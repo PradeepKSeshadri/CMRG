@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Atom Model</title>
+
+  <!-- ✅ Three.js CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script> -->
+  <!-- ✅ Three.js from jsDelivr -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script> -->
+<!-- ✅ Three.js from UNPKG -->
+<!-- <script src="https://unpkg.com/three@0.148.0/build/three.min.js"></script> -->
+
+
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f172a;
+      color: white;
+      font-family: sans-serif;
+    }
+    .atom-3d-section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #atom-model {
+      width: 100%;
+      height: 100%;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="atom-3d-section">
+    <div id="atom-model"></div>
+  </section>
+
+  <script>
+    const container = document.getElementById("atom-model");
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    container.appendChild(renderer.domElement);
+
+    // Nucleus
+    const nucleus = new THREE.Mesh(
+      new THREE.SphereGeometry(1, 32, 32),
+      new THREE.MeshStandardMaterial({ color: 0xff4444 })
+    );
+    scene.add(nucleus);
+
+    // Light
+    const light = new THREE.PointLight(0xffffff, 2);
+    light.position.set(5, 5, 5);
+    scene.add(light);
+
+    // Orbit paths
+    const orbitMaterial = new THREE.MeshBasicMaterial({ color: 0x00ccff, wireframe: true });
+    const rotations = [[1, 0, 0], [0, 1, 0], [1, 1, 0]];
+
+    rotations.forEach(rotation => {
+      const orbit = new THREE.Mesh(new THREE.TorusGeometry(2.5, 0.02, 16, 100), orbitMaterial);
+      orbit.rotation.set(...rotation);
+      scene.add(orbit);
+    });
+
+    // Electrons
+    const electronMaterial = new THREE.MeshStandardMaterial({ color: 0x00ccff });
+    const electrons = [0, 1, 2].map(() => {
+      const e = new THREE.Mesh(new THREE.SphereGeometry(0.1, 16, 16), electronMaterial);
+      scene.add(e);
+      return e;
+    });
+
+    camera.position.z = 6;
+
+    function animate(time) {
+      requestAnimationFrame(animate);
+      const t = time * 0.002;
+      electrons[0].position.set(2.5 * Math.cos(t), 2.5 * Math.sin(t), 0);
+      electrons[1].position.set(2.5 * Math.cos(t + Math.PI / 2), 0, 2.5 * Math.sin(t + Math.PI / 2));
+      electrons[2].position.set(0, 2.5 * Math.cos(t + Math.PI), 2.5 * Math.sin(t + Math.PI));
+      nucleus.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  </script>
+</body>
+</html>

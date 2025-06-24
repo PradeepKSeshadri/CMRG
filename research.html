@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body{
+        /* border:2px solid red; */
+        /* padding:0px; */
+      }
+
+      .ribbon {
+        /* background-color: #0f172a; */
+        /* background-color: #de2900; */
+        background: linear-gradient(to right, #1e293b, #475569);
+        color: white;
+        padding: 35px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .ribbon-content {
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .ribbon-title {
+        letter-spacing: 2px;
+        font-size: 3rem; /* 48px */
+        margin: 0;
+      }
+
+      .ribbon-desc {
+        letter-spacing: 0.5px;
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.6;
+        margin: 0;
+        padding: 0 10px;
+      }
+
+      .ribbon1{
+        background-color: #ffffff;
+        background: linear-gradient(to right, #ffffff, #ffffff);
+
+        /* background-color: #de2900; */
+        color: #0f172a;
+      }
+      /* -------------------- Responsive Media Queries -------------------- */
+
+      @media (max-width: 768px) {
+        .ribbon {
+          padding: 50px 20px;
+        }
+
+        .ribbon-title {
+          font-size: 2.2rem; /* ~35px */
+        }
+
+        .ribbon-desc {
+          font-size: 1rem; /* ~16px */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ribbon {
+          padding: 40px 15px;
+        }
+
+        .ribbon-title {
+          font-size: 1.8rem; /* ~29px */
+        }
+
+        .ribbon-desc {
+          font-size: 0.95rem;
+        }
+      }
+      .container {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* center in container */
+        gap: 4rem;
+        max-width: 1100px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .stat-box {
+        flex: 1 1 200px;
+        padding: 1.5rem;
+        background-color: #f9fafb;
+        /* border-radius: 12px; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        min-width: 180px;
+        border-bottom: 2px solid rgb(7, 7, 56);
+      }
+
+      .stat-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-box h2 {
+        color: #0f172a;
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .stat-box p {
+        margin-top: 0.5rem;
+        color: #555;
+        font-size: 1rem;
+      }
+
+      /* ----------------- Responsive Breakpoints ----------------- */
+
+      @media (max-width: 768px) {
+        .stats {
+          justify-content: center;
+          gap: 1.5rem;
+        }
+
+        .stat-box {
+          flex: 1 1 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .stat-box {
+          flex: 1 1 100%;
+        }
+
+        .stat-box h2 {
+          font-size: 2rem;
+        }
+
+        .stat-box p {
+          font-size: 0.95rem;
+        }
+      }
+
+      .research-detail {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 40px 0px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tabs button.active {
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.research-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  gap: 40px;
+}
+
+.left {
+  flex: 2;
+  min-width: 280px;
+}
+
+.right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.title-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.icon-square {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+}
+
+.title-area h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.badge {
+  background: #e2e8f0;
+  color: #1e293b;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  align-self: center;
+  margin-left: auto;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.projects {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.projects li {
+  margin-bottom: 8px;
+}
+
+.tools span {
+  background: #f1f5f9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.impact-box {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.impact-box ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.impact-box li {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .research-card {
+    flex-direction: column;
+  }
+
+  .badge {
+    margin-left: 0;
+  }
+}
+
+      .recent-highlights-section {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #f9fbfd;
+      }
+
+      .recent-section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1c1c1c;
+      }
+
+      .recent-section-subtitle {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      .recent-highlight-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .recent-highlight-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background: #ffffff;
+        padding: 24px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        text-align: left;
+        transition: transform 0.3s ease;
+
+        max-height: 500px;
+      }
+
+      .recent-highlight-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .recent-badge {
+        display: inline-block;
+        background-color: #111827;
+        color: white;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      .recent-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 6px 0 8px;
+        color: #0f172a;
+        line-height: 1.4;
+      }
+
+      .recent-authors {
+        font-size: 0.95rem;
+        color: #4b5563;
+        margin-bottom: 4px;
+      }
+
+      .recent-journal {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 10px;
+      }
+
+      .recent-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .recent-description {
+        font-size: 0.9rem;
+        color: #374151;
+        line-height: 1.6;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .recent-description.expanded {
+        -webkit-line-clamp: unset;
+      }
+
+      .recent-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .recent-citations {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1d4ed8;
+        text-decoration: none;
+      }
+
+      .recent-read-more {
+        background-color: #f1f5f9;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #1e293b;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .recent-read-more:hover {
+        background-color: #e2e8f0;
+      }
+
+      @media (max-width: 768px) {
+        .recent-highlight-card {
+          width: 100%;
+          max-width: 450px;
+        }
+      }
+
+      .footer {
+        /* background-color: #0f172a; */
+                background: linear-gradient(to right, #1e293b, #475569);
+
+        color: #cbd5e1;
+        padding: 60px 20px 30px;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .footer-column {
+        flex: 1 1 260px;
+      }
+
+      .footer-column h3,
+      .footer-column h4 {
+        color: #ffffff;
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+      }
+
+      .footer-column p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      .footer-column ul li a {
+        color: #cbd5e1;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin-right: 14px;
+        font-size: 1.3rem;
+        color: #cbd5e1;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #ffffff;
+      }
+
+      .contact-info i {
+        margin-right: 8px;
+        color: #94a3b8;
+      }
+
+      hr {
+        margin: 40px auto 20px;
+        border: none;
+        border-top: 1px solid #334155;
+        max-width: 1200px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #94a3b8;
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .footer-column {
+          flex: 1 1 100%;
+        }
+
+        .footer {
+          padding: 50px 15px 20px;
+        }
+      }
+
+      .card-header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .card-title {
+        flex: 1;
+        min-width: 200px;
+        box-sizing: border-box;
+      }
+
+      .labels {
+        align-self: flex-start;
+        min-width: 100px;
+        text-align: right;
+      }
+
+/* research card */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  /* padding: 20px; */
+  background: #f9f9f9;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  /* border:2px solid red; */
+  margin:0px 50px;
+  background-color: aliceblue;
+}
+
+.tab {
+  padding: 10px 60px;
+  background: #f0f4f8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tab.active {
+  background: #dceeff;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: justify;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-left, .card-right {
+  /* flex: 1; */
+  /* border:2px solid red;  */
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  letter-spacing: 0.6px;
+  border:2px solid rgb(0, 255, 55);
+}
+
+.icon {
+  font-size: 30px;
+  background: #e0ecff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.pub-count {
+  margin-left: auto;
+  background: #eef6ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.section h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.section ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 5px;
+  color: #333;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.tools span {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.impact ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.impact li {
+  margin-bottom: 5px;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .icon-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pub-count {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .tools {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 468px) {
+  .tab {
+    flex: 1 1 100%;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .subtitle, .impact li {
+    font-size: 0.85rem;
+  }
+}
+
+
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <header>
+      <div id="logo">
+        <img
+          src="images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
+          alt=""
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        <span>CompMulti Lab</span>
+      </div>
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="navListul">
+        <li class="navItem">
+          <a href="/index.html">Home</a>
+        </li>
+        <li class="navItem">
+          <a href="/about.html">About</a>
+        </li>
+        <li class="navItem">
+          <a href="/publications.html">Publications</a>
+        </li>
+        <li class="navItem">
+          <a href="/research.html" class="active">Research</a>
+        </li>
+        <li class="navItem">
+          <a href="/blog.html">Blog</a>
+        </li>
+        <li class="navItem">
+          <a href="/openings.html">Openings</a>
+        </li>
+        <li class="navItem">
+          <a href="/courses.html">Courses</a>
+        </li>
+        <li class="navItem">
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </header>
+
+    
+
+
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
+      </div>
+    </div>
+
+    <div class="ribbon ribbon1" id="ribbon1">
+      <div class="ribbon-content ribbon-content1">
+        <h1 class="ribbon-title ribbon-title1"></h1>
+        <p class="ribbon-desc ribbon-desc1"></p>
+      </div>
+    </div>
+
+    <section class="research-detail">
+  <div class="tabs">
+    <button class="active">Computational</button>
+    <button>Structural</button>
+    <button>Heat</button>
+    <button>Electromagnetics</button>
+    <button>High-Performance</button>
+    <button>Machine</button>
+  </div>
+
+  <div class="research-card">
+    <div class="left">
+      <div class="title-area">
+        <div class="icon-square">🌊</div>
+        <div>
+          <h2>Computational Fluid Dynamics</h2>
+          <p class="subtitle">Advanced numerical methods for fluid flow simulations</p>
+        </div>
+        <span class="badge">45 Publications</span>
+      </div>
+
+      <div class="section">
+        <h4>Overview</h4>
+        <p>
+          Our CFD research focuses on developing next-generation numerical algorithms for complex fluid flow phenomena,
+          including turbulence modeling, multiphase flows, and reactive flows. We work on both fundamental method
+          development and practical applications in aerospace, automotive, and energy industries.
+        </p>
+      </div>
+
+      <div class="section">
+        <h4>Current Projects</h4>
+        <ul class="projects">
+          <li>Turbulence Modeling for Hypersonic Flows</li>
+          <li>Multiphase Flow in Porous Media</li>
+          <li>Reactive Flow Simulations</li>
+          <li>High-Order Numerical Methods</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="section">
+        <h4>Tools & Software</h4>
+        <div class="tools">
+          <span>OpenFOAM</span>
+          <span>ANSYS Fluent</span>
+          <span>Custom Solvers</span>
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <h4>Research Impact</h4>
+        <ul>
+          <li>45 peer-reviewed publications</li>
+          <li>Multiple industry collaborations</li>
+          <li>Open-source software contributions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  <section class="recent-highlights-section">
+      <h2 class="recent-section-title"></h2>
+      <p class="recent-section-subtitle"></p>
+      <div class="recent-highlight-cards"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="contact-info"></ul>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- <script>
+      fetch("research.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const publicationData = data.publications;
+
+          // Total Publications
+          const totalPublications = publicationData.length;
+
+          // Total Citations
+          const totalCitations = publicationData.reduce((sum, pub) => {
+            const citation = parseInt(pub.card?.citation || 0);
+            return sum + citation;
+          }, 0);
+
+          // H-Index calculation
+          const citationsSorted = publicationData
+            .map((pub) => parseInt(pub.card?.citation || 0))
+            .sort((a, b) => b - a);
+
+          let hIndex = 0;
+          for (let i = 0; i < citationsSorted.length; i++) {
+            if (citationsSorted[i] >= i + 1) hIndex++;
+            else break;
+          }
+
+          // Unique Journals
+          const journalSet = new Set(
+            publicationData.map((pub) => pub.card?.["publication-title"])
+          );
+          const totalJournals = journalSet.size;
+
+          // Inject into DOM
+          document.getElementById("total-publications").textContent =
+            totalPublications + "+";
+          document.getElementById("total-citations").textContent =
+            totalCitations;
+          document.getElementById("h-index").textContent = hIndex;
+          document.getElementById("total-journals").textContent =
+            totalJournals + "+";
+        })
+        .catch((error) => {
+          console.error("Error loading publication data:", error);
+        });
+    </script> -->
+
+    <script>
+      async function loadPublications() {
+        try {
+          const res = await fetch("research.json");
+          const data = await res.json();
+
+          // Ribbon
+          document.querySelector(".ribbon-title").textContent =
+            data.ribbon.title;
+          document.querySelector(".ribbon-desc").textContent =
+            data.ribbon.description;
+
+        // Ribbon1
+          document.querySelector(".ribbon-title1").textContent =
+            data.ribbon1.title;
+          document.querySelector(".ribbon-desc1").textContent =
+            data.ribbon1.description;
+
+          // Stats
+          // document.getElementById("total-publications").textContent = data.stats["total-publications"];
+          // document.getElementById("total-citations").textContent = data.stats["total-citations"];
+          // document.getElementById("h-index").textContent = data.stats["h-index"];
+          // document.getElementById("total-journals").textContent = data.stats["total-journals"];
+
+          // Filter Options
+          // const yearSelect = document.getElementById("yearFilter");
+          // data.filters.years.forEach((year) => {
+          //   const option = document.createElement("option");
+          //   option.value = year;
+          //   option.textContent = year;
+          //   yearSelect.appendChild(option);
+          // });
+
+          // Recent Highlights
+          // Load recent highlights from JSON
+          const recentHighlightData = data["recent-highlights"];
+
+          // Set section title and subtitle
+          document.querySelector(".recent-section-title").textContent =
+            recentHighlightData["recent-section-title"];
+          document.querySelector(".recent-section-subtitle").textContent =
+            recentHighlightData["recent-section-subtitle"];
+
+          // Render recent highlight cards
+          const highlightCards = document.querySelector(
+            ".recent-highlight-cards"
+          );
+          highlightCards.innerHTML = ""; // Clear existing
+
+          recentHighlightData.cards.forEach((highlight) => {
+            const div = document.createElement("div");
+            div.className = "recent-highlight-card";
+            div.innerHTML = `
+                <div class="recent-card-content">
+                  <span class="recent-badge">${highlight["recent-badge"]}</span>
+                  <h3 class="recent-title">${highlight["recent-title"]}</h3>
+                  <p class="recent-authors">${highlight["recent-authors"]}</p>
+                  <p class="recent-journal">${highlight["recent-journal"]}</p>
+                  <p class="recent-description">${highlight["recent-description"]}</p>
+                </div>
+                <div class="recent-card-footer">
+                  <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
+                  <a href="${highlight["recent-link"]}" class="recent-read-more"">Read More</a>
+                </div>
+              `;
+            highlightCards.appendChild(div);
+          });
+
+          // Footer
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.twitter;
+          socialLinks[2].href = footer.about.social.linkedin;
+
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="#">${link}</a>`;
+            quickLinks.appendChild(li);
+          });
+
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
+        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
+        <li><i class="fas fa-envelope"></i>${contact.email}</li>
+      `;
+
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+
+      // Call on load
+      document.addEventListener("DOMContentLoaded", loadPublications);
+
+      // Optional: Toggle Read More logic
+      function toggleDescription(element) {
+        const desc = element.parentElement.previousElementSibling.querySelector(
+          ".recent-description"
+        );
+        desc.classList.toggle("expanded");
+        element.textContent = desc.classList.contains("expanded")
+          ? "Read Less"
+          : "Read More";
+      }
+    </script>
+  </body>
+</html>

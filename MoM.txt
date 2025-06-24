@@ -1,0 +1,145 @@
+06/06/2025 - Friday
+Minutes of Meeting – Computational Multiphysics Laboratory Website
+
+Date: 06 June 2025
+Client: Pradeep
+Developer: Nirmal S
+Project: Website Development for Computational Multiphysics Lab
+Meeting Type: Progress Review & Planning
+
+---
+
+Discussion Summary:
+
+1. The homepage prototype was presented successfully.
+2. Client approved the homepage design direction and confirmed continuation of development.
+3. Client agreed to provide:
+	 .) Required content, images, and information for further sections.
+     .) Personal resume containing publications details for building the Publications page.
+4. Discussed the importance of finalizing the application UI template to maintain design consistency across the site.
+
+---
+
+Next Action Items:
+
+| Task                                                                             | Owner                     | Deadline     |
+| -------------------------------------------------------------------------------- | ------------------------- | ------------ |
+| Share content, images, and resume with developer                                 | Pradeep                   | Before 11/06 |
+| Finalize template design for the application section                             | Pradeep & Nirmal          | By 13/06     |
+| Develop Publications Page (once data is received)                                | Nirmal                    | By 13/06     |
+| Prepare layout drafts for About Us and Home (based on approved template)         | Nirmal                    | Next week    |
+
+---
+
+ Next Meeting Scheduled:
+
+📅 Friday, 13th June 2025
+
+Objective:
+
+ Finalize application template
+ Review Publications page prototype
+ Confirm structure for About Us and other static pages
+
+---
+
+14/06/2025-Saturday
+
+Minutes of Meeting – Computational Multiphysics Laboratory Website
+
+Date: 14 June 2025
+Client: Pradeep
+Developer: Nirmal S
+Project: Website Development for Computational Multiphysics Lab
+Meeting Type: Progress Review & Planning
+
+---
+
+Discussion Summary:
+
+1. Publications Page
+
+    .)The completed Publications page was presented.
+    .)Client reviewed and approved the layout and functionality.
+    .)No changes were requested at this stage.
+
+2. Next Steps – Page Structure Update
+
+    Publications section will now be split into two separate dropdown pages:
+
+      .)Journals
+      .)Conferences
+
+3. New Pages to be Designed (Template Stage)
+   The following pages will be initiated and template-designed by next week:
+
+    About Page
+    Research Page (with two sub-pages):
+
+      .)Past Projects
+      .)Ongoing Projects
+
+4. Content and Assets
+
+    Client will provide:
+
+      .)Text content
+      .)Images or media assets
+    These will be integrated once the templates are ready.
+
+---
+
+ 📆 Target Deadline
+
+ All template pages to be completed and ready for review by Friday, 21 June 2025.
+
+Please review and confirm if anything needs to be added or corrected.
+
+----
+22-06-2025
+
+Minutes of Meeting – Computational Multiphysics Laboratory Website
+
+Date: 22 June 2025
+Client: Pradeep
+Developer: Nirmal S
+Project: Website Development for Computational Multiphysics Lab
+Meeting Type: Progress Review & Planning
+
+
+Meeting Summary:
+1. Showcased Completed Pages
+2. About Page: Includes lab introduction and core details.
+3. Team Page: Structure presented with placeholders for team members.
+4. Research Page: Template designed for Past and Ongoing Projects.
+5. Contact Page: UI completed with placeholder contact info and map integration.
+
+
+Next Steps:
+1. Complete entire website by next week with the finalized content.
+2. Use the actual lab data provided today for full integration.
+
+Content to Be Provided by Client (Today):
+.) Lab Logo
+.) Lab Name (Website Title)
+.) High-quality images related to lab facilities, research, and activities
+.) About the Lab – A short descriptive overview
+.) Mission Statement
+.) Vision Statement
+.) Team Members:
+	Full Name
+	Educational Qualification
+	Designation
+	Profile Details
+	Mail ID
+	LinkedIn URL
+.) 3 Key Milestones/Highlights in the lab’s journey
+.) Social Media and Repository Links:
+	GitHub
+	Instagram
+	X (Twitter)
+.) Publication Images (for journals/conferences)
+.) Contact Info:
+	Email
+	Phone Number
+	Address

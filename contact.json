@@ -1,0 +1,33 @@
+{
+  "logo":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+  "brand":"Comp Multi Lab",
+  "email": "spk15031990@gmail.com",
+  "phone": "9789796025 ",
+  "githublink": "",
+  "linkedinlink": "https://www.linkedin.com/in/spradeepmahadeek/",
+  "twitterlink": "",
+  "instagramlink": "",
+  "footer": {
+    "about": {
+      "title": "Computational Multiphysics Research Lab",
+      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
+      "social": {
+        "github": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    "quick-links": [
+      "Research Areas",
+      "Publications",
+      "Open Source",
+      "Join Our Team"
+    ],
+    "contact": {
+      "address": "123 University Ave, Research Building",
+      "phone": "9789796025",
+      "email": "spk15031990@gmail.com"
+    },
+    "footer-note": "© 2025 Computational Multiphysics Research Lab. All rights reserved."
+  }
+}

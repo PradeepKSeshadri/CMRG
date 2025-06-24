@@ -1,0 +1,141 @@
+REQUIREMENT:
+============
+
+	Main Purpose:
+	-------------
+	
+		Computational Multiphysics Research Group 
+
+	Core Sections:
+	--------------
+
+		Home
+		
+		About the Lab , Team
+
+		Research Projects (Past, Ongoing, Future) - 2 pages
+
+		Publications & Conferences - 2 pages
+
+		Open-source Codes / Tools (with GitHub integration + CI/CD showcase)
+
+		Blog / Announcements / News
+
+		Course Notes / Materials
+
+		Join Us / Openings
+		
+		Contact	Email, GitHub, LinkedIn, etc.
+			
+			
+	Reference Websites:
+	-------------------
+
+		1. https://www.solids.group/alamo/
+
+		2. https://numericsresearchgroup.org
+		
+
+publications reference page - https://chandanbose.com/journals.html
+
+research reference page - resume shared in linked in
+
+Hi Pradeep, we can connect on sunday morning at 11:00 am. i will complete the half of our project at production level including responsiveness for mobile and tablets.
+
+pages going to showcase is
+1. Home page
+2. About page
+3. Team page
+4. publications page - journals
+5. publications page - conference
+6. research page - past
+7. research page - ongoing
+8. contact page with interactive email linkage 
+
+
+
+<section class="hero">
+      <div class="left">
+      <div class="content">
+        <button class="tag">Advancing Computation</button>
+        <h1>"Where Physics Powers Innovation"</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut earum perferendis adipisci repellendus, deleniti optio tempora beatae corporis? Ipsum natus ab esse molestias vero sed tenetur repellat suscipit, deleniti, eveniet unde inventore qui sequi necessitatibus, officiis corporis dolorum! Itaque suscipit tempore accusamus voluptates repellendus. Fugiat accusamus, autem iusto iure, cumque perferendis atque excepturi, est at harum amet magni voluptates illo aliquid explicabo facere veniam quia libero beatae culpa quasi pariatur!</p>
+        <button class="explore">Explore Now</button>
+        <button class="explore1">Explore Now</button>
+    </div>
+      </div>
+      <div class="right">
+        
+        <!-- <img class="right-img" src="/images/abstract-technology-background.jpg" alt=""> -->
+        <div
+        id="carouselExampleIndicators"
+        class="carousel slide right-img"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/abstract-technology-background.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/abstract-technology-background.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/abstract-technology-background.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </div>
+    </section>

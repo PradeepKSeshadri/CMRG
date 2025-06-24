@@ -1,0 +1,339 @@
+{
+  "ribbon": {
+    "title": "Publications",
+    "description": "Explore our research contributions to the scientific community through peer-reviewed publications, conference papers, and technical reports. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatibus?"
+  },
+  "filters": {
+    "years": ["2024", "2023", "2022", "2021","2020"]
+  },
+  "publications": [
+    {
+      "card": {
+        "thumbnail": "",
+        "card-heading": "Chordwise flexible aft-tail suppresses jet-switching by reinstating wake periodicity in a flapping foil",
+        "author-name": "Chhote Lal Shah, Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
+        "year": "2022",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Journal of Fluid Mechanics , In Press, 2022.",
+        "description": "The effect of a chord-wise flexible aft-tail of a rigid heaving airfoil on the dynamical transitions of the trailing-wake is studied here. The two-way coupled fluid-solid dynamics is simulated using an in-house Fluid-Structure Interaction (FSI) platform, comprising of a discrete forcing Immersed Boundary Method based incompressible Navier-Stokes solver weakly coupled with a finite difference method based structural solver. The FSI dynamics is studied in comparison to its corresponding rigid tail configuration. It is obeserved that the flexible tail regularizes the flow-field and supresses the jet-switching phenomenon by reinstating the wake periodicity. The underlying flow-field behaviour, instrumental in suppressing the jet-switching phenomenon, is identified through a detailed investigation of the near-field vortices dictated by the dynamics.",
+        "doi": "",
+        "view-link": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Transition boundaries and an order-to-chaos map for the flow-field past a flapping foil",
+        "author-name": "Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
+        "year": "2022",
+        "citation": "0 citations",
+        "tags": ["HPC", "Multiphysics", "Exascale"],
+        "category": "Journal",
+        "publication-title": "Journal of Fluid Mechanics , 942, A40, 2022.",
+        "description": "The present study focuses on identifying the dynamical transition boundaries and presents an order-to-chaos map for the unsteady flow-field of a flapping foil in the low Reynolds number regime. Two new non-dimensional measures - maximum effective angle-of-attack and a leading-edge amplitude-based Strouhal number are proposed here, which can capture the physical effect of the parametric variations on the wake dynamics. The study also proposes generalised transition boundaries and an order-to-chaos map through a transitional regime in terms of these two newly proposed parameters.",
+        "doi": "https://doi.org/10.1017/jfm.2022.385",
+        "view-link": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Numerical investigation of discontinuity-induced bifurcations in an aeroelastic system with coupled non-smooth nonlinearities",
+        "author-name": "Sai Vishal Gali*, Ashwad Raaj*, Chandan Bose , Venkatramani Jagadish, Grigorios Dimitriadis",
+        "year": "2022",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Nonlinear Dynamics , 108, 3025-3051, 2022.",
+        "description": "The present study focuses on investigating the bifurcation characteristics of a pitch-plunge aeroelastic system possessing coupled non-smooth nonlinearities, both in structural and aerodynamic fronts. At low airspeeds, the dynamical transitions occur predominantly due to the structural freeplay nonlinearity while the flow remains attached to the surface of the wing. However, beyond a critical value of airspeed, the system response is dominated by high amplitude pitch-dominated limit-cycle oscillations, which can be attributed to stall flutter. It is demonstrated that the freeplay gap plays a key role in combining the effects of structural and aerodynamic nonlinearities. At higher values of the freeplay gap, interesting discontinuity-induced bifurcation scenarios, such as grazing and boundary equilibrium bifurcations arise due to coupled nonlinear interactions, which can significantly impact the safety of the aeroelastic system.",
+        "doi": "https://link.springer.com/article/10.1007/s11071-022-07352-3",
+        "view-link": "https://link.springer.com/journal/11071",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Experimental Investigation on the Synchronization Characteristics of a Pitch-Plunge Aeroelastic System Exhibiting Stall Flutter",
+        "author-name": "Dheeraj Tripathi*, R. Shreenivas*, Chandan Bose , Sirshendu Mondal, J Venkatramani",
+        "year": "2022",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Chaos , In Press, 2022.",
+        "description": "This study focuses on characterizing the bifurcation scenario and the underlying synchrony behaviour in a nonlinear aeroelastic system under deterministic as well as stochastic inflow conditions. Wind tunnel experiments arecarried out for a canonical pitch-plunge aeroelastic system subjected to dynamic stall conditions. We observe intermittent phase synchronization between pitch and plunge modes near the fold point; whereas, synchronization via phase trappingis observed near the Hopf point. Repeating the experiments under stochastic inflow conditions, we observe two different aeroelastic responses; low amplitude noise-induced random oscillations (NIROs) and high amplitude random LCOs (RLCOs) during stall flutter. The present study shows asynchrony between pitch and plunge modesin the NIRO regime. At the onset of RLCOs, asynchrony persists even though the relative phase distribution changes. With the further increase in flow velocity, we observe intermittent phase synchronization in the flutter regime.",
+        "doi": "",
+        "view-link": "https://pubs.aip.org/aip/cha",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": " Passive Suppression of Vortex-Induced Vibrations Using a Nonlinear Energy Sink - Numerical and Analytical Perspective",
+        "author-name": "Abraham Thomas Chirathalattu*; Santhosh B; Chandan Bose , Rony Philip; Bipin Balaram",
+        "year": "2022",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Mechanical Systems and Signal Processing , Revised, 2022.",
+        "description": "This study investigates the suppression mechanism of instabilities induced by fluid-structure interactions (FSI) using passive vibration absorption devices, such as nonlinear energy sink (NES). The present FSI framework comprises a low-order phe- nomenological model, wherein the wake effect is modelled using the classical Van der Pol oscillator. The structure is represented as a cylindrical bluff body with degree-of- freedom along the cross-flow direction. The response of the NES-augmented struc- ture exhibits specific relaxation type oscillations, referred to as strongly modulated response (SMR), passively suppressing the high amplitude vortex-induced vibrations (VIV). The underlying mechanism of SMR is studied using an analytical approach based on the Complexification-Averaging (CXA) technique.",
+        "doi": "",
+        "view-link": "https://www.sciencedirect.com/journal/mechanical-systems-and-signal-processing",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Stall-induced fatigue damage analysis of nonlinear aeroelastic systems subjected to randomly fluctuating inflow",
+        "author-name": "Dheeraj Tripathi*, Sai Vishal*, Chandan Bose , J Venkatramani",
+        "year": "2022",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "International Journal of Nonlinear Mechanics , 142, 104003, 2022.",
+        "description": "This study focuses on characterizing the fatigue damage accumulated in nonlinear aeroelastic systems subjected to stochastic input flows. The response dynamics and the associated fatigue damage of the aeroelastic system, possessing different sources of nonlinearities, are systematically investigated under isolated cases of deterministic and stochastic input flows. It is observed that different time scales and intensities of the oncoming flow fluctuation play a pivotal role in dictating the fatigue damage in aeroelastic systems. Fatigue damage is observed to be significantly higher for torsionally dominant oscillations in the dynamical stall regime compared to the oscillations at the attached flow regime.",
+        "doi": "https://doi.org/10.1016/j.ijnonlinmec.2022.104003",
+        "view-link": "https://www.journals.elsevier.com/international-journal-of-non-linear-mechanics",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Routes to Synchronization in a pitch-plunge aeroelastic system with coupled structural and aerodynamic nonlinearities",
+        "author-name": "Sai Vishal Gali*, Ashwad Raaj*, Chandan Bose , Venkatramani Jagadish",
+        "year": "2021",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "International Journal of Nonlinear Mechanics , Volume 135, 103766, 2021.",
+        "description": "In this study, we investigate the response characteristics of a pitch-plunge aeroelastic system possessing coupled non-smooth nonlinearities, namely free-play in the structure and dynamic stall in the flow. We demonstrate the need to present a one-one relationship between the dynamic stall behavior with respect to the output aeroelastic response. We systematically demonstrate the different routes to synchronization in the nonlinear aeroelastic problem and use the same to heuristically demarcate coupled mode flutter against stall flutter.",
+        "doi": "https://doi.org/10.1016/j.ijnonlinmec.2021.103766",
+        "view-link": "https://www.sciencedirect.com/science/article/abs/pii/S0020746221001001?via%3Dihub",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Enhancing Piezoelectric Energy Harvesting from the Flow-Induced Vibration of a Circular Cylinder Using Dual Splitters",
+        "author-name": "Junlei Wang; Shanghao Gu; Abdessattar Abdelkefi; Chandan Bose",
+        "year": "2021",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Smart Materials and Structures , 30, 05LT01, 2021.",
+        "description": "This study is focused on enhancing the piezoelectric energy harvesting from the flow-induced vibration of a circular cylinder by using two symmetric splitters in different relative angular positions with respect to the oncoming uniform flow. Both wind tunnel experiments and numerical simulations are carried out to study the effect of different installation angles of the dual splitters on the energy harvesting efficiency with the increasing flow velocity. This study systematically carries out the performance analysis of the vortex-induced vibration-based energy harvester with multiple splitters and directly contributes to the optimized design of an innovative wind energy harvester.",
+        "doi": "https://doi.org/10.1088/1361-665X/abefb5",
+        "view-link": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=b8394e54-addb-474d-b580-9bfec758734a&ssb=42227296444&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F1361-665X%2Fabefb5&ssi=b5b4cdb7-cnvj-4ce1-ad56-de068be70424&ssk=botmanager_support@radware.com&ssm=63210428429985727104121298618469&ssn=5f87e82681a23959548985cb353dc4ca6e3daa55c1c2-2f6f-4c61-998f17&sso=fb0d4929-351e2cb4a0c3ba8d202e6d7bf14dae6b7c44d7e1296c40bd&ssp=63738628001749793401174975734356028&ssq=41301645586295033990355862751921605025095&ssr=NDkuMzcuMjA5Ljk4&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/137.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjYwMDAxMWNiOGE3My04YzFmLTQ5ODEtYjk2MC0zYzJhYzhkYjQzYjUxNzQ5NzU1ODYyNjE5MC1kOTkzNTllMDNhZGU3NGI4MTAiLCJ1em14IjoiN2Y5MDAwNTVmZWE4YzMtM2JiNy00OWZkLTk5NTctYjhkMjIwYWJjMTUxMS0xNzQ5NzU1ODYyNjE5MC1jOTI4NDgwZmQ2OGEwNjQ1MTAifQ==",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Dynamic interlinking between near and far-field wakes behind a pitching-plunging airfoil",
+        "author-name": "Chandan Bose ; Sayan Gupta; Sunetra Sarkar",
+        "year": "2021",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Journal of Fluid Mechanics , 911, A31, 2021.",
+        "description": "This study establishes a dynamic link between the near and far-field wake transitions and investigates the role of aperiodic jet-switching in ushering in chaos in the wake of a pitch-plunge flapping system. The mechanism of jet-switching and the role of leading-edge vortex are also revealed in this paper.",
+        "doi": "https://doi.org/10.1063/5.0024084",
+        "view-link": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/dynamic-interlinking-between-near-and-farfield-wakes-behind-a-pitchingheaving-airfoil/FF6410999B6BF6908FFD95664016B387",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Effect of gusty inflow on the jet-switching characteristics of a plunging foil",
+        "author-name": "Dipanjan Majumdar; Chandan Bose ; Sunetra Sarkar",
+        "year": "2020",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Physics of Fluids , 32, 117105, 2020.",
+        "description": "This study investigates the effect of stochastic inflow fluctuations on the jet-switching characteristics of a harmonically plunging elliptic foil, in comparison to steady- uniform inflow, at a low Reynolds number regime. Numerical simulations are performed with an Immersed Boundary Method (IBM)-based in-house flow solver and the temporal inflow fluctuations are generated by an Ornstein-Uhlenbeck process - a stationary Gauss- Markov process with a chosen correlation function.",
+        "doi": "https://doi.org/10.1063/5.0024084",
+        "view-link": "https://pubs.aip.org/aip/pof/article-abstract/32/11/117105/1041946/Effect-of-gusty-inflow-on-the-jet-switching?redirectedFrom=fulltext",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Capturing the Dynamical Transitions in the Flow-field of a Flapping Foil using Immersed Boundary Method",
+        "author-name": "Dipanjan Majumdar; Chandan Bose ; Sunetra Sarkar",
+        "year": "2020",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Journal of Fluids and Structures , Volume 95, Pages 102999, 2020.",
+        "description": "This study explores the scope of body non-conformal mesh methods in comparison to body-fitted approaches in capturing complex flow topologies, especially, during aperiodic transition in the unsteady flow-field of a flapping foil.",
+        "doi": "https://doi.org/10.1016/j.jfluidstructs.2020.102999",
+        "view-link": "https://www.sciencedirect.com/science/article/abs/pii/S0889974620300128?via%3Dihub",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Transition to chaos in the flow-induced vibration of a pitching-plunging airfoil at low Reynolds numbers : Ruelle-Takens-Newhouse scenario",
+        "author-name": "Chandan Bose ; Sayan Gupta; Sunetra Sarkar",
+        "year": "2019",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "International Journal of Non-Linear Mechanics , Volume 109, Pages 189 - 203, 2019.",
+        "description": "This study reports a Ruelle-Takens-Newhouse quasi-periodic route during the transition from periodic to chaotic dynamics in the fluid-elastic response of a 2-dof flexibly-mounted airfoil with very low solid-to-fluid added mass ratio through robust nonlinear dynamic analysis.",
+        "doi": "DOI: 10.1016/j.ijnonlinmec.2018.11.012",
+        "view-link": "https://www.sciencedirect.com/science/article/abs/pii/S0020746218305201?via%3Dihub",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Investigating chaotic wake dynamics past a flapping airfoil and the role of vortex interactions behind the chaotic transition",
+        "author-name": "Chandan Bose ; Sunetra Sarkar",
+        "year": "2018",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Physics of Fluids , Volume 30, Issue 4, 047101, 2018.",
+        "description": "This study revealed that slightly erratic leading edge separation could trigger a complete chaotic breakdown of the wake of a flapping wing that mimics natural flyers like birds and insects. Fundamental vortex interaction mechanism that sustains chaos in the wake have also been identified in the study.",
+        "doi": "DOI: 10.1063/1.5019442",
+        "view-link": "https://pubs.aip.org/aip/pof/article-abstract/30/4/047101/260409/Investigating-chaotic-wake-dynamics-past-a?redirectedFrom=fulltext",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Dynamical behaviour of unsteady flow-field of an elastically mounted flapping airfoil",
+        "author-name": "Chandan Bose ; Sayan Gupta; Sunetra Sarkar",
+        "year": "2018",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "AIAA Journal , Volume 56, Issue 5, Pages 2062-2069, 2018.",
+        "description": "The present study reports the quasi-periodic flow dynamics behind a spanwise flexible flapping airfoil. In the qualitative transition in the unsteady flowfield, the trailing-edge wake loses its periodicity beyond a critical wind velocity and becomes quasi-periodic (QP) in nature at a regime of comparable solid and fluid added mass (μ = 5). The correlation coefficient of the vorticity field and the reconstructed phase space, frequency spectra, Poincaré sections, and recurrence plots of the aerodynamic loads establish the presence of quasi-periodicity in the flow topology conclusively. The loss of periodicity is shown to lead to variability in the aerodynamic loads at the corresponding flow regimes, implying the potential requirement of feedback control mechanisms for stable operations at these flow regimes.",
+        "doi": "DOI: 10.2514/1.J056664",
+        "view-link": "https://arc.aiaa.org/doi/full/10.2514/1.J056664",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Transient and stable chaos in dipteran flight inspired flapping flight",
+        "author-name": "Chandan Bose ; Vikas Reddy; Sayan Gupta; Sunetra Sarkar",
+        "year": "2017",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Journal of Computational and Nonlinear Dynamics , Volume 13, Issue 2, 021014, 2017.",
+        "description": "This paper deals with the nonlinear fluid structure interaction (FSI) dynamics of a Dipteran flight motor inspired flapping system in an inviscid fluid. In the present study, the FSI effects are incorporated to an existing forced Duffing oscillator model to gain a clear understanding of the nonlinear dynamical behavior of the system in the presence of aerodynamic loads. The present FSI framework employs a potential flow solver to determine the aerodynamic loads. Interesting dynamical behavior including period doubling, chaotic transients, periodic windows, and finally an intermittent transition to stable chaotic attractor have been observed in the response with an increase in the bifurcation parameter.",
+        "doi": "DOI: 10.1115/1.4038447",
+        "view-link": "https://asmedigitalcollection.asme.org/computationalnonlinear/article-abstract/13/2/021014/473581/Transient-and-Stable-Chaos-in-Dipteran-Flight?redirectedFrom=fulltext",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Investigations on a vortex induced vibration based energy harvester",
+        "author-name": "S Krishna Kumar; Chandan Bose ; Shaikh Faruque Ali; Sayan Gupta; Sunetra Sarkar",
+        "year": "2017",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "Applied Physics Letters , Volume 111, Issue 24, 243903, 2017.",
+        "description": "This study investigates energy harvesting from vortex induced vibrations of a flexible cantilevered flapper placed in the wake of a rigid circular cylinder. The effect of the gap between the cylinder and the flapper on the energy harvested is investigated through wind tunnel experiments and numerical simulations. As the flow speed is varied, a transition in the flapper dynamics is observed, which in turn affects the power extracted by the harvester. Numerical investigations reveal that the flapper dynamics is different depending on whether the vortices are shed ahead or behind the flapper. This study concludes that the choice of the gap influences the energy harvesting potential of such harvesters.",
+        "doi": "DOI: 10.1063/1.5001863",
+        "view-link": "https://pubs.aip.org/aip/apl/article-abstract/111/24/243903/34527/Investigations-on-a-vortex-induced-vibration-based?redirectedFrom=fulltext",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
+        "thumbnail": "https://via.placeholder.com/150",
+        "card-heading": "Identifying the route to chaos in the flow past a flapping airfoil",
+        "author-name": "Sandeep Badrinath; Chandan Bose; Sunetra Sarkar",
+        "year": "2017",
+        "citation": "0 citations",
+        "tags": ["Machine Learning", "Turbulence", "Hypersonic"],
+        "category": "Journal",
+        "publication-title": "European Journal of Mechanics/ B-Fluids , Volume 66, Pages 38-59, 2017.",
+        "description": "This paper focuses on analyzing the dynamics and identifying the route to chaos in the wake of a plunging airfoil. The intermittency route to chaos is conclusively established using techniques from time series analysis, such as phase space reconstruction and recurrence plots. A qualitative analysis of the patterns in the recurrence plots is used to identify the type of intermittency to be Type I. Moreover, the implication of Type I intermittency into the flow dynamics has been studied through various vortex interaction mechanisms and its effect on the thrust generation.",
+        "doi": "DOI: 10.1016/j.euromechflu.2017.05.012",
+        "view-link": "https://www.sciencedirect.com/science/article/abs/pii/S0997754616300656",
+        "pdf-link": "#"
+      }
+    }
+  ],
+  "recent-highlights": {
+    "recent-section-title":"Recent Highlight",
+    "recent-section-subtitle":"Featured publications representing our latest research breakthroughs",
+    "cards":[
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Chordwise flexible aft-tail suppresses jet-switching by reinstating wake periodicity in a flapping foil",
+      "recent-authors": "Chhote Lal Shah, Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
+      "recent-journal": "Journal of Fluid Mechanics (2022)",
+      "recent-description": "The effect of a chord-wise flexible aft-tail of a rigid heaving airfoil on the dynamical transitions of the trailing-wake is studied here. The two-way coupled fluid-solid dynamics is simulated using an in-house Fluid-Structure Interaction (FSI) platform, comprising of a discrete forcing Immersed Boundary Method based incompressible Navier-Stokes solver weakly coupled with a finite difference method based structural solver. The FSI dynamics is studied in comparison to its corresponding rigid tail configuration. It is obeserved that the flexible tail regularizes the flow-field and supresses the jet-switching phenomenon by reinstating the wake periodicity. The underlying flow-field behaviour, instrumental in suppressing the jet-switching phenomenon, is identified through a detailed investigation of the near-field vortices dictated by the dynamics.",
+      "recent-citations": "0 citations",
+      "recent-link":"https://www.cambridge.org/core/journals/journal-of-fluid-mechanics"
+    },
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Transition boundaries and an order-to-chaos map for the flow-field past a flapping foil",
+      "recent-authors": "Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
+      "recent-journal": "Journal of Fluid Mechanics (2022)",
+      "recent-description": "The present study focuses on identifying the dynamical transition boundaries and presents an order-to-chaos map for the unsteady flow-field of a flapping foil in the low Reynolds number regime. Two new non-dimensional measures - maximum effective angle-of-attack and a leading-edge amplitude-based Strouhal number are proposed here, which can capture the physical effect of the parametric variations on the wake dynamics. The study also proposes generalised transition boundaries and an order-to-chaos map through a transitional regime in terms of these two newly proposed parameters.",
+      "recent-citations": "0 citations",
+      "recent-link":"https://www.cambridge.org/core/journals/journal-of-fluid-mechanics"
+    },
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Numerical investigation of discontinuity-induced bifurcations in an aeroelastic system with coupled non-smooth nonlinearities",
+      "recent-authors": "Sai Vishal Gali*, Ashwad Raaj*, Chandan Bose , Venkatramani Jagadish, Grigorios Dimitriadis",
+      "recent-journal": "Nonlinear Dynamics (2022)",
+      "recent-description": "The present study focuses on investigating the bifurcation characteristics of a pitch-plunge aeroelastic system possessing coupled non-smooth nonlinearities, both in structural and aerodynamic fronts. At low airspeeds, the dynamical transitions occur predominantly due to the structural freeplay nonlinearity while the flow remains attached to the surface of the wing. However, beyond a critical value of airspeed, the system response is dominated by high amplitude pitch-dominated limit-cycle oscillations, which can be attributed to stall flutter. It is demonstrated that the freeplay gap plays a key role in combining the effects of structural and aerodynamic nonlinearities. At higher values of the freeplay gap, interesting discontinuity-induced bifurcation scenarios, such as grazing and boundary equilibrium bifurcations arise due to coupled nonlinear interactions, which can significantly impact the safety of the aeroelastic system.",
+      "recent-citations": "0 citations",
+      "recent-link":"https://link.springer.com/journal/11071"
+    }
+  ] 
+  },
+  "footer": {
+    "about": {
+      "title": "Computational Multiphysics Research Lab",
+      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
+      "social": {
+        "github": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    "quick-links": [
+      "Research Areas",
+      "Publications",
+      "Open Source",
+      "Join Our Team"
+    ],
+    "contact": {
+      "address": "123 University Ave, Research Building",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@cmplab.edu"
+    },
+    "footer-note": "© 2024 Computational Multiphysics Research Lab. All rights reserved."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "ribbon": {
+    "title": "Research",
+    "description": "Explore our research contributions to the scientific community through peer-reviewed publications, conference papers, and technical reports. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatibus?"
+  },
+  "ribbon1": {
+    "title": "Research",
+    "description": "Explore our research contributions to the scientific community through peer-reviewed publications, conference papers, and technical reports. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatibus?"
+  },
+  "recent-highlights": {
+    "recent-section-title":"Recent Highlight",
+    "recent-section-subtitle":"Featured publications representing our latest research breakthroughs",
+    "cards":[
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Chordwise flexible aft-tail suppresses jet-switching by reinstating wake periodicity in a flapping foil",
+      "recent-authors": "Chhote Lal Shah, Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
+      "recent-journal": "Journal of Fluid Mechanics (2022)",
+      "recent-description": "The effect of a chord-wise flexible aft-tail of a rigid heaving airfoil on the dynamical transitions of the trailing-wake is studied here. The two-way coupled fluid-solid dynamics is simulated using an in-house Fluid-Structure Interaction (FSI) platform, comprising of a discrete forcing Immersed Boundary Method based incompressible Navier-Stokes solver weakly coupled with a finite difference method based structural solver. The FSI dynamics is studied in comparison to its corresponding rigid tail configuration. It is obeserved that the flexible tail regularizes the flow-field and supresses the jet-switching phenomenon by reinstating the wake periodicity. The underlying flow-field behaviour, instrumental in suppressing the jet-switching phenomenon, is identified through a detailed investigation of the near-field vortices dictated by the dynamics.",
+      "recent-citations": "0 citations",
+      "recent-link":"https://www.cambridge.org/core/journals/journal-of-fluid-mechanics"
+    },
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Transition boundaries and an order-to-chaos map for the flow-field past a flapping foil",
+      "recent-authors": "Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
+      "recent-journal": "Journal of Fluid Mechanics (2022)",
+      "recent-description": "The present study focuses on identifying the dynamical transition boundaries and presents an order-to-chaos map for the unsteady flow-field of a flapping foil in the low Reynolds number regime. Two new non-dimensional measures - maximum effective angle-of-attack and a leading-edge amplitude-based Strouhal number are proposed here, which can capture the physical effect of the parametric variations on the wake dynamics. The study also proposes generalised transition boundaries and an order-to-chaos map through a transitional regime in terms of these two newly proposed parameters.",
+      "recent-citations": "0 citations",
+      "recent-link":"https://www.cambridge.org/core/journals/journal-of-fluid-mechanics"
+    },
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Numerical investigation of discontinuity-induced bifurcations in an aeroelastic system with coupled non-smooth nonlinearities",
+      "recent-authors": "Sai Vishal Gali*, Ashwad Raaj*, Chandan Bose , Venkatramani Jagadish, Grigorios Dimitriadis",
+      "recent-journal": "Nonlinear Dynamics (2022)",
+      "recent-description": "The present study focuses on investigating the bifurcation characteristics of a pitch-plunge aeroelastic system possessing coupled non-smooth nonlinearities, both in structural and aerodynamic fronts. At low airspeeds, the dynamical transitions occur predominantly due to the structural freeplay nonlinearity while the flow remains attached to the surface of the wing. However, beyond a critical value of airspeed, the system response is dominated by high amplitude pitch-dominated limit-cycle oscillations, which can be attributed to stall flutter. It is demonstrated that the freeplay gap plays a key role in combining the effects of structural and aerodynamic nonlinearities. At higher values of the freeplay gap, interesting discontinuity-induced bifurcation scenarios, such as grazing and boundary equilibrium bifurcations arise due to coupled nonlinear interactions, which can significantly impact the safety of the aeroelastic system.",
+      "recent-citations": "0 citations",
+      "recent-link":"https://link.springer.com/journal/11071"
+    }
+  ] 
+  },
+  "footer": {
+    "about": {
+      "title": "Computational Multiphysics Research Lab",
+      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
+      "social": {
+        "github": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    "quick-links": [
+      "Research Areas",
+      "Publications",
+      "Open Source",
+      "Join Our Team"
+    ],
+    "contact": {
+      "address": "123 University Ave, Research Building",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@cmplab.edu"
+    },
+    "footer-note": "© 2024 Computational Multiphysics Research Lab. All rights reserved."
+  }
+}

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .mission-vision-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 20px;
+        background-color: #fff;
+      }
+
+      .mission-vision-section .card {
+        flex: 1 1 400px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 30px;
+        max-width: 600px;
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+
+      .mission-vision-section .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .mission-vision-section h2 {
+        color: #1e2a5a; /* Dark blue */
+        margin-bottom: 15px;
+        font-size: 24px;
+      }
+
+      .mission-vision-section p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Responsive - small devices */
+      @media (max-width: 768px) {
+        .mission-vision-section {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .mission-vision-section .card {
+          width: 100%;
+          /* border: 2px solid red; */
+          text-align: center;
+        }
+      }
+      .values-section {
+        background-color: #f9fafb;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 37px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 10px;
+      }
+
+      .section-subtitle {
+        font-size: 20px;
+        color: #555;
+        margin: 30px 40px;
+      }
+
+      .values-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        margin-top: 50px;
+        /* border: 2px solid red; */
+      }
+
+      .value-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        padding: 40px;
+        flex: 1 1 220px;
+        max-width: 260px;
+        transition: transform 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .value-card h3 {
+        color: #1e2a5a;
+        margin-bottom: 12px;
+        font-size: 22px;
+      }
+
+      .value-card p {
+        font-size: 16px;
+        color: #333;
+        margin-top: 30px;
+        line-height: 1.5;
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        .values-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .value-card {
+          width: 100%;
+          max-width: 90%;
+        }
+      }
+
+      /* team start  */
+      .team-section {
+        padding: 60px 20px;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #0f172a;
+      }
+
+      .section-subtitle {
+        color: #555;
+        font-size: 18px;
+        margin: 10px 0 40px;
+      }
+
+      .team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .team-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        padding: 25px;
+        width: 100%;
+        max-width: 350px;
+        transition: transform 0.3s ease;
+      }
+
+      .team-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .team-photo {
+        width: 150px;
+        height: 150px;
+        background-color: #f3f3f3;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        object-fit: cover;
+      }
+
+      .team-card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0px;
+        color: #0f172a;
+      }
+
+      .badge {
+        background: #f1f5f9;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        color: #1e40af;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .degree,
+      .research {
+        font-size: 14px;
+        color: #374151;
+        margin: 10px 18px;
+        text-align: left;
+        line-height: 26px;
+      }
+
+      .team-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .team-icons a {
+        color: #0f172a;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      .team-icons a:hover {
+        color: #1d4ed8;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .team-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      /* team ends  */
+
+      /* journety starts  */
+
+      .journey-section {
+        padding: 60px 20px;
+        background-color: #f8fafc;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #0f172a;
+      }
+
+      .section-subtitle {
+        color: #475569;
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .timeline-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 20px 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateY(-3px);
+      }
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        background-color: #1e3a8a;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+        flex-shrink: 0;
+      }
+
+      .timeline-content {
+        text-align: left;
+      }
+
+      .year-tag {
+        display: inline-block;
+        border: 1px solid #1e3a8a;
+        border-radius: 20px;
+        padding: 2px 10px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        color: #1e3a8a;
+      }
+
+      .timeline-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 10px 0px;
+      }
+
+      .timeline-content p {
+        color: #475569;
+        font-size: 15px;
+        margin: 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .timeline-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .icon-circle {
+          margin-bottom: 10px;
+        }
+      }
+
+      /* journey ends  */
+
+      /* footer starts  */
+
+      .footer {
+        background-color: #0f172a;
+        color: #cbd5e1;
+        padding: 60px 20px 30px;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .footer-column {
+        flex: 1 1 260px;
+      }
+
+      .footer-column h3,
+      .footer-column h4 {
+        color: #ffffff;
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+      }
+
+      .footer-column p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      .footer-column ul li a {
+        color: #cbd5e1;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin-right: 14px;
+        font-size: 1.3rem;
+        color: #cbd5e1;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #ffffff;
+      }
+
+      .contact-info i {
+        margin-right: 8px;
+        color: #94a3b8;
+      }
+
+      hr {
+        margin: 40px auto 20px;
+        border: none;
+        border-top: 1px solid #334155;
+        max-width: 1200px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #94a3b8;
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .footer-column {
+          flex: 1 1 100%;
+        }
+
+        .footer {
+          padding: 50px 15px 20px;
+        }
+      }
+      /* footer ends  */
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <img
+          src="images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
+          alt=""
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        <span>CompMulti Lab</span>
+      </div>
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="navListul">
+        <li class="navItem">
+          <a href="/index.html">Home</a>
+        </li>
+        <li class="navItem">
+          <a href="/about.html" class="active">About</a>
+        </li>
+        <li class="navItem">
+          <a href="/publications.html">Publications</a>
+        </li>
+        <li class="navItem">
+          <a href="/research.html">Research</a>
+        </li>
+        <li class="navItem">
+          <a href="/blog.html">Blog</a>
+        </li>
+        <li class="navItem">
+          <a href="/openings.html">Openings</a>
+        </li>
+        <li class="navItem">
+          <a href="/courses.html">Courses</a>
+        </li>
+        <li class="navItem">
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </header>
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
+      </div>
+    </div>
+    <section class="mission-vision-section">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p id="mission-desc"></p>
+      </div>
+      <div class="card">
+        <h2>Our Vision</h2>
+        <p id="vision-desc"></p>
+      </div>
+    </section>
+    <section class="values-section">
+      <h2 class="section-title">Our Values</h2>
+      <p class="section-subtitle">
+        The principles that guide our research and shape our lab culture
+      </p>
+      <div class="values-grid" id="valuesgrid"></div>
+    </section>
+    <section class="team-section">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">
+        Meet the talented researchers driving innovation in computational
+        multiphysics
+      </p>
+      <div class="team-grid" id="team-grid"></div>
+    </section>
+    <section class="journey-section">
+      <h2 class="section-title">Our Journey</h2>
+      <p class="section-subtitle">
+        Key milestones in our lab's growth and achievements
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
+          <div class="timeline-content">
+            <span class="year-tag">2015</span>
+            <h3>Lab Foundation</h3>
+            <p>
+              Computational Multiphysics Research Lab established with initial
+              NSF funding
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
+          <div class="timeline-content">
+            <span class="year-tag">2017</span>
+            <h3>Major Grant Award</h3>
+            <p>Received $2.5M DOE grant for advanced simulation methods</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
+          <div class="timeline-content">
+            <span class="year-tag">2019</span>
+            <h3>International Recognition</h3>
+            <p>
+              Lab director awarded prestigious international research fellowship
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="contact-info"></ul>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+
+    <!-- navigation toggle starts -->
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".navListul");
+        menu.classList.toggle("active");
+      }
+    </script>
+    <!-- navigation toggle ends -->
+    <!-- on load -->
+    <script>
+      async function loadAbout() {
+        try {
+          const res = await fetch("about.json");
+          const data = await res.json();
+
+          // Ribbon
+          document.querySelector(".ribbon-title").textContent =
+            data.ribbon.title;
+          document.querySelector(".ribbon-desc").textContent =
+            data.ribbon.description;
+
+          //mission-vision
+          const missiondesc = document.getElementById("mission-desc");
+          missiondesc.textContent = data.mission.description;
+          const visiondesc = document.getElementById("vision-desc");
+          visiondesc.textContent = data.vision.description;
+
+          //value-card
+          data.values.forEach((val) => {
+            console.log(val);
+            const valuesgrid = document.getElementById("valuesgrid");
+            const valuecard = document.createElement("div");
+            valuecard.className = "value-card";
+            const valuecardh3 = document.createElement("h3");
+            const valuecardp = document.createElement("p");
+            valuecardh3.textContent = val.value.title;
+            valuecardp.textContent = val.value.description;
+            valuecard.appendChild(valuecardh3);
+            valuecard.appendChild(valuecardp);
+            valuesgrid.appendChild(valuecard);
+          });
+
+          //team card
+          const teamgrid = document.getElementById("team-grid");
+          data.teams.forEach((team) => {
+            const teamcard = document.createElement("div");
+            teamcard.className = "team-card";
+            const teamimg = document.createElement("img");
+            teamimg.src = team.src;
+            teamimg.alt = team.name;
+            teamimg.className = "team-photo";
+            const teamcardh3 = document.createElement("h3");
+            teamcardh3.textContent = team.name;
+            const teamspan = document.createElement("span");
+            teamspan.className = "badge";
+            teamspan.textContent = team.role;
+            const teamp = document.createElement("p");
+            teamp.className = "degree";
+            teamp.innerHTML = `<i class="fas fa-graduation-cap"></i> ${team.designation}`;
+            const team2p = document.createElement("p");
+            team2p.className = "research";
+            team2p.innerHTML = `<i class="fas fa-award"></i> ${team.subject}`;
+            const teamicondiv = document.createElement("div");
+            teamicondiv.className = "team-icons";
+            teamicondiv.innerHTML = `
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>`;
+            teamcard.appendChild(teamimg);
+            teamcard.appendChild(teamcardh3);
+            teamcard.appendChild(teamspan);
+            teamcard.appendChild(teamp);
+            teamcard.appendChild(team2p);
+            teamcard.appendChild(teamicondiv);
+            teamgrid.appendChild(teamcard);
+          });
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+
+      // Call on load
+      document.addEventListener("DOMContentLoaded", loadAbout);
+    </script>
+    <!-- onload ends  -->
+  </body>
+</html>
