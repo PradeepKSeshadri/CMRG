@@ -4,15 +4,625 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computational Multiphysics Lab</title>
-    <!-- Bootstrap  -->
+    <!-- Bootstrap for carousal starts -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <!-- Bootstrap  -->
+    <!-- Bootstrap for carousal ends -->
+    <!-- style sheet starts  -->
     <link rel="stylesheet" href="style.css" />
+    <!-- style sheet ends  -->
+    <style>
+      /* stat box starts  */
+      .container {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        /* border:2px solid red; */
+        margin-top: 50px;
+      }
+
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* center in container */
+        gap: 4rem;
+        max-width: 1100px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .stat-box {
+        flex: 1 1 200px;
+        padding: 1.5rem;
+        background-color: #f9fafb;
+        /* border-radius: 12px; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        min-width: 180px;
+        border-bottom: 2px solid rgb(7, 7, 56);
+      }
+
+      .stat-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-box h2 {
+        color: #0f172a;
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .stat-box p {
+        margin-top: 0.5rem;
+        color: #555;
+        font-size: 1rem;
+      }
+
+      /* ----------------- Responsive Breakpoints ----------------- */
+
+      @media (max-width: 768px) {
+        .container {
+          margin-top: 20px;
+        }
+        .stats {
+          justify-content: center;
+          gap: 1.5rem;
+        }
+
+        .stat-box {
+          flex: 1 1 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          margin-top: 20px;
+        }
+        .stat-box {
+          flex: 1 1 100%;
+        }
+
+        .stat-box h2 {
+          font-size: 2rem;
+        }
+
+        .stat-box p {
+          font-size: 0.95rem;
+        }
+      }
+
+      /* stat box ends  */
+      /* why starts  */
+      .why-choose-section {
+        text-align: center;
+        padding: 60px 20px;
+        margin-top: 50px;
+      }
+
+      .why-choose-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .why-choose-section p {
+        font-size: 1rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        color: #666;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
+        padding: 30px 20px;
+        width: 280px;
+        text-align: center;
+        border-radius: 5px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+      }
+
+      .icon {
+        font-size: 40px;
+        background-color: #1f3b8f;
+        color: white;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .card p {
+        color: #555;
+        font-size: 0.95rem;
+      }
+      @media (max-width: 600px) {
+        .card {
+          width: 90%;
+        }
+      }
+      /* why ends  */
+      /* research starts  */
+      .research-section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .research-section-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .research-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .research-section p {
+        color: #64748b;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-inline: auto;
+        font-size: 1rem;
+      }
+
+      .research-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .research-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 12px;
+        padding: 30px 20px;
+        width: 260px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .research-card:hover {
+        transform: translateY(-6px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+      }
+
+      .icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      .research-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+
+      .research-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+      }
+
+      .btn-view {
+        display: inline-block;
+        background: #1e293b;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+        border: 2px solid #1e293b;
+      }
+
+      .btn-view:hover {
+        background: white;
+        border: 2px solid #1e293b;
+        color:#1e293b;;
+      }
+
+      @media (max-width: 768px) {
+        .research-card {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+      /* research ends  */
+      /* join our community starts*/
+      .join-section {
+        /* background-color: var(--main-color); */
+                background: linear-gradient(305deg, #1e293b, #475569);
+
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .join-section-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .join-section h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      .join-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        min-width: 150px;
+        text-align: center;
+      }
+
+      .btn.primary {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+      }
+
+      .btn.primary:hover {
+        background-color: white;
+        color: #0f172a;
+      }
+
+      .btn.secondary {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+      }
+
+      .btn.secondary:hover {
+        background-color: white;
+        color: #0f172a;
+      }
+
+      @media (max-width: 500px) {
+        .btn {
+          width: 100%;
+        }
+      }
+      /* join our community ends*/
+
+      /* footer starts  */
+      .footer {
+        /* background-color: #0f172a; */
+                background: linear-gradient(to right, #1e293b, #475569);
+
+        color: #cbd5e1;
+        padding: 60px 20px 30px;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .footer-column {
+        flex: 1 1 260px;
+      }
+
+      .footer-column h3,
+      .footer-column h4 {
+        color: #ffffff;
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+      }
+
+      .footer-column p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      .footer-column ul li a {
+        color: #cbd5e1;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin-right: 14px;
+        font-size: 1.3rem;
+        color: #cbd5e1;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #ffffff;
+      }
+
+      .contact-info i {
+        margin-right: 8px;
+        color: #94a3b8;
+      }
+
+      hr {
+        margin: 40px auto 20px;
+        border: none;
+        border-top: 1px solid #334155;
+        max-width: 1200px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #94a3b8;
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .footer-column {
+          flex: 1 1 100%;
+        }
+
+        .footer {
+          padding: 50px 15px 20px;
+        }
+      }
+
+      .card-header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        border: 2px solid red;
+      }
+
+      .card-title {
+        flex: 1;
+        min-width: 200px;
+        box-sizing: border-box;
+      }
+
+      .labels {
+        align-self: flex-start;
+        min-width: 100px;
+        text-align: right;
+      }
+      /* footer ends  */
+
+      /* hero section starts  */
+      .hero {
+        padding: 80px 20px;
+        background: linear-gradient(to right, #1e293b, #475569);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1300px;
+        margin: 0 auto;
+        gap: 40px;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      .hero-content {
+        flex: 1 1 500px;
+        animation: slideInLeft 1s ease forwards;
+      }
+
+      .hero-content .tagline {
+        display: inline-block;
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 6px 18px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        opacity: 0.8;
+      }
+
+      .hero-content h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        color: #cbd5e1;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-align: center;
+        min-width: 140px;
+      }
+
+      .btn.primary {
+        background-color: white;
+        color: rgb(0, 0, 0);
+      }
+
+      .btn.primary:hover {
+        background-color: #232e41;
+        color: white;
+      }
+
+      .btn.secondary {
+        border: 1.5px solid white;
+        color: white;
+      }
+
+      .btn.secondary:hover {
+        background-color: white;
+        color: #0f172a;
+      }
+
+      .hero-image {
+        flex: 1 1 500px;
+        animation: slideInRight 1.2s ease forwards;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Animations */
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-content p {
+          font-size: 0.95rem;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+      }
+      /* hero section ends  */
+
+      /* atom starts  */
+      .atom-3d-section {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin-top: 40px;
+  }
+
+  #atom-model {
+    width: 100%;
+    height: 100%;
+  }
+    </style>
   </head>
   <body>
     <header>
@@ -26,200 +636,302 @@
         />
         <span>CompMulti Lab</span>
       </div>
-        <ul class="navListul">
-          <li class="navItem">
-            <a href="#">Home</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Research</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Team</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Courses</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Blog</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Openings</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Publications</a>
-          </li>
-          <li class="navItem">
-            <a href="#">Contact</a>
-          </li>
-        </ul>
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="navListul">
+        <li class="navItem">
+          <a href="/index.html" class="active">Home</a>
+        </li>
+        <li class="navItem">
+          <a href="/about.html">About</a>
+        </li>
+        <li class="navItem">
+          <a href="/publications.html">Publications</a>
+        </li>
+        <li class="navItem">
+          <a href="/research.html">Research</a>
+        </li>
+        <li class="navItem">
+          <a href="/blog.html">Blog</a>
+        </li>
+        <li class="navItem">
+          <a href="/openings.html">Openings</a>
+        </li>
+        <li class="navItem">
+          <a href="/courses.html">Courses</a>
+        </li>
+        <li class="navItem">
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>
     </header>
-    <section class="hero">
-      <!-- <div class="mask">
-      </div>
-      <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="3000"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="images/abstract-technology-background.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="images/abstract-technology-background.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div> -->
-    <div class="left">
-      <div class="content">
-        <h1>"Where Physics Powers Innovation"</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut earum perferendis adipisci repellendus, deleniti optio tempora beatae corporis? Ipsum natus ab esse molestias vero sed tenetur repellat suscipit, deleniti, eveniet unde inventore qui sequi necessitatibus, officiis corporis dolorum! Itaque suscipit tempore accusamus voluptates repellendus. Fugiat accusamus, autem iusto iure, cumque perferendis atque excepturi, est at harum amet magni voluptates illo aliquid explicabo facere veniam quia libero beatae culpa quasi pariatur!</p>
-        <button class="explore">Explore Now</button>
-        <button class="explore1">Explore Now</button>
-    </div>
-    </div>
-    <div class="right">
-      
-      <!-- <img class="right-img" src="/images/abstract-technology-background.jpg" alt=""> -->
-      <div
-      id="carouselExampleIndicators"
-      class="carousel slide right-img"
-      data-bs-ride="carousel"
-      data-bs-interval="3000"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="images/abstract-technology-background.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="images/abstract-technology-background.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="images/abstract-technology-background.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    </div>
-    </section>
-    
-    
 
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="tagline">Advancing Computation</span>
+          <h1>"Where Physics Powers Innovation"</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit officiis, nemo repudiandae! Fugiat accusamus tempore
+            cumque saepe minus blanditiis? Eligendi earum repellat numquam
+            accusantium, perspiciatis culpa provident.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn primary">Explore Now</a>
+            <a href="#" class="btn secondary">Explore Now</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="/images/abstract-technology-background.jpg"
+            alt="Physics Visual"
+          />
+          <!-- <section class="atom-3d-section">
+  <div id="atom-model"></div> -->
+</section>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stats">
+        <div class="stat-box">
+          <h2 id="total-publications">12+</h2>
+          <p>Total Publications</p>
+        </div>
+        <div class="stat-box">
+          <h2 id="total-citations">30</h2>
+          <p>Total Citations</p>
+        </div>
+        <div class="stat-box">
+          <h2 id="h-index">22</h2>
+          <p>H-Index</p>
+        </div>
+        <div class="stat-box">
+          <h2 id="total-journals">14</h2>
+          <p>Journals</p>
+        </div>
+      </div>
+    </div>
+    <section class="why-choose-section">
+      <div class="why-choose-section-container">
+        <h2>Why Choose Our Lab</h2>
+        <p>
+          We combine cutting-edge research with practical applications to solve
+          complex engineering and scientific challenges.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">🎖️</div>
+            <h3>Excellence in Research</h3>
+            <p>Over 150+ peer-reviewed publications in top-tier journals</p>
+          </div>
+          <div class="card">
+            <div class="icon">👥</div>
+            <h3>Expert Team</h3>
+            <p>15+ researchers specializing in computational sciences</p>
+          </div>
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3>Open Source</h3>
+            <p>
+              Contributing to the scientific community with open-source tools
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <div class="research-section-container">
+        <h2>Research Areas</h2>
+        <p>
+          Our multidisciplinary approach spans various domains of computational
+          physics and engineering.
+        </p>
+
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="icon">🌊</div>
+            <h3>Fluid Dynamics</h3>
+            <p>Advanced CFD simulations for complex flow phenomena</p>
+          </div>
+          <div class="research-card">
+            <div class="icon">🏗️</div>
+            <h3>Structural Mechanics</h3>
+            <p>
+              Computational methods for material behavior and failure analysis
+            </p>
+          </div>
+          <div class="research-card">
+            <div class="icon">🔥</div>
+            <h3>Heat Transfer</h3>
+            <p>Thermal analysis and heat exchange optimization</p>
+          </div>
+          <div class="research-card">
+            <div class="icon">⚡</div>
+            <h3>Electromagnetics</h3>
+            <p>Electromagnetic field simulations and wave propagation</p>
+          </div>
+        </div>
+
+        <a href="#" class="btn-view">View All Research →</a>
+      </div>
+    </section>
+
+    <section class="join-section">
+      <div class="join-section-container">
+        <h2>Join Our Research Community</h2>
+        <p>
+          We're always looking for talented researchers, students, and
+          collaborators to join our mission of advancing computational science.
+        </p>
+        <div class="buttons">
+          <a href="#" class="btn primary">View Openings</a>
+          <a href="#" class="btn secondary">View Openings</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3>Computa</h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Research</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="contact-info"></ul>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+
+    <!-- Bootstrap carousal starts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- Bootstrap carousal ends  -->
 
-    <footer>
-      &copy; 2025 Computational Multiphysics Lab. All rights reserved.
-    </footer>
+    <!-- navbar toggle starts  -->
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".navListul");
+        menu.classList.toggle("active");
+      }
+    </script>
+    <!-- navbar toggle ends  -->
+
+    <!-- atom starts  -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+
+<script>
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / 400,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(window.innerWidth, 400);
+  document.getElementById("atom-model").appendChild(renderer.domElement);
+
+  // Atom nucleus (sphere)
+  const nucleusGeometry = new THREE.SphereGeometry(1, 32, 32);
+  const nucleusMaterial = new THREE.MeshStandardMaterial({ color: 0xff4444 });
+  const nucleus = new THREE.Mesh(nucleusGeometry, nucleusMaterial);
+  scene.add(nucleus);
+
+  // Electron Orbits (torus)
+  const orbits = [];
+  const orbitMaterial = new THREE.MeshBasicMaterial({ color: 0x00ccff, wireframe: true });
+  const radii = [2.5, 2.5, 2.5];
+  const rotations = [ [1,0,0], [0,1,0], [1,1,0] ];
+
+  for (let i = 0; i < 3; i++) {
+    const torus = new THREE.Mesh(
+      new THREE.TorusGeometry(radii[i], 0.02, 16, 100),
+      orbitMaterial
+    );
+    torus.rotation.set(...rotations[i]);
+    scene.add(torus);
+    orbits.push(torus);
+  }
+
+  // Electrons (small spheres)
+  const electronGeometry = new THREE.SphereGeometry(0.1, 16, 16);
+  const electronMaterial = new THREE.MeshStandardMaterial({ color: 0x00ccff });
+  const electrons = [
+    new THREE.Mesh(electronGeometry, electronMaterial),
+    new THREE.Mesh(electronGeometry, electronMaterial),
+    new THREE.Mesh(electronGeometry, electronMaterial)
+  ];
+  electrons.forEach(e => scene.add(e));
+
+  const light = new THREE.PointLight(0xffffff, 1);
+  light.position.set(5, 5, 5);
+  scene.add(light);
+
+  camera.position.z = 6;
+
+  // Animation loop
+  function animate(time) {
+    requestAnimationFrame(animate);
+
+    electrons[0].position.set(
+      2.5 * Math.cos(time * 0.002),
+      2.5 * Math.sin(time * 0.002),
+      0
+    );
+    electrons[1].position.set(
+      2.5 * Math.cos(time * 0.002 + Math.PI / 2),
+      0,
+      2.5 * Math.sin(time * 0.002 + Math.PI / 2)
+    );
+    electrons[2].position.set(
+      0,
+      2.5 * Math.cos(time * 0.002 + Math.PI),
+      2.5 * Math.sin(time * 0.002 + Math.PI)
+    );
+
+    nucleus.rotation.y += 0.005;
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  // Responsive resize
+  window.addEventListener("resize", () => {
+    camera.aspect = window.innerWidth / 400;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, 400);
+  });
+</script>
   </body>
 </html>
