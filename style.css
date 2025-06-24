@@ -251,7 +251,7 @@ header {
   font-size: 1.3rem;
   color: var(--text-light);
   transition: color 0.3s;
-  border:2px solid red;
+  /* border:2px solid red; */
 }
 
 .social-icons a:hover {
@@ -289,7 +289,7 @@ hr {
 
   .footer {
     padding: 50px 10px;
-    border:2px solid red;
+    /* border:2px solid red; */
   }
 }
 /* footer ends  */

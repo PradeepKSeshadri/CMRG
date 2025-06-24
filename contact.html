@@ -8,6 +8,12 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <style>
+      :root {
+        /* --main-color:#0f172a; */
+        --main-color: linear-gradient(to right, rgb(0, 53, 78), rgb(61, 88, 105));
+        --text-light: rgb(255, 255, 255);
+        --text-dark: rgb(0, 0, 0);
+      }
       .contact-section {
         padding: 60px 20px;
         background-color: #f9fafb;
@@ -79,6 +85,7 @@
         background-color: #f8fafc;
         padding: 30px;
         border-radius: 12px;
+        /* border:2px solid red; */
       }
       .contact-form label {
         font-size: 0.95rem;
@@ -109,7 +116,7 @@
         font-size: 0.85rem;
       }
       .contact-form button {
-        background-color: #1e293b;
+        background: var(--main-color);
         color: #ffffff;
         border: none;
         padding: 12px 24px;
@@ -119,12 +126,29 @@
         transition: background-color 0.3s ease;
       }
       .contact-form button:hover {
-        background-color: #1e293b;
+        background: var(--text-dark);
       }
       @media (max-width: 768px) {
         .contact-container {
           flex-direction: column;
         }
+        .contact-container{
+          padding:15px;
+        }
+        .form-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+        .checkbox{
+          /* width: 100%; */
+          /* border:2px solid red; */
+          display: flex;
+        }
+        
       }
     </style>
 </head>
@@ -182,16 +206,10 @@
           </div>
           <div class="social-links">
             <span>Follow us:</span>
-            <a id="github-link"
-              ><img src="/images/github.svg" alt="GitHub"
-            /></a>
-            <a id="linkedin-link"
-              ><img src="/images/linkedin.svg" alt="LinkedIn"
-            /></a>
-            <a id="twitter-link"><img src="/images/twitter.svg" alt="X" /></a>
-            <a id="instagram-link"
-              ><img src="images/instagram.svg" alt="Instagram"
-            /></a>
+            <a id="github-link"><img src="images/github.svg" alt="GitHub"/></a>
+            <a id="linkedin-link"><img src="images/linkedin.svg" alt="LinkedIn"/></a>
+            <a id="twitter-link"><img src="images/twitter.svg" alt="X" /></a>
+            <a id="instagram-link"><img src="images/instagram.svg" alt="Instagram"/></a>
           </div>
         </div>
         <form class="contact-form" action="" method="POST">
