@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Computational Fluid Dynamics",
+    "subtitle": "Advanced numerical methods for fluid flow simulations",
+    "icon": "🌊",
+    "overview": "Our CFD research focuses on developing next-generation numerical algorithms for complex fluid flow phenomena, including turbulence modeling, multiphase flows, and reactive flows. We work on both fundamental method development and practical applications in aerospace, automotive, and energy industries.",
+    "publicationCount": 45,
+    "currentProjects": [
+      "Turbulence Modeling for Hypersonic Flows",
+      "Multiphase Flow in Porous Media",
+      "Reactive Flow Simulations",
+      "High-Order Numerical Methods"
+    ],
+    "tools": [
+      "OpenFOAM",
+      "ANSYS Fluent",
+      "Custom Solvers"
+    ],
+    "impact": [
+      "45 peer-reviewed publications",
+      "Multiple industry collaborations",
+      "Open-source software contributions"
+    ]
+  },
+  {
+    "title": "Bio-Immmmmnspired Robotics",
+    "subtitle": "Designing terrain-adaptive robots based on nature",
+    "icon": "🤖",
+    "overview": "This project explores legged robotics inspired by insects and animals to navigate complex terrain. Applications include disaster recovery, agriculture, and autonomous exploration.",
+    "publicationCount": 30,
+    "currentProjects": [
+      "Quadruped Robot Gait Optimization",
+      "Bio-Inspired Sensor Integration",
+      "Energy-Efficient Motor Control"
+    ],
+    "tools": [
+      "ROS",
+      "Gazebo",
+      "Custom Embedded Boards"
+    ],
+    "impact": [
+      "30+ international conference papers",
+      "Cross-institute collaborations",
+      "Open-source robotics libraries"
+    ]
+  }
+]

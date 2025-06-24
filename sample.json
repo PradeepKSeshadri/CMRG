@@ -1,68 +1,116 @@
-[
-  {
-    "title": "Chordwise flexible aft-tail suppresses jet-switching by reinstating wake periodicity in a flapping foil",
-    "authors": "Chhote Lal Shah, Dipanjan Majumdar, Chandan Bose , Sunetra Sarkar",
-    "year": "2022",
-    "citations": "",
-    "category": "Journal",
-    "publicationTitle": "Journal of Fluid Mechanics",
-    "description": "The effect of a chord-wise flexible aft-tail of a rigid heaving airfoil on the dynamical transitions of the trailing-wake is studied here. The two-way coupled fluid-solid dynamics is simulated using an in-house Fluid-Structure Interaction (FSI) platform, comprising of a discrete forcing Immersed Boundary Method based incompressible Navier-Stokes solver weakly coupled with a finite difference method based structural solver. The FSI dynamics is studied in comparison to its corresponding rigid tail configuration. It is obeserved that the flexible tail regularizes the flow-field and supresses the jet-switching phenomenon by reinstating the wake periodicity. The underlying flow-field behaviour, instrumental in suppressing the jet-switching phenomenon, is identified through a detailed investigation of the near-field vortices dictated by the dynamics.",
-    "doi": "10.1234/example.doi----",
-    "tags":["Machine Learning---","Artificial Intelligence---"]
-  },
-  {
-    "title": "Quantum Computing for ABC",
-    "authors": "Alice Johnson",
-    "year": "2024",
-    "citations": "89",
-    "category": "Quantum",
-    "publicationTitle": "Quantum Journal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores tenetur quae enim praesentium voluptatibus odit, ex cum quod corrupti facere natus iusto voluptatum earum quidem sed autem, excepturi voluptate.",
-    "doi": "10.5678/example.qc",
-    "tags":["Machine Learning","Full Stack Development","Data Science"]
-  },
-  {
-    "title": "Deep Learning for XYZ ernvaioeurnv r9jevhiua er8hv ujo wrhv",
-    "authors": "John Doe, Jane Smith",
-    "year": "2023",
-    "citations": "145",
-    "category": "AI",
-    "publicationTitle": "Journal of AI Research",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores tenetur quae enim praesentium voluptatibus odit, ex cum quod corrupti facere natus iusto voluptatum earum quidem sed autem, excepturi voluptate.",
-    "doi": "10.1234/example.doi",
-    "tags":["Machine Learning","Artificial Intelligence"]
-  },
-  {
-    "title": "Quantum Computing for ABC",
-    "authors": "Alice Johnson",
-    "year": "2024",
-    "citations": "89",
-    "category": "Quantum",
-    "publicationTitle": "Quantum Journal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores tenetur quae enim praesentium voluptatibus odit, ex cum quod corrupti facere natus iusto voluptatum earum quidem sed autem, excepturi voluptate.",
-    "doi": "10.5678/example.qc",
-    "tags":["Machine Learning","Full Stack Development","Data Science"]
-  },
-  {
-    "title": "Deep Learning for XYZ ernvaioeurnv r9jevhiua er8hv ujo wrhv",
-    "authors": "John Doe, Jane Smith",
-    "year": "2023",
-    "citations": "145",
-    "category": "AI",
-    "publicationTitle": "Journal of AI Research",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores tenetur quae enim praesentium voluptatibus odit, ex cum quod corrupti facere natus iusto voluptatum earum quidem sed autem, excepturi voluptate.",
-    "doi": "10.1234/example.doi",
-    "tags":["Machine Learning","Artificial Intelligence"]
-  },
-  {
-    "title": "Quantum Computing for ABC",
-    "authors": "Alice Johnson",
-    "year": "2024",
-    "citations": "89",
-    "category": "Quantum",
-    "publicationTitle": "Quantum Journal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores tenetur quae enim praesentium voluptatibus odit, ex cum quod corrupti facere natus iusto voluptatum earum quidem sed autem, excepturi voluptate.",
-    "doi": "10.5678/example.qc",
-    "tags":["Machine Learning","Full Stack Development","Data Science"]
-  }
-]
+{
+  "assistant": [
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    }
+  ],
+  "graduate": [
+    {
+      "title": "Autonomous Vehicle Research",
+      "subtitle": "Navigation, sensing, and control systems",
+      "icon": "🚗",
+      "overview": "Graduate researchers work on sensors, control algorithms, and real-time processing for AVs.",
+      "publicationCount": 20,
+      "currentProjects": [
+        "LIDAR Sensor Fusion",
+        "Path Planning Algorithms",
+        "Real-Time Obstacle Detection"
+      ],
+      "tools": ["ROS", "MATLAB", "Python"],
+      "impact": [
+        "20 papers",
+        "University-Industry project",
+        "National conference awards"
+      ]
+    }
+  ],
+  "undergraduate": [
+    {
+      "title": "Smart Irrigation Systems",
+      "subtitle": "IoT-based water management",
+      "icon": "💧",
+      "overview": "Undergraduates contribute to IoT-based irrigation using sensors, control valves, and mobile dashboards.",
+      "publicationCount": 10,
+      "currentProjects": [
+        "Soil Moisture Sensing",
+        "Water Pump Automation",
+        "Remote Monitoring App"
+      ],
+      "tools": ["Arduino", "NodeMCU", "Blynk"],
+      "impact": [
+        "Prototype tested on farms",
+        "Smart India Hackathon finalist",
+        "Featured in student expo"
+      ]
+    }
+  ]
+}

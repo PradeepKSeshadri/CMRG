@@ -1,6 +1,19 @@
 :root {
-  /* --main-color:#0f172a; */
-  --main-color: linear-gradient(to right, rgb(0, 53, 78), rgb(61, 88, 105));
+  --main-color: linear-gradient(to right, rgb(49, 27, 101), rgb(24, 23, 94));
+  --main-color: linear-gradient(135deg, #1e3c72, #2a5298, #8e44ad);
+  --main-color: linear-gradient(135deg, #654ea3, #eaafc8, #00c6ff);
+--main-color: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+--main-color: linear-gradient(135deg, #bdc3c7, #2c3e50);
+--main-color: linear-gradient(135deg, #4b6cb7, #182848);
+--main-color:#3a4b68;
+/* --main-color: linear-gradient(135deg, #7F7FD5, #86A8E7, #91EAE4); */
+/* --main-color: linear-gradient(135deg, #2c3e50, #4ca1af); */
+/* primary - 0B3D91 */
+/* secondary - 1F77B4 */
+/* ASCEBNT - 15759px */
+/* BG - F8F9A */
+/* TEXT - 212529 */
+
   --text-light: rgb(255, 255, 255);
   --text-dark: rgb(0, 0, 0);
 }
@@ -30,7 +43,6 @@ html {
 /* header starts  */
 header {
   background: var(--main-color);
-  /* background: linear-gradient(to right, #1e293b, #475569); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -191,7 +203,6 @@ header {
 /* footer starts  */
 .footer {
   background: var(--main-color);
-  /* background: linear-gradient(to right, #1e293b, #475569); */
   color: var(--text-light);
   padding: 60px 20px 30px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -202,13 +213,11 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* border:2px solid red; */
   gap: 40px;
 }
 
 .footer-column {
   text-align: center;
-  /* border:2px solid red; */
   flex: 1 1 260px;
 }
 

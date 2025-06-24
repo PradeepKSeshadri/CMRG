@@ -3,35 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research Projects by Role</title>
+  <title>Research Projects</title>
+
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
       background: #f9f9fb;
       margin: 0;
       padding: 0;
-    }
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem;
-    }
-
-    .button-group button {
-      padding: 0.6rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #2a68d4;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .button-group button.active {
-      background-color: #174ca6;
     }
 
     #projects-container {
@@ -170,56 +149,63 @@
         flex: 1 1 100%;
       }
     }
-
     @media (max-width: 468px) {
-      .research-card {
-        padding: 1.5rem 1rem;
-        border-radius: 12px;
-      }
+  .research-card {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
 
-      .title-area {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .title-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-      .badge {
-        margin-left: 0;
-        margin-top: 0.5rem;
-      }
+  .badge {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
 
-      .research-title {
-        font-size: 1.2rem;
-      }
+  .research-title {
+    font-size: 1.2rem;
+  }
 
-      .subtitle {
-        font-size: 0.85rem;
-      }
+  .subtitle {
+    font-size: 0.85rem;
+  }
 
-      .section h4 {
-        font-size: 0.95rem;
-      }
+  .section h4 {
+    font-size: 0.95rem;
+  }
 
-      .tools-list span,
-      .badge {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.6rem;
-      }
+  .tools-list span,
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
 
-      .icon-square {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-      }
-    }
+  .tools-list {
+    gap: 0.4rem;
+  }
+
+  .impact-box {
+    padding: 0.8rem;
+  }
+
+  .impact-box ul,
+  .projects-list {
+    font-size: 0.9rem;
+  }
+
+  .icon-square {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
   </style>
 </head>
 <body>
-
-  <div class="button-group">
-    <button class="active" onclick="loadResearch('assistant', this)">Assistant</button>
-    <button onclick="loadResearch('graduate', this)">Graduate</button>
-    <button onclick="loadResearch('undergraduate', this)">Undergraduate</button>
-  </div>
 
   <div id="projects-container"></div>
 
@@ -229,15 +215,17 @@
         <div class="title-area">
           <div class="icon-square">🔬</div>
           <div>
-            <h2 class="research-title">Title</h2>
-            <p class="subtitle">Subtitle</p>
+            <h2 class="research-title">Title Here</h2>
+            <p class="subtitle">Subtitle goes here</p>
           </div>
           <span class="badge publication-count">0 Publications</span>
         </div>
+
         <div class="section">
           <h4>Overview</h4>
-          <p class="overview-text">Overview content</p>
+          <p class="overview-text">Overview text...</p>
         </div>
+
         <div class="section">
           <h4>Current Projects</h4>
           <ul class="projects-list"></ul>
@@ -249,6 +237,7 @@
           <h4>Tools & Software</h4>
           <div class="tools-list"></div>
         </div>
+
         <div class="section impact-box">
           <h4>Research Impact</h4>
           <ul class="impact-list"></ul>
@@ -258,57 +247,47 @@
   </template>
 
   <script>
-    let researchData;
+    fetch("sampleresearch.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("projects-container");
+        const template = document.getElementById("research-card-template");
 
-    function loadResearch(role, btn) {
-      // Highlight button
-      document.querySelectorAll(".button-group button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+        data.forEach(item => {
+          const clone = template.content.cloneNode(true);
 
-      const container = document.getElementById("projects-container");
-      container.innerHTML = ""; // Clear previous
+          clone.querySelector(".research-title").textContent = item.title;
+          clone.querySelector(".subtitle").textContent = item.subtitle;
+          clone.querySelector(".icon-square").textContent = item.icon;
+          clone.querySelector(".overview-text").textContent = item.overview;
+          clone.querySelector(".publication-count").textContent = `${item.publicationCount} Publications`;
 
-      const list = researchData[role];
-      const template = document.getElementById("research-card-template");
+          const projectList = clone.querySelector(".projects-list");
+          item.currentProjects.forEach(project => {
+            const li = document.createElement("li");
+            li.textContent = project;
+            projectList.appendChild(li);
+          });
 
-      list.forEach(item => {
-        const clone = template.content.cloneNode(true);
-        clone.querySelector(".research-title").textContent = item.title;
-        clone.querySelector(".subtitle").textContent = item.subtitle;
-        clone.querySelector(".icon-square").textContent = item.icon;
-        clone.querySelector(".overview-text").textContent = item.overview;
-        clone.querySelector(".publication-count").textContent = `${item.publicationCount} Publications`;
+          const toolsList = clone.querySelector(".tools-list");
+          item.tools.forEach(tool => {
+            const span = document.createElement("span");
+            span.textContent = tool;
+            toolsList.appendChild(span);
+          });
 
-        const projectList = clone.querySelector(".projects-list");
-        item.currentProjects.forEach(p => {
-          const li = document.createElement("li");
-          li.textContent = p;
-          projectList.appendChild(li);
+          const impactList = clone.querySelector(".impact-list");
+          item.impact.forEach(point => {
+            const li = document.createElement("li");
+            li.textContent = point;
+            impactList.appendChild(li);
+          });
+
+          container.appendChild(clone);
         });
-
-        const tools = clone.querySelector(".tools-list");
-        item.tools.forEach(t => {
-          const span = document.createElement("span");
-          span.textContent = t;
-          tools.appendChild(span);
-        });
-
-        const impact = clone.querySelector(".impact-list");
-        item.impact.forEach(i => {
-          const li = document.createElement("li");
-          li.textContent = i;
-          impact.appendChild(li);
-        });
-
-        container.appendChild(clone);
-      });
-    }
-
-    fetch("sample.json")
-      .then(res => res.json())
-      .then(json => {
-        researchData = json;
-        loadResearch("assistant", document.querySelector(".button-group button")); // Default
+      })
+      .catch(error => {
+        console.error("Failed to load research data:", error);
       });
   </script>
 </body>
