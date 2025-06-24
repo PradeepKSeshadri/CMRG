@@ -247,7 +247,7 @@
           <a href="publications.html">Publications</a>
         </li>
         <li class="navItem">
-          <a href="research.html">Research</a>
+          <a href="research.html" class="active">Research</a>
         </li>
         <li class="navItem">
           <a href="blog.html">Blog</a>
@@ -421,6 +421,10 @@
           document.querySelector(".footer-bottom").textContent =
             json.footer["footer-note"];
       });
+      function toggleMenu() {
+        const menu = document.querySelector(".navListul");
+        menu.classList.toggle("active");
+      }
   </script>
 </body>
 </html>

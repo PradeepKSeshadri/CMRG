@@ -703,13 +703,13 @@
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul class="navListul">
         <li class="navItem">
-          <a href="index.html" class="active">Home</a>
+          <a href="index.html">Home</a>
         </li>
         <li class="navItem">
           <a href="about.html">About</a>
         </li>
         <li class="navItem">
-          <a href="publications.html">Publications</a>
+          <a href="publications.html" class="active">Publications</a>
         </li>
         <li class="navItem">
           <a href="research.html">Research</a>
@@ -1101,6 +1101,12 @@
       }
 
       document.addEventListener("DOMContentLoaded", loadPublications);
+    </script>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".navListul");
+        menu.classList.toggle("active");
+      }
     </script>
   </body>
 </html>
