@@ -16,6 +16,146 @@
     <link rel="stylesheet" href="style.css" />
     <!-- style sheet ends  -->
     <style>
+      :root {
+        --primary:#012a5e;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: var(--secondary);
+      }
+      /* Complete Hero starts  */
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .hero {
+        height: 100vh;
+        background: linear-gradient(90deg, #011733, #012a5e, #0048a5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 10px;
+      }
+      .hero-content {
+        max-width: 700px;
+        text-align: center;
+      }
+      .hero-content h2 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        color: var(--text-light);
+        text-transform: uppercase;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        color: var(--text-light);
+      }
+
+      .btn {
+        background-color:var(--highlight);
+        color: var(--primary);
+        border: 2px solid var(--highlight);
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-align: center;
+        max-width: 140px;
+        z-index: 999;
+        outline: none;
+      }
+
+      .btn:hover {
+        color: var(--highlight);
+        background-color: transparent;
+        border: 2px solid var(--highlight);
+        outline: none;
+      }
+
+      .box div {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 3px solid rgba(197, 197, 197, 0.8);
+      }
+      .box div:nth-child(1) {
+        top: 25%;
+        left: 43%;
+        animation: animate 13s linear infinite;
+      }
+      .box div:nth-child(2) {
+        top: 70%;
+        left: 40%;
+        animation: animate 9s linear infinite;
+      }
+      .box div:nth-child(3) {
+        top: 17%;
+        left: 6%;
+        animation: animate 9s linear infinite;
+      }
+      .box div:nth-child(4) {
+        top: 35%;
+        left: 60%;
+        animation: animate 10s linear infinite;
+      }
+      .box div:nth-child(5) {
+        top: 67%;
+        left: 10%;
+        animation: animate 6s linear infinite;
+      }
+      .box div:nth-child(6) {
+        top: 75%;
+        left: 60%;
+        animation: animate 12s linear infinite;
+      }
+      .box div:nth-child(7) {
+        top: 80%;
+        left: 84%;
+        animation: animate 10s linear infinite;
+      }
+      .box div:nth-child(8) {
+        top: 32%;
+        left: 25%;
+        animation: animate 16s linear infinite;
+      }
+      .box div:nth-child(9) {
+        top: 90%;
+        left: 25%;
+        animation: animate 9s linear infinite;
+      }
+      .box div:nth-child(10) {
+        top: 20%;
+        left: 80%;
+        animation: animate 5s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+          transform: scale(0) translateY(0) rotate(0);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.3) translateY(-90px) rotate(360deg);
+          opacity: 1;
+        }
+      }
+      /* Complete Hero ends  */
+
       /* stat box starts  */
       .container {
         padding: 2rem;
@@ -39,7 +179,7 @@
       .stat-box {
         flex: 1 1 200px;
         padding: 1.5rem;
-        background-color: #f9fafb;
+        background-color: var(--text-light);
         /* border-radius: 12px; */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s ease;
@@ -247,7 +387,7 @@
       .btn-view:hover {
         background: white;
         border: 2px solid #1e293b;
-        color:#1e293b;;
+        color: #1e293b;
       }
 
       @media (max-width: 768px) {
@@ -260,8 +400,7 @@
       /* join our community starts*/
       .join-section {
         /* background-color: var(--main-color); */
-                background: linear-gradient(305deg, #1e293b, #475569);
-
+        background: linear-gradient(305deg, #1e293b, #475569);
         color: white;
         text-align: center;
         padding: 60px 20px;
@@ -332,8 +471,7 @@
       /* footer starts  */
       .footer {
         /* background-color: #0f172a; */
-                background: linear-gradient(to right, #1e293b, #475569);
-
+        background: linear-gradient(to right, #1e293b, #475569);
         color: #cbd5e1;
         padding: 60px 20px 30px;
         font-family: "Segoe UI", sans-serif;
@@ -452,221 +590,81 @@
         text-align: right;
       }
       /* footer ends  */
-
-      /* hero section starts  */
-      .hero {
-        padding: 80px 20px;
-        background: linear-gradient(to right, #1e293b, #475569);
-        color: white;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1300px;
-        margin: 0 auto;
-        gap: 40px;
-        animation: fadeInUp 1s ease forwards;
-      }
-
-      .hero-content {
-        flex: 1 1 500px;
-        animation: slideInLeft 1s ease forwards;
-      }
-
-      .hero-content .tagline {
-        display: inline-block;
-        background: transparent;
-        border: 1px solid #fff;
-        padding: 6px 18px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        margin-bottom: 20px;
-        opacity: 0.8;
-      }
-
-      .hero-content h1 {
-        font-size: 2.8rem;
-        font-weight: 800;
-        margin-bottom: 20px;
-        line-height: 1.2;
-      }
-
-      .hero-content p {
-        font-size: 1rem;
-        line-height: 1.7;
-        margin-bottom: 30px;
-        color: #cbd5e1;
-      }
-
-      .hero-buttons {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-
-      .btn {
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        text-align: center;
-        min-width: 140px;
-      }
-
-      .btn.primary {
-        background-color: white;
-        color: rgb(0, 0, 0);
-      }
-
-      .btn.primary:hover {
-        background-color: #232e41;
-        color: white;
-      }
-
-      .btn.secondary {
-        border: 1.5px solid white;
-        color: white;
-      }
-
-      .btn.secondary:hover {
-        background-color: white;
-        color: #0f172a;
-      }
-
-      .hero-image {
-        flex: 1 1 500px;
-        animation: slideInRight 1.2s ease forwards;
-      }
-
-      .hero-image img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      }
-
-      /* Animations */
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slideInRight {
-        from {
-          opacity: 0;
-          transform: translateX(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .hero-container {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .hero-content h1 {
-          font-size: 2.2rem;
-        }
-
-        .hero-content p {
-          font-size: 0.95rem;
-        }
-
-        .hero-buttons {
-          justify-content: center;
-        }
-      }
-      /* hero section ends  */
-
-      /* atom starts  */
-      .atom-3d-section {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    margin-top: 40px;
-  }
-
-  #atom-model {
-    width: 100%;
-    height: 100%;
-  }
     </style>
   </head>
   <body>
+    <!--Complete Header Starts-->
     <header>
-      <div id="logo">
-        <img
-          src="images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
-          alt=""
-          width="30"
-          height="24"
-          class="d-inline-block align-text-top"
-        />
-        <span>CompMulti Lab</span>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt="" /></div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Research</a>
+            <div class="dropdown-content">
+              <a href="#">Ongoing</a>
+              <a href="#">Past</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Publications</a>
+            <div class="dropdown-content">
+              <a href="publications.html">Journals</a>
+              <a href="#">Conferences</a>
+            </div>
+          </li>
+          <!-- <li><a href="#">Blog</a></li> -->
+          <li><a href="#">Opening</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <!-- Hamburger Icon -->
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <ul class="navListul">
-        <li class="navItem">
-          <a href="index.html" class="active">Home</a>
-        </li>
-        <li class="navItem">
-          <a href="about.html">About</a>
-        </li>
-        <li class="navItem">
-          <a href="publications.html">Publications</a>
-        </li>
-        <li class="navItem">
-          <a href="research.html">Research</a>
-        </li>
-        <li class="navItem">
-          <a href="blog.html">Blog</a>
-        </li>
-        <li class="navItem">
-          <a href="openings.html">Openings</a>
-        </li>
-        <li class="navItem">
-          <a href="courses.html">Courses</a>
-        </li>
-        <li class="navItem">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
     </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="past-projects.html">Past Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
 
-    <section class="hero">
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- Complete Header Ends  -->
+    <!-- <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
           <span class="tagline">Advancing Computation</span>
@@ -687,13 +685,36 @@
             src="/images/abstract-technology-background.jpg"
             alt="Physics Visual"
           />
-          <!-- <section class="atom-3d-section">
-  <div id="atom-model"></div> -->
-</section>
+    </section> -->
+    <!-- Complete hero starts  -->
+    <section class="hero">
+        <div class="hero-content">
+          <h2>"Where Physics Powers Innovation"</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit officiis, nemo repudiandae! Fugiat accusamus tempore
+            cumque saepe minus blanditiis? Eligendi earum repellat numquam
+            accusantium, perspiciatis culpa provident.
+          </p>
+          <div class="hero-button">
+            <a href="#" class="btn">Explore Now</a>
+          </div>
         </div>
-      </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
     </section>
 
+    <!-- Complete hero ends  -->
     <div class="container">
       <div class="stats">
         <div class="stat-box">
@@ -829,25 +850,40 @@
       <div class="footer-bottom"></div>
     </footer>
 
-    <!-- Bootstrap carousal starts -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap carousal ends  -->
-
-    <!-- navbar toggle starts  -->
     <script>
+      // Footer
+      const footer = data.footer;
+      document.querySelector(".about h3").textContent = footer.about.title;
+      document.querySelector(".about p").innerHTML = footer.about.description;
+
+      const socialLinks = document.querySelectorAll(".social-icons a");
+      socialLinks[0].href = footer.about.social.github;
+      socialLinks[1].href = footer.about.social.twitter;
+      socialLinks[2].href = footer.about.social.linkedin;
+
+      const quickLinks = document.querySelector(".footer-column ul");
+      quickLinks.innerHTML = "";
+      footer["quick-links"].forEach((link) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="#">${link}</a>`;
+        quickLinks.appendChild(li);
+      });
+
+      const contact = footer.contact;
+      const contactInfo = document.querySelector(".contact-info");
+      contactInfo.innerHTML = `
+        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
+        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
+        <li><i class="fas fa-envelope"></i>${contact.email}</li>
+      `;
+
+      document.querySelector(".footer-bottom").textContent =
+        footer["footer-note"];
       function toggleMenu() {
         const menu = document.querySelector(".navListul");
         menu.classList.toggle("active");
       }
     </script>
-    <!-- navbar toggle ends  -->
-
-    <!-- atom starts  -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-
+    
   </body>
 </html>

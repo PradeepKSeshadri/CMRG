@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      :root {
+        --primary: #012149;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #f9f9f9;
+      }
+
+      /* Complete Header Style Starts */
+header {
+  background-color: var(--primary);
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 200px;
+}
+.logo img {
+  width: 100%;
+}
+
+nav.desktop-nav {
+  display: flex;
+}
+
+nav.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav.desktop-nav li {
+  position: relative;
+}
+
+nav.desktop-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  font-size: 1rem;
+}
+
+nav.desktop-nav a:hover {
+  border-bottom: 2px solid var(--highlight);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary);
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+nav.desktop-nav li:hover > .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 0.6rem 1rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-light);
+  border-radius: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  max-width: 300px;
+  height: 100%;
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.sidebar .close-icon {
+  font-size: 26px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a,
+.sidebar ul li div {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 14px;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover,
+.sidebar ul li div:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.submenu {
+  display: none;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu li a {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+}
+
+.dropdown.open > .submenu {
+  display: block;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media (max-width: 858px) {
+  nav.desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .sidebar {
+    display: block;
+  }
+}
+
+/* Complete Header Style Ends  */
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt=""></div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Research</a>
+            <div class="dropdown-content">
+              <a href="#">Ongoing</a>
+              <a href="#">Past</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Publications</a>
+            <div class="dropdown-content">
+              <a href="publications.html">Journals</a>
+              <a href="#">Conferences</a>
+            </div>
+          </li>
+          <!-- <li><a href="#">Blog</a></li> -->
+          <li><a href="#">Opening</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="past-projects.html">Past Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

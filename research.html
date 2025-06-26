@@ -8,13 +8,6 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: #f9f9fb;
-      margin: 0;
-      padding: 0;
-    }
-
     .button-group {
       display: flex;
       justify-content: center;
@@ -223,46 +216,77 @@
 </head>
 <body>
 
-  <header>
-      <div id="logo">
-        <img
-          src="images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
-          alt=""
-          width="30"
-          height="24"
-          class="d-inline-block align-text-top"
-        />
-        <span>CompMulti Lab</span>
+  <!--Complete Header Starts-->
+    <header>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt=""></div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Research</a>
+            <div class="dropdown-content">
+              <a href="#">Ongoing</a>
+              <a href="#">Past</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Publications</a>
+            <div class="dropdown-content">
+              <a href="publications.html">Journals</a>
+              <a href="#">Conferences</a>
+            </div>
+          </li>
+          <!-- <li><a href="#">Blog</a></li> -->
+          <li><a href="#">Opening</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <!-- Hamburger Icon -->
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <ul class="navListul">
-        <li class="navItem">
-          <a href="index.html" class="active">Home</a>
-        </li>
-        <li class="navItem">
-          <a href="about.html">About</a>
-        </li>
-        <li class="navItem">
-          <a href="publications.html">Publications</a>
-        </li>
-        <li class="navItem">
-          <a href="research.html" class="active">Research</a>
-        </li>
-        <li class="navItem">
-          <a href="blog.html">Blog</a>
-        </li>
-        <li class="navItem">
-          <a href="openings.html">Openings</a>
-        </li>
-        <li class="navItem">
-          <a href="courses.html">Courses</a>
-        </li>
-        <li class="navItem">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
     </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="past-projects.html">Past Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- Complete Header Ends  -->
 
 <div class="ribbon">
       <div class="ribbon-content">
