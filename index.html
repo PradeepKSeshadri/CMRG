@@ -230,17 +230,18 @@
       }
 
       /* Complete stat box ends */
-      /* why starts  */
+      /* Complete why starts  */
       .why-choose-section {
         text-align: center;
         padding: 60px 20px;
         margin-top: 50px;
+        /* border:2px solid red; */
       }
 
       .why-choose-section h2 {
         font-size: 2rem;
         margin-bottom: 10px;
-        color: #333;
+        color: var(--text-dark);
       }
 
       .why-choose-section p {
@@ -258,7 +259,7 @@
       }
 
       .card {
-        background-color: #fff;
+        background-color: var(--secondary);
         border-radius: 12px;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
         padding: 30px 20px;
@@ -276,7 +277,7 @@
       .icon {
         font-size: 40px;
         background-color: #1f3b8f;
-        color: white;
+        color: var(--text-light);
         width: 70px;
         height: 70px;
         line-height: 70px;
@@ -298,11 +299,14 @@
         font-size: 0.95rem;
       }
       @media (max-width: 600px) {
+        .why-choose-section {
+          margin-top: 30px;
+      }
         .card {
           width: 90%;
         }
       }
-      /* why ends  */
+      /* Complete why ends  */
       /* research starts  */
       .research-section {
         padding: 60px 20px;
