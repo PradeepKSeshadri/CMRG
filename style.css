@@ -80,6 +80,10 @@ nav.desktop-nav a:hover {
   border-bottom: 2px solid var(--highlight);
 }
 
+nav.desktop-nav .active {
+  border-bottom: 2px solid var(--highlight);
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
