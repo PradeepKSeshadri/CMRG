@@ -9,7 +9,7 @@
     <!-- style sheet ends  -->
     <style>
       :root {
-        --primary: #012a5e;
+        --primary: #012149;
         --secondary: white;
         --highlight: #facc15;
         --text-dark: #111827;
@@ -409,107 +409,6 @@
         margin-bottom: 30px;
       }
       /* Complete join our community ends*/
-
-      /* Complete footer starts  */
-      .footer {
-        background: var(--primary);
-        color: var(--text-light);
-        padding: 60px 20px 30px;
-        box-shadow: 0px 0px 10px 1px rgb(0, 26, 69);
-      }
-
-      .footer-container {
-        max-width: 1200px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 40px;
-      }
-
-      .footer-column {
-        flex: 1 1 260px;
-      }
-
-      .footer-column h3,
-      .footer-column h4 {
-        color: var(--text-light);
-        font-size: 1.25rem;
-        margin-bottom: 16px;
-      }
-
-      .footer-column p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: var(--text-light);
-      }
-
-      .footer-column ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .footer-column ul li {
-        margin-bottom: 12px;
-        font-size: 0.95rem;
-      }
-
-      .footer-column ul li a {
-        color: var(--text-light);
-        text-decoration: none;
-      }
-
-      .footer-column ul li a:hover {
-        text-decoration: underline;
-      }
-
-      .social-icons a {
-        display: inline-block;
-        margin-right: 14px;
-        font-size: 1.3rem;
-        color: var(--text-light);
-        transition: color 0.3s;
-      }
-
-      .social-icons a:hover {
-        color: var(--text-light);
-      }
-
-      .contact-info i {
-        margin-right: 8px;
-        color: var(--text-light);
-      }
-
-      hr {
-        margin: 40px auto 20px;
-        border: none;
-        border-top: 1px solid var(--text-white);
-        max-width: 1200px;
-      }
-
-      .footer-bottom {
-        text-align: center;
-        font-size: 0.85rem;
-        color: var(--text-light);
-        padding-bottom: 10px;
-      }
-
-      @media (max-width: 768px) {
-        .footer-container {
-          flex-direction: column;
-          gap: 40px;
-        }
-
-        .footer-column {
-          flex: 1 1 100%;
-        }
-
-        .footer {
-          padding: 50px 15px 20px;
-        }
-      }
-      /* Complete footer ends  */
     </style>
   </head>
   <body>
@@ -742,7 +641,7 @@
       <div class="footer-bottom"></div>
     </footer>
     <script>
-      async function loadAbout() {
+      async function loadFooter() {
         try {
           const res = await fetch("about.json");
           const data = await res.json();
@@ -774,7 +673,7 @@
           console.error("Error loading publications data:", err);
         }
       }
-      loadAbout();
+      loadFooter();
     </script>
   </body>
 </html>

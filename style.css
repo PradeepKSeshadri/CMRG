@@ -39,7 +39,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -213,8 +213,8 @@ nav.desktop-nav li:hover > .dropdown-content {
 
 /* ribbon starts  */
 .ribbon {
-  background: var(--primary-color);
-  color: var(--text-color);
+  background: var(--primary);
+  color: var(--text-light);
   padding: 60px 40px;
   display: flex;
   justify-content: center;
@@ -270,10 +270,10 @@ nav.desktop-nav li:hover > .dropdown-content {
 /* ribbon ends  */
 /* footer starts  */
 .footer {
-  background: var(--primary-color);
-  color: var(--text-color);
+  background: var(--primary);
+  color: var(--text-light);
   padding: 60px 20px 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 0px 10px 1px rgb(0, 26, 69);
 }
 .footer-container {
   max-width: 1200px;
@@ -291,7 +291,7 @@ nav.desktop-nav li:hover > .dropdown-content {
 
 .footer-column h3,
 .footer-column h4 {
-  color: var(--text-color);
+  color: var(--text-light);
   font-size: 1.25rem;
   margin-bottom: 16px;
 }
@@ -299,7 +299,7 @@ nav.desktop-nav li:hover > .dropdown-content {
 .footer-column p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--text-light);
 }
 
 .footer-column ul {
@@ -314,7 +314,7 @@ nav.desktop-nav li:hover > .dropdown-content {
 }
 
 .footer-column ul li a {
-  color: var(--text-color);
+  color: var(--text-light);
   text-decoration: none;
 }
 
@@ -326,17 +326,17 @@ nav.desktop-nav li:hover > .dropdown-content {
   display: inline-block;
   margin: 14px;
   font-size: 1.3rem;
-  color: var(--text-color);
+  color: var(--text-light);
   transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: var(--text-color);
+  color: var(--text-light);
 }
 
 .footer-contact-info i {
   margin-right: 8px;
-  color: var(--text-color);
+  color: var(--text-light);
 }
 
 hr {
@@ -349,7 +349,7 @@ hr {
 .footer-bottom {
   text-align: center;
   font-size: 0.85rem;
-  color: var(--text-color);
+  color: var(--text-light);
   padding-bottom: 10px;
 }
 
