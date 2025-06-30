@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research Projects</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      padding: 25px 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      color: #2c3e50;
+      margin: 0 0 5px;
+    }
+
+    .card .title {
+      font-size: 16px;
+      color: #4a4a4a;
+      margin-bottom: 12px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .meta strong {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    .section {
+      margin-top: 15px;
+    }
+
+    .section-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .note-box {
+      background: #eef4fb;
+      padding: 10px 15px;
+      border-left: 4px solid #2d8cf0;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @media screen and (max-width: 600px) {
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="projectsContainer"></div>
+  <script>
+    const projects = [
+      {
+        "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
+        "funding": "$7,500,000",
+        "duration": "06/2019 ~ 05/2024",
+        "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
+        "source": "U.S. Department of Defense, Air Force Office of Scientific Research (AFOSR), MURI Program",
+        "leadInvestigator": "Thomas Sewell (University of Missouri-Columbia)",
+        "coPI": "H.S. Udaykumar (University of Iowa)",
+        "coInvestigators": [
+          "D. Dlott (UIUC)",
+          "Catalin Picu (RPI)",
+          "S. Chaudhari (UIC)",
+          "W.C. Sun (Columbia)",
+          "S. Baek (UVA)"
+        ],
+        "contributions": [
+          "Higher Order Accurate Modeling of Micro/Meso/Macro scale simulations",
+          "New Framework to model Flyer Impact induced Shock Initiation of PBX",
+          "Physics Aware Recurrent Convolutional Neural Network",
+          "New sub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions"
+        ],
+        "notes": "4 papers published; 1 in Science Advances (IF=13.6), 5+ in progress"
+      },
+      {
+        "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
+        "duration": "05/2010 ~ Ongoing",
+        "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
+        "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
+        "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
+        "contributions": [
+          "Uncertainty Quantification of Surrogate Burn Model MESIG",
+          "Published two-part paper in Journal of Applied Physics",
+          "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
+        ]
+      },
+      {
+        "projectCode": "NSF-DMREF (2118393)",
+        "funding": "$1,650,000",
+        "duration": "03/2022 ~ 02/2026",
+        "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
+        "source": "National Science Foundation, DMREF Program",
+        "contributions": [
+          "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
+          "Building material database of HMX, RDX, TNT, PETN, TATB",
+          "Running mesoscale simulations and training PhD students"
+        ]
+      }
+    ];
+
+    const container = document.getElementById("projectsContainer");
+
+    projects.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h2>${p.projectCode}</h2>
+        <div class="title">${p.title}</div>
+        ${p.duration ? `<div class="meta"><strong>Duration:</strong> ${p.duration}</div>` : ""}
+        ${p.funding ? `<div class="meta"><strong>Funding:</strong> ${p.funding}</div>` : ""}
+        ${p.source ? `<div class="meta"><strong>Source:</strong> ${p.source}</div>` : ""}
+        ${p.leadInvestigator ? `<div class="meta"><strong>Lead Investigator:</strong> ${p.leadInvestigator}</div>` : ""}
+        ${p.coPI ? `<div class="meta"><strong>Co-PI:</strong> ${p.coPI}</div>` : ""}
+        ${p.coInvestigators ? `<div class="section"><div class="section-title">Co-Investigators</div><ul>${p.coInvestigators.map(name => `<li>${name}</li>`).join("")}</ul></div>` : ""}
+        ${p.contributions ? `<div class="section"><div class="section-title">My Contributions</div><ul>${p.contributions.map(point => `<li>${point}</li>`).join("")}</ul></div>` : ""}
+        ${p.notes ? `<div class="note-box">${p.notes}</div>` : ""}
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

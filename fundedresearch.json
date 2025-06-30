@@ -1,0 +1,107 @@
+{ 
+  "ribbontitle":"Research",
+  "ribbondesc":"Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
+  "Ongoing Research": [
+    {
+      "project": " DOD/AFOSR (FA9550-19-1-0318)",
+      "funding": "$7,500,000",
+      "duration": ["06/2019 ~ 05/2024"],
+      "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
+      "icon": "🌊",
+      "mycontribution": "In this multidisciplinC & MISSEL) for Macro-Scale Sensitivity Predictions.",
+      "investigators":"PI: H.S. Udaykumar (University of Iowa)",
+      "Lead": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "co-pi": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "project": " DOD/AFOSR (FA9550-19-1-0318)",
+      "funding": "$7,500,000",
+      "duration": ["06/2019 ~ 05/2024"],
+      "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
+      "icon": "🌊",
+      "mycontribution": "In this multub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions.",
+      "investigators":"PI: H.S. Udaykumar (University of Iowa)",
+      "Lead": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "co-pi": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    }
+  ],
+  "Past Research": [
+    {
+      "title": "Autonomous Vehicle Research",
+      "subtitle": "Navigation, sensing, and control systems",
+      "icon": "🚗",
+      "overview": "Graduate researchers work on sensors, control algorithms, and real-time processing for AVs.",
+      "publicationCount": 20,
+      "currentProjects": [
+        "LIDAR Sensor Fusion",
+        "Path Planning Algorithms",
+        "Real-Time Obstacle Detection"
+      ],
+      "tools": ["ROS", "MATLAB", "Python"],
+      "impact": [
+        "20 papers",
+        "University-Industry project",
+        "National conference awards"
+      ]
+    }
+  ],
+  "Graduate Student Researcher": [
+    {
+      "title": "Smart Irrigation Systems",
+      "subtitle": "IoT-based water management",
+      "icon": "💧",
+      "overview": "Undergraduates contribute to IoT-based irrigation using sensors, control valves, and mobile dashboards.",
+      "publicationCount": 10,
+      "currentProjects": [
+        "Soil Moisture Sensing",
+        "Water Pump Automation",
+        "Remote Monitoring App"
+      ],
+      "tools": ["Arduino", "NodeMCU", "Blynk"],
+      "impact": [
+        "Prototype tested on farms",
+        "Smart India Hackathon finalist",
+        "Featured in student expo"
+      ]
+    }
+  ],
+  "footer": {
+    "about": {
+      "title": "Computational Multiphysics Research Lab",
+      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
+      "social": {
+        "github": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    "quick-links": [
+      "Research Areas",
+      "Publications",
+      "Open Source",
+      "Join Our Team"
+    ],
+    "contact": {
+      "address": "123 University Ave, Research Building",
+      "phone": "9789796025",
+      "email": "spk15031990@gmail.com"
+    },
+    "footer-note": "© 2025 Computational Multiphysics Research Lab. All rights reserved."
+  }
+}
