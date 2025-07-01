@@ -1,13 +1,13 @@
 {
   "ribbon": {
-    "title": "About Our Lab",
-    "description": "Established in 2015, our lab has been at the forefront of computational multiphysics research, developing innovative solutions for complex engineering and scientific challenges."
+    "title": "About Research Group",
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
   "mission": {
-    "description": "To advance the frontiers of computational multiphysics through innovative research, cutting-edge numerical methods, and high-performance computing solutions. We aim to bridge the gap between theoretical understanding and practical applications in engineering and science."
+    "description": "At the core of our work lies a rigorous blend of first-principles modeling, high-fidelity numerical methods, and AI-accelerated multi-scale simulations. We seek to uncover governing physical mechanisms, design predictive frameworks, and provide insights into real-world engineering problems in aerospace, defense, energy, and biological systems."
   },
   "vision": {
-    "description": "To be a globally recognized leader in computational multiphysics research, fostering innovation, training exceptional scientists, and contributing to solutions for society's most pressing challenges through computational science and engineering."
+    "description": "We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles."
   },
   "values": [
     {
@@ -42,26 +42,12 @@
         "role":"Principal Investigator & Lab Director",
         "designation":"PhD in Mechanical Engineering, MIT",
         "subject":"Computational Fluid Dynamics, Turbulence Modeling"
-    },
-    {
-        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
-        "name":"Dr. Sarah Chen",
-        "role":"Principal Investigator & Lab Director",
-        "designation":"PhD in Mechanical Engineering, MIT",
-        "subject":"Computational Fluid Dynamics, Turbulence Modeling"
-    },
-    {
-        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
-        "name":"Dr. Sarah Chen",
-        "role":"Principal Investigator & Lab Director",
-        "designation":"PhD in Mechanical Engineering, MIT",
-        "subject":"Computational Fluid Dynamics, Turbulence Modeling"
     }
   ],
   "footer": {
     "about": {
       "title": "Computational Multiphysics Research Lab",
-      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
+      "description": "We model complex flows and materials across scales and speeds, combining physics-based simulation and AI to solve challenges in aerospace, defense, energy, and bioinspired systems.",
       "social": {
         "github": "#",
         "twitter": "#",
@@ -76,8 +62,8 @@
     ],
     "contact": {
       "address": "123 University Ave, Research Building",
-      "phone": "+1 (555) 123-4567",
-      "email": "info@cmplab.edu"
+      "phone": "9789796025",
+      "email": "spk15031990@gmail.com"
     },
     "footer-note": "© 2024 Computational Multiphysics Research Lab. All rights reserved."
   }

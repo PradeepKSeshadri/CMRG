@@ -141,87 +141,6 @@
         }
       }
       /* Complete Hero ends  */
-
-      /* Complete stat box starts  */
-      .container {
-        margin-top: 50px;
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        /* border:2px solid red;  */
-      }
-
-      .stats {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 4rem;
-        max-width: 1100px;
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-        /* border:2px solid red; */
-      }
-
-      .stat-box {
-        flex: 1 1 200px;
-        padding: 1.5rem;
-        background-color: var(--text-light);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-        min-width: 180px;
-        border-bottom: 2px solid var(--primary);
-      }
-
-      .stat-box:hover {
-        transform: translateY(-5px);
-      }
-
-      .stat-box h2 {
-        color: var(--primary);
-        font-size: 2.5rem;
-        margin: 0;
-        font-weight: bold;
-      }
-
-      .stat-box p {
-        margin-top: 0.5rem;
-        color: rgb(94, 94, 94);
-        font-size: 1rem;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          margin-top: 20px;
-        }
-        .stats {
-          justify-content: center;
-          gap: 1.5rem;
-        }
-
-        .stat-box {
-          flex: 1 1 45%;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          margin-top: 20px;
-        }
-        .stat-box {
-          flex: 1 1 100%;
-        }
-
-        .stat-box h2 {
-          font-size: 2rem;
-        }
-
-        .stat-box p {
-          font-size: 0.95rem;
-        }
-      }
-
-      /* Complete stat box ends */
       /* Complete why starts  */
       .why-choose-section {
         text-align: center;
@@ -410,11 +329,15 @@
       }
       /* Complete join our community ends*/
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <!--Complete Header Starts-->
     <header>
-      <div class="logo"><img src="images/CMRG Logo White.png" alt="" /></div>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt="Computational Multiphysics Research Group" /></div>
       <nav class="desktop-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -422,8 +345,8 @@
           <li class="dropdown">
             <a>Research</a>
             <div class="dropdown-content">
-              <a href="ongoing.html">Ongoing</a>
-              <a href="past.html">Past</a>
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
             </div>
           </li>
           <li class="dropdown">
@@ -454,8 +377,8 @@
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -471,26 +394,14 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-    </script>
     <!-- Complete Header Ends  -->
     <!-- Complete hero starts  -->
     <section class="hero">
       <div class="hero-content">
-        <h2>"Where Physics Powers Innovation"</h2>
-        <p>
-          Bridging atoms to continuum, biology to ballistics -- the CoMPhys Research Group simulates every scale, every material, every interface, and every speed across defense, aerospace, energy, and bioinspired systems.  
-        </p>
+        <h2></h2>
+        <p></p>
         <div class="hero-button">
-          <a href="#" class="btn">Explore Now</a>
+          <a href="" class="btn"></a>
         </div>
       </div>
       <div class="box">
@@ -507,140 +418,158 @@
       </div>
     </section>
     <!-- Complete hero ends  -->
-    <!-- Complete stats start  -->
-    <div class="container">
-      <div class="stats">
-        <div class="stat-box">
-          <h2 id="total-publications">12+</h2>
-          <p>Total Publications</p>
-        </div>
-        <div class="stat-box">
-          <h2 id="total-citations">30</h2>
-          <p>Total Citations</p>
-        </div>
-        <div class="stat-box">
-          <h2 id="h-index">22</h2>
-          <p>H-Index</p>
-        </div>
-        <div class="stat-box">
-          <h2 id="total-journals">14</h2>
-          <p>Journals</p>
-        </div>
-      </div>
-    </div>
-    <!-- Complete stats ends -->
     <!-- Complete why choose starts -->
-    <section class="why-choose-section">
+    <section class="why-choose-section" id="why-choose-section">
       <div class="why-choose-section-container">
-        <h2>Why Choose Our Lab</h2>
-        <p>
-          We combine cutting-edge research with practical applications to solve
-          complex engineering and scientific challenges.
-        </p>
-
-        <div class="cards">
-          <div class="card">
-            <div class="icon">🎖️</div>
-            <h3>Excellence in Research</h3>
-            <p>Over 150+ peer-reviewed publications in top-tier journals</p>
-          </div>
-          <div class="card">
-            <div class="icon">👥</div>
-            <h3>Expert Team</h3>
-            <p>15+ researchers specializing in computational sciences</p>
-          </div>
-          <div class="card">
-            <div class="icon">💻</div>
-            <h3>Open Source</h3>
-            <p>
-              Contributing to the scientific community with open-source tools
-            </p>
-          </div>
-        </div>
+        <h2></h2>
+        <p></p>
+        <div class="cards"></div>
       </div>
     </section>
     <!-- Complete why choose ends -->
+    <!-- Complete research starts  -->
     <section class="research-section">
       <div class="research-section-container">
-        <h2>Research Areas</h2>
-        <p>
-          Our multidisciplinary approach spans various domains of computational
-          physics and engineering.
-        </p>
-        <div class="research-grid">
-          <div class="research-card">
-            <div class="icon">🌊</div>
-            <h3>Fluid Dynamics</h3>
-            <p>Advanced CFD simulations for complex flow phenomena</p>
-          </div>
-          <div class="research-card">
-            <div class="icon">🏗️</div>
-            <h3>Structural Mechanics</h3>
-            <p>
-              Computational methods for material behavior and failure analysis
-            </p>
-          </div>
-          <div class="research-card">
-            <div class="icon">🔥</div>
-            <h3>Heat Transfer</h3>
-            <p>Thermal analysis and heat exchange optimization</p>
-          </div>
-          <div class="research-card">
-            <div class="icon">⚡</div>
-            <h3>Electromagnetics</h3>
-            <p>Electromagnetic field simulations and wave propagation</p>
-          </div>
-        </div>
-        <a href="#" class="btn-view">View All Research →</a>
+        <h2></h2>
+        <p></p>
+        <div class="research-grid"></div>
+        <a href="" class="btn-view"></a>
       </div>
     </section>
+    <!-- Complete research ends  -->
+    <!-- Complete join section starts  -->
     <section class="join-section">
       <div class="join-section-container">
-        <h2>Join Our Research Community</h2>
-        <p>
-          We're always looking for talented researchers, students, and
-          collaborators to join our mission of advancing computational science.
-        </p>
+        <h2></h2>
+        <p></p>
         <div class="buttons">
-          <a href="#" class="btn">View Openings</a>
+          <a href="" class="btn"></a>
         </div>
       </div>
     </section>
+    <!-- Complete join section ends  -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
         <div class="footer-column about">
-          <h3>Computa</h3>
+          <h3></h3>
           <p></p>
           <div class="social-icons">
             <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
         <!-- Column 2: Links -->
         <div class="footer-column">
           <h4>Quick Links</h4>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Research</li>
-            <li>Contact</li>
-          </ul>
+          <ul></ul>
         </div>
         <!-- Column 3: Contact -->
         <div class="footer-column">
           <h4>Contact</h4>
-          <ul class="contact-info"></ul>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
         </div>
       </div>
       <hr />
       <div class="footer-bottom"></div>
     </footer>
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading index data starts  -->
+    <script>
+      async function loadIndexData() {
+        try {
+          const res = await fetch("index.json");
+          const data = await res.json();
+
+          // HERO
+          const hero = data.hero;
+          document.querySelector(
+            ".hero-content h2"
+          ).textContent = `"${hero.title}"`;
+          document.querySelector(".hero-content p").textContent =
+            hero.description;
+          const heroBtn = document.querySelector(".hero-button a");
+          heroBtn.textContent = hero.buttonText;
+          heroBtn.href = hero.buttonLink;
+
+          // WHY CHOOSE
+          const whychoose = data.whyChoose;
+          document.querySelector(
+            ".why-choose-section-container h2"
+          ).textContent = whychoose.heading;
+          document.querySelector(
+            ".why-choose-section-container p"
+          ).textContent = whychoose.description;
+          const whyChooseContainer = document.querySelector(".cards");
+          whyChooseContainer.innerHTML = "";
+          whychoose.items.forEach((item) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+          <div class="icon">${item.icon}</div>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        `;
+            whyChooseContainer.appendChild(card);
+          });
+
+          // RESEARCH
+          const research = data.research;
+          document.querySelector(".research-section h2").textContent =
+            research.heading;
+          document.querySelector(".research-section p").textContent =
+            research.description;
+          const researchGrid = document.querySelector(".research-grid");
+          researchGrid.innerHTML = "";
+          research.items.forEach((item) => {
+            const card = document.createElement("div");
+            card.classList.add("research-card");
+            card.innerHTML = `
+          <div class="icon">${item.icon}</div>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        `;
+            researchGrid.appendChild(card);
+          });
+          const researchBtn = document.querySelector(".btn-view");
+          researchBtn.textContent = research.buttonText;
+          researchBtn.href = research.buttonLink;
+
+          // JOIN SECTION
+          const join = data.join;
+          document.querySelector(".join-section h2").textContent = join.heading;
+          document.querySelector(".join-section p").textContent =
+            join.description;
+          const joinBtn = document.querySelector(".join-section .btn");
+          joinBtn.textContent = join.buttonText;
+          joinBtn.href = join.buttonLink;
+        } catch (error) {
+          console.error("Error loading index data:", error);
+        }
+      }
+
+      loadIndexData();
+    </script>
+    <!-- loading index data ends  -->
+    <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
         try {
-          const res = await fetch("about.json");
+          const res = await fetch("footer.json");
           const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
@@ -648,7 +577,7 @@
             footer.about.description;
           const socialLinks = document.querySelectorAll(".social-icons a");
           socialLinks[0].href = footer.about.social.github;
-          socialLinks[1].href = footer.about.social.twitter;
+          socialLinks[1].href = footer.about.social.mail;
           socialLinks[2].href = footer.about.social.linkedin;
           const quickLinks = document.querySelector(".footer-column ul");
           quickLinks.innerHTML = "";
@@ -660,10 +589,31 @@
           const contact = footer.contact;
           const contactInfo = document.querySelector(".contact-info");
           contactInfo.innerHTML = `
-        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-        <li><i class="fas fa-envelope"></i>${contact.email}</li>
-      `;
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
           document.querySelector(".footer-bottom").textContent =
             footer["footer-note"];
         } catch (err) {
@@ -672,5 +622,6 @@
       }
       loadFooter();
     </script>
+    <!-- loading footer ends  -->
   </body>
 </html>

@@ -415,7 +415,7 @@
         <p class="ribbon-desc"></p>
       </div>
     </div>
-    <section class="mission-vision-section">
+    <!-- <section class="mission-vision-section">
       <div class="card">
         <h2>Our Mission</h2>
         <p id="mission-desc"></p>
@@ -431,7 +431,13 @@
         The principles that guide our research and shape our lab culture
       </p>
       <div class="values-grid" id="valuesgrid"></div>
-    </section>
+    </section> -->
+    <div class="card" style="margin: 0px auto;padding:60px 40px;max-width: 1200px;">
+        <h2>Description</h2>
+        </br>
+        <p id="desc">At the core of our work lies a rigorous blend of first-principles modeling, high-fidelity numerical methods, and AI-accelerated multi-scale simulations. We seek to uncover governing physical mechanisms, design predictive frameworks, and provide insights into real-world engineering problems in aerospace, defense, energy, and biological systems.</br></br>
+We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles.</p>
+      </div>
     <section class="team-section">
       <h2 class="section-title">Our Team</h2>
       <p class="section-subtitle">
@@ -450,16 +456,15 @@
         <div class="timeline-item">
           <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
           <div class="timeline-content">
-            <span class="year-tag">2015</span>
+            <span class="year-tag">2025</span>
             <h3>Lab Foundation</h3>
             <p>
-              Computational Multiphysics Research Lab established with initial
-              NSF funding
+              Computational Multiphysics Research Lab established
             </p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <!-- <div class="timeline-item">
           <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
           <div class="timeline-content">
             <span class="year-tag">2017</span>
@@ -477,7 +482,7 @@
               Lab director awarded prestigious international research fellowship
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <footer class="footer">
@@ -531,25 +536,25 @@
             data.ribbon.description;
 
           //mission-vision
-          const missiondesc = document.getElementById("mission-desc");
-          missiondesc.textContent = data.mission.description;
-          const visiondesc = document.getElementById("vision-desc");
-          visiondesc.textContent = data.vision.description;
+          // const missiondesc = document.getElementById("mission-desc");
+          // missiondesc.textContent = data.mission.description;
+          // const visiondesc = document.getElementById("vision-desc");
+          // visiondesc.textContent = data.vision.description;
 
           //value-card
-          data.values.forEach((val) => {
-            console.log(val);
-            const valuesgrid = document.getElementById("valuesgrid");
-            const valuecard = document.createElement("div");
-            valuecard.className = "value-card";
-            const valuecardh3 = document.createElement("h3");
-            const valuecardp = document.createElement("p");
-            valuecardh3.textContent = val.value.title;
-            valuecardp.textContent = val.value.description;
-            valuecard.appendChild(valuecardh3);
-            valuecard.appendChild(valuecardp);
-            valuesgrid.appendChild(valuecard);
-          });
+          // data.values.forEach((val) => {
+          //   console.log(val);
+          //   const valuesgrid = document.getElementById("valuesgrid");
+          //   const valuecard = document.createElement("div");
+          //   valuecard.className = "value-card";
+          //   const valuecardh3 = document.createElement("h3");
+          //   const valuecardp = document.createElement("p");
+          //   valuecardh3.textContent = val.value.title;
+          //   valuecardp.textContent = val.value.description;
+          //   valuecard.appendChild(valuecardh3);
+          //   valuecard.appendChild(valuecardp);
+          //   valuesgrid.appendChild(valuecard);
+          // });
 
           //team card
           const teamgrid = document.getElementById("team-grid");
@@ -606,10 +611,14 @@
           const contact = footer.contact;
           const contactInfo = document.querySelector(".contact-info");
           contactInfo.innerHTML = `
-        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-        <li><i class="fas fa-envelope"></i>${contact.email}</li>
+        <li>${contact.address}</li>
+        <li>${contact.phone}</li>
+        <li>${contact.email}</li>
       `;
+
+      //<i class="fas fa-map-marker-alt"></i>
+      //<i class="fas fa-phone-alt"></i>
+      //<i class="fas fa-envelope"></i>
 
           document.querySelector(".footer-bottom").textContent =
             footer["footer-note"];

@@ -223,7 +223,7 @@ nav.desktop-nav li:hover > .dropdown-content {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .ribbon-content {
-  max-width: 900px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;

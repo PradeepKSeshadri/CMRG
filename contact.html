@@ -57,7 +57,7 @@
         border-radius: 10px;
         margin-bottom: 15px;
         font-size: 0.95rem;
-        color: #1e293b;
+        color: var(--primary);
       }
       .social-links span {
         display: block;
@@ -116,7 +116,7 @@
         font-size: 0.85rem;
       }
       .contact-form button {
-        background: var(--main-color);
+        background: var(--primary);
         color: #ffffff;
         border: none;
         padding: 12px 24px;
@@ -124,9 +124,12 @@
         cursor: pointer;
         font-weight: 500;
         transition: background-color 0.3s ease;
+        border: 2px solid var(--primary);
       }
       .contact-form button:hover {
-        background: var(--text-dark);
+        background: var(--text-light);
+        color:var(--primary);
+        border: 2px solid var(--primary);
       }
       @media (max-width: 768px) {
         .contact-container {
@@ -232,15 +235,15 @@
           <div class="info-box">
             <p>Email : <strong id="emailid"></strong></p>
           </div>
-          <div class="info-box">
+          <!-- <div class="info-box">
             <p>Phone : <strong id="phoneno"></strong></p>
-          </div>
+          </div> -->
           <div class="social-links">
             <span>Follow us:</span>
             <a id="github-link"><img src="images/github.svg" alt="GitHub"/></a>
             <a id="linkedin-link"><img src="images/linkedin.svg" alt="LinkedIn"/></a>
-            <a id="twitter-link"><img src="images/twitter.svg" alt="X" /></a>
-            <a id="instagram-link"><img src="images/instagram.svg" alt="Instagram"/></a>
+            <!-- <a id="twitter-link"><img src="images/twitter.svg" alt="X" /></a> -->
+            <!-- <a id="instagram-link"><img src="images/instagram.svg" alt="Instagram"/></a> -->
           </div>
         </div>
         <form class="contact-form" action="" method="POST">
@@ -306,17 +309,17 @@
           // const brand = document.getElementById("brand");
           // brand.textContent = data.brand;
           const email = document.getElementById("emailid");
-          const phone = document.getElementById("phoneno");
+          // const phone = document.getElementById("phoneno");
           email.textContent = data.email;
-          phone.textContent = data.phone;
+          // phone.textContent = data.phone;
           const githublink = document.getElementById("github-link");
           const linkedinlink = document.getElementById("linkedin-link");
-          const twitterlink = document.getElementById("twitter-link");
-          const instagramlink = document.getElementById("instagram-link");
+          // const twitterlink = document.getElementById("twitter-link");
+          // const instagramlink = document.getElementById("instagram-link");
           githublink.href = data.githublink;
           linkedinlink.href = data.linkedinlink;
-          twitterlink.href = data.twitterlink;
-          instagramlink.href = data.instagramlink;
+          // twitterlink.href = data.twitterlink;
+          // instagramlink.href = data.instagramlink;
           // Footer
           document.getElementById("footer-title").textContent =
             data.footer.about.title;

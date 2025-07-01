@@ -1,0 +1,25 @@
+{
+    "footer": {
+    "about": {
+      "title": "Computational Multiphysics Research Lab",
+      "description": "We model complex flows and materials across scales and speeds, combining physics-based simulation and AI to solve challenges in aerospace, defense, energy, and bioinspired systems.",
+      "social": {
+        "github": "#",
+        "mail": "#",
+        "linkedin": "#"
+      }
+    },
+    "quick-links": [
+      "Research Areas",
+      "Publications",
+      "Open Source",
+      "Join Our Team"
+    ],
+    "contact": {
+      "address": "123 University Ave, Research Building",
+      "phone": "9789796025",
+      "email": "spk15031990@gmail.com"
+    },
+    "footer-note": "© 2024 Computational Multiphysics Research Lab. All rights reserved."
+  }
+}
