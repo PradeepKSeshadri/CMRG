@@ -1,4 +1,7 @@
-{
+{"ribbon":{
+  "title":"Conferences",
+  "description":"Explore our distinguished conference contributions that highlight pioneering research, collaborative innovation, and the global impact of our work in computational multiphysics and interdisciplinary scientific advancements."
+},
   "conferences": [
     {
       "title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows",

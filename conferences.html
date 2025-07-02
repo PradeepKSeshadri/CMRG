@@ -3,27 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publications</title>
+    <title>Conferences</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      :root {
+        --primary: #012149;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
       /* filter starts */
-
       .filters {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #f9f9f9;
+        background-color: var(--text-light);
         padding: 2rem;
         border-radius: 8px;
         gap: 1rem;
         flex-wrap: wrap;
       }
-
       .search-box {
         flex: 1;
         min-width: 300px;
       }
-
       .search-box input {
         width: 100%;
         padding: 0.8rem 1rem;
@@ -31,12 +35,10 @@
         border-radius: 6px;
         font-size: 1rem;
       }
-
       .select-boxes {
         display: flex;
         gap: 1rem;
       }
-
       .select-boxes select {
         padding: 0.5rem 0.8rem;
         border-radius: 6px;
@@ -49,35 +51,30 @@
         outline: none;
         padding: 8px 16px;
         border-radius: 6px;
-        background-color: #1e293b; /* dark navy */
+        background-color: var(--primary); /* dark navy */
         color: #f8fafc;
         font-size: 1rem;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
-
       /* Hover and focus states */
       .filter-btn:hover,
       .filter-btn:focus {
-        background-color: #1e293b;
+        background-color: var(--primary);
         transform: translateY(-1px);
       }
-
       /* --tablet  */
-
       @media (max-width: 768px) {
         .filters {
           flex-direction: column;
           align-items: stretch;
           padding: 1.5rem;
         }
-
         .select-boxes {
           justify-content: space-between;
           width: 100%;
         }
-
         .select-boxes select {
           flex: 1;
           min-width: 0;
@@ -88,24 +85,19 @@
           width: auto;
         }
       }
-
       /* ---mobile */
-
       @media (max-width: 480px) {
         .filters {
           padding: 1rem;
         }
-
         .select-boxes {
           flex-direction: column;
           gap: 0.8rem;
         }
-
         .select-boxes select {
           width: 100%;
           font-size: 0.95rem;
         }
-
         .search-box input {
           font-size: 0.95rem;
           padding: 0.6rem 0.8rem;
@@ -118,15 +110,14 @@
           margin-bottom: 10px;
         }
       }
-
       /* filter ends  */
+      /* publication container starts  */
       .publication-container {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         padding: 60px 20px;
       }
-
       .pub-card {
         background: white;
         border-radius: 12px;
@@ -135,67 +126,72 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         flex: 1 1 600px;
       }
-
       .pub-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
       }
-
       .pub-title {
         font-size: 1rem;
         font-weight: 600;
         margin-bottom: 8px;
         color: #2a2a2a;
       }
-
       .pub-authors {
         font-size: 0.9rem;
         color: #555;
         margin-bottom: 10px;
       }
-
       .pub-journal {
         font-size: 0.85rem;
         color: #777;
         margin-bottom: 6px;
       }
-
       .pub-meta {
         font-size: 0.8rem;
         color: #888;
       }
       mark {
-  background-color: #ffe066;
-  padding: 0 2px;
-  border-radius: 2px;
-}
+        background-color: #ffe066;
+        padding: 0 2px;
+        border-radius: 2px;
+      }
+      /* publication container ends  */
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <!--Complete Header Starts-->
     <header>
-      <div class="logo"><img src="images/CMRG Logo White.png" alt="" /></div>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group"
+        />
+      </div>
       <nav class="desktop-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
-            <a href="#">Research</a>
+            <a>Research</a>
             <div class="dropdown-content">
-              <a href="#">Ongoing</a>
-              <a href="#">Past</a>
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
             </div>
           </li>
           <li class="dropdown">
-            <a href="#">Publications</a>
+            <a class="active">Publications</a>
             <div class="dropdown-content">
               <a href="publications.html">Journals</a>
-              <a href="#">Conferences</a>
+              <a href="conferences.html">Conferences</a>
             </div>
           </li>
-          <!-- <li><a href="#">Blog</a></li> -->
-          <li><a href="#">Opening</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="#">Opening</a></li> -->
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -214,8 +210,8 @@
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -231,29 +227,16 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-    </script>
     <!-- Complete Header Ends  -->
-
+    <!-- Complete ribbon starts  -->
     <div class="ribbon">
       <div class="ribbon-content">
-        <h1 class="ribbon-title">Conferences</h1>
-        <p class="ribbon-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          consequatur omnis eaque quo, accusamus quas. At ratione vitae quisquam
-          earum.
-        </p>
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
       </div>
     </div>
+    <!-- Complete ribbon ends  -->
+    <!-- Complete filter starts  -->
     <div class="filters">
       <div class="search-box">
         <input
@@ -263,46 +246,77 @@
           oninput="filterConferences()"
         />
       </div>
-      <!-- <div class="select-boxes">
-        <select id="yearFilter">
-          
-        </select>
-        <button onclick="filterCards()" class="filter-btn">Filter</button>
-      </div> -->
     </div>
-
-    <!-- <h2 style="text-align: center; margin: 40px;background-color:var(--primary);color:white;padding:10px">
-      Journal Publications
-    </h2> -->
-
-    <div class="publication-container" id="conference-container">
-      <!-- Cards will be inserted here -->
-    </div>
-
+    <!-- Complete filter ends  -->
+    <!-- Complete conference card starts  -->
+    <div class="publication-container" id="conference-container"></div>
+    <!-- Complete conference card ends  -->
+    <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading conference starts -->
     <script>
       fetch("conference.json")
         .then((response) => response.json())
         .then((data) => {
+          // Ribbon
+          document.querySelector(".ribbon-title").textContent = data.ribbon.title;
+          document.querySelector(".ribbon-desc").textContent = data.ribbon.description;
           const container = document.getElementById("conference-container");
-
           data.conferences.forEach((pub) => {
             const card = document.createElement("div");
             card.className = "pub-card";
-
             card.innerHTML = `
-  <div class="pub-title">${pub.title}</div>
-  <div class="pub-authors">
-    ${pub.authors.replace(
-      "Seshadri, P. K",
-      "<span style='color: darkblue; font-weight: bold;'>Seshadri, P. K</span>"
-    )}
-  </div>
-  <div class="pub-journal">${pub.journal}</div>
-  <div class="pub-meta">CiteScore: ${pub.citescore} | Ranking: ${
+                <div class="pub-title">${pub.title}</div>
+                <div class="pub-authors">
+                  ${pub.authors.replace(
+                    "Seshadri, P. K",
+                    "<span style='color: darkblue; font-weight: bold;'>Seshadri, P. K</span>"
+                  )}
+                </div>
+                <div class="pub-journal">${pub.journal}</div>
+                <div class="pub-meta">CiteScore: ${pub.citescore} | Ranking: ${
               pub.ranking
-            }</div>
-`;
-
+            }</div>`;
             container.appendChild(card);
           });
         })
@@ -310,41 +324,70 @@
           console.error("Error loading conference data:", error);
         });
     </script>
-    <footer class="footer">
-      <div class="footer-container">
-        <!-- Column 1: About -->
-        <div class="footer-column about">
-          <h3>Computa</h3>
-          <p></p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <!-- Column 2: Links -->
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Research</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <!-- Column 3: Contact -->
-        <div class="footer-column">
-          <h4>Contact</h4>
-          <ul class="contact-info"></ul>
-        </div>
-      </div>
-      <hr />
-      <div class="footer-bottom"></div>
-    </footer>
+    <script>
+      let allConferences = [];
+      // Load the data
+      fetch("conference.json")
+        .then((response) => response.json())
+        .then((data) => {
+          allConferences = data.conferences;
+          renderConferences(allConferences, "");
+        })
+        .catch((error) => {
+          console.error("Error loading conference data:", error);
+        });
+      // Highlight matched words
+      function highlightMatch(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(`(${query})`, "gi");
+        return text.replace(regex, "<mark>$1</mark>");
+      }
+      function renderConferences(conferences, query) {
+        const container = document.getElementById("conference-container");
+        container.innerHTML = "";
+        conferences.forEach((pub) => {
+          const card = document.createElement("div");
+          card.className = "pub-card";
+          // Highlight all relevant fields
+          const title = highlightMatch(pub.title, query);
+          const authorsRaw = pub.authors.replace(
+            "Seshadri, P. K",
+            "<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>"
+          );
+          const authors = highlightMatch(authorsRaw, query);
+          const journal = highlightMatch(pub.journal, query);
+          const citescore = highlightMatch(
+            `CiteScore: ${pub.citescore}`,
+            query
+          );
+          const ranking = highlightMatch(`Ranking: ${pub.ranking}`, query);
+          card.innerHTML = `
+            <div class="pub-title">${title}</div>
+            <div class="pub-authors">${authors}</div>
+            <div class="pub-journal">${journal}</div>
+            <div class="pub-meta">${citescore} | ${ranking}</div>
+          `;
+          container.appendChild(card);
+        });
+      }
+      function filterConferences() {
+        const query = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const filtered = allConferences.filter((pub) => {
+          const combined =
+            `${pub.title} ${pub.authors} ${pub.journal} ${pub.citescore} ${pub.ranking}`.toLowerCase();
+          return combined.includes(query);
+        });
+        renderConferences(filtered, query);
+      }
+    </script>
+    <!-- loading conference ends -->
+    <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
         try {
-          const res = await fetch("about.json");
+          const res = await fetch("footer.json");
           const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
@@ -352,7 +395,7 @@
             footer.about.description;
           const socialLinks = document.querySelectorAll(".social-icons a");
           socialLinks[0].href = footer.about.social.github;
-          socialLinks[1].href = footer.about.social.twitter;
+          socialLinks[1].href = footer.about.social.mail;
           socialLinks[2].href = footer.about.social.linkedin;
           const quickLinks = document.querySelector(".footer-column ul");
           quickLinks.innerHTML = "";
@@ -364,10 +407,31 @@
           const contact = footer.contact;
           const contactInfo = document.querySelector(".contact-info");
           contactInfo.innerHTML = `
-        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-        <li><i class="fas fa-envelope"></i>${contact.email}</li>
-      `;
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
           document.querySelector(".footer-bottom").textContent =
             footer["footer-note"];
         } catch (err) {
@@ -376,117 +440,6 @@
       }
       loadFooter();
     </script>
-
-    <!-- <script>
-  let allConferences = [];
-
-  // Fetch and render conferences
-  fetch('conference.json')
-    .then(response => response.json())
-    .then(data => {
-      allConferences = data.conferences;
-      renderConferences(allConferences);
-    })
-    .catch(error => {
-      console.error('Error loading conference data:', error);
-    });
-
-  function renderConferences(conferences) {
-    const container = document.getElementById('conference-container');
-    container.innerHTML = '';
-
-    conferences.forEach(pub => {
-      const card = document.createElement('div');
-      card.className = 'pub-card';
-
-      const highlightedAuthors = pub.authors.replace(
-        "Seshadri, P. K",
-        "<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>"
-      );
-
-      card.innerHTML = `
-        <div class="pub-title">${pub.title}</div>
-        <div class="pub-authors">${highlightedAuthors}</div>
-        <div class="pub-journal">${pub.journal}</div>
-        <div class="pub-meta">CiteScore: ${pub.citescore} | Ranking: ${pub.ranking}</div>
-      `;
-
-      container.appendChild(card);
-    });
-  }
-
-  function filterConferences() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-
-    const filtered = allConferences.filter(pub => {
-      const combined = `${pub.title} ${pub.authors} ${pub.journal} ${pub.citescore} ${pub.ranking}`.toLowerCase();
-      return combined.includes(query);
-    });
-
-    renderConferences(filtered);
-  }
-</script> -->
-
-<script>
-  let allConferences = [];
-
-  // Load the data
-  fetch('conference.json')
-    .then(response => response.json())
-    .then(data => {
-      allConferences = data.conferences;
-      renderConferences(allConferences, "");
-    })
-    .catch(error => {
-      console.error('Error loading conference data:', error);
-    });
-
-  // Highlight matched words
-  function highlightMatch(text, query) {
-    if (!query) return text;
-    const regex = new RegExp(`(${query})`, 'gi');
-    return text.replace(regex, '<mark>$1</mark>');
-  }
-
-  function renderConferences(conferences, query) {
-    const container = document.getElementById('conference-container');
-    container.innerHTML = '';
-
-    conferences.forEach(pub => {
-      const card = document.createElement('div');
-      card.className = 'pub-card';
-
-      // Highlight all relevant fields
-      const title = highlightMatch(pub.title, query);
-      const authorsRaw = pub.authors.replace("Seshadri, P. K", "<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>");
-      const authors = highlightMatch(authorsRaw, query);
-      const journal = highlightMatch(pub.journal, query);
-      const citescore = highlightMatch(`CiteScore: ${pub.citescore}`, query);
-      const ranking = highlightMatch(`Ranking: ${pub.ranking}`, query);
-
-      card.innerHTML = `
-        <div class="pub-title">${title}</div>
-        <div class="pub-authors">${authors}</div>
-        <div class="pub-journal">${journal}</div>
-        <div class="pub-meta">${citescore} | ${ranking}</div>
-      `;
-
-      container.appendChild(card);
-    });
-  }
-
-  function filterConferences() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-
-    const filtered = allConferences.filter(pub => {
-      const combined = `${pub.title} ${pub.authors} ${pub.journal} ${pub.citescore} ${pub.ranking}`.toLowerCase();
-      return combined.includes(query);
-    });
-
-    renderConferences(filtered, query);
-  }
-</script>
-
-
+    <!-- loading footer ends  -->
   </body>
 </html>
