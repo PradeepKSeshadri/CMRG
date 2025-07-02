@@ -3,68 +3,35 @@
     "title": "About Research Group",
     "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
-  "mission": {
-    "description": "At the core of our work lies a rigorous blend of first-principles modeling, high-fidelity numerical methods, and AI-accelerated multi-scale simulations. We seek to uncover governing physical mechanisms, design predictive frameworks, and provide insights into real-world engineering problems in aerospace, defense, energy, and biological systems."
-  },
-  "vision": {
-    "description": "We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles."
-  },
-  "values": [
-    {
-      "value": {
-        "title": "Excellence",
-        "description": "We strive for the highest standards in research quality and scientific rigor."
-      }
-    },
-    {
-      "value": {
-        "title": "Innovation",
-        "description": "We push the boundaries of computational science with novel approaches and methods."
-      }
-    },
-    {
-      "value": {
-        "title": "Collaboration",
-        "description": "We believe in the power of interdisciplinary teamwork and global partnerships.   "
-      }
-    },
-    {
-      "value": {
-        "title": "Education",
-        "description": "We are committed to training the next generation of computational scientists."
-      }
-    }
-  ],
+    "description1": "At the core of our work lies a rigorous blend of first-principles modeling, high-fidelity numerical methods, and AI-accelerated multi-scale simulations. We seek to uncover governing physical mechanisms, design predictive frameworks, and provide insights into real-world engineering problems in aerospace, defense, energy, and biological systems.",
+    "description2": "We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles.",
   "teams":[
     {
         "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
         "name":"Dr. Sarah Chen",
         "role":"Principal Investigator & Lab Director",
         "designation":"PhD in Mechanical Engineering, MIT",
-        "subject":"Computational Fluid Dynamics, Turbulence Modeling"
+        "subject":"Computational Fluid Dynamics, Turbulence Modeling",
+        "email":"#",
+        "linkedin":"#"
     }
   ],
-  "footer": {
-    "about": {
-      "title": "Computational Multiphysics Research Lab",
-      "description": "We model complex flows and materials across scales and speeds, combining physics-based simulation and AI to solve challenges in aerospace, defense, energy, and bioinspired systems.",
-      "social": {
-        "github": "#",
-        "twitter": "#",
-        "linkedin": "#"
-      }
-    },
-    "quick-links": [
-      "Research Areas",
-      "Publications",
-      "Open Source",
-      "Join Our Team"
-    ],
-    "contact": {
-      "address": "123 University Ave, Research Building",
-      "phone": "9789796025",
-      "email": "spk15031990@gmail.com"
-    },
-    "footer-note": "© 2024 Computational Multiphysics Research Lab. All rights reserved."
+  "journey":[
+  {
+    "year": "2025",
+    "title": "Lab Foundation",
+    "description": "Computational Multiphysics Research Lab established"
+  },
+  {
+    "year": "2026",
+    "title": "First Research Grant",
+    "description": "Secured first major funding from the Department of Science"
+  },
+  {
+    "year": "2027",
+    "title": "International Collaboration",
+    "description": "Partnered with MIT for joint simulations research"
   }
+]
+
 }

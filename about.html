@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       :root {
@@ -13,150 +13,28 @@
         --text-dark: #111827;
         --text-light: #f9fafb;
       }
-      .mission-vision-section {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 40px 20px;
-        background-color:var(--text-light);
-      }
-
-      .mission-vision-section .card {
-        flex: 1 1 400px;
-        background-color: var(--text-light);
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        padding: 30px;
-        max-width: 600px;
-        height: 100%;
-        transition: transform 0.3s ease;
-      }
-
-      .mission-vision-section .card:hover {
-        transform: translateY(-5px);
-      }
-
-      .mission-vision-section h2 {
-        color: var(--text-dark); /* Dark blue */
-        margin-bottom: 15px;
-        font-size: 24px;
-      }
-
-      .mission-vision-section p {
-        font-size: 16px;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      /* Responsive - small devices */
-      @media (max-width: 768px) {
-        .mission-vision-section {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .mission-vision-section .card {
-          width: 100%;
-          /* border: 2px solid red; */
-          text-align: center;
-        }
-      }
-      .values-section {
-        background-color: var(--text-light);
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      .section-title {
-        font-size: 37px;
-        font-weight: 700;
-        color: var(--text-dark);
-        margin-bottom: 10px;
-      }
-
-      .section-subtitle {
-        font-size: 20px;
-        color: #555;
-        margin: 30px 40px;
-      }
-
-      .values-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
-        justify-content: center;
-        margin-top: 50px;
-        /* border: 2px solid red; */
-      }
-
-      .value-card {
-        background-color: var(--text-light);
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-        padding: 40px;
-        flex: 1 1 220px;
-        max-width: 260px;
-        transition: transform 0.3s ease;
-      }
-
-      .value-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .value-card h3 {
-        color: var(--text-dark);
-        margin-bottom: 12px;
-        font-size: 22px;
-      }
-
-      .value-card p {
-        font-size: 16px;
-        color: #333;
-        margin-top: 30px;
-        line-height: 1.5;
-      }
-
-      /* Responsive Layout */
-      @media (max-width: 768px) {
-        .values-grid {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .value-card {
-          width: 100%;
-          max-width: 90%;
-        }
-      }
-
       /* team start  */
       .team-section {
         padding: 60px 20px;
         background-color:var(--text-light);
         text-align: center;
       }
-
       .section-title {
         font-size: 32px;
         font-weight: bold;
         color: var(--primary);
       }
-
       .section-subtitle {
         color: #555;
         font-size: 18px;
         margin: 10px 0 40px;
       }
-
       .team-grid {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
         justify-content: center;
       }
-
       .team-card {
         background: var(--text-light);
         border-radius: 12px;
@@ -166,11 +44,9 @@
         max-width: 350px;
         transition: transform 0.3s ease;
       }
-
       .team-card:hover {
         transform: translateY(-5px);
       }
-
       .team-photo {
         width: 150px;
         height: 150px;
@@ -179,14 +55,12 @@
         margin: 0 auto 15px;
         object-fit: cover;
       }
-
       .team-card h3 {
         font-size: 20px;
         font-weight: 600;
         margin: 15px 0px;
         color: var(--text-dark);
       }
-
       .badge {
         background: var(--text-light);
         padding: 5px 12px;
@@ -196,7 +70,6 @@
         display: inline-block;
         margin-bottom: 20px;
       }
-
       .degree,
       .research {
         font-size: 14px;
@@ -205,24 +78,20 @@
         text-align: left;
         line-height: 26px;
       }
-
       .team-icons {
         display: flex;
         justify-content: center;
         gap: 20px;
         margin-top: 15px;
       }
-
       .team-icons a {
         color: var(--text-dark);
         font-size: 18px;
         transition: color 0.3s;
       }
-
       .team-icons a:hover {
         color: var(--highlight);
       }
-
       /* Responsive */
       @media (max-width: 768px) {
         .team-grid {
@@ -230,29 +99,23 @@
           align-items: center;
         }
       }
-
       /* team ends  */
-
       /* journety starts  */
-
       .journey-section {
         padding: 60px 20px;
         background-color: var(--text-light);
         text-align: center;
       }
-
       .section-title {
         font-size: 32px;
         font-weight: bold;
         color: var(--text-dark);
       }
-
       .section-subtitle {
         color: #475569;
         font-size: 18px;
         margin-bottom: 40px;
       }
-
       .timeline {
         display: flex;
         flex-direction: column;
@@ -260,7 +123,6 @@
         max-width: 900px;
         margin: 0 auto;
       }
-
       .timeline-item {
         display: flex;
         align-items: center;
@@ -271,11 +133,9 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         transition: transform 0.2s ease;
       }
-
       .timeline-item:hover {
         transform: translateY(-3px);
       }
-
       .icon-circle {
         width: 60px;
         height: 60px;
@@ -288,11 +148,9 @@
         font-size: 26px;
         flex-shrink: 0;
       }
-
       .timeline-content {
         text-align: left;
       }
-
       .year-tag {
         display: inline-block;
         border: 1px solid var(--text-dark);
@@ -303,34 +161,28 @@
         margin-bottom: 6px;
         color: var(--text-dark);
       }
-
       .timeline-content h3 {
         font-size: 18px;
         font-weight: 600;
         color: var(--primary);
         margin: 10px 0px;
       }
-
       .timeline-content p {
         color: #475569;
         font-size: 15px;
         margin: 0;
       }
-
       /* Responsive */
       @media (max-width: 600px) {
         .timeline-item {
           flex-direction: column;
           align-items: flex-start;
         }
-
         .icon-circle {
           margin-bottom: 10px;
         }
       }
-
       /* journey ends  */
-
     </style>
     <link
       rel="stylesheet"
@@ -340,28 +192,28 @@
   <body>
     <!--Complete Header Starts-->
     <header>
-      <div class="logo"><img src="images/CMRG Logo White.png" alt=""></div>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt="Computational Multiphysics Research Group" /></div>
       <nav class="desktop-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li class="dropdown">
-            <a href="#">Research</a>
+            <a>Research</a>
             <div class="dropdown-content">
-              <a href="#">Ongoing</a>
-              <a href="#">Past</a>
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
             </div>
           </li>
           <li class="dropdown">
-            <a href="#">Publications</a>
+            <a>Publications</a>
             <div class="dropdown-content">
               <a href="publications.html">Journals</a>
-              <a href="#">Conferences</a>
+              <a href="conferences.html">Conferences</a>
             </div>
           </li>
-          <!-- <li><a href="#">Blog</a></li> -->
-          <li><a href="#">Opening</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="#">Opening</a></li> -->
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -380,8 +232,8 @@
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -397,47 +249,27 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-    </script>
     <!-- Complete Header Ends  -->
+     <!-- Complete ribbon starts  -->
     <div class="ribbon">
       <div class="ribbon-content">
         <h1 class="ribbon-title"></h1>
         <p class="ribbon-desc"></p>
       </div>
     </div>
-    <!-- <section class="mission-vision-section">
-      <div class="card">
-        <h2>Our Mission</h2>
-        <p id="mission-desc"></p>
-      </div>
-      <div class="card">
-        <h2>Our Vision</h2>
-        <p id="vision-desc"></p>
-      </div>
-    </section>
-    <section class="values-section">
-      <h2 class="section-title">Our Values</h2>
-      <p class="section-subtitle">
-        The principles that guide our research and shape our lab culture
-      </p>
-      <div class="values-grid" id="valuesgrid"></div>
-    </section> -->
+    <!-- Complete ribbon ends  -->
+    <!-- Complete description starts  -->
     <div class="card" style="margin: 0px auto;padding:60px 40px;max-width: 1200px;">
         <h2>Description</h2>
         </br>
-        <p id="desc">At the core of our work lies a rigorous blend of first-principles modeling, high-fidelity numerical methods, and AI-accelerated multi-scale simulations. We seek to uncover governing physical mechanisms, design predictive frameworks, and provide insights into real-world engineering problems in aerospace, defense, energy, and biological systems.</br></br>
-We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles.</p>
-      </div>
+        <p>
+          <span class="description1"></span>
+          </br></br>
+          <span class="description2"></span>
+        </p>
+    </div>
+    <!-- Complete description ends  -->
+     <!-- Complete team starts  -->
     <section class="team-section">
       <h2 class="section-title">Our Team</h2>
       <p class="section-subtitle">
@@ -446,45 +278,17 @@ We actively collaborate across disciplines and welcome students and researchers 
       </p>
       <div class="team-grid" id="team-grid"></div>
     </section>
+    <!-- Complete team ends  -->
+     <!-- Complete journey starts  -->
     <section class="journey-section">
       <h2 class="section-title">Our Journey</h2>
       <p class="section-subtitle">
         Key milestones in our lab's growth and achievements
       </p>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
-          <div class="timeline-content">
-            <span class="year-tag">2025</span>
-            <h3>Lab Foundation</h3>
-            <p>
-              Computational Multiphysics Research Lab established
-            </p>
-          </div>
-        </div>
-
-        <!-- <div class="timeline-item">
-          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
-          <div class="timeline-content">
-            <span class="year-tag">2017</span>
-            <h3>Major Grant Award</h3>
-            <p>Received $2.5M DOE grant for advanced simulation methods</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
-          <div class="timeline-content">
-            <span class="year-tag">2019</span>
-            <h3>International Recognition</h3>
-            <p>
-              Lab director awarded prestigious international research fellowship
-            </p>
-          </div>
-        </div> -->
-      </div>
+      <div class="timeline" id="timeline-container"></div>
     </section>
+    <!-- Complete journey ends  -->
+    <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
@@ -492,70 +296,52 @@ We actively collaborate across disciplines and welcome students and researchers 
           <h3></h3>
           <p></p>
           <div class="social-icons">
-            <a><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-
         <!-- Column 2: Links -->
         <div class="footer-column">
           <h4>Quick Links</h4>
           <ul></ul>
         </div>
-
         <!-- Column 3: Contact -->
         <div class="footer-column">
           <h4>Contact</h4>
-          <ul class="contact-info"></ul>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
         </div>
       </div>
       <hr />
       <div class="footer-bottom"></div>
     </footer>
-
-    <!-- navigation toggle starts -->
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
     <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".navListul");
-        menu.classList.toggle("active");
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
       }
     </script>
-    <!-- navigation toggle ends -->
-    <!-- on load -->
+    <!-- loading header ends  -->
+    <!-- loading About starts -->
     <script>
       async function loadAbout() {
         try {
           const res = await fetch("about.json");
           const data = await res.json();
-
           // Ribbon
-          document.querySelector(".ribbon-title").textContent =
-            data.ribbon.title;
-          document.querySelector(".ribbon-desc").textContent =
-            data.ribbon.description;
-
-          //mission-vision
-          // const missiondesc = document.getElementById("mission-desc");
-          // missiondesc.textContent = data.mission.description;
-          // const visiondesc = document.getElementById("vision-desc");
-          // visiondesc.textContent = data.vision.description;
-
-          //value-card
-          // data.values.forEach((val) => {
-          //   console.log(val);
-          //   const valuesgrid = document.getElementById("valuesgrid");
-          //   const valuecard = document.createElement("div");
-          //   valuecard.className = "value-card";
-          //   const valuecardh3 = document.createElement("h3");
-          //   const valuecardp = document.createElement("p");
-          //   valuecardh3.textContent = val.value.title;
-          //   valuecardp.textContent = val.value.description;
-          //   valuecard.appendChild(valuecardh3);
-          //   valuecard.appendChild(valuecardp);
-          //   valuesgrid.appendChild(valuecard);
-          // });
-
+          document.querySelector(".ribbon-title").textContent = data.ribbon.title;
+          document.querySelector(".ribbon-desc").textContent = data.ribbon.description;
+          //description
+          document.querySelector(".description1").textContent = data.description1;
+          document.querySelector(".description2").textContent = data.description2;
           //team card
           const teamgrid = document.getElementById("team-grid");
           data.teams.forEach((team) => {
@@ -579,8 +365,8 @@ We actively collaborate across disciplines and welcome students and researchers 
             const teamicondiv = document.createElement("div");
             teamicondiv.className = "team-icons";
             teamicondiv.innerHTML = `
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>`;
+            <a href="${team.email}"><i class="fas fa-envelope"></i></a>
+            <a href="${team.linkedin}"><i class="fab fa-linkedin"></i></a>`;
             teamcard.appendChild(teamimg);
             teamcard.appendChild(teamcardh3);
             teamcard.appendChild(teamspan);
@@ -588,18 +374,43 @@ We actively collaborate across disciplines and welcome students and researchers 
             teamcard.appendChild(team2p);
             teamcard.appendChild(teamicondiv);
             teamgrid.appendChild(teamcard);
-
-            // Footer
+        })
+          //journey
+            const container = document.getElementById("timeline-container");
+            data.journey.forEach((item) => {
+            const timelineItem = document.createElement("div");
+            timelineItem.className = "timeline-item";
+            timelineItem.innerHTML = `
+              <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
+              <div class="timeline-content">
+                <span class="year-tag">${item.year}</span>
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+              </div>
+            `;
+          container.appendChild(timelineItem);
+        })}
+        catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", loadAbout);
+    </script>
+    <!-- loading About ends  -->
+     <!-- loading footer starts  -->
+    <script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("footer.json");
+          const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
           document.querySelector(".about p").innerHTML =
             footer.about.description;
-
           const socialLinks = document.querySelectorAll(".social-icons a");
           socialLinks[0].href = footer.about.social.github;
-          socialLinks[1].href = footer.about.social.twitter;
+          socialLinks[1].href = footer.about.social.mail;
           socialLinks[2].href = footer.about.social.linkedin;
-
           const quickLinks = document.querySelector(".footer-column ul");
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
@@ -607,30 +418,42 @@ We actively collaborate across disciplines and welcome students and researchers 
             li.innerHTML = `<a href="#">${link}</a>`;
             quickLinks.appendChild(li);
           });
-
           const contact = footer.contact;
           const contactInfo = document.querySelector(".contact-info");
           contactInfo.innerHTML = `
-        <li>${contact.address}</li>
-        <li>${contact.phone}</li>
-        <li>${contact.email}</li>
-      `;
-
-      //<i class="fas fa-map-marker-alt"></i>
-      //<i class="fas fa-phone-alt"></i>
-      //<i class="fas fa-envelope"></i>
-
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
           document.querySelector(".footer-bottom").textContent =
             footer["footer-note"];
-          });
         } catch (err) {
           console.error("Error loading publications data:", err);
         }
       }
-
-      // Call on load
-      document.addEventListener("DOMContentLoaded", loadAbout);
+      loadFooter();
     </script>
-    <!-- onload ends  -->
+    <!-- loading footer ends  -->
   </body>
 </html>
