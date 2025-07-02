@@ -313,10 +313,7 @@
                     "<span style='color: darkblue; font-weight: bold;'>Seshadri, P. K</span>"
                   )}
                 </div>
-                <div class="pub-journal">${pub.journal}</div>
-                <div class="pub-meta">CiteScore: ${pub.citescore} | Ranking: ${
-              pub.ranking
-            }</div>`;
+                <div class="pub-journal">${pub.journal}</div>`;
             container.appendChild(card);
           });
         })
@@ -356,17 +353,10 @@
           );
           const authors = highlightMatch(authorsRaw, query);
           const journal = highlightMatch(pub.journal, query);
-          const citescore = highlightMatch(
-            `CiteScore: ${pub.citescore}`,
-            query
-          );
-          const ranking = highlightMatch(`Ranking: ${pub.ranking}`, query);
           card.innerHTML = `
             <div class="pub-title">${title}</div>
             <div class="pub-authors">${authors}</div>
-            <div class="pub-journal">${journal}</div>
-            <div class="pub-meta">${citescore} | ${ranking}</div>
-          `;
+            <div class="pub-journal">${journal}</div>`;
           container.appendChild(card);
         });
       }

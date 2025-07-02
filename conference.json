@@ -4,109 +4,102 @@
 },
   "conferences": [
     {
-      "title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows",
-      "authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
-      "journal": "International Journal of Multiphase Flow , 2024",
-      "citescore": "7.3",
-      "ranking": "Q1"
+      "title": "Physics-aware Recurrent Convolutional Neural Networks for Spatiotemporal Dynamics Modeling.",
+      "authors": "Nguyen, P.C., Cheng, X., Arfaza, S., Seshadri, P. K., Nguyen, Y.T., Kim, M., Choi, S., Udaykumar, H.S. and Baek, S.",
+      "journal": "ICML Conference, 2024",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Johnson-Cook yield functions for Cyclotetramethylene-tetranitramine (HMX) and Cyclotrimethylene-trinitramine (RDX) derived from single crystal plasticity models",
-      "authors": "Sen, O., Seshadri, P. K., Rai, N.K., Larentzos, J., Brennan, J., Sewell, T., Picu, C.R., and Udaykumar, H. S",
-      "journal": "Journal of Applied Physics, 2024",
-      "citescore": "5.1",
-      "ranking": "Q2"
+      "title": "High-order methods for simulations of shocked reactive energetic materials at all scales.",
+      "authors": "Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
+      "journal": "2.Bulletin of the American Physical Society, 2024.",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Physically evocative meso-informed sub-grid source term for energy localization in shocked heterogeneous energetic materials",
-      "authors": "Nguyen, Y. T., Seshadri, P. K., and Udaykumar, H. S",
-      "journal": "Journal of Applied Physics, 2023",
-      "citescore": "5.1",
-      "ranking": "Q2"
+      "title": "High fidelity mesoscale simulations of shock initiation through flyer impact on HMX crystal–binder aggregates.",
+      "authors": "Roy, S., Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
+      "journal": "American Physical Society, 2024",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "PARC: Physics-aware recurrent convolutional neural networks to assimilate meso scale reactive mechanics of energetic materials",
-      "authors": "Nguyen, P. C., Nguyen, Y. T., Choi, J. B., Seshadri, P. K., Udaykumar, H. S., & Baek, S. S",
-      "journal": "Science Advances, 2023",
-      "citescore": "20.4",
-      "ranking": "Q1"
+      "title": "Transfer-Learning for Rapid Predictions of CHNO Energetic Material Sensitivity.",
+      "authors": "Saha, R., Seshadri, P. K., Wang, C. and Udaykumar, H. S.",
+      "journal": "Bulletin of the American Physical Society, 2024",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "A Physics‐Aware Deep Learning Model for Energy Localization in Multiscale Shock‐To‐Detonation Simulations of Heterogeneous Energetic Materials",
-      "authors": "Nguyen, P. C., Nguyen, Y. T., Seshadri, P. K., Choi, J. B., Udaykumar, H. S., & Baek, S. S. ",
-      "journal": "Propellants, Explosives, Pyrotechnics, 2023",
-      "citescore": "3.6",
-      "ranking": "Q2"
+      "title": "Interface-resolved reactive simulations of initiation through flyer impact on HMX crystal–binder aggregates.",
+      "authors": "Roy, S., Seshadri, P. K., and Udaykumar, H. S.",
+      "journal": "Bulletin of the American Physical Society, 2023",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Leading edge vortex dynamics in airfoils: Effect of pitching motion at large amplitudes",
-      "authors": "Seshadri, P. K., Aravind, A., and De, A",
-      "journal": "Journal of Fluids and Structures, 2023",
-      "citescore": "6.7",
-      "ranking": "Q1"
+      "title": "Modeling Multi-Dimensional Shock-to-Detonation Transition of Pressed HMX Using a Meso-informed Ignition and Growth Model.",
+      "authors": "Seshadri, P. K., Nguyen, Y. T., and Udaykumar, H. S.",
+      "journal": "Bulletin of the American Physical Society, 2023",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Physically Evocative Meso-Informed Burn Model: Topology of Evolving Hotspot Fields",
-      "authors": "Udaykumar, H. S., Nguyen, Y. T., and Seshadri, P. K",
-      "journal": "Journal of Propulsion and Power, 2022",
-      "citescore": "4.4",
-      "ranking": "Q2"
+      "title": "Structure-property-performance linkages for heterogeneous energetic materials using deep-learning generated synthetic microstructures.",
+      "authors": "Seshadri, P. K., Nguyen, Y. T., Roy, S., Sen, O., and Udaykumar, H. S.",
+      "journal": "APS March Meeting Abstracts, 2021",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Multi-scale modeling of shock initiation of a pressed energetic material. II. Effect of void–void interactions on energy localization",
-      "authors": "Nguyen, Y. T., Seshadri, P. K., Sen, O., Hardin, D. B., Molek, C. D., and Udaykumar, H. S.",
-      "journal": "Journal of Applied Physics, 2022",
-      "citescore": "5.1",
-      "ranking": "Q2"
+      "title": "Evaluation of the importance of void shapes in predictive meso-informed ignition and growth surrogate models for heterogeneous energetic materials.",
+      "authors": "Nguyen, Y. T., Seshadri, P. K., Sen, O., Hardin, D. B., and Udaykumar, H. S.",
+      "journal": "APS March Meeting Abstracts, 1978",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Multi-scale modeling of shock initiation of a pressed energetic material I: The effect of void shapes on energy localization",
-      "authors": "Nguyen, Y. T., Seshadri, P. K., Sen, O., Hardin, D. B., Molek, C. D., and Udaykumar, H. S",
-      "journal": "Journal of Applied Physics, 2022",
-      "citescore": "5.1",
-      "ranking": "Q2"
+      "title": "Simulation of Flow Past an Oscillating Airfoil Using Sharp Interface Immersed Boundary Approach.",
+      "authors": "Seshadri, P. K., and De, A.",
+      "journal": "Proceedings of the 7th International and 45th National Conference on Fluid Mechanics and Fluid Power, 2018",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Meso-scale simulation of energetic materials. II. Establishing structure–property linkages using synthetic microstructures",
-      "authors": "Seshadri, P. K., Nguyen, Y. T., Sen, O., and Udaykumar, H. S",
-      "journal": "Journal of Applied Physics, 2022",
-      "citescore": "5.1",
-      "ranking": "Q2"
+      "title": "Comparative Study of Pressure Reconstruction Schemes in Sharp-Interface Immersed Boundary Method.",
+      "authors": "Seshadri, P. K., and De, A.",
+      "journal": "Proceedings of the 1st International Conference on Mechanical Engineering (INCOM18)",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "A robust sharp interface based immersed boundary framework for moving body problems with applications to laminar incompressible flows",
+      "title": "Assessment of Pressure Reconstruction Schemes in Sharp Interface Immersed Boundary Method.",
       "authors": "Seshadri, P. K., and De, A",
-      "journal": "Computers & Mathematics with Applications, 2021",
-      "citescore": "5.9",
-      "ranking": "Q1"
+      "journal": "AIP Conference Proceedings, 2018",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "Investigation of shock wave interactions involving stationary and moving wedges",
-      "authors": "Seshadri, P. K., and De, A",
-      "journal": "Physics of Fluids, 2020",
-      "citescore": "6.4",
-      "ranking": "Q1"
+      "title": "Determination of flow field due to clap and fling motion of a rigid flapping wing using LBM simulation.",
+      "authors": "Seshadri, P. K., De, A., and Das, D.",
+      "journal": "9th International Conference on Intelligent Unmanned Systems (ICIUS 2013), 2013",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": "A novel sharp interface immersed boundary framework for viscous flow simulations at arbitrary Mach number involving complex and moving boundaries",
-      "authors": "Seshadri, P. K., and De, A",
-      "journal": "Computers & Fluids, 2020",
-      "citescore": "6.0",
-      "ranking": "Q1"
+      "title": "Analysis of Unsteady Aerodynamics on Dragonfly Using Computational Fluid Dynamics and the Effect of Flapping Trajectories on it.",
+      "authors": "Arun Ramanathan.S, Prabhu.S, Pradeep Kumar S, Tamizhvendhan.B, Asad Ahmed",
+      "journal": "13.Proceedings of 11th Asian International Conference on Fluid Machinery, IIT Madras, Chennai, Nov 2011.",
+      "citescore": "",
+      "ranking": ""
     },
     {
-      "title": " Flow Past Stationary and Oscillating Airfoil at a Low Reynolds Number Using Sharp Interface Immersed-Boundary Approach.",
-      "authors": "Seshadri, P. K., and De, A",
-      "journal": "Journal of Flow Visualizations and Image Processing, 2020",
-      "citescore": "1.2",
-      "ranking": "Q4"
-    },
-    {
-      "title": " Investigation of flow field of clap & fling motion using Immersed Boundary coupled Lattice Boltzmann Method.",
-      "authors": "Seshadri, P. K., De, A., and Das, D",
-      "journal": " Journal of Fluids and Structures, 2015",
-      "citescore": "6.7",
-      "ranking": "Q1"
+      "title": " Analysis of Unsteady Aerodynamics on Dragonfly Using CFD.",
+      "authors": "Arun Ramanathan.S, Prabhu.S, Pradeep Kumar S, Tamizhvendhan.B, Asad Ahmed.",
+      "journal": "14.the 11th Asian Symposium on Visualization, JUN 2011.",
+      "citescore": "",
+      "ranking": ""
     }
   ]
 }
