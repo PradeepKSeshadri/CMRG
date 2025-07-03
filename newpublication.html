@@ -194,7 +194,7 @@
         width: 300px;
         height:300px;
         border: 2px solid rgb(199, 199, 199);
-        /* height: auto; */
+        /* height: auto ; */
         border-radius: 10px;
         object-fit: cover;
       }
@@ -259,33 +259,35 @@
         color: #333;
       }
       .description {
-        font-size: 14px;
-        margin-top: 10px;
-        color: #444;
-        line-height: 1.5;
-        max-height: 100px;         /* Fixed height */
-        overflow: hidden;
-        position: relative;
-        text-align: justify;
-        transition: max-height 0.3s ease;
-      }
-      .description.expanded {
-        max-height: none;          /* Full height when expanded */
-      }
-      .show-more-btn {
-        color: #1e293b;
-        font-weight: 500;
-        font-size: 13px;
-        cursor: pointer;
-        margin-top: 6px;
-        display: inline-block;
-        background: #f1f5f9;
-        padding: 4px 10px;
-        border-radius: 6px;
-      }
-      .show-more-btn:hover {
-        background-color: #e2e8f0;
-      }
+  font-size: 14px;
+  margin-top: 10px;
+  color: #444;
+  line-height: 1.5;
+  max-height: 100px;         /* Fixed height */
+  overflow: hidden;
+  position: relative;
+  text-align: justify;
+  transition: max-height 0.3s ease;
+}
+
+.description.expanded {
+  max-height: none;          /* Full height when expanded */
+}
+.show-more-btn {
+  color: #1e293b;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 6px;
+  display: inline-block;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.show-more-btn:hover {
+  background-color: #e2e8f0;
+}
+
       /* .description {
         font-size: 14px;
         margin-top: 10px;
@@ -759,20 +761,25 @@
         clone.querySelector(".journal.category").textContent = card.category;
         clone.querySelector(".publication-title").textContent = card["publication-title"];
         const description = clone.querySelector(".description");
-        description.textContent = card.description;
-        const showMoreBtn = document.createElement("span");
-        showMoreBtn.className = "show-more-btn";
-        showMoreBtn.textContent = "Show more";
-        let isExpanded = false;
-        showMoreBtn.onclick = () => {
-          isExpanded = !isExpanded;
-          description.classList.toggle("expanded");
-          showMoreBtn.textContent = isExpanded ? "Show less" : "Show more";
-        };
-        // Only show button if description is long
-        if (card.description.length > 300) {
-          description.after(showMoreBtn);
-        }
+description.textContent = card.description;
+
+const showMoreBtn = document.createElement("span");
+showMoreBtn.className = "show-more-btn";
+showMoreBtn.textContent = "Show more";
+
+let isExpanded = false;
+
+showMoreBtn.onclick = () => {
+  isExpanded = !isExpanded;
+  description.classList.toggle("expanded");
+  showMoreBtn.textContent = isExpanded ? "Show less" : "Show more";
+};
+
+// Only show button if description is long
+if (card.description.length > 300) {
+  description.after(showMoreBtn);
+}
+
         clone.querySelector(".doi").innerHTML = `<a href="${card.doi}" target="_blank">${card.doi}</a>`;
         clone.querySelector(".view-btn").href = card["view-link"];
         // clone.querySelector(".pdf-btn").href = card["pdf-link"];
