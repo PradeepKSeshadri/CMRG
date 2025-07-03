@@ -30,23 +30,23 @@
         box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
         padding: 40px;
       }
-      .contact-info {
+      .contact-infor {
         flex: 1;
         min-width: 280px;
       }
-      .contact-info h4 {
+      .contact-infor h4 {
         text-transform: uppercase;
         font-size: 0.9rem;
         color: #475569;
         font-weight: 600;
         margin-bottom: 10px;
       }
-      .contact-info h2 {
+      .contact-infor h2 {
         font-size: 2rem;
         font-weight: 600;
         margin-bottom: 10px;
       }
-      .contact-info p {
+      .contact-infor p {
         font-size: 0.95rem;
         color: #475569;
         margin-bottom: 25px;
@@ -150,35 +150,34 @@
           /* width: 100%; */
           display: flex;
         }
-        
       }
     </style>
 </head>
   <body>
     <!--Complete Header Starts-->
     <header>
-      <div class="logo"><img src="images/CMRG Logo White.png" alt=""></div>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt="Computational Multiphysics Research Group" /></div>
       <nav class="desktop-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
-            <a href="#">Research</a>
+            <a>Research</a>
             <div class="dropdown-content">
-              <a href="#">Ongoing</a>
-              <a href="#">Past</a>
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
             </div>
           </li>
           <li class="dropdown">
-            <a href="#">Publications</a>
+            <a>Publications</a>
             <div class="dropdown-content">
               <a href="publications.html">Journals</a>
-              <a href="#">Conferences</a>
+              <a href="conferences.html">Conferences</a>
             </div>
           </li>
-          <!-- <li><a href="#">Blog</a></li> -->
-          <li><a href="#">Opening</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="#">Opening</a></li> -->
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
@@ -197,8 +196,8 @@
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -214,36 +213,21 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-    </script>
     <!-- Complete Header Ends  -->
+    <!-- Complete contact starts  -->
     <section class="contact-section">
       <div class="contact-container">
-        <div class="contact-info">
+        <div class="contact-infor">
           <h4>Contact Us</h4>
           <h2>Get in touch today</h2>
           <p>We’d love to hear from you. Here’s how you can reach us.</p>
           <div class="info-box">
             <p>Email : <strong id="emailid"></strong></p>
           </div>
-          <!-- <div class="info-box">
-            <p>Phone : <strong id="phoneno"></strong></p>
-          </div> -->
           <div class="social-links">
             <span>Follow us:</span>
             <a id="github-link"><img src="images/github.svg" alt="GitHub"/></a>
             <a id="linkedin-link"><img src="images/linkedin.svg" alt="LinkedIn"/></a>
-            <!-- <a id="twitter-link"><img src="images/twitter.svg" alt="X" /></a> -->
-            <!-- <a id="instagram-link"><img src="images/instagram.svg" alt="Instagram"/></a> -->
           </div>
         </div>
         <form class="contact-form" action="" method="POST">
@@ -272,15 +256,17 @@
         </form>
       </div>
     </section>
+    <!-- Complete contact ends  -->
+    <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
         <div class="footer-column about">
-          <h3 id="footer-title"></h3>
-          <p id="footer-para"></p>
+          <h3></h3>
+          <p></p>
           <div class="social-icons">
-            <a><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
@@ -292,69 +278,104 @@
         <!-- Column 3: Contact -->
         <div class="footer-column">
           <h4>Contact</h4>
-          <ul class="footer-contact-info"></ul>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
         </div>
       </div>
       <hr />
       <div class="footer-bottom"></div>
     </footer>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading contact starts  -->
     <script>
       async function loadContact() {
         try {
           const res = await fetch("contact.json");
-          const data = await res.json();
-          console.log(data);
-          // const logo = document.getElementById("logolink");
-          // logo.src = data.logo;
-          // const brand = document.getElementById("brand");
-          // brand.textContent = data.brand;
+          const data1 = await res.json();
+          console.log(data1);
           const email = document.getElementById("emailid");
-          // const phone = document.getElementById("phoneno");
-          email.textContent = data.email;
-          // phone.textContent = data.phone;
+          email.textContent = data1.email;
           const githublink = document.getElementById("github-link");
           const linkedinlink = document.getElementById("linkedin-link");
-          // const twitterlink = document.getElementById("twitter-link");
-          // const instagramlink = document.getElementById("instagram-link");
-          githublink.href = data.githublink;
-          linkedinlink.href = data.linkedinlink;
-          // twitterlink.href = data.twitterlink;
-          // instagramlink.href = data.instagramlink;
-          // Footer
-          document.getElementById("footer-title").textContent =
-            data.footer.about.title;
-          document.getElementById("footer-para").innerHTML =
-            data.footer.about.description;
-          const socialLinks = document.querySelectorAll(".social-icons a");
-          socialLinks[0].href = data.footer.about.social.github;
-          socialLinks[1].href = data.footer.about.social.twitter;
-          socialLinks[2].href = data.footer.about.social.linkedin;
-          const quickLinks = document.querySelector(".footer-column ul");
-          quickLinks.innerHTML = "";
-          data.footer["quick-links"].forEach((link) => {
-            console.log(link);
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
-            quickLinks.appendChild(li);
-          });
-          const contact = data.footer.contact;
-          const contactInfo = document.querySelector(".footer-contact-info");
-          contactInfo.innerHTML = `
-            <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-            <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-            <li><i class="fas fa-envelope"></i>${contact.email}</li>
-          `;
-          document.querySelector(".footer-bottom").textContent =
-            data.footer["footer-note"];
+          githublink.href = data1.githublink;
+          linkedinlink.href = data1.linkedinlink;
         } catch (err) {
           console.error("Error loading publications data:", err);
         }
       }
-      function toggleMenu() {
-        const menu = document.querySelector(".navListul");
-        menu.classList.toggle("active");
-      }
       loadContact();
     </script>
+    <!-- loading contact ends  -->
+    <!-- loading footer starts  -->
+    <script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("footer.json");
+          const data = await res.json();
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.mail;
+          socialLinks[2].href = footer.about.social.linkedin;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="#">${link}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      loadFooter();
+    </script>
+    <!-- loading footer ends  -->
   </body>
 </html>
