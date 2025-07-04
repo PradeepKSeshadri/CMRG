@@ -725,11 +725,15 @@
           recentHighlightData.cards.forEach((highlight) => {
             const div = document.createElement("div");
             div.className = "recent-highlight-card";
+            const recentauthor = highlight["recent-authors"];
             div.innerHTML = `
                 <div class="recent-card-content">
                   <span class="recent-badge">${highlight["recent-badge"]}</span>
                   <h3 class="recent-title">${highlight["recent-title"]}</h3>
-                  <p class="recent-authors">${highlight["recent-authors"]}</p>
+                  <p class="recent-authors">${recentauthor.replace(
+                  "Seshadri, P. K",
+                  `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+                )}</p>
                   <p class="recent-journal">${highlight["recent-journal"]}</p>
                   <p class="recent-description">${highlight["recent-description"]}</p>
                 </div>
@@ -753,7 +757,11 @@
         const card = pub.card;
         clone.querySelector("img").src = card.thumbnail;
         clone.querySelector(".card-heading").textContent = card["card-heading"];
-        clone.querySelector(".author-name").textContent = card["author-name"];
+        const author = card["author-name"];
+        clone.querySelector(".author-name").innerHTML = author.replace(
+          "Seshadri, P. K",
+          `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+        );
         clone.querySelector(".year").textContent = card.year;
         clone.querySelector(".citation").textContent = card.citation;
         clone.querySelector(".journal.category").textContent = card.category;

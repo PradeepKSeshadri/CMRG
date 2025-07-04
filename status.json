@@ -1,0 +1,18 @@
+{
+  "badges": [
+    { "label": "contributors", "value": "17", "color": "green" },
+    { "label": "pull requests", "value": "3 open", "color": "gray" },
+    { "label": "issues", "value": "5 open", "color": "gold" },
+    { "label": "DOI", "value": "10.5281/zenodo.10381768", "color": "blue", "link": "https://doi.org/10.5281/zenodo.10381768" }
+  ],
+  "development": [
+    { "label": "Linux", "status": "passing", "color": "black" },
+    { "label": "Coverage", "status": "passing", "color": "green" },
+    { "label": "last commit (development)", "status": "yesterday", "color": "limegreen" }
+  ],
+  "master": [
+    { "label": "Linux", "status": "passing", "color": "black" },
+    { "label": "last commit (master)", "status": "last wednesday", "color": "limegreen" }
+  ],
+  "bibtex": "@article{runnels2025alamo,\n  title={The Alamo multiphysics solver for phase field simulations with strong-form mechanics and block structured adaptive mesh refinement},\n  author={Runnels, Brandon and Agrawal, Vinamra and Meier, Maycon},\n  journal={arXiv preprint arXiv:2503.08917},\n  year={2025}\n}"
+}

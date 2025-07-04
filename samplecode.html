@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiphysics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #111;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      /* border:2px solid red; */
+    }
+
+    .main {
+      flex: 1 1 600px;
+      text-align: center;
+    }
+
+    .main img {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      border:2px solid red;
+      
+    }
+
+    .buttons a {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-grow: 1;
+    }
+
+    .buttons a:hover {
+      background: #0056b3;
+    }
+
+    .news {
+      flex: 1 1 300px;
+    }
+
+    .news h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .news-item {
+      border-left: 3px solid #007bff;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .news-item p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main,
+      .news {
+        flex: 1 1 100%;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+    }
+
+    .status-section {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .badge-container,
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      color: white;
+      display: inline-block;
+    }
+
+    .badge.gray { background-color: #6c757d; }
+    .badge.green { background-color: green; }
+    .badge.gold { background-color: goldenrod; }
+    .badge.blue { background-color: #007bff; }
+    .badge.black { background-color: #333; }
+    .badge.limegreen { background-color: limegreen; }
+
+    .status-title {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    pre {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      color: #005cc5;
+    }
+
+    @media (max-width: 600px) {
+      .badge-container, .badge-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <img src="images/Pub_Journal_10_JAP_2022.jpg" alt="alamo multiphysics" />
+      <div class="tagline" id="tagline"></div>
+      <div class="buttons" id="buttons"></div>
+      
+    </div>
+
+    <div class="news">
+      <h2>News</h2>
+      <div id="news-list"></div>
+    </div>
+
+     <div class="status-section">
+    <h2>Status</h2>
+
+    <div class="badge-container" id="main-badges"></div>
+
+    <div class="status-title">Development:</div>
+    <div class="badge-group" id="dev-badges"></div>
+
+    <div class="status-title">Master:</div>
+    <div class="badge-group" id="master-badges"></div>
+
+    <p>To acknowledge alamo in your publications, please cite the following article.</p>
+
+    <pre id="bibtex"></pre>
+  </div>
+    
+  </div>
+ 
+
+  <script>
+    async function loadNews() {
+      try {
+        const res = await fetch("samplecode.json");
+        const data = await res.json();
+
+        // Set tagline
+        document.getElementById("tagline").textContent = data.tagline;
+
+        // Set buttons
+        const btnContainer = document.getElementById("buttons");
+        data.buttons.forEach(btn => {
+          const a = document.createElement("a");
+          a.href = btn.link;
+          a.innerHTML = `<i class="${btn.icon}"></i> ${btn.label}`;
+          btnContainer.appendChild(a);
+        });
+
+        // Set news items
+        const newsList = document.getElementById("news-list");
+        data.news.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "news-item";
+          div.innerHTML = `<p>${item.title}</p><p style="color:gray; font-size: 0.85rem">${item.date}</p>`;
+          newsList.appendChild(div);
+        });
+      } catch (err) {
+        console.error("Failed to load news:", err);
+      }
+    }
+
+    loadNews();
+  </script>
+  
+
+  <script>
+    async function loadStatus() {
+      try {
+        const res = await fetch("status.json");
+        const data = await res.json();
+
+        // Main badges
+        const main = document.getElementById("main-badges");
+        data.badges.forEach(b => {
+          const badge = document.createElement("a");
+          badge.className = `badge ${b.color}`;
+          badge.textContent = `${b.label} ${b.value}`;
+          badge.href = b.link || "#";
+          badge.target = "_blank";
+          badge.style.textDecoration = "none";
+          main.appendChild(badge);
+        });
+
+        // Development badges
+        const dev = document.getElementById("dev-badges");
+        data.development.forEach(d => {
+          const badge = document.createElement("span");
+          badge.className = `badge ${d.color}`;
+          badge.textContent = `${d.label} ${d.status}`;
+          dev.appendChild(badge);
+        });
+
+        // Master badges
+        const master = document.getElementById("master-badges");
+        data.master.forEach(d => {
+          const badge = document.createElement("span");
+          badge.className = `badge ${d.color}`;
+          badge.textContent = `${d.label} ${d.status}`;
+          master.appendChild(badge);
+        });
+
+        // BibTeX
+        document.getElementById("bibtex").textContent = data.bibtex;
+      } catch (err) {
+        console.error("Error loading status:", err);
+      }
+    }
+
+    loadStatus();
+  </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses - Research Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #004aad;
+      --light: #f4f6f8;
+      --white: #fff;
+      --gray: #777;
+      --border-radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: #333;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    .courses-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .course-card {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      padding: 2rem;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .course-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .course-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-meta {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .course-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      flex: 1;
+    }
+
+    .course-footer {
+      margin-top: 1.5rem;
+    }
+
+    .course-button {
+      padding: 0.6rem 1.2rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .course-button:hover {
+      background-color: #00307a;
+    }
+
+    footer {
+      text-align: center;
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Optional: Font Awesome icons for course topics */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Courses</h1>
+    <p>Advanced learning in simulation, computation & engineering science</p>
+  </header>
+
+  <div class="courses-container">
+    <div class="courses-grid">
+
+      <!-- Course 1 -->
+      <div class="course-card">
+        <div class="course-icon"><i class="fas fa-cogs"></i></div>
+        <div class="course-title">Computational Fluid Dynamics</div>
+        <div class="course-meta">Fall 2025 · Dr. A. Sharma</div>
+        <div class="course-description">
+          Dive into numerical methods for solving Navier-Stokes equations using finite volume and immersed boundary methods. Includes coding projects & simulation assignments.
+        </div>
+        <div class="course-footer">
+          <a href="#" class="course-button">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+        <div class="course-icon"><i class="fas fa-dna"></i></div>
+        <div class="course-title">Bio-Inspired Aerodynamics</div>
+        <div class="course-meta">Spring 2026 · Dr. R. Verma</div>
+        <div class="course-description">
+          Learn how natural flyers like insects use unsteady mechanisms like clap and fling. Model their motion with modern numerical solvers.
+        </div>
+        <div class="course-footer">
+          <a href="#" class="course-button">Join Waitlist</a>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card">
+        <div class="course-icon"><i class="fas fa-brain"></i></div>
+        <div class="course-title">AI for Scientific Computing</div>
+        <div class="course-meta">Spring 2026 · Dr. P. Mehra</div>
+        <div class="course-description">
+          Understand how machine learning and surrogate modeling are revolutionizing simulation workflows in CFD, thermal systems, and structural analysis.
+        </div>
+        <div class="course-footer">
+          <a href="#" class="course-button">Apply Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Computational Multiphysics Research Group
+  </footer>
+
+</body>
+</html>

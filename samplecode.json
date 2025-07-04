@@ -1,0 +1,43 @@
+{
+  "tagline": "Massively parallel implicit/explicit solid mechanics with block structured adaptive mesh refinement",
+  "buttons": [
+    { "label": "Github", "icon": "fab fa-github", "link": "#" },
+    { "label": "Docs", "icon": "fas fa-book", "link": "#" },
+    { "label": "Coverage", "icon": "fas fa-user", "link": "#" },
+    { "label": "Performance", "icon": "fas fa-tachometer-alt", "link": "#" }
+  ],
+  "news": [
+    {
+      "title": "Atomistic-informed phase field modeling of magnesium twin growth by disconnections – Our work appears in Acta Materialia",
+      "date": "January 8, 2025"
+    },
+    {
+      "title": "Mike Meier receives UCCS MAE PhD Student of the Year Award",
+      "date": "May 17, 2024"
+    },
+    {
+      "title": "Finite kinematics diffuse interface mechanics coupled to solidcomposite propellant deflagration – our work appears in CMAME",
+      "date": "May 14, 2024"
+    },
+    {
+      "title": "Grain boundary energy and faceting with lattice matching – our work appears in Acta Materialia",
+      "date": "May 14, 2024"
+    },
+    {
+      "title": "Congratulations Dr. Boyd and Dr. Meier!",
+      "date": "April 9, 2024"
+    },
+    {
+      "title": "Atomistic-informed phase field modeling of magnesium twin growth by disconnections – Our work appears in Acta Materialia",
+      "date": "January 8, 2025"
+    },
+    {
+      "title": "Mike Meier receives UCCS MAE PhD Student of the Year Award",
+      "date": "May 17, 2024"
+    },
+    {
+      "title": "Finite kinematics diffuse interface mechanics coupled to solidcomposite propellant deflagration – our work appears in CMAME",
+      "date": "May 14, 2024"
+    }
+  ]
+}

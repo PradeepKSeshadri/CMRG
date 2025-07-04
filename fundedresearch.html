@@ -300,28 +300,28 @@
 
   <!--Complete Header Starts-->
     <header>
-      <div class="logo"><img src="images/CMRG Logo White.png" alt=""></div>
+      <div class="logo"><img src="images/CMRG Logo White.png" alt="Computational Multiphysics Research Group" /></div>
       <nav class="desktop-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li class="dropdown">
-            <a href="#">Research</a>
+            <a>Research</a>
             <div class="dropdown-content">
-              <a href="#">Ongoing</a>
-              <a href="#">Past</a>
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
             </div>
           </li>
           <li class="dropdown">
-            <a href="#">Publications</a>
+            <a>Publications</a>
             <div class="dropdown-content">
               <a href="publications.html">Journals</a>
-              <a href="#">Conferences</a>
+              <a href="conferences.html">Conferences</a>
             </div>
           </li>
-          <!-- <li><a href="#">Blog</a></li> -->
-          <li><a href="#">Opening</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="#">Opening</a></li> -->
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -340,8 +340,8 @@
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -357,25 +357,15 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-    </script>
     <!-- Complete Header Ends  -->
-
-<div class="ribbon">
+    <!-- Complete ribbon starts  -->
+    <div class="ribbon">
       <div class="ribbon-content">
         <h1 class="ribbon-title"></h1>
         <p class="ribbon-desc"></p>
       </div>
     </div>
+    <!-- Complete ribbon ends  -->
 
   <div class="button-group">
     <button class="active" onclick="loadResearch('Ongoing Research', this)">Ongoing Research</button>
@@ -419,55 +409,6 @@
   </template> -->
   <div class="container" id="projectsContainer"></div>
   <script>
-    const projects = [
-      {
-        "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
-        "funding": "$7,500,000",
-        "duration": "06/2019 ~ 05/2024",
-        "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
-        "source": "U.S. Department of Defense, Air Force Office of Scientific Research (AFOSR), MURI Program",
-        "leadInvestigator": "Thomas Sewell (University of Missouri-Columbia)",
-        "coPI": "H.S. Udaykumar (University of Iowa)",
-        "coInvestigators": [
-          "D. Dlott (UIUC)",
-          "Catalin Picu (RPI)",
-          "S. Chaudhari (UIC)",
-          "W.C. Sun (Columbia)",
-          "S. Baek (UVA)"
-        ],
-        "contributions": [
-          "Higher Order Accurate Modeling of Micro/Meso/Macro scale simulations",
-          "New Framework to model Flyer Impact induced Shock Initiation of PBX",
-          "Physics Aware Recurrent Convolutional Neural Network",
-          "New sub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions"
-        ],
-        "notes": "4 papers published; 1 in Science Advances (IF=13.6), 5+ in progress"
-      },
-      {
-        "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
-        "duration": "05/2010 ~ Ongoing",
-        "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
-        "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
-        "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
-        "contributions": [
-          "Uncertainty Quantification of Surrogate Burn Model MESIG",
-          "Published two-part paper in Journal of Applied Physics",
-          "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
-        ]
-      },
-      {
-        "projectCode": "NSF-DMREF (2118393)",
-        "funding": "$1,650,000",
-        "duration": "03/2022 ~ 02/2026",
-        "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
-        "source": "National Science Foundation, DMREF Program",
-        "contributions": [
-          "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
-          "Building material database of HMX, RDX, TNT, PETN, TATB",
-          "Running mesoscale simulations and training PhD students"
-        ]
-      }
-    ];
 
     const container = document.getElementById("projectsContainer");
 

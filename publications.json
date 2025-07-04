@@ -10,7 +10,7 @@
         "card-heading": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
         "author-name": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
         "year": "2024",
-        "citation": "4 citations",
+        "citation": "14 citations",
         "tags": ["Physics-informed machine learning", "Physics-aware recurrent convolutional neural networks", "Data-driven modeling"],
         "category": "Journal",
         "publication-title": "International Journal of Multiphase Flow",
@@ -24,7 +24,7 @@
       "card": {
         "thumbnail": "images/Pub_Journal_2_JAP_2024.jpg",
         "card-heading": "Johnson-Cook yield functions for Cyclotetramethylene-tetranitramine (HMX) and Cyclotrimethylene-trinitramine (RDX) derived from single crystal plasticity models.",
-        "author-name": "Sen, O., Seshadri, P.K., Rai, N.K., Larentzos, J., Brennan, J., Sewell, T., Picu, C.R., and Udaykumar, H. S.",
+        "author-name": "Sen, O., Seshadri, P. K., Rai, N.K., Larentzos, J., Brennan, J., Sewell, T., Picu, C.R., and Udaykumar, H. S.",
         "year": "2024",
         "citation": "5 citations",
         "tags": ["Molecular dynamics", "Speed of sound", "Stress measurement","Plasticity"," Shear modulus"],

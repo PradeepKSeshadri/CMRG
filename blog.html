@@ -1,189 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root {
-  --primary: #ffffff;
-  --secondary: #012a5e;
-  --highlight: #facc15;
-  --text-dark: #111827;
-  --text-light: #ffffff;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab Blog & Openings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
-}
+    header {
+      background: #002244;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-/* Header */
-.header {
-  background-color: var(--primary);
-  color: var(--text-dark);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
+    .main-container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
-.logo img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
+    @media (max-width: 900px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.brand h1 {
-  font-size: 16px;
-  margin: 0;
-}
+    .blog-section,
+    .openings-section {
+      margin-bottom: 3rem;
+    }
 
-.brand span {
-  font-size: 12px;
-  color: gray;
-}
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #002244;
+    }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 75%;
-  max-width: 300px;
-  height: 100%;
-  background-color: var(--secondary);
-  color: var(--text-light);
-  padding: 20px;
-  transition: left 0.3s ease;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-}
+    .blog-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s;
+      padding:10px;
+      border:1px solid rgb(227, 227, 227);
+    }
 
-.sidebar.show {
-  left: 0;
-}
+    .blog-card:hover {
+      transform: translateY(-4px);
+    }
 
-.sidebar .close-icon {
-  font-size: 26px;
-  align-self: flex-end;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border:1px solid rgb(227, 227, 227);
+    }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    .blog-content {
+      padding: 1.2rem;
+    }
 
-.sidebar ul li {
-  margin: 10px 0;
-}
+    .blog-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
 
-.sidebar ul li a,
-.sidebar ul li div {
-  color: var(--text-light);
-  text-decoration: none;
-  font-size: 16px;
-  padding: 10px 14px;
-  display: block;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .blog-meta {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.8rem;
+    }
 
-.sidebar ul li a.active,
-.sidebar ul li a:hover,
-.sidebar ul li div:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
+    .blog-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
-/* Dropdown submenu */
-.submenu {
-  display: none;
-  padding-left: 10px;
-  margin-top: 5px;
-}
+    .read-more {
+      margin-top: 1rem;
+      display: inline-block;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.submenu li {
-  margin: 5px 0;
-}
+    .read-more:hover {
+      text-decoration: underline;
+    }
 
-.submenu li a {
-  font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 8px 12px;
-}
+    .sidebar1 {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      padding: 1.5rem;
+    }
 
-.dropdown.open > .submenu {
-  display: block;
-}
+    .sidebar1 h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #002244;
+    }
 
-    </style>
+    .news-item {
+      margin-bottom: 1.2rem;
+      border-left: 3px solid #0066cc;
+      padding-left: 0.8rem;
+    }
+
+    .news-item p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .openings-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .openings-section li {
+      background: white;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .openings-section li strong {
+      color: #002244;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      background: #002244;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 </head>
 <body>
-    <header class="header">
-  <div class="logo">
-    <img src="images/logo.png" alt="Logo">
-    <div class="brand">
-      <h1>CMP Lab</h1>
-      <span>Computational Multiphysics</span>
+
+  <!--Complete Header Starts-->
+    <header>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group"
+        />
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a>Research</a>
+            <div class="dropdown-content">
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="active">Publications</a>
+            <div class="dropdown-content">
+              <a href="publications.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="#">Opening</a></li> -->
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- sidebar1 -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Complete Header Ends  -->
+    <!-- Complete ribbon starts  -->
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title">Blogs & Openings</h1>
+        <p class="ribbon-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae ipsam vero consequatur officia quia qui commodi deserunt excepturi eos, dignissimos aut beatae est voluptas sit. Nostrum libero nisi adipisci repellat odio voluptatibus reprehenderit hic voluptatum aliquam quae neque corrupti animi dolorum pariatur, error optio sint tenetur sit culpa distinctio impedit.</p>
+      </div>
     </div>
+    <!-- Complete ribbon ends  -->
+
+  <div class="main-container">
+    <div>
+      <!-- Blog Section -->
+      <section class="blog-section">
+        <h2 class="section-title">Latest Blog Posts</h2>
+
+        <div class="blog-card">
+          <img src="images/Pub_Journal_6_JFS_2023.jpg" alt="Blog 1" />
+          <div class="blog-content">
+            <h3 class="blog-title">Understanding Clap & Fling Mechanism</h3>
+            <p class="blog-meta">By Dr. A. Sharma | July 1, 2025</p>
+            <p class="blog-description">
+              We investigate low Reynolds number aerodynamic effects using immersed boundary with lattice Boltzmann method.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/Pub_Journal_8_JAP_2022.jpg" alt="Blog 2" />
+          <div class="blog-content">
+            <h3 class="blog-title">Parametric Flow Study</h3>
+            <p class="blog-meta">By M. Patel | June 27, 2025</p>
+            <p class="blog-description">
+              A comparative study of vortex dynamics with changing Re, J and frequency shows new aerodynamic patterns.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Openings Section -->
+      <section class="openings-section">
+        <h2 class="section-title">Join Our Research Team</h2>
+        <ul>
+          <li>
+            <strong>PhD Position in Computational Fluid Dynamics</strong>
+            We are looking for motivated candidates with background in CFD and numerical methods.
+          </li>
+          <li>
+            <strong>Postdoctoral Fellow – Multiphysics Simulation</strong>
+            Opportunity to work on cutting-edge simulations involving fluid-structure interaction and machine learning.
+          </li>
+          <li>
+            <strong>Undergraduate Research Internship</strong>
+            Apply your programming and math skills to real-world physics problems in a collaborative environment.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- sidebar1 Section -->
+    <aside class="sidebar1">
+      <h3>Lab News</h3>
+      <div class="news-item">
+        <p><strong>July 1:</strong> Our latest paper accepted in *Physics of Fluids*</p>
+      </div>
+      <div class="news-item">
+        <p><strong>June 20:</strong> Congratulations to Dr. Mehra on securing DST grant</p>
+      </div>
+      <div class="news-item">
+        <p><strong>June 10:</strong> New GPU cluster installed in lab for high-res simulations</p>
+      </div>
+      <div class="news-item">
+        <p><strong>July 1:</strong> Our latest paper accepted in *Physics of Fluids*</p>
+      </div>
+      <div class="news-item">
+        <p><strong>June 20:</strong> Congratulations to Dr. Mehra on securing DST grant</p>
+      </div>
+      <div class="news-item">
+        <p><strong>June 10:</strong> New GPU cluster installed in lab for high-res simulations</p>
+      </div>
+      <div class="news-item">
+        <p><strong>July 1:</strong> Our latest paper accepted in *Physics of Fluids*</p>
+      </div>
+      <div class="news-item">
+        <p><strong>June 20:</strong> Congratulations to Dr. Mehra on securing DST grant</p>
+      </div>
+      <div class="news-item">
+        <p><strong>June 10:</strong> New GPU cluster installed in lab for high-res simulations</p>
+      </div>
+    </aside>
   </div>
-  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
-</header>
 
-<nav class="sidebar" id="sidebar">
-  <div class="close-icon" onclick="toggleSidebar()">×</div>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-
-    <!-- Dropdown: Research -->
-    <li class="dropdown">
-      <div onclick="toggleDropdown(this)">Research ▾</div>
-      <ul class="submenu">
-        <li><a href="past-projects.html">Past Projects</a></li>
-        <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
-      </ul>
-    </li>
-
-    <!-- Dropdown: Publications -->
-    <li class="dropdown">
-      <div onclick="toggleDropdown(this)">Publications ▾</div>
-      <ul class="submenu">
-        <li><a href="journals.html">Journals</a></li>
-        <li><a href="conferences.html">Conferences</a></li>
-      </ul>
-    </li>
-
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="code.html">Code</a></li>
-    <li><a href="openings.html">Openings</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-<script>
-  function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("show");
-  }
-
-  function toggleDropdown(el) {
-    const parent = el.parentElement;
-    parent.classList.toggle("open");
-  }
-</script>
+  <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+     <!-- loading footer starts  -->
+    <script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("footer.json");
+          const data = await res.json();
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.mail;
+          socialLinks[2].href = footer.about.social.linkedin;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="#">${link}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      loadFooter();
+    </script>
+    <!-- loading footer ends  -->
 
 </body>
 </html>

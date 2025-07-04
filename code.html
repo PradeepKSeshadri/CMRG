@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Lab Codes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #001e46;
+      --light: #f5f7fa;
+      --white: #fff;
+      --gray: #777;
+      --border-radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: #333;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    .codes-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .codes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .code-card {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      padding: 2rem;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .code-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .code-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #002244;
+      margin-bottom: 0.4rem;
+    }
+
+    .code-meta {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .code-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      flex: 1;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: #e1ecf4;
+      color: #004aad;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-right: 8px;
+      margin-top: 10px;
+    }
+
+    .code-footer {
+      margin-top: 1.5rem;
+    }
+
+    .code-button {
+      padding: 0.5rem 1rem;
+      background-color: #004aad;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+      margin-right: 10px;
+    }
+
+    .code-button:hover {
+      background-color: #00307a;
+    }
+
+    footer {
+      text-align: center;
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lab Simulation Codes</h1>
+    <p>Open-source tools and research-grade simulation codes developed by our lab</p>
+  </header>
+
+  <div class="codes-container">
+    <div class="codes-grid">
+
+      <!-- Code Project 1 -->
+      <div class="code-card">
+        <div class="code-title">Immersed Boundary + LBM Solver</div>
+        <div class="code-meta">C++, OpenMP · Last updated: July 2025</div>
+        <div class="code-description">
+          A fast, parallelized solver combining the immersed boundary method with the lattice Boltzmann method for low Re flows involving complex geometries.
+        </div>
+        <div class="tech-badge">C++</div>
+        <div class="tech-badge">LBM</div>
+        <div class="tech-badge">Fluid Dynamics</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/ibm-lbm-solver" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Code Project 2 -->
+      <div class="code-card">
+        <div class="code-title">CFD Visualization Tool</div>
+        <div class="code-meta">Python, Streamlit · June 2025</div>
+        <div class="code-description">
+          A web-based visualization dashboard for plotting 2D velocity fields, vorticity maps, and animated time-stepping of simulation results.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">Streamlit</div>
+        <div class="tech-badge">Visualization</div>
+        <div class="code-footer">
+          <a href="https://yourlab.github.io/cfd-visualizer" target="_blank" class="code-button">
+            <i class="fas fa-play-circle"></i> Demo
+          </a>
+          <a href="https://github.com/yourlab/cfd-visualizer" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Code Project 3 -->
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+      <div class="code-card">
+        <div class="code-title">AI-Powered Surrogate Model</div>
+        <div class="code-meta">TensorFlow, NumPy · May 2025</div>
+        <div class="code-description">
+          A deep learning model trained on simulation data to predict pressure distributions over airfoils under varying conditions.
+        </div>
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">TensorFlow</div>
+        <div class="tech-badge">ML + Simulation</div>
+        <div class="code-footer">
+          <a href="https://github.com/yourlab/surrogate-airfoil" target="_blank" class="code-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Computational Multiphysics Research Group
+  </footer>
+
+</body>
+</html>

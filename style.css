@@ -90,7 +90,7 @@ nav.desktop-nav .active {
   background-color: var(--primary);
   top: 100%;
   left: 0;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
@@ -353,6 +353,12 @@ hr {
   padding-bottom: 10px;
 }
 
+.contact-info{
+  width: 480px;
+  /* justify-content: center; */
+  /* flex-grow: 2; */
+}
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -365,6 +371,9 @@ hr {
 
   .footer {
     padding: 50px 10px;
+  }
+  .contact-info{
+    width:100%;
   }
 }
 /* footer ends  */

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – CoMPhys Lab</title>
+  <style>
+    :root {
+      --primary: #012149;
+      --secondary: #f9fafb;
+      --text-dark: #1f2937;
+      --highlight: #facc15;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--secondary);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.3rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .blog-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      flex: 1 1 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin: 0 0 10px;
+    }
+
+    .card .meta {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .card .summary {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #1e40af;
+      font-size: 0.9rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .description {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="page-title"></h1>
+    <p class="description" id="page-desc"></p>
+    <div class="blog-grid" id="blog-container"></div>
+  </div>
+
+  <script>
+    async function loadBlog() {
+      try {
+        const res = await fetch("sampleblog.json");
+        const data = await res.json();
+
+        document.getElementById("page-title").textContent = data.title;
+        document.getElementById("page-desc").textContent = data.description;
+
+        const container = document.getElementById("blog-container");
+
+        data.posts.forEach(post => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <h3>${post.title}</h3>
+            <div class="meta">${post.date} &bull; ${post.author}</div>
+            <div class="summary">${post.summary}</div>
+            <a href="${post.link}" target="_blank">Read more →</a>
+          `;
+
+          container.appendChild(card);
+        });
+      } catch (err) {
+        console.error("Error loading blog data:", err);
+      }
+    }
+
+    loadBlog();
+  </script>
+</body>
+</html>

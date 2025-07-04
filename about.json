@@ -8,12 +8,12 @@
   "teams":[
     {
         "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
-        "name":"Dr. Sarah Chen",
-        "role":"Principal Investigator & Lab Director",
-        "designation":"PhD in Mechanical Engineering, MIT",
-        "subject":"Computational Fluid Dynamics, Turbulence Modeling",
+        "name":"Dr. Pradeep Kumar Seshadri",
+        "role":"Principal Investigator",
+        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
+        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
         "email":"#",
-        "linkedin":"#"
+        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
     }
   ],
   "journey":[
