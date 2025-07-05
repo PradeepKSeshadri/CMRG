@@ -1,4 +1,8 @@
 {
+  "ribbon": {
+    "title": "Open Source Code",
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+  },
   "tagline": "Massively parallel implicit/explicit solid mechanics with block structured adaptive mesh refinement",
   "buttons": [
     { "label": "Github", "icon": "fab fa-github", "link": "#" },

@@ -1,5 +1,8 @@
 {
-  "intro": "The Computational Multiphysics Research Group (CoMPhys Lab) welcomes driven individuals at all levels — from high school students to doctoral candidates — who are excited to explore the physics of complex systems through cutting-edge simulation and modeling.",
+  "ribbon": {
+    "title": "Openings",
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+  },
   "sections": [
     {
       "title": "Graduate Positions (PhD / MS) – Openings from January 2025",

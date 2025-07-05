@@ -1,0 +1,29 @@
+{
+  "courseMeetingTimes": {
+    "lectures": "3 sessions / week, 2 hours / session",
+    "labs": "1 session / week, 2 hours / session"
+  },
+  "learningObjectives": [
+    "Formulate and apply appropriate aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations;",
+    "Assess the applicability of aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations and estimate the errors resulting from their application;",
+    "Perform a computational and experimental aerodynamic analysis and design together with members of a team."
+  ],
+  "commentOnModels": "An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)...An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)... An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)... An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)... An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)... An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)... An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)... An aerodynamic model is simply a method to estimate the aerodynamic performance (e.g. the lift or drag) of an object (e.g. an airfoil, wing, or airplane)...",
+  "skills": [
+    "Quantitative or Analytical Skills",
+    "Qualitative or Conceptual Skills",
+    "Integrative Skills"
+  ],
+  "weightage": [
+    { "activity": "Homework", "percentage": "20%" },
+    { "activity": "Exams (The Written and Oral Part of each Exam are 15% each)", "percentage": "60%" },
+    { "activity": "Project (Assignments are 10% Total and the Design Report is 10%)", "percentage": "20%" }
+  ],
+  "grading": [
+    { "grade": "A", "marks": "90-100" },
+    { "grade": "B", "marks": "80-90" },
+    { "grade": "C", "marks": "70-80" },
+    { "grade": "D", "marks": "60-70" },
+    { "grade": "F", "marks": "0-60" }
+  ]
+}

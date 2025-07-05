@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syllabus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #0077b6;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        background: #0077b6;
+        color: white;
+      }
+      td {
+        padding-left: 50%;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Syllabus</h1>
+  <section id="meeting-times"></section>
+  <section id="objectives"></section>
+  <section id="model-comment"></section>
+  <section id="skills"></section>
+  <section id="grades"></section>
+
+  <script>
+    fetch("coursesection.json")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("meeting-times").innerHTML = `
+          <h2>Course Meeting Times</h2>
+          <p><strong>Lectures:</strong> ${data.courseMeetingTimes.lectures}</p>
+          <p><strong>Labs:</strong> ${data.courseMeetingTimes.labs}</p>
+        `;
+
+        document.getElementById("objectives").innerHTML = `
+          <h2>Learning Objectives</h2>
+          <ul>${data.learningObjectives.map(obj => `<li>${obj}</li>`).join('')}</ul>
+        `;
+
+        document.getElementById("model-comment").innerHTML = `
+          <h2>Comment on Aerodynamic Models</h2>
+          <p>${data.commentOnModels}</p>
+        `;
+
+        document.getElementById("skills").innerHTML = `
+          <h2>General Pedagogy and Assessment Strategy</h2>
+          <ul>${data.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+        `;
+
+        document.getElementById("grades").innerHTML = `
+          <h2>Grades and Weightage</h2>
+          <table>
+            <thead>
+              <tr><th>Activities</th><th>Percentages</th></tr>
+            </thead>
+            <tbody>
+              ${data.weightage.map(item => `<tr><td data-label="Activity">${item.activity}</td><td data-label="Percentage">${item.percentage}</td></tr>`).join('')}
+            </tbody>
+          </table>
+          <h3>Grade Breakdown</h3>
+          <table>
+            <thead>
+              <tr><th>Grades</th><th>Marks</th></tr>
+            </thead>
+            <tbody>
+              ${data.grading.map(g => `<tr><td data-label="Grade">${g.grade}</td><td data-label="Marks">${g.marks}</td></tr>`).join('')}
+            </tbody>
+          </table>
+        `;
+      });
+  </script>
+</body>
+</html>

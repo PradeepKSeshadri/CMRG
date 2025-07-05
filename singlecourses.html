@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Detail</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar-toggle {
+      display: none;
+      background-color: #1e3a5f;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      width: 240px;
+      background-color: #1e3a5f;
+      color: white;
+      padding-top: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .module-list li {
+      padding: 12px 20px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .module-list li:hover,
+    .module-list li.active {
+      background-color: #27476e;
+    }
+
+    .content-area {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .module-content {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .lecture-list {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .lecture-list li {
+      margin-bottom: 10px;
+    }
+
+    .lecture-list a {
+      color: #1e3a5f;
+      text-decoration: none;
+    }
+
+    .lecture-list a:hover {
+      text-decoration: underline;
+    }
+
+    table.calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .calendar-table th {
+      background-color: #1e3a5f;
+      color: white;
+    }
+
+    .calendar-table tr:nth-child(even) {
+      background-color: #f1f3f5;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar-toggle {
+        display: block;
+      }
+
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1000;
+        transform: translateX(-100%);
+      }
+
+      .sidebar.visible {
+        transform: translateX(0);
+      }
+
+      .content-area {
+        padding: 20px 10px;
+      }
+    }
+    /* ---------- Syllabus Section Styling ---------- */
+.module-content section {
+  margin-bottom: 30px;
+}
+
+.module-content h1,
+.module-content h2,
+.module-content h3 {
+  color: #1e3a5f;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.module-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.module-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.module-content ul li {
+  list-style: disc;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.module-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.module-content th,
+.module-content td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.module-content th {
+  background-color: #1e3a5f;
+  color: white;
+}
+
+.module-content tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive Table for Mobile */
+@media screen and (max-width: 600px) {
+  .module-content table,
+  .module-content thead,
+  .module-content tbody,
+  .module-content th,
+  .module-content td,
+  .module-content tr {
+    display: block;
+  }
+
+  .module-content thead tr {
+    display: none;
+  }
+
+  .module-content td {
+    padding-left: 50%;
+    position: relative;
+    text-align: left;
+  }
+
+  .module-content td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: bold;
+    color: #1e3a5f;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Select Module</div>
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+      <h2>Modules</h2>
+      <ul class="module-list" id="moduleList"></ul>
+    </div>
+    <div class="content-area">
+      <div class="module-content">
+        <h2 id="moduleTitle">Select a Module</h2>
+        <p id="moduleDescription">Click on a module to view its lecture notes and content.</p>
+        <ul class="lecture-list" id="lectureList"></ul>
+        <div id="calendarSection"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const modulesData = {
+    "modules": [
+      {
+        "title": "Aerodynamics",
+        "description": "Explore fundamental concepts of aerodynamics including fluid motion, aircraft forces, and pressure fields.",
+        "lectures": [
+          { "name": "Sensitivity Analysis", "link": "#" },
+          { "name": "Kinematics of a Fluid Element", "link": "#" },
+          { "name": "Stress-Strain Relationship", "link": "#" },
+          { "name": "Equations of Aircraft Motion", "link": "#" }
+        ],
+        "calendar": [
+          { "week": "1", "topics": ["Integral Equations, Lift and Drag"], "keyDates": ["Project assignment 1 out"] },
+          { "week": "2", "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations", "Wright Brothers Wind Tunnel Tests", "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"], "keyDates": ["Homework 1 due"] },
+          { "week": "3", "topics": ["2-D Potential Flow"], "keyDates": ["Homework 2 due", "Project assignment 1 due"] },
+          { "week": "4", "topics": ["2-D Panel Methods"], "keyDates": ["Homework 3 due", "Project assignment 2 out"] },
+          { "week": "5", "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"], "keyDates": ["Homework 4 due", "Project assignment 2 due"] },
+          { "week": "6", "topics": ["Lifting Line and High Aspect Ratio Wings"], "keyDates": ["Homework 5 due", "Project assignment 3 out"] },
+          { "week": "7", "topics": ["Compressibility and Quasi 1D Flow"], "keyDates": ["Take-home written exam 1 out"] }
+        ]
+      },
+      {
+        "title": "Syllabus",
+        "description": "Course structure, objectives, pedagogy and grading strategy."
+      },
+      {
+        "title": "Thermodynamics",
+        "description": "Learn about energy conservation, heat transfer, and the laws of thermodynamics in engineering systems.",
+        "lectures": [
+          { "name": "First Law of Thermodynamics", "link": "#" },
+          { "name": "Entropy and Second Law", "link": "#" },
+          { "name": "Carnot Cycle", "link": "#" }
+        ]
+      },
+      {
+        "title": "Fluid Mechanics",
+        "description": "Understand the behavior of fluids in motion and at rest, and their application in engineering designs.",
+        "lectures": [
+          { "name": "Continuity Equation", "link": "#" },
+          { "name": "Bernoulli's Principle", "link": "#" },
+          { "name": "Navier-Stokes Equations", "link": "#" }
+        ]
+      }
+    ]
+  };
+
+  const moduleList = document.getElementById("moduleList");
+  const sidebar = document.getElementById("sidebar");
+
+  function toggleSidebar() {
+    sidebar.classList.toggle("visible");
+  }
+
+  function loadModule(index) {
+    const contentArea = document.querySelector(".content-area");
+    const module = modulesData.modules[index];
+
+    // If it's the "Syllabus" module
+    if (module.title === "Syllabus") {
+      contentArea.innerHTML = `
+        <div class="module-content">
+          <h1>Syllabus</h1>
+          <hr>
+          <section id="meeting-times"></section>
+          <section id="objectives"></section>
+          <section id="model-comment"></section>
+          <section id="skills"></section>
+          <section id="grades"></section>
+        </div>
+      `;
+      loadSyllabus(); // load syllabus content after HTML inserted
+    } else {
+      contentArea.innerHTML = `
+        <div class="module-content">
+          <h2 id="moduleTitle">${module.title}</h2>
+          <p id="moduleDescription">${module.description}</p>
+          <ul class="lecture-list" id="lectureList"></ul>
+          <div id="calendarSection"></div>
+        </div>
+      `;
+
+      const lectureList = document.getElementById("lectureList");
+      const calendarSection = document.getElementById("calendarSection");
+
+      module.lectures?.forEach(lecture => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${lecture.link}" target="_blank">${lecture.name}</a>`;
+        lectureList.appendChild(li);
+      });
+
+      if (module.calendar) {
+        const table = document.createElement("table");
+        table.className = "calendar-table";
+        table.innerHTML = `
+          <thead>
+            <tr><th>WEEK #</th><th>TOPICS</th><th>KEY DATES</th></tr>
+          </thead>
+          <tbody>
+            ${module.calendar.map(row => `
+              <tr>
+                <td>${row.week}</td>
+                <td>${row.topics.join('<br>')}</td>
+                <td>${row.keyDates.join('<br>')}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        `;
+        calendarSection.appendChild(table);
+      }
+    }
+
+    // Highlight the selected module
+    document.querySelectorAll('.module-list li').forEach((el, i) => {
+      el.classList.toggle('active', i === index);
+    });
+
+    if (window.innerWidth <= 768) sidebar.classList.remove("visible");
+  }
+
+  // Load syllabus JSON
+  function loadSyllabus() {
+    fetch("coursesection.json")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("meeting-times").innerHTML = `
+          <h2>Course Meeting Times</h2>
+          <p><strong>Lectures:</strong> ${data.courseMeetingTimes.lectures}</p>
+          <p><strong>Labs:</strong> ${data.courseMeetingTimes.labs}</p>
+        `;
+        document.getElementById("objectives").innerHTML = `
+          <h2>Learning Objectives</h2>
+          <ul>${data.learningObjectives.map(obj => `<li>${obj}</li>`).join('')}</ul>
+        `;
+        document.getElementById("model-comment").innerHTML = `
+          <h2>Comment on Aerodynamic Models</h2>
+          <p>${data.commentOnModels}</p>
+        `;
+        document.getElementById("skills").innerHTML = `
+          <h2>General Pedagogy and Assessment Strategy</h2>
+          <ul>${data.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+        `;
+        document.getElementById("grades").innerHTML = `
+          <h2>Grades and Weightage</h2>
+          <table>
+            <thead>
+              <tr><th>Activities</th><th>Percentages</th></tr>
+            </thead>
+            <tbody>
+              ${data.weightage.map(item => `<tr><td>${item.activity}</td><td>${item.percentage}</td></tr>`).join('')}
+            </tbody>
+          </table>
+          <h3>Grade Breakdown</h3>
+          <table>
+            <thead>
+              <tr><th>Grades</th><th>Marks</th></tr>
+            </thead>
+            <tbody>
+              ${data.grading.map(g => `<tr><td>${g.grade}</td><td>${g.marks}</td></tr>`).join('')}
+            </tbody>
+          </table>
+        `;
+      });
+  }
+
+  // Initialize module sidebar
+  modulesData.modules.forEach((module, index) => {
+    const li = document.createElement("li");
+    li.textContent = module.title;
+    li.addEventListener("click", () => loadModule(index));
+    moduleList.appendChild(li);
+  });
+
+  // Load first module by default
+  loadModule(0);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Page</title>
+    <style>
+      :root {
+        --primary: #012149;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        background: #f5f7fa;
+      }
+      .category-toggle {
+        display: none;
+        background: var(--primary);
+        color: #fff;
+        padding: 12px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .container {
+        display: flex;
+        min-height: 100vh;
+      }
+      .category {
+        width: 240px;
+        background: var(--primary);
+        color: #fff;
+        padding: 20px 0;
+        flex-shrink: 0;
+      }
+      .category h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .category ul {
+        list-style: none;
+        padding: 0;
+      }
+      .category ul li {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+      }
+      .category ul li:hover,
+      .category ul li.active {
+        background: #c9c9c921;
+      }
+      .content {
+        flex: 1;
+        padding: 30px;
+        background: #fff;
+      }
+      h1,
+      h2 {
+        color: var(--primary);
+        margin-bottom: 10px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background: var(--primary);
+        color: white;
+      }
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .category {
+          position: absolute;
+          transform: translateX(-100%);
+          transition: transform 0.3s;
+          z-index: 1000;
+          height: 100%;
+        }
+        .category.visible {
+          transform: translateX(0);
+        }
+        .category-toggle {
+          display: block;
+        }
+      }
+      @media (max-width: 600px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+        thead {
+          display: none;
+        }
+        td {
+          padding-left: 50%;
+          position: relative;
+        }
+        td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 12px;
+          font-weight: bold;
+          color: var(--primary);
+        }
+      }
+      /* readings  */
+      #readings h1 {
+        color: var(--primary);
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+
+      #readings h3 {
+        color: var(--primary);
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+
+      #readings p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      #readings ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      #readings li {
+        margin-bottom: 8px;
+      }
+
+      #readings em {
+        font-style: italic;
+      }
+
+      /* lectures starts  */
+      #lecture-notes h2 {
+        color: var(--primary);
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+
+      #lecture-notes p {
+        color: #444;
+        margin-bottom: 15px;
+      }
+
+      .notes-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .notes-list li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #222;
+      }
+
+      .notes-list a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .notes-list a:hover {
+        text-decoration: underline;
+      }
+      /* assignments starts  */
+      #assignments h2 {
+        color: var(--primary);
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+
+      #assignments p {
+        color: #444;
+        margin-bottom: 20px;
+      }
+
+      .assignment-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+      }
+
+      .assignment-table th,
+      .assignment-table td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .assignment-table th {
+        background-color: #005b8f;
+        color: white;
+      }
+
+      .assignment-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .assignment-table a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .assignment-table a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive table */
+      @media (max-width: 768px) {
+        .assignment-table,
+        .assignment-table thead,
+        .assignment-table tbody,
+        .assignment-table th,
+        .assignment-table td,
+        .assignment-table tr {
+          display: block;
+        }
+
+        .assignment-table thead {
+          display: none;
+        }
+
+        .assignment-table tr {
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          background: #fff;
+        }
+
+        .assignment-table td {
+          padding: 10px 15px;
+          position: relative;
+          padding-left: 50%;
+        }
+
+        .assignment-table td::before {
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          font-weight: bold;
+          color: var(--primary);
+          content: attr(data-label);
+        }
+      }
+      /* exams  */
+      #exams h2 {
+        color: var(--primary);
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+
+      #exams p {
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .exam-links {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .exam-links li {
+        margin-bottom: 10px;
+      }
+
+      .exam-links a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .exam-links a:hover {
+        text-decoration: underline;
+      }
+      /* projects  */
+      #projects h2 {
+        color: var(--primary);
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+
+      #projects p {
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      #projects ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .project-links {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .project-links li {
+        margin-bottom: 10px;
+      }
+
+      .project-links a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .project-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* study material  */
+      #study-materials {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      #study-materials h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+      }
+
+      #study-materials p {
+        margin-bottom: 15px;
+      }
+
+      .study-links {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .study-links li {
+        margin-bottom: 10px;
+      }
+
+      .study-links a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .study-links a:hover {
+        text-decoration: underline;
+      }
+      /* related source  */
+      #related-resources {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      #related-resources h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+      }
+
+      #related-resources h3 {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #222;
+      }
+
+      .resource-links {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .resource-links li {
+        margin-bottom: 8px;
+      }
+
+      .resource-links a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .resource-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Complete Header Starts-->
+    <header>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group"
+        />
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li class="dropdown">
+            <a>Research</a>
+            <div class="dropdown-content">
+              <a href="nonfundedresearch.html">Non Funded</a>
+              <a href="fundedresearch.html">Funded</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a>Publications</a>
+            <div class="dropdown-content">
+              <a href="publications.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="#">Opening</a></li> -->
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="nonfundedresearch.html">Non Funded</a></li>
+            <li><a href="fundedresearch.html">Funded</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Complete Header Ends  -->
+
+    <div
+      class="category-toggle"
+      onclick="document.querySelector('.category').classList.toggle('visible')"
+    >
+      ☰ Modules
+    </div>
+
+    <div class="container">
+      <div class="category">
+        <h2>Modules</h2>
+        <ul id="moduleList"></ul>
+      </div>
+      <div class="content" id="moduleContent">
+        <h2>Select a mod</h2>
+        <p>Choose a mod from the category to view its content.</p>
+      </div>
+    </div>
+
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading course start  -->
+    <script>
+      fetch("completecourse.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const moduleList = document.getElementById("moduleList");
+          const moduleContent = document.getElementById("moduleContent");
+
+          data.modules.forEach((mod, i) => {
+            const li = document.createElement("li");
+            li.textContent = mod.title;
+            li.addEventListener("click", () => loadModule(i));
+            moduleList.appendChild(li);
+          });
+
+          function loadModule(index) {
+            document.querySelectorAll("#moduleList li").forEach((el, i) => {
+              el.classList.toggle("active", i === index);
+            });
+
+            const mod = data.modules[index];
+
+            if (mod.title === "Syllabus") {
+              moduleContent.innerHTML = `
+            <h1>${mod.title}</h1>
+            <section>
+              <h2>Course Meeting Times</h2>
+              <p><strong>Lectures:</strong> ${
+                mod.courseMeetingTimes.lectures
+              }</p>
+              <p><strong>Labs:</strong> ${mod.courseMeetingTimes.labs}</p>
+            </section>
+            <section>
+              <h2>Learning Objectives</h2>
+              <ul>${mod.learningObjectives
+                .map((obj) => `<li>${obj}</li>`)
+                .join("")}</ul>
+            </section>
+            <section>
+              <h2>Comment on Aerodynamic Models</h2>
+              <p>${mod.commentOnModels}</p>
+            </section>
+            <section>
+              <h2>General Pedagogy and Assessment Strategy</h2>
+              <ul>${mod.skills
+                .map((skill) => `<li>${skill}</li>`)
+                .join("")}</ul>
+            </section>
+            <section>
+              <h2>Grades and Weightage</h2>
+              <table>
+                <thead><tr><th>Activity</th><th>Percentage</th></tr></thead>
+                <tbody>
+                  ${mod.weightage
+                    .map(
+                      (w) =>
+                        `<tr><td data-label="Activity">${w.activity}</td><td data-label="Percentage">${w.percentage}</td></tr>`
+                    )
+                    .join("")}
+                </tbody>
+              </table>
+              <h3>Grade Breakdown</h3>
+              <table>
+                <thead><tr><th>Grade</th><th>Marks</th></tr></thead>
+                <tbody>
+                  ${mod.grading
+                    .map(
+                      (g) =>
+                        `<tr><td data-label="Grade">${g.grade}</td><td data-label="Marks">${g.marks}</td></tr>`
+                    )
+                    .join("")}
+                </tbody>
+              </table>
+            </section>
+          `;
+            } else if (mod.title === "Calender") {
+              moduleContent.innerHTML = `
+            <h1>${mod.title}</h1>
+            <p>${mod.description}</p>
+            ${
+              mod.lectures
+                ? `<h2>Lectures</h2><ul>${mod.lectures
+                    .map(
+                      (l) =>
+                        `<li><a href="${l.link}" target="_blank">${l.name}</a></li>`
+                    )
+                    .join("")}</ul>`
+                : ""
+            }
+            ${
+              mod.calendar
+                ? `
+              <h2>Calendar</h2>
+              <table>
+                <thead><tr><th>Week</th><th>Topics</th><th>Key Dates</th></tr></thead>
+                <tbody>
+                  ${mod.calendar
+                    .map(
+                      (row) => `
+                    <tr>
+                      <td data-label="Week">${row.week}</td>
+                      <td data-label="Topics">${row.topics.join("<br>")}</td>
+                      <td data-label="Key Dates">${row.keyDates.join(
+                        "<br>"
+                      )}</td>
+                    </tr>`
+                    )
+                    .join("")}
+                </tbody>
+              </table>`
+                : ""
+            }
+          `;
+            } else if (mod.title === "Readings") {
+              moduleContent.innerHTML = `
+    <div class="mod-content" id="readings">
+      <h1>${mod.title}</h1>
+      <p>${mod.description}</p>
+
+      <h3>Textbooks</h3>
+      <p>${mod.books.recommended.text}</p>
+      ${mod.books.recommended.items.map((item) => `<p>${item}</p>`).join("")}
+
+      <p>${mod.books.alsoUsed.text}</p>
+      <ul>${mod.books.alsoUsed.items
+        .map((book) => `<li>${book}</li>`)
+        .join("")}</ul>
+
+      <p>${mod.books.additional.text}</p>
+      ${mod.books.additional.items.map((item) => `<p>${item}</p>`).join("")}
+    </div>
+  `;
+            } else if (mod.title === "Lecture Notes") {
+              moduleContent.innerHTML = `
+    <div class="mod-content" id="lecture-notes">
+      <h2>${mod.title}</h2>
+      <p>${mod.description}</p>
+      <ul class="notes-list">
+        ${mod.lectures
+          .map(
+            (lec) => `
+          <li>
+            ${lec.title} <a href="${lec.link}" target="_blank">(PDF)</a>
+          </li>
+        `
+          )
+          .join("")}
+      </ul>
+    </div>
+  `;
+            } else if (mod.title === "Assignments") {
+              moduleContent.innerHTML = `
+    <div class="mod-content" id="assignments">
+      <h2>${mod.title}</h2>
+      <p>${mod.description}</p>
+      <div class="assignment-table-wrapper">
+        <table class="assignment-table">
+          <thead>
+            <tr>
+              <th>WEEK #</th>
+              <th>TOPICS</th>
+              <th>ASSIGNMENTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${mod.assignments
+              .map(
+                (a) => `
+              <tr>
+                <td>${a.week}</td>
+                <td>${a.topics?.join("<br>") || ""}</td>
+                <td>
+                  ${
+                    a.links
+                      ?.map(
+                        (link) =>
+                          `<a href="${link.url}" target="_blank">${link.title}</a>`
+                      )
+                      .join("<br>") || ""
+                  }
+                </td>
+              </tr>
+            `
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+            } else if (mod.title === "Exams") {
+              moduleContent.innerHTML = `
+      <div class="mod-content" id="exams">
+        <h2>${mod.title}</h2>
+        <p>${mod.description}</p>
+        <ul class="exam-links">
+          ${mod.links
+            .map(
+              (link) =>
+                `<li><a href="${link.url}" target="_blank">${link.title}</a></li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+    `;
+            } else if (mod.title === "Projects") {
+              moduleContent.innerHTML = `
+      <div class="mod-content" id="projects">
+        <h2>${mod.title}</h2>
+        <p>${mod.description}</p>
+        <ul class="project-links">
+          ${mod.links
+            .map(
+              (link) =>
+                `<li><a href="${link.url}" target="_blank">${link.title}</a></li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+    `;
+            } else if (mod.title === "Study Materials") {
+              moduleContent.innerHTML = `
+    <div class="mod-content" id="study-materials">
+      <h2>${mod.title}</h2>
+      <p>${mod.description}</p>
+      <ul class="study-links">
+        ${mod.links
+          .map(
+            (link) =>
+              `<li><a href="${link.url}" target="_blank">${link.title}</a></li>`
+          )
+          .join("")}
+      </ul>
+    </div>
+  `;
+            } else if (mod.title === "Related Resources") {
+              moduleContent.innerHTML = `
+    <div class="mod-content" id="related-resources">
+      <h2>${mod.title}</h2>
+      <div class="resource-section">
+        <h3>Useful Links</h3>
+        <ul class="resource-links">
+          ${mod.usefulLinks
+            .map(
+              (link) =>
+                `<li><a href="${link.url}" target="_blank">${link.title}</a></li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+      <div class="resource-section">
+        <h3>Project Links</h3>
+        <ul class="resource-links">
+          ${mod.projectLinks
+            .map(
+              (link) =>
+                `<li><a href="${link.url}" target="_blank">${link.title}</a></li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+    </div>
+  `;
+            }
+            if (window.innerWidth <= 768) {
+              document.querySelector(".category").classList.remove("visible");
+            }
+          }
+
+          loadModule(0); // Load first mod by default
+        });
+    </script>
+
+    <!-- loading course ends  -->
+  </body>
+</html>
