@@ -47,10 +47,6 @@ header {
 
 .logo {
   display:flex;
-  /* border:2px solid red; */
-}
-.logo img {
-  /* width: 100%; */
 }
 .brand{
   width: 200px
@@ -60,7 +56,6 @@ header {
   width:70px;
   margin-left: 20px;
 }
-
 nav.desktop-nav {
   display: flex;
 }
@@ -205,7 +200,7 @@ nav.desktop-nav li:hover > .dropdown-content {
   display: none;
 }
 
-@media (max-width: 858px) {
+@media (max-width: 1100px) {
   nav.desktop-nav {
     display: none;
   }

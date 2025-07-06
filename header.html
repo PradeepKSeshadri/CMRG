@@ -18,7 +18,7 @@
         background: #f9f9f9;
       }
 
-      /* Complete Header Style Starts */
+     /* Complete Header Style Starts */
 header {
   background-color: var(--primary);
   color: var(--text-light);
@@ -26,19 +26,23 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
 .logo {
-  width: 200px;
+  display:flex;
 }
-.logo img {
-  width: 100%;
+.brand{
+  width: 200px
 }
-
+.iit{
+  border-radius: 50%;
+  width:70px;
+  margin-left: 20px;
+}
 nav.desktop-nav {
   display: flex;
 }
@@ -67,13 +71,17 @@ nav.desktop-nav a:hover {
   border-bottom: 2px solid var(--highlight);
 }
 
+nav.desktop-nav .active {
+  border-bottom: 2px solid var(--highlight);
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: var(--primary);
   top: 100%;
   left: 0;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
@@ -179,7 +187,7 @@ nav.desktop-nav li:hover > .dropdown-content {
   display: none;
 }
 
-@media (max-width: 858px) {
+@media (max-width: 1100px) {
   nav.desktop-nav {
     display: none;
   }
@@ -196,30 +204,37 @@ nav.desktop-nav li:hover > .dropdown-content {
     </style>
   </head>
   <body>
-    <!-- Header -->
+    <!--Complete Header Starts-->
     <header>
-      <div class="logo"><img src="images/CMRG Logo White.png" alt=""></div>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group" class="brand"
+        />
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+      </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
-            <a href="#">Research</a>
+            <a>Research</a>
             <div class="dropdown-content">
-              <a href="#">Ongoing</a>
-              <a href="#">Past</a>
+              <a href="ongoing.html">Ongoing</a>
+              <a href="funded.html">Funded</a>
             </div>
           </li>
           <li class="dropdown">
-            <a href="#">Publications</a>
+            <a>Publications</a>
             <div class="dropdown-content">
-              <a href="publications.html">Journals</a>
-              <a href="#">Conferences</a>
+              <a href="journals.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
             </div>
           </li>
-          <!-- <li><a href="#">Blog</a></li> -->
-          <li><a href="#">Opening</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="code.html">Code</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="openings.html">Opening</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -238,8 +253,8 @@ nav.desktop-nav li:hover > .dropdown-content {
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="ongoing.html">Ongoing</a></li>
+            <li><a href="funded.html">Funded</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -249,12 +264,15 @@ nav.desktop-nav li:hover > .dropdown-content {
             <li><a href="conferences.html">Conferences</a></li>
           </ul>
         </li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="courses.html">Courses</a></li>
         <li><a href="code.html">Code</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="openings.html">Openings</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <!-- Complete Header Ends  -->
+    
     <script>
       function toggleSidebar() {
         const sidebar = document.getElementById("sidebar");
