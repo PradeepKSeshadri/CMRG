@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMRG | Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #012149;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
+      .contact-section {
+        padding: 60px 20px;
+        background-color: #f9fafb;
+      }
+      .contact-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+        padding: 40px;
+      }
+      .contact-infor {
+        flex: 1;
+        min-width: 280px;
+      }
+      .contact-infor h4 {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #475569;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .contact-infor h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .contact-infor p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin-bottom: 25px;
+      }
+      .info-box {
+        background-color: #f1f5f9;
+        padding: 14px 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        color: var(--primary);
+      }
+      .social-links span {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .social-links a {
+        margin-right: 12px;
+        display: inline-block;
+      }
+      .social-links img {
+        width: 24px;
+        height: 24px;
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+      .social-links img:hover {
+        opacity: 1;
+      }
+      .contact-form {
+        flex: 1;
+        min-width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: #f8fafc;
+        padding: 30px;
+        border-radius: 12px;
+      }
+      .contact-form label {
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        font-size: 0.95rem;
+        font-weight: 300;
+        width: 100%;
+        resize: none;
+      }
+      .contact-form textarea {
+        font-family: inherit;
+      }
+      .form-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .checkbox {
+        font-size: 0.85rem;
+      }
+      .contact-form button {
+        background: var(--primary);
+        color: #ffffff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        border: 2px solid var(--primary);
+      }
+      .contact-form button:hover {
+        background: var(--text-light);
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+      @media (max-width: 768px) {
+        .contact-container {
+          flex-direction: column;
+        }
+        .contact-container {
+          padding: 15px;
+        }
+        .form-bottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 10px;
+        }
+        .checkbox {
+          /* width: 100%; */
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--Complete Header Starts-->
+    <header>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
+        />
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a>Research</a>
+            <div class="dropdown-content">
+              <a href="ongoing.html">Ongoing</a>
+              <a href="funded.html">Funded</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a>Publications</a>
+            <div class="dropdown-content">
+              <a href="journals.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
+            </div>
+          </li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="code.html">Code</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="openings.html">Opening</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="ongoing.html">Ongoing</a></li>
+            <li><a href="funded.html">Funded</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Complete Header Ends  -->
+    <!-- Complete contact starts  -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-infor">
+          <h4>Contact Us</h4>
+          <h2>Get in touch today</h2>
+          <p>We’d love to hear from you. Here’s how you can reach us.</p>
+          <div class="info-box">
+            <p>Email : <strong id="emailid"></strong></p>
+          </div>
+          <div class="social-links">
+            <span>Follow us:</span>
+            <a id="github-link"><img src="images/github.svg" alt="GitHub" /></a>
+            <a id="linkedin-link"
+              ><img src="images/linkedin.svg" alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/xpwreopq" method="POST">
+          <label for="name">Full Name <span style="color: red">*</span></label>
+          <input type="text" id="name" placeholder="Your name" name="Name" required />
+          <label for="email">Email <span style="color: red">*</span></label>
+          <input
+            type="email"
+            id="emailinp"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+          <label for="company">Company (optional)</label>
+          <input type="text" id="company" placeholder="Company name" />
+          <label for="message">Message <span style="color: red">*</span></label>
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Write your message here..."
+            name="Message"
+            required
+          ></textarea>
+          <div class="form-bottom">
+            <label class="checkbox"
+              ><input type="checkbox" required /> I'm not a robot</label
+            >
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Complete contact ends  -->
+    <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading contact starts  -->
+    <script>
+      async function loadContact() {
+        try {
+          const res = await fetch("contact.json");
+          const data1 = await res.json();
+          console.log(data1);
+          const email = document.getElementById("emailid");
+          email.textContent = data1.email;
+          const githublink = document.getElementById("github-link");
+          const linkedinlink = document.getElementById("linkedin-link");
+          githublink.href = data1.githublink;
+          linkedinlink.href = data1.linkedinlink;
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      loadContact();
+    </script>
+    <!-- loading contact ends  -->
+    <!-- loading footer starts  -->
+    <script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("footer.json");
+          const data = await res.json();
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.mail;
+          socialLinks[2].href = footer.about.social.linkedin;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      loadFooter();
+    </script>
+    <!-- loading footer ends  -->
+  </body>
+</html>

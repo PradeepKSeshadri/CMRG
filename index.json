@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "title": "Where Physics Powers Innovation",
+    "description": "Bridging atoms to continuum, biology to ballistics — the CoMPhys Research Group simulates every scale, every material, every interface, and every speed across defense, aerospace, energy, and bioinspired systems.",
+    "buttonText": "Explore Now",
+    "buttonLink": "about.html"
+  },
+  "whyChoose": {
+    "heading": "Why Choose Our Lab",
+    "description": "Tackle extreme physics with interdisciplinary tools, strong team culture, and rigorous training — from fundamentals to impact.",
+    "items":[
+        {
+        "icon": "🎖️",
+        "title": "Extreme Multiphysics",
+        "text": "All Scales and Speeds. Model complex flows and materials across scales — from nature to impact. (Respecting nature’s richness, capturing it through computation)"
+        },
+        {
+        "icon": "👥",
+        "title": "Interdisciplinary Science Meets Real-World Problems",
+        "text": "Start with real-world phenomena, model them, and drive practical innovation. (Observation leads to insight — insight leads to solutions)"
+        },
+        {
+        "icon": "💻",
+        "title": "Rigorous Training",
+        "text": "Strong Team Culture. Learn to collaborate, code professionally, and use cutting-edge computing tools. (We grow researchers ready for science, industry, and leadership)"
+        }
+     ]
+   },
+  "research": {
+    "heading": "Research Areas",
+    "description": "Our multidisciplinary approach spans various domains of computational physics and engineering.",
+    "items": [
+      {
+        "icon": "🌊",
+        "title": "Bioinspired Flows",
+        "text": "Modeling unsteady aerodynamics in nature’s flyers and biological systems."
+      },
+      {
+        "icon": "🏗️",
+        "title": "Energetic Material Dynamics",
+        "text": "Simulating shock, reaction, and detonation in high-energy materials."
+      },
+      {
+        "icon": "🔥",
+        "title": "Hypersonic Reentry Physics",
+        "text": "Capturing extreme aerothermal loads, ablation, and gas-surface interactions."
+      },
+      {
+        "icon": "⚡",
+        "title": "High Strain-Rate Material Response",
+        "text": "Understanding material deformation and failure under dynamic loading conditions."
+      },
+      {
+        "icon": "⚡",
+        "title": "AI-Driven Multi-Scale Modeling",
+        "text": "Accelerating simulations using machine learning across scales and physics domains."
+      }
+    ],
+    "buttonText": "View All Research →",
+    "buttonLink": "funded.html"
+  },
+  "join": {
+    "heading": "Join Our Research Community",
+    "description": "We welcome curious minds eager to learn, code, model, and make a difference in science, engineering, and real-world applications.",
+    "buttonText": "View Openings",
+    "buttonLink": "openings.html"
+  }
+}
