@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMRG | Funded Research</title>
+    <link rel="icon" type="image/x-icon" href="images/iit madras without bg.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Inline Styles (cleaned up for .card layout only) -->
+    <style>
+      :root {
+        --primary: #012149;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem;
+      }
+
+      .button-group button {
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+        background-color: var(--text-light);
+        color: var(--text-dark);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .button-group button.active {
+        background-color: var(--primary);
+        color: var(--text-light);
+      }
+
+      .button-group button:hover {
+        color: var(--text-light);
+        background-color: var(--primary);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 1rem 2rem;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        padding: 25px 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h2 {
+        font-size: 22px;
+        color: #2c3e50;
+        margin: 0 0 5px;
+      }
+
+      .card .title {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 12px;
+      }
+
+      .meta {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      .meta strong {
+        color: #222;
+      }
+
+      .section {
+        margin-top: 15px;
+      }
+
+      .section-title {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      .note-box {
+        background: #eef4fb;
+        padding: 10px 15px;
+        border-left: 4px solid #2d8cf0;
+        border-radius: 8px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      @media screen and (max-width: 600px) {
+        .card {
+          padding: 20px;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- Header, Ribbon, Buttons -->
+    <header>...Your header HTML remains unchanged...</header>
+
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button class="active" onclick="loadResearch('Ongoing Research', this)">Ongoing Research</button>
+      <button onclick="loadResearch('Past Research', this)">Past Research</button>
+    </div>
+
+    <div class="container" id="projectsContainer"></div>
+
+    <!-- Footer (unchanged) -->
+    <footer class="footer">...Your footer HTML remains unchanged...</footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+      const container = document.getElementById("projectsContainer");
+      let researchData;
+
+      fetch("funded.json")
+        .then(res => res.json())
+        .then(json => {
+          researchData = json;
+          document.querySelector(".ribbon-title").textContent = researchData.ribbontitle;
+          document.querySelector(".ribbon-desc").textContent = researchData.ribbondesc;
+          loadResearch("Ongoing Research", document.querySelector(".button-group button"));
+        });
+
+      function loadResearch(role, btn) {
+        document.querySelectorAll(".button-group button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const list = researchData[role];
+        container.innerHTML = "";
+
+        list.forEach(p => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <h2>${p.project}</h2>
+            <div class="title">${p.title}</div>
+            ${p.duration ? `<div class="meta"><strong>Duration:</strong> ${p.duration}</div>` : ""}
+            ${p.funding ? `<div class="meta"><strong>Funding:</strong> ${p.funding}</div>` : ""}
+            ${p.source ? `<div class="meta"><strong>Source:</strong> ${p.source}</div>` : ""}
+            ${p.leadInvestigator ? `<div class="meta"><strong>Lead Investigator:</strong> ${p.leadInvestigator}</div>` : ""}
+            ${p.coPI ? `<div class="meta"><strong>Co-PI:</strong> ${p.coPI}</div>` : ""}
+            ${
+              p.coInvestigators
+                ? `<div class="section"><div class="section-title">Co-Investigators</div><ul>${p.coInvestigators.map(name => `<li>${name}</li>`).join("")}</ul></div>`
+                : ""
+            }
+            ${
+              p.contributions
+                ? `<div class="section"><div class="section-title">My Contributions</div><ul>${p.contributions.map(point => `<li>${point}</li>`).join("")}</ul></div>`
+                : ""
+            }
+            ${p.notes ? `<div class="note-box">${p.notes}</div>` : ""}
+          `;
+
+          container.appendChild(card);
+        });
+      }
+    </script>
+  </body>
+</html>

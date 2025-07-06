@@ -176,7 +176,7 @@
       </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
             <a>Research</a>
@@ -194,7 +194,7 @@
           </li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="code.html">Code</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
           <li><a href="openings.html">Opening</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -209,7 +209,7 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
@@ -227,7 +227,7 @@
         </li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="code.html">Code</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="openings.html">Openings</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -368,7 +368,7 @@
       }
     </script>
     <!-- loading header ends  -->
-     <!-- loading footer starts  -->
+    <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
         try {
@@ -386,7 +386,7 @@
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;

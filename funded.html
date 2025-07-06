@@ -1,318 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research Projects by Role</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    :root {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMRG | Funded Research</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
         --primary: #012149;
         --secondary: white;
         --highlight: #facc15;
         --text-dark: #111827;
         --text-light: #f9fafb;
       }
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem;
-    }
+      .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem;
+      }
 
-    .button-group button {
-      padding: 0.6rem 1.5rem;
-      border-radius: 8px;
-      background-color: var(--text-light);
-      color: var(--text-dark);
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+      .button-group button {
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+        background-color: var(--text-light);
+        color: var(--text-dark);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
 
-    .button-group button.active {
-      background-color: var(--primary);
-      color:var(--text-light);
-    }
+      .button-group button.active {
+        background-color: var(--primary);
+        color: var(--text-light);
+      }
 
-    .button-group button:hover {
-      color:var(--text-light);
-      background-color: var(--primary);
-    }
+      .button-group button:hover {
+        color: var(--text-light);
+        background-color: var(--primary);
+      }
 
-    /* #projects-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding: 2rem;
-    }
-
-    .research-card {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      gap: 2rem;
-    }
-
-    .card-left {
-      flex: 1 1 60%;
-      min-width: 280px;
-    }
-
-    .card-right {
-      flex: 1 1 30%;
-      min-width: 240px;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .title-area {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .icon-square {
-      width: 48px;
-      height: 48px;
-      background: #e7f0fd;
-      color: #2a68d4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      border-radius: 12px;
-    }
-
-    .research-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0;
-     
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: #6b7280;
-      margin: 0;
-    }
-
-    .badge {
-      background: #e5ecf9;
-      color: #2a68d4;
-      font-size: 0.85rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      margin-left: auto;
-    }
-
-    .section {
-      margin-bottom: 1.5rem;
-    }
-
-    .section h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .section p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .projects-list {
-      padding-left: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .projects-list li {
-      margin-bottom: 0.4rem;
-    }
-
-    .tools-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .tools-list span {
-      background: #f3f4f6;
-      border: 1px solid #d1d5db;
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      color: #374151;
-    }
-
-    .impact-box {
-      background: #f3f4f6;
-      padding: 1rem;
-      border-radius: 12px;
-    }
-
-    .impact-box ul {
-      padding-left: 1.2rem;
-      font-size: 0.95rem;
-    }
-
-    .impact-box li {
-      margin-bottom: 0.4rem;
-      color: #374151;
-    }
-
-    @media (max-width: 768px) {
-      .research-card {
+      .container {
+        max-width: 1100px;
+        margin: 30px auto 50px;
+        display: flex;
         flex-direction: column;
+        gap: 30px;
       }
 
-      .card-right {
-        flex: 1 1 100%;
-      }
-    }
-
-    @media (max-width: 468px) {
-      .research-card {
-        padding: 1.5rem 1rem;
-        border-radius: 12px;
-      }
-
-      .title-area {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .badge {
-        margin-left: 0;
-        margin-top: 0.5rem;
-      }
-
-      .research-title {
-        font-size: 1.2rem;
-      }
-
-      .subtitle {
-        font-size: 0.85rem;
-      }
-
-      .section h4 {
-        font-size: 0.95rem;
-      }
-
-      .tools-list span,
-      .badge {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.6rem;
-      }
-
-      .icon-square {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-      }
-    } */
-
-    /* new card  */
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      padding: 25px 30px;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h2 {
-      font-size: 22px;
-      color: #2c3e50;
-      margin: 0 0 5px;
-    }
-
-    .card .title {
-      font-size: 16px;
-      color: #4a4a4a;
-      margin-bottom: 12px;
-    }
-
-    .meta {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 5px;
-    }
-
-    .meta strong {
-      color: #222;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-top: 5px;
-    }
-
-    .section {
-      margin-top: 15px;
-    }
-
-    .section-title {
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #333;
-    }
-
-    .note-box {
-      background: #eef4fb;
-      padding: 10px 15px;
-      border-left: 4px solid #2d8cf0;
-      border-radius: 8px;
-      margin-top: 10px;
-      font-size: 14px;
-      color: #333;
-    }
-
-    @media screen and (max-width: 600px) {
       .card {
-        padding: 20px;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        padding: 25px 30px;
+        transition: transform 0.3s ease;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!--Complete Header Starts-->
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h2 {
+        font-size: 22px;
+        color: #2c3e50;
+        margin: 0 0 5px;
+      }
+
+      .card .title {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 12px;
+      }
+
+      .meta {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      .meta strong {
+        color: #222;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin-top: 5px;
+      }
+
+      .section {
+        margin-top: 15px;
+      }
+
+      .section-title {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      .note-box {
+        background: #eef4fb;
+        padding: 10px 15px;
+        border-left: 4px solid #2d8cf0;
+        border-radius: 8px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      @media screen and (max-width: 600px) {
+        .card {
+          padding: 20px;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Complete Header Starts-->
     <header>
       <div class="logo">
         <img
           src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group" class="brand"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
         />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
       </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
-            <a>Research</a>
+            <a class="active">Research</a>
             <div class="dropdown-content">
               <a href="ongoing.html">Ongoing</a>
               <a href="funded.html">Funded</a>
@@ -342,10 +169,10 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <div onclick="toggleDropdown(this)">Research ▾</div>
+        <li class="dropdown" class="active">
+          <div onclick="toggleDropdown(this)" class="active">Research ▾</div>
           <ul class="submenu">
             <li><a href="ongoing.html">Ongoing</a></li>
             <li><a href="funded.html">Funded</a></li>
@@ -374,105 +201,145 @@
       </div>
     </div>
     <!-- Complete ribbon ends  -->
-
-  <div class="button-group">
-    <button class="active" onclick="loadResearch('Ongoing Research', this)">Ongoing Research</button>
-    <button onclick="loadResearch('Past Research', this)">Past Research</button>
-  </div>
-
-  <!-- <div id="projects-container"></div>
-
-  <template id="research-card-template">
-    <div class="research-card">
-      <div class="card-left">
-        <div class="title-area">
-          <div class="icon-square">🔬</div>
-          <div>
-            <h2 class="research-title">Title</h2>
-            <p class="subtitle">Subtitle</p>
-          </div>
-          <span class="badge publication-count">0 Publications</span>
-        </div>
-        <div class="section">
-          <h4>Overview</h4>
-          <p class="overview-text">Overview content</p>
-        </div>
-        <div class="section">
-          <h4>Current Projects</h4>
-          <ul class="projects-list"></ul>
-        </div>
-      </div>
-
-      <div class="card-right">
-        <div class="section">
-          <h4>Tools & Software</h4>
-          <div class="tools-list"></div>
-        </div>
-        <div class="section impact-box">
-          <h4>Research Impact</h4>
-          <ul class="impact-list"></ul>
-        </div>
-      </div>
+    <!-- Complete Research starts  -->
+    <div class="button-group">
+      <button class="active" onclick="loadResearch('Ongoing Research', this)">
+        Ongoing Research
+      </button>
+      <button onclick="loadResearch('Past Research', this)">
+        Past Research
+      </button>
     </div>
-  </template> -->
-  <div class="container" id="projectsContainer"></div>
-  <script>
-
-    const container = document.getElementById("projectsContainer");
-
-    projects.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      card.innerHTML = `
-        <h2>${p.projectCode}</h2>
-        <div class="title">${p.title}</div>
-        ${p.duration ? `<div class="meta"><strong>Duration:</strong> ${p.duration}</div>` : ""}
-        ${p.funding ? `<div class="meta"><strong>Funding:</strong> ${p.funding}</div>` : ""}
-        ${p.source ? `<div class="meta"><strong>Source:</strong> ${p.source}</div>` : ""}
-        ${p.leadInvestigator ? `<div class="meta"><strong>Lead Investigator:</strong> ${p.leadInvestigator}</div>` : ""}
-        ${p.coPI ? `<div class="meta"><strong>Co-PI:</strong> ${p.coPI}</div>` : ""}
-        ${p.coInvestigators ? `<div class="section"><div class="section-title">Co-Investigators</div><ul>${p.coInvestigators.map(name => `<li>${name}</li>`).join("")}</ul></div>` : ""}
-        ${p.contributions ? `<div class="section"><div class="section-title">My Contributions</div><ul>${p.contributions.map(point => `<li>${point}</li>`).join("")}</ul></div>` : ""}
-        ${p.notes ? `<div class="note-box">${p.notes}</div>` : ""}
-      `;
-
-      container.appendChild(card);
-    });
-  </script>
-
-  <footer class="footer">
+    <div class="container" id="projectsContainer"></div>
+    <!-- Complete Research ends  -->
+    <!-- Complete footer starts  -->
+    <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
         <div class="footer-column about">
           <h3></h3>
           <p></p>
           <div class="social-icons">
-            <a><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-
         <!-- Column 2: Links -->
         <div class="footer-column">
           <h4>Quick Links</h4>
           <ul></ul>
         </div>
-
         <!-- Column 3: Contact -->
-        <div class="footer-column">
+        <div class="footer-column contact-div">
           <h4>Contact</h4>
-          <ul class="contact-info"></ul>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
         </div>
       </div>
       <hr />
       <div class="footer-bottom"></div>
     </footer>
-<script>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading research starts -->
+    <script>
+      const container = document.getElementById("projectsContainer");
+      fetch("funded.json")
+        .then((res) => res.json())
+        .then((json) => {
+          researchData = json;
+          document.querySelector(".ribbon-title").textContent =
+            researchData.ribbontitle;
+          document.querySelector(".ribbon-desc").textContent =
+            researchData.ribbondesc;
+          loadResearch(
+            "Ongoing Research",
+            document.querySelector(".button-group button")
+          );
+        });
+      let researchData;
+      function loadResearch(role, btn) {
+        // Highlight button
+        document
+          .querySelectorAll(".button-group button")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const container = document.getElementById("projectsContainer");
+        container.innerHTML = ""; // Clear previous
+
+        const list = researchData[role];
+        list.forEach((p) => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+        <h1>${p.projectCode}</h1>
+        <div class="title">${p.title}</div>
+        ${
+          p.duration
+            ? `<div class="meta"><strong>Duration:</strong> ${p.duration}</div>`
+            : ""
+        }
+        ${
+          p.funding
+            ? `<div class="meta"><strong>Funding:</strong> ${p.funding}</div>`
+            : ""
+        }
+        ${
+          p.source
+            ? `<div class="meta"><strong>Source:</strong> ${p.source}</div>`
+            : ""
+        }
+        ${
+          p.leadInvestigator
+            ? `<div class="meta"><strong>Lead Investigator:</strong> ${p.leadInvestigator}</div>`
+            : ""
+        }
+        ${
+          p.coPI
+            ? `<div class="meta"><strong>Co-PI:</strong> ${p.coPI}</div>`
+            : ""
+        }
+        ${
+          p.coInvestigators
+            ? `<div class="section"><div class="section-title">Co-Investigators</div><ul>${p.coInvestigators
+                .map((name) => `<li>${name}</li>`)
+                .join("")}</ul></div>`
+            : ""
+        }
+        ${
+          p.contributions
+            ? `<div class="section"><div class="section-title">My Contributions</div><ul>${p.contributions
+                .map((point) => `<li>${point}</li>`)
+                .join("")}</ul></div>`
+            : ""
+        }
+        ${p.notes ? `<div class="note-box">${p.notes}</div>` : ""}
+      `;
+          container.appendChild(card);
+        });
+      }
+    </script>
+    <!-- loading research ends  -->
+    <!-- loading footer starts  -->
+    <script>
       async function loadFooter() {
         try {
-          const res = await fetch("about.json");
+          const res = await fetch("footer.json");
           const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
@@ -480,22 +347,43 @@
             footer.about.description;
           const socialLinks = document.querySelectorAll(".social-icons a");
           socialLinks[0].href = footer.about.social.github;
-          socialLinks[1].href = footer.about.social.twitter;
+          socialLinks[1].href = footer.about.social.mail;
           socialLinks[2].href = footer.about.social.linkedin;
           const quickLinks = document.querySelector(".footer-column ul");
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;
           const contactInfo = document.querySelector(".contact-info");
           contactInfo.innerHTML = `
-        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-        <li><i class="fas fa-envelope"></i>${contact.email}</li>
-      `;
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
           document.querySelector(".footer-bottom").textContent =
             footer["footer-note"];
         } catch (err) {
@@ -504,91 +392,6 @@
       }
       loadFooter();
     </script>
-  <script>
-    let researchData;
-
-    function loadResearch(role, btn) {
-      // Highlight button
-      document.querySelectorAll(".button-group button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const container = document.getElementById("projects-container");
-      container.innerHTML = ""; // Clear previous
-
-      const list = researchData[role];
-      const template = document.getElementById("research-card-template");
-
-      list.forEach(item => {
-        const clone = template.content.cloneNode(true);
-        clone.querySelector(".research-title").textContent = item.project;
-        clone.querySelector(".subtitle").textContent = item.title;
-        clone.querySelector(".icon-square").textContent = item.icon;
-        clone.querySelector(".overview-text").textContent = item.mycontribution;
-        clone.querySelector(".publication-count").textContent = item.funding;
-
-        // const projectList = clone.querySelector(".projects-list");
-        // item.currentProjects.forEach(p => {
-        //   const li = document.createElement("li");
-        //   li.textContent = p;
-        //   projectList.appendChild(li);
-        // });
-
-        // const tools = clone.querySelector(".tools-list");
-        // item.tools.forEach(t => {
-        //   const span = document.createElement("span");
-        //   span.textContent = t;
-        //   tools.appendChild(span);
-        // });
-
-        // const impact = clone.querySelector(".impact-list");
-        // item.impact.forEach(i => {
-        //   const li = document.createElement("li");
-        //   li.textContent = i;
-        //   impact.appendChild(li);
-        // });
-
-        container.appendChild(clone);
-      });
-    }
-
-    fetch("funded.json")
-      .then(res => res.json())
-      .then(json => {
-        researchData = json;
-        document.querySelector(".ribbon-title").textContent = json.ribbontitle;
-        document.querySelector(".ribbon-desc").textContent = json.ribbondesc;
-        loadResearch("Ongoing Research", document.querySelector(".button-group button"));
-        // Footer
-          document.getElementById("footer-title").textContent =
-            json.footer.about.title;
-          document.getElementById("footer-para").innerHTML =
-            json.footer.about.description;  
-          const socialLinks = document.querySelectorAll(".social-icons a");
-          socialLinks[0].href = json.footer.about.social.github;
-          socialLinks[1].href = json.footer.about.social.twitter;
-          socialLinks[2].href = json.footer.about.social.linkedin;
-          const quickLinks = document.querySelector(".footer-column ul");
-          quickLinks.innerHTML = "";
-          json.footer["quick-links"].forEach((link) => {
-            console.log(link);
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
-            quickLinks.appendChild(li);
-          });
-          const contact = json.footer.contact;
-          const contactInfo = document.querySelector(".footer-contact-info");
-          contactInfo.innerHTML = `
-            <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-            <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-            <li><i class="fas fa-envelope"></i>${contact.email}</li>
-          `;
-          document.querySelector(".footer-bottom").textContent =
-            json.footer["footer-note"];
-      });
-      function toggleMenu() {
-        const menu = document.querySelector(".navListul");
-        menu.classList.toggle("active");
-      }
-  </script>
-</body>
+    <!-- loading footer ends  -->
+  </body>
 </html>

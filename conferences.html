@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conferences</title>
+    <title>CMRG | Conferences</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
     <style>
       :root {
         --primary: #012149;
@@ -175,7 +180,7 @@
       </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
             <a>Research</a>
@@ -185,7 +190,7 @@
             </div>
           </li>
           <li class="dropdown">
-            <a>Publications</a>
+            <a class="active">Publications</a>
             <div class="dropdown-content">
               <a href="journals.html">Journals</a>
               <a href="conferences.html">Conferences</a>
@@ -208,7 +213,7 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
@@ -217,8 +222,8 @@
             <li><a href="funded.html">Funded</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <div onclick="toggleDropdown(this)">Publications ▾</div>
+        <li class="dropdown" class="active">
+          <div onclick="toggleDropdown(this)" class="active">Publications ▾</div>
           <ul class="submenu">
             <li><a href="journals.html">Journals</a></li>
             <li><a href="conferences.html">Conferences</a></li>
@@ -395,7 +400,7 @@
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;

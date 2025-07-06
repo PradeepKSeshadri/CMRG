@@ -1,156 +1,79 @@
-{ 
-  "ribbontitle":"Research",
-  "ribbondesc":"Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
-  "projects" : [
-      {
-        "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
-        "funding": "$7,500,000",
-        "duration": "06/2019 ~ 05/2024",
-        "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
-        "source": "U.S. Department of Defense, Air Force Office of Scientific Research (AFOSR), MURI Program",
-        "leadInvestigator": "Thomas Sewell (University of Missouri-Columbia)",
-        "coPI": "H.S. Udaykumar (University of Iowa)",
-        "coInvestigators": [
-          "D. Dlott (UIUC)",
-          "Catalin Picu (RPI)",
-          "S. Chaudhari (UIC)",
-          "W.C. Sun (Columbia)",
-          "S. Baek (UVA)"
-        ],
-        "contributions": [
-          "Higher Order Accurate Modeling of Micro/Meso/Macro scale simulations",
-          "New Framework to model Flyer Impact induced Shock Initiation of PBX",
-          "Physics Aware Recurrent Convolutional Neural Network",
-          "New sub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions"
-        ],
-        "notes": "4 papers published; 1 in Science Advances (IF=13.6), 5+ in progress"
-      },
-      {
-        "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
-        "duration": "05/2010 ~ Ongoing",
-        "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
-        "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
-        "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
-        "contributions": [
-          "Uncertainty Quantification of Surrogate Burn Model MESIG",
-          "Published two-part paper in Journal of Applied Physics",
-          "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
-        ]
-      },
-      {
-        "projectCode": "NSF-DMREF (2118393)",
-        "funding": "$1,650,000",
-        "duration": "03/2022 ~ 02/2026",
-        "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
-        "source": "National Science Foundation, DMREF Program",
-        "contributions": [
-          "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
-          "Building material database of HMX, RDX, TNT, PETN, TATB",
-          "Running mesoscale simulations and training PhD students"
-        ]
-      }
-    ],
-    "Ongoing Research": [
+{
+  "ribbontitle": "Research",
+  "ribbondesc": "Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
+  "Ongoing Research": [
     {
-      "project": " DOD/AFOSR (FA9550-19-1-0318)",
+      "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
       "funding": "$7,500,000",
-      "duration": ["06/2019 ~ 05/2024"],
+      "duration": "06/2019 ~ 05/2024",
       "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
-      "icon": "🌊",
-      "mycontribution": "In this multidisciplinC & MISSEL) for Macro-Scale Sensitivity Predictions.",
-      "investigators":"PI: H.S. Udaykumar (University of Iowa)",
-      "Lead": [
-        "Hypersonic Flow Modeling",
-        "Multiphase Flow Studies",
-        "Reactive Flow Engines"
+      "source": "U.S. Department of Defense, Air Force Office of Scientific Research (AFOSR), MURI Program",
+      "leadInvestigator": "Thomas Sewell (University of Missouri-Columbia)",
+      "coPI": "H.S. Udaykumar (University of Iowa)",
+      "coInvestigators": [
+        "D. Dlott (UIUC)",
+        "Catalin Picu (RPI)",
+        "S. Chaudhari (UIC)",
+        "W.C. Sun (Columbia)",
+        "S. Baek (UVA)"
       ],
-      "co-pi": [
-        "45 publications",
-        "Industry collaboration",
-        "Open-source tools"
+      "contributions": [
+        "Higher Order Accurate Modeling of Micro/Meso/Macro scale simulations",
+        "New Framework to model Flyer Impact induced Shock Initiation of PBX",
+        "Physics Aware Recurrent Convolutional Neural Network",
+        "New sub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions"
+      ],
+      "notes": "4 papers published; 1 in Science Advances (IF=13.6), 5+ in progress"
+    },
+    {
+      "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
+      "duration": "05/2010 ~ Ongoing",
+      "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
+      "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
+      "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
+      "contributions": [
+        "Uncertainty Quantification of Surrogate Burn Model MESIG",
+        "Published two-part paper in Journal of Applied Physics",
+        "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
       ]
     },
     {
-      "project": " DOD/AFOSR (FA9550-19-1-0318)",
-      "funding": "$7,500,000",
-      "duration": ["06/2019 ~ 05/2024"],
-      "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
-      "icon": "🌊",
-      "mycontribution": "In this multub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions.",
-      "investigators":"PI: H.S. Udaykumar (University of Iowa)",
-      "Lead": [
-        "Hypersonic Flow Modeling",
-        "Multiphase Flow Studies",
-        "Reactive Flow Engines"
-      ],
-      "co-pi": [
-        "45 publications",
-        "Industry collaboration",
-        "Open-source tools"
+      "projectCode": "NSF-DMREF (2118393)",
+      "funding": "$1,650,000",
+      "duration": "03/2022 ~ 02/2026",
+      "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
+      "source": "National Science Foundation, DMREF Program",
+      "contributions": [
+        "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
+        "Building material database of HMX, RDX, TNT, PETN, TATB",
+        "Running mesoscale simulations and training PhD students"
       ]
     }
   ],
   "Past Research": [
     {
-      "title": "Autonomous Vehicle Research",
-      "subtitle": "Navigation, sensing, and control systems",
-      "icon": "🚗",
-      "overview": "Graduate researchers work on sensors, control algorithms, and real-time processing for AVs.",
-      "publicationCount": 20,
-      "currentProjects": [
-        "LIDAR Sensor Fusion",
-        "Path Planning Algorithms",
-        "Real-Time Obstacle Detection"
-      ],
-      "tools": ["ROS", "MATLAB", "Python"],
-      "impact": [
-        "20 papers",
-        "University-Industry project",
-        "National conference awards"
+      "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
+      "duration": "05/2010 ~ Ongoing",
+      "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
+      "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
+      "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
+      "contributions": [
+        "Uncertainty Quantification of Surrogate Burn Model MESIG",
+        "Published two-part paper in Journal of Applied Physics",
+        "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
       ]
-    }
-  ],
-  "Graduate Student Researcher": [
+    },
     {
-      "title": "Smart Irrigation Systems",
-      "subtitle": "IoT-based water management",
-      "icon": "💧",
-      "overview": "Undergraduates contribute to IoT-based irrigation using sensors, control valves, and mobile dashboards.",
-      "publicationCount": 10,
-      "currentProjects": [
-        "Soil Moisture Sensing",
-        "Water Pump Automation",
-        "Remote Monitoring App"
-      ],
-      "tools": ["Arduino", "NodeMCU", "Blynk"],
-      "impact": [
-        "Prototype tested on farms",
-        "Smart India Hackathon finalist",
-        "Featured in student expo"
+      "projectCode": "NSF-DMREF (2118393)",
+      "funding": "$1,650,000",
+      "duration": "03/2022 ~ 02/2026",
+      "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
+      "source": "National Science Foundation, DMREF Program",
+      "contributions": [
+        "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
+        "Building material database of HMX, RDX, TNT, PETN, TATB",
+        "Running mesoscale simulations and training PhD students"
       ]
     }
-  ],
-  "footer": {
-    "about": {
-      "title": "Computational Multiphysics Research Lab",
-      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
-      "social": {
-        "github": "#",
-        "twitter": "#",
-        "linkedin": "#"
-      }
-    },
-    "quick-links": [
-      "Research Areas",
-      "Publications",
-      "Open Source",
-      "Join Our Team"
-    ],
-    "contact": {
-      "address": "123 University Ave, Research Building",
-      "phone": "9789796025",
-      "email": "spk15031990@gmail.com"
-    },
-    "footer-note": "© 2025 Computational Multiphysics Research Lab. All rights reserved."
-  }
+  ]
 }

@@ -12,7 +12,27 @@
         "role":"Principal Investigator",
         "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
         "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
-        "email":"#",
+        "email":"mailto:spk15031990@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+    }
+  ],
+  "collaborators":[
+    {
+        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+        "name":"Dr. Pradeep Kumar Seshadri",
+        "role":"Principal Investigator",
+        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
+        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
+        "email":"mailto:spk15031990@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+    },
+    {
+        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+        "name":"Dr. Pradeep Kumar Seshadri",
+        "role":"Principal Investigator",
+        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
+        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
+        "email":"mailto:spk15031990@gmail.com",
         "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
     }
   ],

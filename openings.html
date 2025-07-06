@@ -1,107 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join Us – CoMPhys Lab</title>
-  <style>
-    :root {
-      --primary: #012149;
-      --secondary: #f9fafb;
-      --highlight: #facc15;
-      --text-dark: #1f2937;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMRG | Openings</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
+    <style>
+      :root {
+        --primary: #012149;
+        --secondary: #f9fafb;
+        --highlight: #facc15;
+        --text-dark: #1f2937;
+      }
 
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--secondary);
-      color: var(--text-dark);
-      line-height: 1.7;
-    }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--secondary);
+        color: var(--text-dark);
+        line-height: 1.7;
+      }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+      }
 
-    /* h1 {
+      /* h1 {
       text-align: center;
       color: var(--primary);
       font-size: 2.2rem;
       margin-bottom: 30px;
     } */
 
-    section {
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px dashed #ccc;
-    }
-
-    h2 {
-      color: var(--primary);
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    .info-block {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      background-color: #f1f5f9;
-      padding: 10px;
-      border-left: 4px solid var(--primary);
-      border-radius: 5px;
-    }
-
-    .emoji {
-      font-size: 1.2rem;
-      margin-right: 5px;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.6rem;
+      section {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #ccc;
       }
 
       h2 {
-        font-size: 1.2rem;
+        color: var(--primary);
+        font-size: 1.4rem;
+        margin-bottom: 10px;
       }
 
-      .container {
-        padding: 20px 15px;
+      ul {
+        margin-top: 10px;
+        padding-left: 20px;
       }
-    }
-  </style>
-   <link
+
+      ul li {
+        margin-bottom: 8px;
+      }
+
+      .info-block {
+        margin-top: 10px;
+        font-size: 0.95rem;
+        background-color: #f1f5f9;
+        padding: 10px;
+        border-left: 4px solid var(--primary);
+        border-radius: 5px;
+      }
+
+      .emoji {
+        font-size: 1.2rem;
+        margin-right: 5px;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        .container {
+          padding: 20px 15px;
+        }
+      }
+    </style>
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!--Complete Header Starts-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Complete Header Starts-->
     <header>
       <div class="logo">
         <img
           src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group" class="brand"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
         />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
       </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown">
             <a>Research</a>
@@ -120,7 +126,7 @@
           <li><a href="courses.html">Courses</a></li>
           <li><a href="code.html">Code</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="openings.html">Opening</a></li>
+          <li><a href="openings.html" class="active">Opening</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -134,7 +140,7 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
@@ -153,12 +159,12 @@
         <li><a href="courses.html">Courses</a></li>
         <li><a href="code.html">Code</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="openings.html">Openings</a></li>
+        <li><a href="openings.html" class="active">Openings</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <!-- Complete Header Ends  -->
-     <!-- Complete ribbon starts  -->
+    <!-- Complete ribbon starts  -->
     <div class="ribbon">
       <div class="ribbon-content">
         <h1 class="ribbon-title"></h1>
@@ -166,68 +172,12 @@
       </div>
     </div>
     <!-- Complete ribbon ends  -->
-     <div class="container">
-        <div id="join-sections"></div>
-     </div>
-    
-  <script>
-    async function loadJoinUsContent() {
-      try {
-        const res = await fetch("openings.json");
-        const data = await res.json();
-
-        // Ribbon
-          document.querySelector(".ribbon-title").textContent = data.ribbon.title;
-          document.querySelector(".ribbon-desc").textContent = data.ribbon.description;
-
-
-        const container = document.getElementById("join-sections");
-
-        data.sections.forEach(section => {
-          const sec = document.createElement("section");
-
-          const heading = document.createElement("h2");
-          heading.innerHTML = `<span class="emoji">${section.emoji}</span>${section.title}`;
-          sec.appendChild(heading);
-
-          if (section.description) {
-            const desc = document.createElement("p");
-            desc.textContent = section.description;
-            sec.appendChild(desc);
-          }
-
-          if (section.points && section.points.length > 0) {
-            const ul = document.createElement("ul");
-            section.points.forEach(point => {
-              const li = document.createElement("li");
-              li.textContent = point;
-              ul.appendChild(li);
-            });
-            sec.appendChild(ul);
-          }
-
-          if (section.info && section.info.length > 0) {
-            const infoDiv = document.createElement("div");
-            infoDiv.classList.add("info-block");
-            section.info.forEach(item => {
-              const line = document.createElement("p");
-              line.textContent = item;
-              infoDiv.appendChild(line);
-            });
-            sec.appendChild(infoDiv);
-          }
-
-          container.appendChild(sec);
-        });
-
-      } catch (err) {
-        console.error("Error loading join-us.json:", err);
-      }
-    }
-
-    loadJoinUsContent();
-  </script>
-   <!-- Complete footer starts  -->
+    <!-- Complete Openings card starts  -->
+    <div class="container">
+      <div id="join-sections"></div>
+    </div>
+    <!-- Complete Openings card ends  -->
+    <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
@@ -269,7 +219,66 @@
       }
     </script>
     <!-- loading header ends  -->
-     <!-- loading footer starts  -->
+    <!-- loading openings starts  -->
+    <script>
+      async function loadJoinUsContent() {
+        try {
+          const res = await fetch("openings.json");
+          const data = await res.json();
+
+          // Ribbon
+          document.querySelector(".ribbon-title").textContent =
+            data.ribbon.title;
+          document.querySelector(".ribbon-desc").textContent =
+            data.ribbon.description;
+
+          const container = document.getElementById("join-sections");
+
+          data.sections.forEach((section) => {
+            const sec = document.createElement("section");
+
+            const heading = document.createElement("h2");
+            heading.innerHTML = `<span class="emoji">${section.emoji}</span>${section.title}`;
+            sec.appendChild(heading);
+
+            if (section.description) {
+              const desc = document.createElement("p");
+              desc.textContent = section.description;
+              sec.appendChild(desc);
+            }
+
+            if (section.points && section.points.length > 0) {
+              const ul = document.createElement("ul");
+              section.points.forEach((point) => {
+                const li = document.createElement("li");
+                li.textContent = point;
+                ul.appendChild(li);
+              });
+              sec.appendChild(ul);
+            }
+
+            if (section.info && section.info.length > 0) {
+              const infoDiv = document.createElement("div");
+              infoDiv.classList.add("info-block");
+              section.info.forEach((item) => {
+                const line = document.createElement("p");
+                line.textContent = item;
+                infoDiv.appendChild(line);
+              });
+              sec.appendChild(infoDiv);
+            }
+
+            container.appendChild(sec);
+          });
+        } catch (err) {
+          console.error("Error loading join-us.json:", err);
+        }
+      }
+
+      loadJoinUsContent();
+    </script>
+    <!-- loading openings ends  -->
+    <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
         try {
@@ -287,7 +296,7 @@
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;
@@ -327,5 +336,5 @@
       loadFooter();
     </script>
     <!-- loading footer ends  -->
-</body>
+  </body>
 </html>

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Computational Multiphysics Research Group</title>
+    <title>CMRG | Home</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
     <!-- style sheet starts  -->
     <link rel="stylesheet" href="style.css" />
     <!-- style sheet ends  -->
@@ -593,7 +598,7 @@
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;

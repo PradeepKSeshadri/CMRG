@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>CMRG | About Us</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
     <style>
       :root {
         --primary: #012149;
@@ -201,8 +206,8 @@
       </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li class="dropdown">
             <a>Research</a>
             <div class="dropdown-content">
@@ -234,8 +239,8 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
@@ -287,7 +292,16 @@
       <div class="team-grid" id="team-grid"></div>
     </section>
     <!-- Complete team ends  -->
-     <!-- Complete journey starts  -->
+    <!-- Complete collab starts  -->
+    <section class="team-section">
+      <h2 class="section-title">Our Collaborators</h2>
+      <p class="section-subtitle">
+        We proudly partner with visionary organizations and individuals who share our mission to create lasting impact.
+      </p>
+      <div class="team-grid" id="collaborator-grid"></div>
+    </section>
+    <!-- Complete collab ends  -->
+    <!-- Complete journey starts  -->
     <section class="journey-section">
       <h2 class="section-title">Our Journey</h2>
       <p class="section-subtitle">
@@ -383,6 +397,39 @@
             teamcard.appendChild(teamicondiv);
             teamgrid.appendChild(teamcard);
         })
+        //team card
+          const collaboratorgrid = document.getElementById("collaborator-grid");
+          data.collaborators.forEach((team) => {
+            const teamcard = document.createElement("div");
+            teamcard.className = "team-card";
+            const teamimg = document.createElement("img");
+            teamimg.src = team.src;
+            teamimg.alt = team.name;
+            teamimg.className = "team-photo";
+            const teamcardh3 = document.createElement("h3");
+            teamcardh3.textContent = team.name;
+            const teamspan = document.createElement("span");
+            teamspan.className = "badge";
+            teamspan.textContent = team.role;
+            const teamp = document.createElement("p");
+            teamp.className = "degree";
+            teamp.innerHTML = `<i class="fas fa-graduation-cap"></i> ${team.designation}`;
+            const team2p = document.createElement("p");
+            team2p.className = "research";
+            team2p.innerHTML = `<i class="fas fa-award"></i> ${team.subject}`;
+            const teamicondiv = document.createElement("div");
+            teamicondiv.className = "team-icons";
+            teamicondiv.innerHTML = `
+            <a href="${team.email}"><i class="fas fa-envelope"></i></a>
+            <a href="${team.linkedin}"><i class="fab fa-linkedin"></i></a>`;
+            teamcard.appendChild(teamimg);
+            teamcard.appendChild(teamcardh3);
+            teamcard.appendChild(teamspan);
+            teamcard.appendChild(teamp);
+            teamcard.appendChild(team2p);
+            teamcard.appendChild(teamicondiv);
+            collaboratorgrid.appendChild(teamcard);
+        })
           //journey
             const container = document.getElementById("timeline-container");
             data.journey.forEach((item) => {
@@ -423,7 +470,7 @@
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;
