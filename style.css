@@ -47,9 +47,16 @@ header {
 
 .logo {
   width: 200px;
+  display:flex;
 }
 .logo img {
   width: 100%;
+}
+.iit{
+  border-radius: 50%;
+  width:70px;
+  height: 70px;
+  margin-left: 10px;
 }
 
 nav.desktop-nav {
