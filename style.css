@@ -46,16 +46,18 @@ header {
 }
 
 .logo {
-  width: 200px;
   display:flex;
+  /* border:2px solid red; */
 }
 .logo img {
-  width: 100%;
+  /* width: 100%; */
+}
+.brand{
+  width: 200px
 }
 .iit{
   border-radius: 50%;
   width:70px;
-  height: 70px;
   margin-left: 20px;
 }
 
