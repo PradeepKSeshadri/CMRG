@@ -1,0 +1,42 @@
+{
+  "announcements": [
+    {
+      "date": "July 2",
+      "message": "Course registration opens for Fall 2025"
+    },
+    {
+      "date": "June 25",
+      "message": "New course on AI-assisted simulation coming soon"
+    },
+    {
+      "date": "June 15",
+      "message": "Past lecture recordings available for CFD"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Computational Fluid Dynamics (CFD)",
+      "instructor": "Dr. A. Sharma",
+      "semester": "Fall 2025",
+      "description": "Introduction to finite volume methods, Navier-Stokes solvers, and advanced simulation of incompressible flow. Includes hands-on coding assignments and a final research mini-project.",
+      "buttonText": "Apply Now",
+      "link": "#"
+    },
+    {
+      "title": "Multiphysics Modeling with LBM",
+      "instructor": "Dr. R. Verma",
+      "semester": "Spring 2026",
+      "description": "Covers immersed boundary and lattice Boltzmann methods for simulating complex fluid-structure interactions in biological and mechanical systems.",
+      "buttonText": "Join Interest List",
+      "link": "#"
+    },
+    {
+      "title": "Machine Learning for Simulation",
+      "instructor": "Dr. P. Mehra",
+      "semester": "Spring 2026",
+      "description": "Learn how neural networks and surrogate models are applied to reduce computational cost in high-fidelity simulation tasks.",
+      "buttonText": "Apply Now",
+      "link": "#"
+    }
+  ]
+}

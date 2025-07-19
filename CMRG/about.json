@@ -1,0 +1,46 @@
+{
+  "ribbon": {
+    "title": "About Research Group",
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+  },
+    "description1": "At the core of our work lies a rigorous blend of first-principles modeling, high-fidelity numerical methods, and AI-accelerated multi-scale simulations. We seek to uncover governing physical mechanisms, design predictive frameworks, and provide insights into real-world engineering problems in aerospace, defense, energy, and biological systems.",
+    "description2": "We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles.",
+  "teams":[
+    {
+        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+        "name":"Dr. Pradeep Kumar Seshadri",
+        "role":"Principal Investigator",
+        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
+        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
+        "email":"mailto:spk15031990@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+    }
+  ],
+  "collaborators":[
+    {
+        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+        "name":"Dr. Pradeep Kumar Seshadri",
+        "role":"Principal Investigator",
+        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
+        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
+        "email":"mailto:spk15031990@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+    },
+    {
+        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+        "name":"Dr. Pradeep Kumar Seshadri",
+        "role":"Principal Investigator",
+        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
+        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
+        "email":"mailto:spk15031990@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+    }
+  ],
+  "journey":[
+  {
+    "year": "2025",
+    "title": "Lab Foundation",
+    "description": "Computational Multiphysics Research Lab established"
+  }
+]
+}

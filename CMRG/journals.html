@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMRG | Journals</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      :root {
+        --primary: #012149;
+        --secondary: white;
+        --highlight: #facc15;
+        --text-dark: #111827;
+        --text-light: #f9fafb;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4rem;
+        max-width: 1100px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .stat-box {
+        flex: 1 1 200px;
+        padding: 1.5rem;
+        background-color: #f9fafb;
+        /* border-radius: 12px; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        min-width: 180px;
+        border-bottom: 2px solid #1e293b;
+      }
+      .stat-box:hover {
+        transform: translateY(-5px);
+      }
+      .stat-box h2 {
+        color: #1e293b;
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+      }
+      .stat-box p {
+        margin-top: 0.5rem;
+        color: #555;
+        font-size: 1rem;
+      }
+      /* ----------------- Responsive Breakpoints ----------------- */
+      @media (max-width: 768px) {
+        .stats {
+          justify-content: center;
+          gap: 1.5rem;
+        }
+        .stat-box {
+          flex: 1 1 45%;
+        }
+      }
+      @media (max-width: 480px) {
+        .stat-box {
+          flex: 1 1 100%;
+        }
+        .stat-box h2 {
+          font-size: 2rem;
+        }
+        .stat-box p {
+          font-size: 0.95rem;
+        }
+      }
+      .filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 2rem;
+        border-radius: 8px;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .search-box {
+        flex: 1;
+        min-width: 300px;
+      }
+      .search-box input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+      .select-boxes {
+        display: flex;
+        gap: 1rem;
+      }
+      .select-boxes select {
+        padding: 0.5rem 0.8rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        min-width: 150px;
+      }
+      .filter-btn {
+        border: none;
+        outline: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background-color: #1e293b; /* dark navy */
+        color: #f8fafc;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      /* Hover and focus states */
+      .filter-btn:hover,
+      .filter-btn:focus {
+        background-color: #1e293b;
+        transform: translateY(-1px);
+      }
+      /* --tablet  */
+      @media (max-width: 768px) {
+        .filters {
+          flex-direction: column;
+          align-items: stretch;
+          padding: 1.5rem;
+        }
+
+        .select-boxes {
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .select-boxes select {
+          flex: 1;
+          min-width: 0;
+        }
+        .filter-btn {
+          font-size: 0.95rem;
+          padding: 10px 20px;
+          width: auto;
+        }
+      }
+      /* ---mobile */
+      @media (max-width: 480px) {
+        .filters {
+          padding: 1rem;
+        }
+        .select-boxes {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+        .select-boxes select {
+          width: 100%;
+          font-size: 0.95rem;
+        }
+        .search-box input {
+          font-size: 0.95rem;
+          padding: 0.6rem 0.8rem;
+        }
+        .filter-btn {
+          display: block;
+          width: 100%;
+          font-size: 1rem;
+          padding: 12px;
+          margin-bottom: 10px;
+        }
+      }
+      .card {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .card img {
+        width: 300px;
+        height:300px;
+        border: 2px solid rgb(199, 199, 199);
+        /* height: auto; */
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .card-content {
+        flex: 1;
+        min-width: 250px;
+      }
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .card-title h2 {
+        font-size: 20px;
+        color: #1e293b;
+        margin: 0;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+      .authors {
+        font-size: 13px;
+        color: #555;
+        margin-top: 6px;
+      }
+      .tags {
+        margin-top: 10px;
+      }
+      .tags span {
+        display: inline-block;
+        background-color: #f0f0f0c9;
+        color: #1e293b;
+        font-size: 12px;
+        padding: 4px 8px;
+        margin: 4px 4px 0 0;
+        border-radius: 6px;
+      }
+      .labels {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-end;
+      }
+      .journal {
+        background-color: #1e293b;
+        color: white;
+        padding: 4px 12px;
+        font-size: 12px;
+        border-radius: 999px;
+      }
+      .q1 {
+        border: 1px solid #22c55e;
+        color: #22c55e;
+        font-size: 12px;
+        padding: 3px 10px;
+        border-radius: 999px;
+      }
+      .publication {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #333;
+      }
+      .description {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #444;
+        line-height: 1.5;
+        max-height: 100px;         /* Fixed height */
+        overflow: hidden;
+        position: relative;
+        text-align: justify;
+        transition: max-height 0.3s ease;
+      }
+      .description.expanded {
+        max-height: none;          /* Full height when expanded */
+      }
+      .show-more-btn {
+        color: #1e293b;
+        font-weight: 500;
+        font-size: 13px;
+        cursor: pointer;
+        margin-top: 6px;
+        display: inline-block;
+        background: #f1f5f9;
+        padding: 4px 10px;
+        border-radius: 6px;
+      }
+      .show-more-btn:hover {
+        background-color: #e2e8f0;
+      }
+      /* .description {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #444;
+        line-height: 1.5;
+      } */
+      .doi {
+        font-size: 12px;
+        color: #777;
+        margin-top: 10px;
+      }
+      .actions {
+        margin-top: 16px;
+      }
+      .actions a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 6px 14px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+      }
+      .view-btn {
+        border: 1px solid #1e293b;
+        color: #1e293b;
+      }
+      .view-btn:hover {
+        background-color: #e4e4e4;
+      }
+      .pdf-btn {
+        background-color: #1e293b;
+        color: white;
+      }
+      .pdf-btn:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: 1px solid #1e293b;
+      }
+      @media (max-width: 768px) {
+        .card {
+          flex-direction: column;
+          align-items: center;
+        }
+        .labels {
+          align-items: flex-start;
+        }
+      }
+      @media (max-width: 480px) {
+        .card img {
+          width: 100%;
+        }
+        .card-title h2 {
+          font-size: 18px;
+        }
+      }
+      .recent-highlights-section {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #f9fbfd;
+      }
+      .recent-section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1e293b;
+      }
+      .recent-section-subtitle {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+      .recent-highlight-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+      }
+      .recent-highlight-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #ffffff;
+        padding: 24px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        text-align: left;
+        transition: transform 0.3s ease;
+        max-height: 500px;
+      }
+      .recent-highlight-card:hover {
+        transform: translateY(-5px);
+      }
+      .recent-badge {
+        display: inline-block;
+        background-color: #1e293b;
+        color: white;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .recent-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 6px 0 8px;
+        color: #1e293b;
+        line-height: 1.4;
+      }
+      .recent-authors {
+        font-size: 0.95rem;
+        color: #4b5563;
+        margin-bottom: 4px;
+      }
+      .recent-journal {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 10px;
+      }
+      .recent-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .recent-description {
+        font-size: 0.9rem;
+        color: #374151;
+        line-height: 1.6;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+      }
+      .recent-description.expanded {
+        -webkit-line-clamp: unset;
+      }
+      .recent-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .recent-citations {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1d4ed8;
+        text-decoration: none;
+      }
+      .recent-read-more {
+        background-color: #f1f5f9;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #1e293b;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+      .recent-read-more:hover {
+        background-color: #e2e8f0;
+      }
+      @media (max-width: 768px) {
+        .recent-highlight-card {
+          width: 100%;
+          max-width: 450px;
+        }
+      }
+      .card-header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .card-title {
+        flex: 1;
+        min-width: 200px;
+        box-sizing: border-box;
+      }
+      .labels {
+        align-self: flex-start;
+        min-width: 100px;
+        text-align: right;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Complete Header Starts-->
+    <header>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group" class="brand"
+        />
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a>Research</a>
+            <div class="dropdown-content">
+              <a href="ongoing.html">Ongoing</a>
+              <a href="funded.html">Funded</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="active">Publications</a>
+            <div class="dropdown-content">
+              <a href="journals.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
+            </div>
+          </li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="code.html">Code</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="openings.html">Opening</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="ongoing.html">Ongoing</a></li>
+            <li><a href="funded.html">Funded</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" class="active">
+          <div onclick="toggleDropdown(this)" class="active">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+          </ul>
+        </li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="openings.html">Openings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Complete Header Ends  -->
+    <!-- Complete ribbon starts  -->
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
+      </div>
+    </div>
+    <!-- Complete ribbon ends  -->
+    <!-- Complete stats starts  -->
+    <div class="container">
+      <div class="stats">
+        <div class="stat-box">
+          <h2 id="total-publications"></h2>
+          <p>Total Publications</p>
+        </div>
+        <div class="stat-box">
+          <h2 id="total-citations"></h2>
+          <p>Total Citations</p>
+        </div>
+        <div class="stat-box">
+          <h2 id="h-index"></h2>
+          <p>H-Index</p>
+        </div>
+        <div class="stat-box">
+          <h2 id="total-journals"></h2>
+          <p>Journals</p>
+        </div>
+      </div>
+    </div>
+    <!-- Complete stats ends  -->
+    <!-- Complete filter starts  -->
+    <div class="filters">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Type here to Search Publications..."
+          oninput="filterPublications()"
+        />
+      </div>
+    </div>
+    <!-- Complete filter ends  -->
+    <!-- Complete publication card starts  -->
+    <div id="cards"></div>
+    <template id="template">
+      <div class="card">
+        <img src="" alt="" />
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-heading"></h2>
+              <p class="authors">
+                <span
+                  >👲<span class="author-name"></span> 🗓️
+                  <span class="year"></span> 🎖️ <span class="citation"></span
+                ></span>
+              </p>
+              <div class="tags"></div>
+            </div>
+            <div class="labels">
+              <span class="journal category"></span>
+            </div>
+          </div>
+          <div class="publication">
+            <strong class="publication-title"></strong>
+          </div>
+          <p class="description" style="text-align: justify"></p>
+          <div class="doi"></div>
+          <div class="actions">
+            <a href="#" class="view-btn pdf-btn" onclick="navigate(this)"
+              >View</a
+            >
+            <!-- <a href="#" class="pdf-btn">PDF</a> -->
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- Complete publication card ends  -->
+    <!-- Complete Recent Highlights starts  -->
+    <section class="recent-highlights-section">
+      <h2 class="recent-section-title"></h2>
+      <p class="recent-section-subtitle"></p>
+      <div class="recent-highlight-cards"></div>
+    </section>
+    <!-- Complete Recent Highlights ends  -->
+    <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading publications starts  -->
+    <script>
+      let allPublications = [];
+      async function loadPublications() {
+        try {
+          const res = await fetch("journals.json");
+          const data = await res.json();
+          allPublications = data.publications;
+          // Ribbon
+          document.querySelector(".ribbon-title").textContent = data.ribbon.title;
+          document.querySelector(".ribbon-desc").textContent = data.ribbon.description;
+          // Stats calculation starts
+          // Total Publications
+          const totalPublications = allPublications.length;
+          // Total Citations
+          const totalCitations = allPublications.reduce((sum, pub) => {
+            const citation = parseInt(pub.card?.citation || 0);
+            return sum + citation;
+          }, 0);
+          // H-Index calculation
+          const citationsSorted = allPublications
+            .map((pub) => parseInt(pub.card?.citation || 0))
+            .sort((a, b) => b - a);
+          let hIndex = 0;
+          for (let i = 0; i < citationsSorted.length; i++) {
+            if (citationsSorted[i] >= i + 1) hIndex++;
+            else break;
+          }
+          // Unique Journals
+          const journalSet = new Set(
+            allPublications.map((pub) => pub.card?.["publication-title"])
+          );
+          const totalJournals = journalSet.size;
+          // Inject into DOM
+          document.getElementById("total-publications").textContent =
+            totalPublications + "+";
+          document.getElementById("total-citations").textContent =
+            totalCitations;
+          document.getElementById("h-index").textContent = hIndex;
+          document.getElementById("total-journals").textContent =
+            totalJournals + "+";
+          //Stats calculation ends
+          renderPublications(allPublications);
+          // Recent Highlights
+          // Load recent highlights from JSON
+          const recentHighlightData = data["recent-highlights"];
+          // Set section title and subtitle
+          document.querySelector(".recent-section-title").textContent = recentHighlightData["recent-section-title"];
+          document.querySelector(".recent-section-subtitle").textContent = recentHighlightData["recent-section-subtitle"];
+          // Render recent highlight cards
+          const highlightCards = document.querySelector(".recent-highlight-cards");
+          highlightCards.innerHTML = "";
+          recentHighlightData.cards.forEach((highlight) => {
+            const div = document.createElement("div");
+            div.className = "recent-highlight-card";
+            const recentauthor = highlight["recent-authors"];
+            div.innerHTML = `
+                <div class="recent-card-content">
+                  <span class="recent-badge">${highlight["recent-badge"]}</span>
+                  <h3 class="recent-title">${highlight["recent-title"]}</h3>
+                  <p class="recent-authors">${recentauthor.replace(
+                  "Seshadri, P. K",
+                  `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+                )}</p>
+                  <p class="recent-journal">${highlight["recent-journal"]}</p>
+                  <p class="recent-description">${highlight["recent-description"]}</p>
+                </div>
+                <div class="recent-card-footer">
+                  <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
+                  <a href="${highlight["recent-link"]}" class="recent-read-more"">Read More</a>
+                </div>
+              `;
+            highlightCards.appendChild(div);
+          });
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      function renderPublications(publications) {
+        const cardsContainer = document.getElementById("cards");
+        const template = document.getElementById("template");
+        cardsContainer.innerHTML = "";
+        publications.forEach((pub) => {
+        const clone = template.content.cloneNode(true);
+        const card = pub.card;
+        clone.querySelector("img").src = card.thumbnail;
+        clone.querySelector(".card-heading").textContent = card["card-heading"];
+        const author = card["author-name"];
+        clone.querySelector(".author-name").innerHTML = author.replace(
+          "Seshadri, P. K",
+          `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+        );
+        clone.querySelector(".year").textContent = card.year;
+        clone.querySelector(".citation").textContent = card.citation;
+        clone.querySelector(".journal.category").textContent = card.category;
+        clone.querySelector(".publication-title").textContent = card["publication-title"];
+        const description = clone.querySelector(".description");
+        description.textContent = card.description;
+        const showMoreBtn = document.createElement("span");
+        showMoreBtn.className = "show-more-btn";
+        showMoreBtn.textContent = "Show more";
+        let isExpanded = false;
+        showMoreBtn.onclick = () => {
+          isExpanded = !isExpanded;
+          description.classList.toggle("expanded");
+          showMoreBtn.textContent = isExpanded ? "Show less" : "Show more";
+        };
+        // Only show button if description is long
+        if (card.description.length > 300) {
+          description.after(showMoreBtn);
+        }
+        clone.querySelector(".doi").innerHTML = `<a href="${card.doi}" target="_blank">${card.doi}</a>`;
+        clone.querySelector(".view-btn").href = card["view-link"];
+        // clone.querySelector(".pdf-btn").href = card["pdf-link"];
+        // Tags
+        const tagsContainer = clone.querySelector(".tags");
+        card.tags.forEach((tag) => {
+          const span = document.createElement("span");
+          span.textContent = tag;
+          tagsContainer.appendChild(span);
+        });
+        cardsContainer.appendChild(clone);
+        });
+      }
+      function filterPublications() {
+        const query = document.getElementById("searchInput").value.toLowerCase();
+        const filtered = allPublications.filter((pub) => {
+          const card = pub.card;
+          const allValues = Object.values(card).flat().join(" ").toLowerCase();
+          return allValues.includes(query);
+        });
+        renderPublications(filtered);
+      }
+      document.addEventListener("DOMContentLoaded", loadPublications);
+    </script>
+    <!-- loading publications ends  -->
+     <!-- loading footer starts  -->
+    <script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("footer.json");
+          const data = await res.json();
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.mail;
+          socialLinks[2].href = footer.about.social.linkedin;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      loadFooter();
+    </script>
+    <!-- loading footer ends  -->
+  </body>
+</html>

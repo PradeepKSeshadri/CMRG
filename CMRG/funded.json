@@ -1,0 +1,79 @@
+{
+  "ribbontitle": "Research",
+  "ribbondesc": "Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
+  "Ongoing Research": [
+    {
+      "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
+      "funding": "$7,500,000",
+      "duration": "06/2019 ~ 05/2024",
+      "title": "Integrating Multiscale Modeling and Experiments to Develop a Meso-Informed Predictive Capability for Explosives Safety and Performance",
+      "source": "U.S. Department of Defense, Air Force Office of Scientific Research (AFOSR), MURI Program",
+      "leadInvestigator": "Thomas Sewell (University of Missouri-Columbia)",
+      "coPI": "H.S. Udaykumar (University of Iowa)",
+      "coInvestigators": [
+        "D. Dlott (UIUC)",
+        "Catalin Picu (RPI)",
+        "S. Chaudhari (UIC)",
+        "W.C. Sun (Columbia)",
+        "S. Baek (UVA)"
+      ],
+      "contributions": [
+        "Higher Order Accurate Modeling of Micro/Meso/Macro scale simulations",
+        "New Framework to model Flyer Impact induced Shock Initiation of PBX",
+        "Physics Aware Recurrent Convolutional Neural Network",
+        "New sub-grid scale closure models (PARC & MISSEL) for Macro-Scale Sensitivity Predictions"
+      ],
+      "notes": "4 papers published; 1 in Science Advances (IF=13.6), 5+ in progress"
+    },
+    {
+      "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
+      "duration": "05/2010 ~ Ongoing",
+      "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
+      "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
+      "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
+      "contributions": [
+        "Uncertainty Quantification of Surrogate Burn Model MESIG",
+        "Published two-part paper in Journal of Applied Physics",
+        "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
+      ]
+    },
+    {
+      "projectCode": "NSF-DMREF (2118393)",
+      "funding": "$1,650,000",
+      "duration": "03/2022 ~ 02/2026",
+      "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
+      "source": "National Science Foundation, DMREF Program",
+      "contributions": [
+        "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
+        "Building material database of HMX, RDX, TNT, PETN, TATB",
+        "Running mesoscale simulations and training PhD students"
+      ]
+    }
+  ],
+  "Past Research": [
+    {
+      "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
+      "duration": "05/2010 ~ Ongoing",
+      "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
+      "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
+      "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
+      "contributions": [
+        "Uncertainty Quantification of Surrogate Burn Model MESIG",
+        "Published two-part paper in Journal of Applied Physics",
+        "Extending burn model to multi-dimensional prediction of corner turning and re-detonation"
+      ]
+    },
+    {
+      "projectCode": "NSF-DMREF (2118393)",
+      "funding": "$1,650,000",
+      "duration": "03/2022 ~ 02/2026",
+      "title": "Physics-Informed Meta-Learning for Design of Complex Materials",
+      "source": "National Science Foundation, DMREF Program",
+      "contributions": [
+        "Deep learning model to meta-learn thermo-mechanical response of CHNO explosives",
+        "Building material database of HMX, RDX, TNT, PETN, TATB",
+        "Running mesoscale simulations and training PhD students"
+      ]
+    }
+  ]
+}

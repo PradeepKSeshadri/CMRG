@@ -1,0 +1,64 @@
+{
+  "ribbon": {
+    "title": "Openings",
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+  },
+  "sections": [
+    {
+      "title": "Graduate Positions (PhD / MS) – Openings from January 2025",
+      "emoji": "🔹",
+      "description": "We are inviting applications for PhD and MS positions in the following research thrusts:",
+      "points": [
+        "Bioinspired Flows: Modeling unsteady aerodynamics in insect flight and cardiovascular systems.",
+        "Energetic Material Dynamics: Simulating detonation, shock initiation, and reactive flow behavior in energetic systems.",
+        "Hypersonic Reentry Physics: Capturing aerothermal loads, ablation dynamics, and gas-surface interactions in reentry environments.",
+        "High Strain-Rate Material Response: Studying deformation and failure under dynamic thermo-mechanical loading conditions.",
+        "AI-Driven Multi-Scale Modeling: Developing machine learning-enhanced solvers for multiscale physical systems."
+      ],
+      "info": [
+        "📍 Start Date: January 2025",
+        "📩 Eligibility: Applicants with strong backgrounds in Aerospace, Mechanical, Applied Physics, or related fields.",
+        "📧 Apply: your_email@example.com"
+      ]
+    },
+    {
+      "title": "Undergraduate Research Internships",
+      "emoji": "🔹",
+      "points": [
+        "Work on real problems aligned with our research thrusts",
+        "Gain hands-on experience in simulation, coding, and scientific writing",
+        "Opportunities to co-author papers or participate in conferences"
+      ],
+      "info": [
+        "📧 Apply: Send resume and 1-paragraph motivation to your_email@example.com"
+      ]
+    },
+    {
+      "title": "Final-Year B.Tech Projects",
+      "emoji": "🔹",
+      "points": [
+        "Structured mentorship and regular check-ins",
+        "Projects tailored to lab’s core research areas",
+        "Emphasis on high-quality scientific and software practices"
+      ]
+    },
+    {
+      "title": "High School Research Exposure",
+      "emoji": "🔹",
+      "points": [
+        "1-week bootcamps during summer, guided by lab members",
+        "Exposure to computational thinking and real-world problem modeling",
+        "Ideal for students curious about physics, math, and computing"
+      ]
+    },
+    {
+      "title": "Application Process",
+      "emoji": "🔹",
+      "points": [
+        "📧 Write to your_email@example.com with subject:",
+        "“Application – [Position Type] – [Your Name]”",
+        "Attach your CV, a short motivation, and mention your research area(s) of interest."
+      ]
+    }
+  ]
+}

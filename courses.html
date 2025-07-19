@@ -1,148 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lab Courses</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
-
-    header {
-      background: #002244;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    .main-container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    @media (max-width: 900px) {
-      .main-container {
-        grid-template-columns: 1fr;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Courses</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: #f5f7fa;
+        color: #333;
       }
-    }
+      .main-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
 
-    .courses-section {
-      margin-bottom: 3rem;
-    }
+      @media (max-width: 900px) {
+        .main-container {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      color: #002244;
-    }
+      .courses-section {
+        margin-bottom: 3rem;
+      }
 
-    .course-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s;
-    }
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        color: #002244;
+      }
 
-    .course-card:hover {
-      transform: translateY(-4px);
-    }
+      .course-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        margin-bottom: 1.0rem;
+        transition: transform 0.3s;
+      }
 
-    .course-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: #002244;
-    }
+      .course-card:hover {
+        transform: translateY(-4px);
+      }
 
-    .course-meta {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1rem;
-    }
+      .course-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: #002244;
+      }
 
-    .course-description {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
+      .course-meta {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
 
-    .apply-button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #0066cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
+      .course-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
 
-    .apply-button:hover {
-      background: #004c99;
-    }
+      .apply-button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #0066cc;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
 
-    .sidebar1 {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-      padding: 1.5rem;
-    }
+      .apply-button:hover {
+        background: #004c99;
+      }
 
-    .sidebar1 h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: #002244;
-    }
+      .sidebar1 {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        padding: 1.5rem;
+      }
 
-    .news-item {
-      margin-bottom: 1.2rem;
-      border-left: 3px solid #0066cc;
-      padding-left: 0.8rem;
-    }
+      .sidebar1 h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #002244;
+      }
 
-    .news-item p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
+      .news-item {
+        margin-bottom: 1.2rem;
+        border-left: 3px solid #0066cc;
+        padding-left: 0.8rem;
+      }
 
-    footer {
-      background: #002244;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-</head>
-<body>
-
-  <!--Complete Header Starts-->
+      .news-item p {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Complete Header Starts-->
     <header>
       <div class="logo">
         <img
           src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group" class="brand"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
         />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
       </div>
       <nav class="desktop-nav">
         <ul>
@@ -203,58 +186,112 @@
       </ul>
     </nav>
     <!-- Complete Header Ends  -->
-
-  <div class="main-container">
-    <div>
-      <!-- Courses Section -->
+    <!-- Complete ribbon starts  -->
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title">Courses</h1>
+        <p class="ribbon-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nisi
+          amet voluptas! Voluptate, vero voluptatum nostrum neque culpa
+          explicabo a dolorum quidem illum asperiores eaque inventore alias!
+          Aspernatur, exercitationem aperiam?
+        </p>
+      </div>
+    </div>
+    <!-- Complete ribbon ends  -->
+    <div class="main-container">
       <section class="courses-section">
         <h2 class="section-title">Current & Upcoming Courses</h2>
-
-        <div class="course-card">
-          <h3 class="course-title">Computational Fluid Dynamics (CFD)</h3>
-          <p class="course-meta">Instructor: Dr. A. Sharma | Semester: Fall 2025</p>
-          <p class="course-description">
-            Introduction to finite volume methods, Navier-Stokes solvers, and advanced simulation of incompressible flow. Includes hands-on coding assignments and a final research mini-project.
-          </p>
-          <a href="#" class="apply-button">Apply Now</a>
-        </div>
-
-        <div class="course-card">
-          <h3 class="course-title">Multiphysics Modeling with LBM</h3>
-          <p class="course-meta">Instructor: Dr. R. Verma | Semester: Spring 2026</p>
-          <p class="course-description">
-            Covers immersed boundary and lattice Boltzmann methods for simulating complex fluid-structure interactions in biological and mechanical systems.
-          </p>
-          <a href="#" class="apply-button">Join Interest List</a>
-        </div>
-
-        <div class="course-card">
-          <h3 class="course-title">Machine Learning for Simulation</h3>
-          <p class="course-meta">Instructor: Dr. P. Mehra | Semester: Spring 2026</p>
-          <p class="course-description">
-            Learn how neural networks and surrogate models are applied to reduce computational cost in high-fidelity simulation tasks.
-          </p>
-          <a href="#" class="apply-button">Apply Now</a>
-        </div>
+        <div id="courses-container"></div>
       </section>
+      <aside class="sidebar1">
+        <h3>Announcements</h3>
+        <div id="announcements-container"></div>
+      </aside>
     </div>
+    <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+     <!-- loading courses starts  -->
+      <script>
+        fetch('courses.json')
+        .then(response => response.json())
+        .then(data => {
+          // Render Announcements
+          const announcementsContainer = document.getElementById('announcements-container');
+          data.announcements.forEach(item => {
+            const newsDiv = document.createElement('div');
+            newsDiv.className = 'news-item';
+            const para = document.createElement('p');
+            para.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
+            newsDiv.appendChild(para);
+            announcementsContainer.appendChild(newsDiv);
+          });
 
-    <!-- Sidebar Section -->
-    <aside class="sidebar1">
-      <h3>Announcements</h3>
-      <div class="news-item">
-        <p><strong>July 2:</strong> Course registration opens for Fall 2025</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 25:</strong> New course on AI-assisted simulation coming soon</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 15:</strong> Past lecture recordings available for CFD</p>
-      </div>
-    </aside>
-  </div>
+          // Render Courses
+          const coursesContainer = document.getElementById('courses-container');
+          data.courses.forEach(course => {
+            const courseCard = document.createElement('div');
+            courseCard.className = 'course-card';
 
-  <!-- loading footer starts  -->
+            courseCard.innerHTML = `
+              <h3 class="course-title">${course.title}</h3>
+              <p class="course-meta">
+                Instructor: ${course.instructor} | Semester: ${course.semester}
+              </p>
+              <p class="course-description">${course.description}</p>
+              <a href="${course.link}" class="apply-button">${course.buttonText}</a>
+            `;
+
+            coursesContainer.appendChild(courseCard);
+          });
+        })
+        .catch(error => {
+          console.error('Error loading data:', error);
+        });
+
+      </script>
+      <!-- loading courses ends  -->
+    <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
         try {
@@ -312,6 +349,5 @@
       loadFooter();
     </script>
     <!-- loading footer ends  -->
-
-</body>
+  </body>
 </html>

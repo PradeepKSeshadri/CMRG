@@ -1,0 +1,105 @@
+{"ribbon":{
+  "title":"Conferences",
+  "description":"Explore our distinguished conference contributions that highlight pioneering research, collaborative innovation, and the global impact of our work in computational multiphysics and interdisciplinary scientific advancements."
+},
+  "conferences": [
+    {
+      "title": "Physics-aware Recurrent Convolutional Neural Networks for Spatiotemporal Dynamics Modeling.",
+      "authors": "Nguyen, P.C., Cheng, X., Arfaza, S., Seshadri, P. K., Nguyen, Y.T., Kim, M., Choi, S., Udaykumar, H.S. and Baek, S.",
+      "journal": "ICML Conference, 2024",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "High-order methods for simulations of shocked reactive energetic materials at all scales.",
+      "authors": "Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
+      "journal": "2.Bulletin of the American Physical Society, 2024.",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "High fidelity mesoscale simulations of shock initiation through flyer impact on HMX crystal–binder aggregates.",
+      "authors": "Roy, S., Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
+      "journal": "American Physical Society, 2024",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Transfer-Learning for Rapid Predictions of CHNO Energetic Material Sensitivity.",
+      "authors": "Saha, R., Seshadri, P. K., Wang, C. and Udaykumar, H. S.",
+      "journal": "Bulletin of the American Physical Society, 2024",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Interface-resolved reactive simulations of initiation through flyer impact on HMX crystal–binder aggregates.",
+      "authors": "Roy, S., Seshadri, P. K., and Udaykumar, H. S.",
+      "journal": "Bulletin of the American Physical Society, 2023",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Modeling Multi-Dimensional Shock-to-Detonation Transition of Pressed HMX Using a Meso-informed Ignition and Growth Model.",
+      "authors": "Seshadri, P. K., Nguyen, Y. T., and Udaykumar, H. S.",
+      "journal": "Bulletin of the American Physical Society, 2023",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Structure-property-performance linkages for heterogeneous energetic materials using deep-learning generated synthetic microstructures.",
+      "authors": "Seshadri, P. K., Nguyen, Y. T., Roy, S., Sen, O., and Udaykumar, H. S.",
+      "journal": "APS March Meeting Abstracts, 2021",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Evaluation of the importance of void shapes in predictive meso-informed ignition and growth surrogate models for heterogeneous energetic materials.",
+      "authors": "Nguyen, Y. T., Seshadri, P. K., Sen, O., Hardin, D. B., and Udaykumar, H. S.",
+      "journal": "APS March Meeting Abstracts, 1978",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Simulation of Flow Past an Oscillating Airfoil Using Sharp Interface Immersed Boundary Approach.",
+      "authors": "Seshadri, P. K., and De, A.",
+      "journal": "Proceedings of the 7th International and 45th National Conference on Fluid Mechanics and Fluid Power, 2018",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Comparative Study of Pressure Reconstruction Schemes in Sharp-Interface Immersed Boundary Method.",
+      "authors": "Seshadri, P. K., and De, A.",
+      "journal": "Proceedings of the 1st International Conference on Mechanical Engineering (INCOM18)",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Assessment of Pressure Reconstruction Schemes in Sharp Interface Immersed Boundary Method.",
+      "authors": "Seshadri, P. K., and De, A",
+      "journal": "AIP Conference Proceedings, 2018",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Determination of flow field due to clap and fling motion of a rigid flapping wing using LBM simulation.",
+      "authors": "Seshadri, P. K., De, A., and Das, D.",
+      "journal": "9th International Conference on Intelligent Unmanned Systems (ICIUS 2013), 2013",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Analysis of Unsteady Aerodynamics on Dragonfly Using Computational Fluid Dynamics and the Effect of Flapping Trajectories on it.",
+      "authors": "Arun Ramanathan.S, Prabhu.S, Seshadri, P. K., Tamizhvendhan.B, Asad Ahmed",
+      "journal": "13.Proceedings of 11th Asian International Conference on Fluid Machinery, IIT Madras, Chennai, Nov 2011.",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": " Analysis of Unsteady Aerodynamics on Dragonfly Using CFD.",
+      "authors": "Arun Ramanathan.S, Prabhu.S, Seshadri, P. K., Tamizhvendhan.B, Asad Ahmed.",
+      "journal": "14.the 11th Asian Symposium on Visualization, JUN 2011.",
+      "citescore": "",
+      "ranking": ""
+    }
+  ]
+}

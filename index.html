@@ -338,18 +338,32 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- aos  -->
   </head>
   <body>
+    <!-- aos  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- aos  -->
     <!--Complete Header Starts-->
     <header>
-      <div class="logo">
+      <div class="logo" data-aos="fade-down"
+     data-aos-anchor-placement="top-center"
+      data-aos-duration="1500">
         <img
           src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group" class="brand"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
         />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
       </div>
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" data-aos="fade-down"
+      data-aos-easing="ease-out"
+      data-aos-duration="1500">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -410,7 +424,9 @@
     <!-- Complete Header Ends  -->
     <!-- Complete hero starts  -->
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="zoom-in-right"
+      data-aos-easing="ease-out"
+      data-aos-duration="1500">
         <h2></h2>
         <p></p>
         <div class="hero-button">
@@ -432,7 +448,7 @@
     </section>
     <!-- Complete hero ends  -->
     <!-- Complete why choose starts -->
-    <section class="why-choose-section" id="why-choose-section">
+    <section class="why-choose-section" id="why-choose-section" >
       <div class="why-choose-section-container">
         <h2></h2>
         <p></p>
