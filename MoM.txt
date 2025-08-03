@@ -136,3 +136,36 @@ Content to Be Provided by Client (Today):
 	Email
 	Phone Number
 	Address
+	
+-----
+
+23/07/2025
+
+Minutes of Meeting – Computational Multiphysics Laboratory Website
+
+Date: 23 July 2025
+Client: Pradeep
+Developer: Nirmal S
+Project: Website Development for Computational Multiphysics Lab
+Meeting Type: Progress Review & Planning
+
+Discussion Summary:
+Page Prioritization and next target.
+
+The client confirmed the order of priority for upcoming pages:
+1) Blog Page
+2) Courses Page
+3) Code Page
+
+Blog Page Requirements:
+------------------------
+.) Blog content
+.) Relevant images
+.) Additional details related to each blog post
+
+Next Steps (Action Plan):
+-------------------------
+Once the client shares the required blog materials, the development process will begin for the Blog Page, including:
+1) Designing the layout
+2) Content alignment
+3) Populating and integrating the data into the website.

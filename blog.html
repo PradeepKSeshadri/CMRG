@@ -1,178 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lab Blog & Openings</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
-
-    header {
-      background: #002244;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    .main-container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    @media (max-width: 900px) {
-      .main-container {
-        grid-template-columns: 1fr;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog & News</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: #f5f7fa;
+        color: #333;
       }
-    }
+      .main-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
 
-    .blog-section,
-    .openings-section {
-      margin-bottom: 3rem;
-    }
+      @media (max-width: 900px) {
+        .main-container {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #002244;
-    }
+      .blog-section{
+        margin-bottom: 1rem;
+      }
 
-    .blog-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s;
-      padding:10px;
-      border:1px solid rgb(227, 227, 227);
-    }
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #002244;
+      }
 
-    .blog-card:hover {
-      transform: translateY(-4px);
-    }
+      .blog-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s;
+        padding: 10px;
+        border: 1px solid rgb(227, 227, 227);
+      }
 
-    .blog-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border:1px solid rgb(227, 227, 227);
-    }
+      .blog-card:hover {
+        transform: translateY(-4px);
+      }
 
-    .blog-content {
-      padding: 1.2rem;
-    }
+      .blog-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid rgb(227, 227, 227);
+      }
 
-    .blog-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
+      .blog-content {
+        padding: 1.2rem;
+      }
 
-    .blog-meta {
-      font-size: 0.85rem;
-      color: #666;
-      margin-bottom: 0.8rem;
-    }
+      .blog-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
 
-    .blog-description {
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
+      .blog-meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.8rem;
+      }
 
-    .read-more {
-      margin-top: 1rem;
-      display: inline-block;
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: 600;
-    }
+      .blog-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
 
-    .read-more:hover {
-      text-decoration: underline;
-    }
+      .read-more {
+        margin-top: 1rem;
+        display: inline-block;
+        color: #0066cc;
+        text-decoration: none;
+        font-weight: 600;
+      }
 
-    .sidebar1 {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-      padding: 1.5rem;
-    }
+      .read-more:hover {
+        text-decoration: underline;
+      }
 
-    .sidebar1 h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: #002244;
-    }
+      .sidebar1 {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        padding: 1.5rem;
+      }
 
-    .news-item {
-      margin-bottom: 1.2rem;
-      border-left: 3px solid #0066cc;
-      padding-left: 0.8rem;
-    }
+      .sidebar1 h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #002244;
+      }
 
-    .news-item p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
+      .news-item {
+        margin-bottom: 1.2rem;
+        border-left: 3px solid #0066cc;
+        padding-left: 0.8rem;
+      }
 
-    .openings-section ul {
-      list-style: none;
-      padding-left: 0;
-    }
+      .news-item p {
+        margin: 0;
+        font-size: 0.95rem;
+      }
 
-    .openings-section li {
-      background: white;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .openings-section li strong {
-      color: #002244;
-      display: block;
-      margin-bottom: 0.3rem;
-    }
-
-    footer {
-      background: #002244;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
-  <link
+      .recent-highlights-section {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #f9fbfd;
+      }
+      .recent-section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1e293b;
+      }
+      .recent-section-subtitle {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+      .recent-highlight-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+      }
+      .recent-highlight-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #ffffff;
+        padding: 24px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        text-align: left;
+        transition: transform 0.3s ease;
+        max-height: 500px;
+      }
+      .recent-highlight-card:hover {
+        transform: translateY(-5px);
+      }
+      .recent-badge {
+        display: inline-block;
+        background-color: #1e293b;
+        color: white;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .recent-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 6px 0 8px;
+        color: #1e293b;
+        line-height: 1.4;
+      }
+      .recent-authors {
+        font-size: 0.95rem;
+        color: #4b5563;
+        margin-bottom: 4px;
+      }
+      .recent-journal {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 10px;
+      }
+      .recent-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .recent-description {
+        font-size: 0.9rem;
+        color: #374151;
+        line-height: 1.6;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+      }
+      .recent-description.expanded {
+        -webkit-line-clamp: unset;
+      }
+      .recent-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .recent-citations {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1d4ed8;
+        text-decoration: none;
+      }
+      .recent-read-more {
+        background-color: #f1f5f9;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #1e293b;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+      .recent-read-more:hover {
+        background-color: #e2e8f0;
+      }
+      @media (max-width: 768px) {
+        .recent-highlight-card {
+          width: 100%;
+          max-width: 450px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-</head>
-<body>
-
-  <!--Complete Header Starts-->
+  </head>
+  <body>
+    <!--Complete Header Starts-->
     <header>
       <div class="logo">
         <img
           src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group" class="brand"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
         />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras">
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
       </div>
       <nav class="desktop-nav">
         <ul>
@@ -236,97 +320,33 @@
     <!-- Complete ribbon starts  -->
     <div class="ribbon">
       <div class="ribbon-content">
-        <h1 class="ribbon-title">Blogs & Openings</h1>
-        <p class="ribbon-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae ipsam vero consequatur officia quia qui commodi deserunt excepturi eos, dignissimos aut beatae est voluptas sit. Nostrum libero nisi adipisci repellat odio voluptatibus reprehenderit hic voluptatum aliquam quae neque corrupti animi dolorum pariatur, error optio sint tenetur sit culpa distinctio impedit.</p>
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
       </div>
     </div>
     <!-- Complete ribbon ends  -->
-
-  <div class="main-container">
-    <div>
-      <!-- Blog Section -->
-      <section class="blog-section">
-        <h2 class="section-title">Latest Blog Posts</h2>
-
-        <div class="blog-card">
-          <img src="images/Pub_Journal_6_JFS_2023.jpg" alt="Blog 1" />
-          <div class="blog-content">
-            <h3 class="blog-title">Understanding Clap & Fling Mechanism</h3>
-            <p class="blog-meta">By Dr. A. Sharma | July 1, 2025</p>
-            <p class="blog-description">
-              We investigate low Reynolds number aerodynamic effects using immersed boundary with lattice Boltzmann method.
-            </p>
-            <a href="#" class="read-more">Read More →</a>
+    <div class="main-container">
+      <div>
+        <section class="blog-section">
+          <h2 class="section-title">Latest Blog Posts</h2>
+          <div id="blog-list">
+            <!-- Blog cards will be inserted here dynamically -->
           </div>
-        </div>
-
-        <div class="blog-card">
-          <img src="images/Pub_Journal_8_JAP_2022.jpg" alt="Blog 2" />
-          <div class="blog-content">
-            <h3 class="blog-title">Parametric Flow Study</h3>
-            <p class="blog-meta">By M. Patel | June 27, 2025</p>
-            <p class="blog-description">
-              A comparative study of vortex dynamics with changing Re, J and frequency shows new aerodynamic patterns.
-            </p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Openings Section -->
-      <section class="openings-section">
-        <h2 class="section-title">Join Our Research Team</h2>
-        <ul>
-          <li>
-            <strong>PhD Position in Computational Fluid Dynamics</strong>
-            We are looking for motivated candidates with background in CFD and numerical methods.
-          </li>
-          <li>
-            <strong>Postdoctoral Fellow – Multiphysics Simulation</strong>
-            Opportunity to work on cutting-edge simulations involving fluid-structure interaction and machine learning.
-          </li>
-          <li>
-            <strong>Undergraduate Research Internship</strong>
-            Apply your programming and math skills to real-world physics problems in a collaborative environment.
-          </li>
-        </ul>
-      </section>
+        </section>
+      </div>
+      <aside class="sidebar1" id="labNewsSection">
+        <h3>Lab News</h3>
+        <!-- News items will be appended here dynamically -->
+      </aside>
     </div>
-
-    <!-- sidebar1 Section -->
-    <aside class="sidebar1">
-      <h3>Lab News</h3>
-      <div class="news-item">
-        <p><strong>July 1:</strong> Our latest paper accepted in *Physics of Fluids*</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 20:</strong> Congratulations to Dr. Mehra on securing DST grant</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 10:</strong> New GPU cluster installed in lab for high-res simulations</p>
-      </div>
-      <div class="news-item">
-        <p><strong>July 1:</strong> Our latest paper accepted in *Physics of Fluids*</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 20:</strong> Congratulations to Dr. Mehra on securing DST grant</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 10:</strong> New GPU cluster installed in lab for high-res simulations</p>
-      </div>
-      <div class="news-item">
-        <p><strong>July 1:</strong> Our latest paper accepted in *Physics of Fluids*</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 20:</strong> Congratulations to Dr. Mehra on securing DST grant</p>
-      </div>
-      <div class="news-item">
-        <p><strong>June 10:</strong> New GPU cluster installed in lab for high-res simulations</p>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Complete footer starts  -->
+    <!-- Complete Recent Highlights starts  -->
+    <section class="recent-highlights-section">
+      <h2 class="recent-section-title"></h2>
+      <p class="recent-section-subtitle"></p>
+      <div class="recent-highlight-cards"></div>
+    </section>
+    <!-- Complete Recent Highlights ends  -->
+    <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
@@ -356,7 +376,7 @@
       <div class="footer-bottom"></div>
     </footer>
     <!-- Complete footer ends  -->
-     <!-- loading header starts  -->
+    <!-- loading header starts  -->
     <script>
       function toggleSidebar() {
         const sidebar = document.getElementById("sidebar");
@@ -368,6 +388,73 @@
       }
     </script>
     <!-- loading header ends  -->
+    <!-- loading blog  -->
+    <script>
+      fetch("blog.json")
+        .then((res) => res.json())
+        .then((data) => {
+          document.querySelector(".ribbon-title").textContent = data.ribbontitle;
+          document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
+          const blogList = document.getElementById("blog-list");
+          data.blogs.forEach((blog) => {
+            const preview =
+              blog.sections[0].content.split(". ").slice(0, 2).join(". ") + ".";
+            const blogCard = `
+              <div class="blog-card">
+                <img src="${blog.image}" alt="Blog ${blog.id}" />
+                <div class="blog-content">
+                  <h3 class="blog-title">${blog.title}</h3>
+                  <p class="blog-meta">By Researcher | 2025</p>
+                  <p class="blog-description">${preview}</p>
+                  <a href="singleblog.html?id=${blog.id}" class="read-more">Read More →</a>
+                </div>
+              </div>
+            `;
+            blogList.innerHTML += blogCard;
+          });
+          const container = document.getElementById('labNewsSection');
+          data.announcements.forEach(item => {
+            const newsDiv = document.createElement('div');
+            newsDiv.className = 'news-item';
+            const newsPara = document.createElement('p');
+            newsPara.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
+            newsDiv.appendChild(newsPara);
+            container.appendChild(newsDiv);
+          });
+
+        const recentHighlightData = data["recent-highlights"];
+          // Set section title and subtitle
+          document.querySelector(".recent-section-title").textContent = recentHighlightData["recent-section-title"];
+          document.querySelector(".recent-section-subtitle").textContent = recentHighlightData["recent-section-subtitle"];
+          // Render recent highlight cards
+          const highlightCards = document.querySelector(".recent-highlight-cards");
+          highlightCards.innerHTML = "";
+          recentHighlightData.cards.forEach((highlight) => {
+            const div = document.createElement("div");
+            div.className = "recent-highlight-card";
+            const recentauthor = highlight["recent-authors"];
+            div.innerHTML = `
+                <div class="recent-card-content">
+                  <span class="recent-badge">${highlight["recent-badge"]}</span>
+                  <h3 class="recent-title">${highlight["recent-title"]}</h3>
+                  <p class="recent-authors">${recentauthor.replace(
+                  "Seshadri, P. K",
+                  `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+                )}</p>
+                  <p class="recent-journal">${highlight["recent-journal"]}</p>
+                  <p class="recent-description">${highlight["recent-description"]}</p>
+                </div>
+                <div class="recent-card-footer">
+                  <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
+                  <a href="${highlight["recent-link"]}" class="recent-read-more"">Read More</a>
+                </div>
+              `;
+            highlightCards.appendChild(div);
+          });
+          
+        });
+    </script>
+    <!-- loading blog end  -->
     <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
@@ -426,6 +513,5 @@
       loadFooter();
     </script>
     <!-- loading footer ends  -->
-
-</body>
+  </body>
 </html>
