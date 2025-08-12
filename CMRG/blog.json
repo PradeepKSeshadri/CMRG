@@ -1,0 +1,176 @@
+{
+  "ribbontitle": "Blogs & News",
+  "ribbondesc": "Stay updated with the latest news, research breakthroughs, and insights from our computational multiphysics research lab.",
+  "blogs":[
+    {
+        "id": 1,
+        "title": "From Dragonfly Wings to Hypersonic Shocks: My Journey into Computational Multiphysics",
+        "image": "images/Blog1.png",
+        "sections": [
+            {
+                "heading": "A Curious Beginning",
+                "content": "It started with a question: how do dragonflies stay aloft with such ease? As an undergraduate, I found myself drawn to the mechanics of flight—not just of aircraft, but of insects. For my final-year project, I used a commercial CFD package to study the flapping trajectories of dragonfly wings. I wanted to understand what made one motion more efficient than another. It was a small step, but it opened the door to a much larger world."
+            },
+            {
+                "heading": "Master’s at IIT Kanpur",
+                "content": "At IIT Kanpur, during my Master’s, that curiosity turned into code. I built a two-dimensional Lattice Boltzmann solver from the ground up, embedding an Immersed Boundary Method to simulate insect flight. My focus was the clap-and-fling maneuver—where insect wings press together and fling apart to generate lift. To capture this motion, I combined Lagrangian interface tracking with a diffuse interface capturing approach. The result was a framework that could resolve leading-edge vortices and the delayed stall that nature exploits so effectively."
+            },
+            {
+                "heading": "PhD: Scaling the Challenge",
+                "content": "These early projects weren’t just academic exercises. They taught me how to translate complex physics into computation—how to build solvers that don’t just approximate but reveal. My PhD continued in this direction, but the scale and the stakes grew. Still at IIT Kanpur, I developed a sharp interface capturing method for simulating moving bodies with complex geometries in all-speed regimes. The goal was to handle realistic interfaces and capture sharp features. I embedded this into an in-house code."
+            },
+            {
+                "heading": "Postdoc: From Wings to Explosives",
+                "content": "When I moved to the University of Iowa for postdoctoral research, the focus shifted again—this time to energetic materials like HMX and RDX. They’re used in propulsion, defense, and impact scenarios where even nano-second time scales count. I joined a team building SCIMITAR3D, a next-generation multi-material hydrocode. My role was to make it faster, sharper, and more capable—able to simulate shocks, fragmentation, and chemical reactions with precision."
+            },
+            {
+                "heading": "Applications in Health and Beyond",
+                "content": "Along the way, I’ve also worked on problems beyond defense—like modeling the evaporation of virus-laden droplets during the COVID-19 pandemic. I built a level set-based drying model to understand how solute concentrations evolve over time. Even here, the same principles applied: multi-physics, interface dynamics, and computation that tells a story."
+            },
+            {
+                "heading": "Where We Are Now",
+                "content": "Now, through my research group, I’m continuing this work—building tools that bridge biology and ballistics, droplets and detonations. We are focused on understanding the physics of materials and flows in extreme conditions—whether it’s a high-speed impact, a shockwave traveling through a crystal, or a droplet drying on a surface. The domains may differ. The approach remains the same: careful modeling, strong physics, and an eye for the invisible forces shaping the world around us."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Learning From the Inside Out: Data-Driven Multiscale Modeling for Extreme Materials",
+        "image": "images/Blog2.png",
+        "sections": [
+        {
+            "heading": "",
+            "content": "In the world of energetic materials—substances like HMX, RDX, or TATB—failure isn’t an option. These materials must endure shocks, store energy safely, and release it on command. But understanding how they behave under extreme conditions is far from simple. The challenge lies not just in the chemistry, or the physics, or the structure—but in how all of these interact across scales.My work over the past few years has focused on exactly that: building computational models that connect the microscopic structure of a material to its macroscopic performance. And increasingly, that work has been driven not just by equations, but by data."
+        },
+        {
+            "heading": "From Microstructure to Macroscale",
+            "content": "Energetic materials are typically heterogeneous—they contain crystals, binders, and defects at the microscale. When a shock hits, it doesn’t trigger a uniform response. Instead, energy gets localized in small “hotspot” zones, often around voids or cracks. These hotspots can grow, interact, and eventually trigger a detonation. Predicting when and how that transition happens is a central question in shock physics.To answer it, we adopted a multi-scale modeling strategy: start at the microstructure, simulate how it behaves under shock, and then use those results to inform larger-scale models. This process demands high-resolution simulations of many different microstructures, each with varying void geometries, distributions, and loading conditions.But such simulations are expensive—running a single Direct Numerical Simulation (DNS) of shock response can take dozens of hours on a high-performance computing cluster. That’s where machine learning enters the picture."
+        },
+        {
+            "heading": "Generative AI for Synthetic Microstructures",
+            "content": "One of the first steps we took was to use Generative Adversarial Networks (GANs) to create synthetic microstructures. Real microstructure images, especially of sensitive energetic materials, are hard to access. By training GANs on a limited dataset of SEM images, we were able to generate realistic substitutes—structures with controllable features like crystal size, shape, orientation, and void distribution.These synthetic structures were then used in DNS to evaluate energy localization rates. The results closely matched those from real images. This showed that data-driven generation could extend our reach without sacrificing fidelity—a step toward Materials by Design."
+        },
+        {
+            "heading": "From Simulation to Surrogate",
+            "content": "Simulating microstructures is one thing. Making predictions from them is another. To link microstructure features to energy deposition, we developed surrogate models—starting with a Modified Bayesian Kriging (MBKG) framework. This became the MES-IG model, a data-driven ignition-and-growth formulation that could replace DNS in macro-scale simulations.Later, we developed the Physics-Aware Recurrent Convolutional (PARC) Neural Network, in collaboration with the University of Virginia. PARC goes further than regression—it learns the thermo-mechanical evolution of hotspots over time, directly from simulation data. Trained on ensembles of DNS runs, it delivers near-DNS accuracy in milliseconds.What makes PARC particularly exciting is its interpretability. It can visualize learned features and identify critical morphological traits—essentially telling us what kind of voids are most dangerous. In doing so, it moves beyond prediction to understanding."
+        },
+        {
+            "heading": "Toward a Predictive Science of Detonation",
+            "content": "These models—MES-IG, PARC, and later MISSEL (a semi-analytical closure)—now form the backbone of our surrogate-informed multi-scale framework. Each addresses the scale-bridging challenge from a different angle: low-dimensional regression, deep learning assimilation, and physics-based closure.Together, they enable predictive simulations that are faster, more generalizable, and grounded in both physics and data. This approach doesn’t just accelerate computations—it reshapes how we think about material modeling.By combining simulation, statistical learning, and physics constraints, we can now explore vast microstructural design spaces, assess uncertainty, and generate performance maps—tools that are vital not just for understanding, but for engineering safer and smarter energetic materials."
+        }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "From Dragonfly Wings to Hypersonic Shocks: My Journey into Computational Multiphysics",
+        "image": "images/Blog1.png",
+        "sections": [
+            {
+                "heading": "A Curious Beginning",
+                "content": "It started with a question: how do dragonflies stay aloft with such ease? As an undergraduate, I found myself drawn to the mechanics of flight—not just of aircraft, but of insects. For my final-year project, I used a commercial CFD package to study the flapping trajectories of dragonfly wings. I wanted to understand what made one motion more efficient than another. It was a small step, but it opened the door to a much larger world."
+            },
+            {
+                "heading": "Master’s at IIT Kanpur",
+                "content": "At IIT Kanpur, during my Master’s, that curiosity turned into code. I built a two-dimensional Lattice Boltzmann solver from the ground up, embedding an Immersed Boundary Method to simulate insect flight. My focus was the clap-and-fling maneuver—where insect wings press together and fling apart to generate lift. To capture this motion, I combined Lagrangian interface tracking with a diffuse interface capturing approach. The result was a framework that could resolve leading-edge vortices and the delayed stall that nature exploits so effectively."
+            },
+            {
+                "heading": "PhD: Scaling the Challenge",
+                "content": "These early projects weren’t just academic exercises. They taught me how to translate complex physics into computation—how to build solvers that don’t just approximate but reveal. My PhD continued in this direction, but the scale and the stakes grew. Still at IIT Kanpur, I developed a sharp interface capturing method for simulating moving bodies with complex geometries in all-speed regimes. The goal was to handle realistic interfaces and capture sharp features. I embedded this into an in-house code."
+            },
+            {
+                "heading": "Postdoc: From Wings to Explosives",
+                "content": "When I moved to the University of Iowa for postdoctoral research, the focus shifted again—this time to energetic materials like HMX and RDX. They’re used in propulsion, defense, and impact scenarios where even nano-second time scales count. I joined a team building SCIMITAR3D, a next-generation multi-material hydrocode. My role was to make it faster, sharper, and more capable—able to simulate shocks, fragmentation, and chemical reactions with precision."
+            },
+            {
+                "heading": "Applications in Health and Beyond",
+                "content": "Along the way, I’ve also worked on problems beyond defense—like modeling the evaporation of virus-laden droplets during the COVID-19 pandemic. I built a level set-based drying model to understand how solute concentrations evolve over time. Even here, the same principles applied: multi-physics, interface dynamics, and computation that tells a story."
+            },
+            {
+                "heading": "Where We Are Now",
+                "content": "Now, through my research group, I’m continuing this work—building tools that bridge biology and ballistics, droplets and detonations. We are focused on understanding the physics of materials and flows in extreme conditions—whether it’s a high-speed impact, a shockwave traveling through a crystal, or a droplet drying on a surface. The domains may differ. The approach remains the same: careful modeling, strong physics, and an eye for the invisible forces shaping the world around us."
+            }
+        ]
+    }],
+    "announcements":[
+    {
+        "date": "July 1",
+        "message": "Our latest paper accepted in *Physics of Fluids*"
+    },
+    {
+        "date": "June 20",
+        "message": "Congratulations to Dr. Mehra on securing DST grant"
+    },
+    {
+        "date": "June 10",
+        "message": "New GPU cluster installed in lab for high-res simulations"
+    },
+    {
+        "date": "July 1",
+        "message": "Our latest paper accepted in *Physics of Fluids*"
+    },
+    {
+        "date": "June 20",
+        "message": "Congratulations to Dr. Mehra on securing DST grant"
+    },
+    {
+        "date": "June 10",
+        "message": "New GPU cluster installed in lab for high-res simulations"
+    },
+    {
+        "date": "July 1",
+        "message": "Our latest paper accepted in *Physics of Fluids*"
+    },
+    {
+        "date": "June 20",
+        "message": "Congratulations to Dr. Mehra on securing DST grant"
+    },
+    {
+        "date": "June 10",
+        "message": "New GPU cluster installed in lab for high-res simulations"
+    },
+    {
+        "date": "July 1",
+        "message": "Our latest paper accepted in *Physics of Fluids*"
+    },
+    {
+        "date": "June 20",
+        "message": "Congratulations to Dr. Mehra on securing DST grant"
+    },
+    {
+        "date": "June 10",
+        "message": "New GPU cluster installed in lab for high-res simulations"
+    }
+    ],
+    "recent-highlights": {
+    "recent-section-title":"Recent Highlight",
+    "recent-section-subtitle":"Featured publications representing our latest research breakthroughs",
+    "cards":[
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
+      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
+      "recent-journal": "International Journal of Multiphase Flow",
+      "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
+      "recent-citations": "4 citations",
+      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
+    },
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
+      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
+      "recent-journal": "International Journal of Multiphase Flow",
+      "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
+      "recent-citations": "4 citations",
+      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
+    },
+    {
+      "recent-badge": "Journal",
+      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
+      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
+      "recent-journal": "International Journal of Multiphase Flow",
+      "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
+      "recent-citations": "4 citations",
+      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
+    }
+  ]}
+}
