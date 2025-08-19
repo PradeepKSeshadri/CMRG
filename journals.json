@@ -10,7 +10,7 @@
         "card-heading": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
         "author-name": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
         "year": "2024",
-        "citation": "14 citations",
+        "citation": "9 citations",
         "tags": ["Physics-informed machine learning", "Physics-aware recurrent convolutional neural networks", "Data-driven modeling"],
         "category": "Journal",
         "publication-title": "International Journal of Multiphase Flow",
@@ -26,7 +26,7 @@
         "card-heading": "Johnson-Cook yield functions for Cyclotetramethylene-tetranitramine (HMX) and Cyclotrimethylene-trinitramine (RDX) derived from single crystal plasticity models.",
         "author-name": "Sen, O., Seshadri, P. K., Rai, N.K., Larentzos, J., Brennan, J., Sewell, T., Picu, C.R., and Udaykumar, H. S.",
         "year": "2024",
-        "citation": "5 citations",
+        "citation": "11 citations",
         "tags": ["Molecular dynamics", "Speed of sound", "Stress measurement","Plasticity"," Shear modulus"],
         "category": "Journal",
         "publication-title": "Journal of Applied Physics",
@@ -42,7 +42,7 @@
         "card-heading": "Physically evocative meso-informed sub-grid source term for energy localization in shocked heterogeneous energetic materials.",
         "author-name": "Nguyen, Y. T., Seshadri, P. K., and Udaykumar, H. S.",
         "year": "2023",
-        "citation": "0 citations",
+        "citation": "3 citations",
         "tags": ["Deformation", "Energetic materials", "Deflagration", "Multiscale methods"],
         "category": "Journal",
         "publication-title": "Journal of Applied Physics",
@@ -58,7 +58,7 @@
         "card-heading": "PARC: Physics-aware recurrent convolutional neural networks to assimilate meso scale reactive mechanics of energetic materials.",
         "author-name": "Nguyen, P. C., Nguyen, Y. T., Choi, J. B., Seshadri, P. K., Udaykumar, H. S., & Baek, S. S. ",
         "year": "2022",
-        "citation": "0 citations",
+        "citation": "31 citations",
         "tags": ["Thermo-mechanical"],
         "category": "Journal",
         "publication-title": "Science Advances",
@@ -74,7 +74,7 @@
         "card-heading": "A Physics‐Aware Deep Learning Model for Energy Localization in Multiscale Shock‐To‐Detonation Simulations of Heterogeneous Energetic Materials.",
         "author-name": "Nguyen, P. C., Nguyen, Y. T., Seshadri, P. K., Choi, J. B., Udaykumar, H. S., & Baek, S. S.",
         "year": "2023",
-        "citation": "2 citations",
+        "citation": "22 citations",
         "tags": ["physics-aware machine learning", "mesoscale energy localization", "shock-to-detonation","multiscale simaulation"],
         "category": "Journal",
         "publication-title": "Propellants, Explosives, Pyrotechnics",
@@ -90,7 +90,7 @@
         "card-heading": "Leading edge vortex dynamics in airfoils: Effect of pitching motion at large amplitudes.",
         "author-name": "Seshadri, P. K., Aravind, A., and De, A.",
         "year": "2023",
-        "citation": "10 citations",
+        "citation": "12 citations",
         "tags": ["Journal of Fluids"],
         "category": "Journal",
         "publication-title": "Journal of Fluids and Structures",
@@ -106,7 +106,7 @@
         "card-heading": "Physically Evocative Meso-Informed Burn Model: Topology of Evolving Hotspot Fields.",
         "author-name": "Udaykumar, H. S., Nguyen, Y. T., and Seshadri, P. K. ",
         "year": "2022",
-        "citation": "0 citations",
+        "citation": "4 citations",
         "tags": ["Reactive burn models", "Heterogeneous energetic materials", "Shock-to-detonation transition"],
         "category": "Journal",
         "publication-title": "Journal of Propulsion and Power",
@@ -122,7 +122,7 @@
         "card-heading": "Multi-scale modeling of shock initiation of a pressed energetic material. II. Effect of void–void interactions on energy localization.",
         "author-name": "Nguyen, Y. T., Seshadri, P. K., Sen, O., Hardin, D. B., Molek, C. D., and Udaykumar, H. S. ",
         "year": "2022",
-        "citation": "0 citations",
+        "citation": "8 citations",
         "tags": ["Shock waves", "Energetic materials", "Multiscale methods"],
         "category": "Journal",
         "publication-title": "Journal of Applied Physics",
@@ -138,7 +138,7 @@
         "card-heading": "Multi-scale modeling of shock initiation of a pressed energetic material I: The effect of void shapes on energy localization",
         "author-name": "Nguyen, Y. T., Seshadri, P. K., Sen, O., Hardin, D. B., Molek, C. D., and Udaykumar, H. S. ",
         "year": "2022",
-        "citation": "0 citations",
+        "citation": "22 citations",
         "tags": ["Micromechanics", "Energetic materials", "Computer simulation","Multiscale methods", "Chemical reaction dynamics"],
         "category": "Journal",
         "publication-title": "Journal of Applied Physics",
@@ -154,7 +154,7 @@
         "card-heading": "Meso-scale simulation of energetic materials. II. Establishing structure–property linkages using synthetic microstructures.",
         "author-name": "Seshadri, P. K., Nguyen, Y. T., Sen, O., and Udaykumar, H. S",
         "year": "2022",
-        "citation": "0 citations",
+        "citation": "12 citations",
         "tags": ["Artificial intelligence", "Machine learning", "Energetic materials", "Multiscale methods"],
         "category": "Journal",
         "publication-title": "Journal of Applied Physics",
@@ -166,11 +166,11 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_11_JAP_2021.jpg",
+        "thumbnail": "images/Pub_Journal_11_CMWA_2021.jpg",
         "card-heading": "A robust sharp interface based immersed boundary framework for moving body problems with applications to laminar incompressible flows.",
         "author-name": "Seshadri, P. K., and De, A.",
         "year": "2021",
-        "citation": "0 citations",
+        "citation": "18 citations",
         "tags": ["Sharp interface approach", "Mass conservation", "Spurious oscillations"],
         "category": "Journal",
         "publication-title": "Computers & Mathematics with Applications",
@@ -182,11 +182,11 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_12_CMWA_2021.jpg",
+        "thumbnail": "images/Pub_Journal_13_PF_2020.jpg",
         "card-heading": "Investigation of shock wave interactions involving stationary and moving wedges.",
         "author-name": "Seshadri, P. K., and De, A.",
         "year": "2020",
-        "citation": "0 citations",
+        "citation": "23 citations",
         "tags": ["Fluid mechanics", "Computational fluid dynamics", "Mach reflection","Shock waves"],
         "category": "Journal",
         "publication-title": "Physics of Fluids",
@@ -198,11 +198,11 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_13_CNF_2020.jpg",
+        "thumbnail": "images/Pub_Journal_12_CNF_2020.jpg",
         "card-heading": "A novel sharp interface immersed boundary framework for viscous flow simulations at arbitrary Mach number involving complex and moving boundaries.",
         "author-name": "Seshadri, P. K., and De, A.",
         "year": "2020",
-        "citation": "13 citations",
+        "citation": "18 citations",
         "tags": ["Sharp interface method", "All-speed flow regimes", "Complex geometries"],
         "category": "Journal",
         "publication-title": "Computers & Fluids",
@@ -214,11 +214,11 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_14_PF_2020.jpg",
+        "thumbnail": "images/Pub_Journal_14_JFVIP_2019.jpg",
         "card-heading": "Flow Past Stationary and Oscillating Airfoil at a Low Reynolds Number Using Sharp Interface Immersed-Boundary Approach",
         "author-name": "Seshadri, P. K., and De, A.",
-        "year": "2020",
-        "citation": "3 citations",
+        "year": "2019",
+        "citation": "6 citations",
         "tags": ["sharp interface", "immersed-boundary method", "field extension","dynamic stall","leading edge vortex"],
         "category": "Journal",
         "publication-title": "Journal of Flow Visualizations and Image Processing",
@@ -230,11 +230,11 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_15_JFVIP_2019.jpg",
+        "thumbnail": "images/Pub_Journal_15_JFS_2015.jpg",
         "card-heading": "Investigation of flow field of clap & fling motion using Immersed Boundary coupled Lattice Boltzmann Method",
         "author-name": "Seshadri, P. K., De, A., and Das, D",
         "year": "2015",
-        "citation": "17 citations",
+        "citation": "20 citations",
         "tags": ["Clap and Fling Mechanism", "Immersed Boundary Method (IBM)", "Lattice Boltzmann Method (LBM)", "Kramer Effect"],
         "category": "Journal",
         "publication-title": "Journal of Fluids and Structures",
@@ -250,13 +250,22 @@
     "recent-section-subtitle":"Featured publications representing our latest research breakthroughs",
     "cards":[
     {
-      "recent-badge": "Journal",
-      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
-      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
+      "recent-badge": "Pre-Print 2025",
+      "recent-title": "Latent Representation Learning of Multi-scale Thermophysics: Application to Dynamics in Shocked Porous Energetic Material",
+      "recent-authors": "Azarfar, S., Choi, J. B., Nguyen, P. C. H., Nguyen, Y. T., Seshadri, P. K., Udaykumar, H.S., and Baek, S.",
       "recent-journal": "International Journal of Multiphase Flow",
       "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
-      "recent-citations": "4 citations",
-      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
+      "recent-citations": "0 citations",
+      "recent-link":"https://arxiv.org/abs/2506.12996"
+    },
+    {
+      "recent-badge": "ICML Conference 2024",
+      "recent-title": "PARCv2: Physics-aware recurrent convolutional neural networks for spatiotemporal dynamics modeling.",
+      "recent-authors": "Nguyen, P. C. H., Cheng, X., Azarfar, S., Seshadri, P. K., Nguyen, Y. T., Kim, M., Choi, S., Udaykumar, H.S., and Baek, S.",
+      "recent-journal": "ICML Conference 2024",
+      "recent-description": "we investigate an inductive bias approach that is versatile and generalizable to model generic nonlinear field evolution problems. Our study focuses on the recent physics-aware recurrent convolutions (PARC), which incorporates a differentiator-integrator architecture that inductively models the spatiotemporal dynamics of generic physical systems. We extend the capabilities of PARC to simulate unsteady, transient, and advection-dominant systems. The extended model, referred to as PARCv2, is equipped with differential operators to model advection-reaction-diffusion equations, as well as a hybrid integral solver for stable, long-time predictions.",
+      "recent-citations": "7 citations",
+      "recent-link":"https://arxiv.org/abs/2402.12503"
     },
     {
       "recent-badge": "Journal",
@@ -264,17 +273,8 @@
       "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
       "recent-journal": "International Journal of Multiphase Flow",
       "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
-      "recent-citations": "4 citations",
+      "recent-citations": "9 citations",
       "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
-    },
-    {
-      "recent-badge": "Journal",
-      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
-      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
-      "recent-journal": "International Journal of Multiphase Flow",
-      "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
-      "recent-citations": "4 citations",
-      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
-    }
+    }  
   ]}
 }

@@ -7,33 +7,60 @@
     "description2": "We actively collaborate across disciplines and welcome students and researchers eager to challenge themselves, develop meaningful tools, and contribute to high-impact science and engineering. The lab emphasizes research integrity, team learning, and best practices in software development, preparing members for both academic and industry leadership roles.",
   "teams":[
     {
-        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
+        "src":"images/Pradeep.JPG",
         "name":"Dr. Pradeep Kumar Seshadri",
         "role":"Principal Investigator",
-        "designation":"Assistant Professor, Department of Aerospace Engineering, IIT Madras",
+        "designation":"Assistant Professor of Aerospace Engineering, IIT Madras",
         "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
-        "email":"mailto:spk15031990@gmail.com",
+        "email":"mailto:pkseshadri@iitm.ac.in",
         "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
     }
   ],
   "collaborators":[
     {
-        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
-        "name":"Dr. Pradeep Kumar Seshadri",
-        "role":"Principal Investigator",
-        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
-        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
-        "email":"mailto:spk15031990@gmail.com",
-        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+        "src":"images/Uday.JPG",
+        "name":"Prof. H. S. UdayKumar",
+        "role": "",
+        "designation":"Professor of Mechanical Engineering, University of Iowa",
+        "subject": "Computational Fluid Dynamics, Moving Boundaries Interacting with Flows, Biofluid Mechanics, Materials Processing ",
+        "email": "",
+        "linkedin": ""
     },
     {
-        "src":"images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
-        "name":"Dr. Pradeep Kumar Seshadri",
-        "role":"Principal Investigator",
-        "designation":"PhD in Aerospace Engineering, IIT Kanpur.",
-        "subject":"Computational Multi Physics, Multi Scale Modeling, Scientific Machine Learning.",
-        "email":"mailto:spk15031990@gmail.com",
-        "linkedin":"https://www.linkedin.com/in/spradeepmahadeek/"
+        "src":"images/Baek.jfif",
+        "name":"Prof. Stephen Baek",
+        "role":"",
+        "designation":"Associate Professor in University of Virginia School of Data Science",
+        "subject":"Geometric Data Analysis, Computational Geometry, Scientific Machine Learning, Computational Design, Generative Modeling",
+        "email":"",
+        "linkedin":""
+    },
+     {
+        "src":"images/Brandon.jpg",
+        "name":"Prof. Brandon Runnels",
+        "role":"",
+        "designation":"Associate Professor of Aerospace Engineering, Iowa State University",
+        "subject":"Multi-physics Simulations, Computational Fluid Dynamics, Bubble Dynamics, Droplet Combustion, Turbulence Modeling",
+        "email":"",
+        "linkedin":""
+    },
+     {
+        "src":"images/Ashoke.jpg",
+        "name":"Prof. Ashoke De",
+        "role":"",
+        "designation":"Professor of Aerospace Engineering, IIT Kanpur",
+        "subject":"High Speed Flows, Energy Harvesting, Combustion and Flame Dynamics, Spray Modeling",
+        "email":"",
+        "linkedin":""
+    },
+     {
+        "src":"images/Pratik.jpg",
+        "name":"Dr. Pratik Das",
+        "role":"",
+        "designation":"Assistant Professor of Department of Mechanical Engineering, IIT Delhi",
+        "subject":"Multi-physics Simulations, Computational Fluid Dynamics, Bubble Dynamics, Droplet Combustion, Turbulence Modeling",
+        "email":"",
+        "linkedin":""
     }
   ],
   "journey":[
