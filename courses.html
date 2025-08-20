@@ -8,6 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
     <style>
       body {
         margin: 0;
@@ -74,7 +79,7 @@
       .apply-button {
         display: inline-block;
         padding: 0.5rem 1rem;
-        background: #0066cc;
+        background: #004c99;
         color: white;
         text-decoration: none;
         border-radius: 6px;
@@ -83,7 +88,7 @@
       }
 
       .apply-button:hover {
-        background: #004c99;
+        background: var(--primary);
       }
 
       .sidebar1 {
@@ -189,13 +194,8 @@
     <!-- Complete ribbon starts  -->
     <div class="ribbon">
       <div class="ribbon-content">
-        <h1 class="ribbon-title">Courses</h1>
-        <p class="ribbon-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nisi
-          amet voluptas! Voluptate, vero voluptatum nostrum neque culpa
-          explicabo a dolorum quidem illum asperiores eaque inventore alias!
-          Aspernatur, exercitationem aperiam?
-        </p>
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
       </div>
     </div>
     <!-- Complete ribbon ends  -->
@@ -256,6 +256,8 @@
         fetch('courses.json')
         .then(response => response.json())
         .then(data => {
+          document.querySelector(".ribbon-title").textContent = data.ribbontitle;
+          document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
           // Render Announcements
           const announcementsContainer = document.getElementById('announcements-container');
           data.announcements.forEach(item => {
@@ -266,13 +268,11 @@
             newsDiv.appendChild(para);
             announcementsContainer.appendChild(newsDiv);
           });
-
           // Render Courses
           const coursesContainer = document.getElementById('courses-container');
           data.courses.forEach(course => {
             const courseCard = document.createElement('div');
             courseCard.className = 'course-card';
-
             courseCard.innerHTML = `
               <h3 class="course-title">${course.title}</h3>
               <p class="course-meta">
@@ -281,16 +281,14 @@
               <p class="course-description">${course.description}</p>
               <a href="${course.link}" class="apply-button">${course.buttonText}</a>
             `;
-
             coursesContainer.appendChild(courseCard);
           });
         })
         .catch(error => {
           console.error('Error loading data:', error);
         });
-
       </script>
-      <!-- loading courses ends  -->
+    <!-- loading courses ends  -->
     <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
