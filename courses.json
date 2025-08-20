@@ -17,6 +17,7 @@
   ],
   "courses": [
     {
+      "id":"1",
       "title": "Computational Fluid Dynamics (CFD)",
       "instructor": "Dr. A. Sharma",
       "semester": "Fall 2025",
@@ -25,6 +26,7 @@
       "link": "#"
     },
     {
+      "id":"2",
       "title": "Multiphysics Modeling with LBM",
       "instructor": "Dr. R. Verma",
       "semester": "Spring 2026",
@@ -33,6 +35,7 @@
       "link": "#"
     },
     {
+      "id":"3",
       "title": "Machine Learning for Simulation",
       "instructor": "Dr. P. Mehra",
       "semester": "Spring 2026",

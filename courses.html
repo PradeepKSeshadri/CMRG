@@ -279,7 +279,7 @@
                 Instructor: ${course.instructor} | Semester: ${course.semester}
               </p>
               <p class="course-description">${course.description}</p>
-              <a href="${course.link}" class="apply-button">${course.buttonText}</a>
+              <a href="${course.link}?id=${course.id}" class="apply-button">${course.buttonText}</a>
             `;
             coursesContainer.appendChild(courseCard);
           });
