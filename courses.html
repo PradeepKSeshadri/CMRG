@@ -271,6 +271,8 @@
           // Render Courses
           const coursesContainer = document.getElementById('courses-container');
           data.courses.forEach(course => {
+            const id = course.id;
+            const to = (course.link || 'completecourse.html') + `?id=${encodeURIComponent(id)}`;
             const courseCard = document.createElement('div');
             courseCard.className = 'course-card';
             courseCard.innerHTML = `
@@ -279,7 +281,7 @@
                 Instructor: ${course.instructor} | Semester: ${course.semester}
               </p>
               <p class="course-description">${course.description}</p>
-              <a href="${course.link}" class="apply-button">${course.buttonText}</a>
+              <a href="${to}" class="apply-button">${course.buttonText}</a>
             `;
             coursesContainer.appendChild(courseCard);
           });
