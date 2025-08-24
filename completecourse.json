@@ -1,0 +1,13 @@
+{
+  "modules": [
+    { "title": "Syllabus" },
+    { "title": "Calender" },
+    { "title": "Readings" },
+    { "title": "Lecture Notes" },
+    { "title": "Assignments" },
+    { "title": "Exams" },
+    { "title": "Projects" },
+    { "title": "Study Materials" },
+    { "title": "Related Resources" }
+  ]
+}

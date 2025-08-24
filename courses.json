@@ -1,0 +1,433 @@
+{
+  "ribbontitle": "Courses",
+  "ribbondesc": "Stay updated with the latest news, research breakthroughs, and insights from our computational multiphysics research lab.",
+  "announcements": [
+    { "date": "July 2", "message": "Course registration opens for Fall 2025" },
+    { "date": "June 25", "message": "New course on AI-assisted simulation coming soon" },
+    { "date": "June 15", "message": "Past lecture recordings available for CFD" }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "Computational Fluid Dynamics (CFD)",
+      "instructor": "Dr. A. Sharma",
+      "semester": "Fall 2025",
+      "description": "Introduction to finite volume methods, Navier-Stokes solvers, and advanced simulation of incompressible flow. Includes hands-on coding assignments and a final research mini-project.",
+      "buttonText": "Apply Now",
+      "link": "completecourse.html",
+      "modules": [
+        {
+          "title": "Syllabus",
+          "description": "Course structure, objectives, pedagogy and grading strategy.",
+          "courseMeetingTimes": {
+            "lectures": "3 sessions / week, 2 hours / session",
+            "labs": "1 session / week, 2 hours / session"
+          },
+          "learningObjectives": [
+            "Formulate and apply appropriate aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations;",
+            "Assess the applicability of aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations and estimate the errors resulting from their application;",
+            "Perform a computational and experimental aerodynamic analysis and design together with members of a team."
+          ],
+          "commentOnModels": "An aerodynamic model is simply a method to estimate the aerodynamic performance...",
+          "skills": [
+            "Quantitative or Analytical Skills",
+            "Qualitative or Conceptual Skills",
+            "Integrative Skills"
+          ],
+          "weightage": [
+            { "activity": "Homework", "percentage": "20%" },
+            { "activity": "Exams (The Written and Oral Part of each Exam are 15% each)", "percentage": "60%" },
+            { "activity": "Project (Assignments are 10% Total and the Design Report is 10%)", "percentage": "20%" }
+          ],
+          "grading": [
+            { "grade": "A", "marks": "90-100" },
+            { "grade": "B", "marks": "80-90" },
+            { "grade": "C", "marks": "70-80" },
+            { "grade": "D", "marks": "60-70" },
+            { "grade": "F", "marks": "0-60" }
+          ]
+        },
+        {
+          "title": "Calendar",
+          "calendar": [
+            { "week": "1", "topics": ["Integral Equations, Lift and Drag"], "keyDates": ["Project assignment 1 out"] },
+            { "week": "2", "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations", "Wright Brothers Wind Tunnel Tests", "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"], "keyDates": ["Homework 1 due"] },
+            { "week": "3", "topics": ["2-D Potential Flow"], "keyDates": ["Homework 2 due", "Project assignment 1 due"] },
+            { "week": "4", "topics": ["2-D Panel Methods"], "keyDates": ["Homework 3 due", "Project assignment 2 out"] },
+            { "week": "5", "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"], "keyDates": ["Homework 4 due", "Project assignment 2 due"] },
+            { "week": "6", "topics": ["Lifting Line and High Aspect Ratio Wings"], "keyDates": ["Homework 5 due", "Project assignment 3 out"] },
+            { "week": "7", "topics": ["Compressibility and Quasi 1D Flow"], "keyDates": ["Take-home written exam 1 out"] }
+          ]
+        },
+        {
+          "title": "Readings",
+          "description": "List of core and recommended textbooks for the course.",
+          "books": {
+            "recommended": {
+              "text": "The following book is recommended for purchase:",
+              "items": [
+                "Anderson, John D. *Fundamentals of Aerodynamics.* 3rd ed. New York, NY: McGraw-Hill, 2001. ISBN: 007237350.",
+                "If you have the Second Edition, it will be acceptable though you will be missing some of the reading material."
+              ]
+            },
+            "alsoUsed": {
+              "text": "The following books will also be used in the course:",
+              "items": [
+                "Kuethe, Arnold, and Chuen-Yen Chow. *Foundation of Aerodynamics.* 5th ed. New York, NY: John Wiley and Sons, 1997. ISBN: 0471129194.",
+                "Bertin, John J. *Aerodynamics for Engineers.* 4th ed. Upper Saddle River, NJ: Prentice Hall, 2001. ISBN: 0130646334.",
+                "Moran, Jack. *An Introduction to Theoretical and Computational Aerodynamics.* 1st ed. New York, NY: John Wiley and Sons, 2003. ISBN: 0486428796."
+              ]
+            },
+            "additional": {
+              "text": "Another useful book for its discussion of aircraft performance and dynamics would be:",
+              "items": [
+                "Anderson, John D. *Introduction to Flight.* 5th ed. New York, NY: McGraw-Hill, 2004. ISBN: 0072990716."
+              ]
+            }
+          }
+        },
+        {
+          "title": "Lecture Notes",
+          "description": "Downloadable lecture note PDFs for each class session.",
+          "lectures": [
+            { "title": "Lecture 1 - Sensitivity Analysis", "link": "#" },
+            { "title": "Lecture 2 - Kinematics of a Fluid Element", "link": "#" },
+            { "title": "Lecture 3 - Stress-Strain Relationship for a Newtonian Fluid", "link": "#" },
+            { "title": "Lecture 4 - Coordination Transformations for Strain and Stress Rates", "link": "#" },
+            { "title": "Lecture 5 - Compressible and Incompressible Fluid Element Motion Chart", "link": "#" },
+            { "title": "Lecture 6 - Compressible Viscous Equations", "link": "#" },
+            { "title": "Lecture 7 - Compressible Equations", "link": "#" },
+            { "title": "Lecture 8 - Equations of Aircraft Motion", "link": "#" },
+            { "title": "Lecture 9 - Brequet Range Equation", "link": "#" },
+            { "title": "Lecture 10 - Aerodynamic Center", "link": "#" },
+            { "title": "Lecture 11 - Notes on CQ 1", "link": "#" },
+            { "title": "Lecture 12 - Quick Visit to Bernoulli Land", "link": "#" },
+            { "title": "Lecture 13 - Kutta Condition", "link": "#" },
+            { "title": "Lecture 14 - Kutta Condition Solution", "link": "#" }
+          ]
+        },
+        {
+          "title": "Assignments",
+          "description": "All assignments below are due in the week in which they are listed.",
+          "assignments": [
+            {
+              "week": 1,
+              "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations"],
+              "links": [{ "title": "Homework 1", "url": "#" }]
+            },
+            {
+              "week": 2,
+              "topics": [
+                "Wright Brothers Wind Tunnel Tests",
+                "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"
+              ]
+            },
+            {
+              "week": 3,
+              "topics": ["2-D Potential Flow"],
+              "links": [{ "title": "Homework 2", "url": "#" }]
+            },
+            {
+              "week": 4,
+              "topics": ["2-D Panel Methods"],
+              "links": [{ "title": "Homework 3", "url": "#" }]
+            },
+            {
+              "week": 5,
+              "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"],
+              "links": [{ "title": "Homework 4", "url": "#" }]
+            },
+            {
+              "week": 6,
+              "topics": ["Lifting Line and High Aspect Ratio Wings"],
+              "links": [{ "title": "Homework 5", "url": "#" }]
+            },
+            {
+              "week": 9,
+              "topics": ["Navier-Stokes Equations"],
+              "links": [{ "title": "Homework 6", "url": "#" }]
+            },
+            {
+              "week": 10,
+              "topics": ["Boundary Layers: Laminar"],
+              "links": [
+                { "title": "Homework 7", "url": "#" },
+                { "title": "2004 Homework 7", "url": "#" },
+                { "title": "2004 Homework 7 Solutions", "url": "#" }
+              ]
+            },
+            {
+              "week": 11,
+              "topics": ["Boundary Layers: Laminar (cont.) and Separation"],
+              "links": [{ "title": "Homework 8", "url": "#" }]
+            }
+          ]
+        },
+        {
+          "title": "Exams",
+          "description": "The exams will have a take-home written portion and an oral portion. Students will have a few days to complete the written exam (see the calendar section for the specific sessions, the take-home exams will be distributed and due). The written exams will then be followed by an oral exam. The oral exams will be largely, though not exclusively, based on the questions from the written exam. The oral exam will be 30 minutes in length, conducted by Prof. Darmofal. The written exam questions will be similar to homework questions focusing mainly on quantitative and integrative abilities. The oral exams will focus on conceptual understanding.",
+          "links": [
+            { "title": "Take-home Exam 1 (PDF)", "url": "#" },
+            { "title": "Take-home Exam 2 (PDF)", "url": "#" },
+            { "title": "Take-home Exam 1 Study Questions (Answers are in the Yellow Boxes) (PDF)", "url": "#" }
+          ]
+        },
+        {
+          "title": "Projects",
+          "description": "Students will participate in an integrative team project developed with The Boeing Company concerning the aerodynamic analysis and design of a Blended-Wing Body (BWB) aircraft. During the first two months of the semester, students will complete assignments to learn the basic skills necessary to analyze the BWB aircraft. In the final month of the semester, teams of approximately three students will complete a redesign of the BWB. These teams will be responsible for completing the design project and documenting their results in a design report.<br><br>During the first two months of the semester, the staff will guide the students through the completion of the assignments. These assignments will be completed in pairs that the students can select, however, the pairs must be different for each of the assignments. Then, in the final month, the Labs will be dedicated to the teams working on the design project with staff in attendance to provide guidance. The students will be assigned to the design teams by the staff. Attendance will be taken for all lab sessions. The total individual student grade on the design project will be based on a team project grade (20%) and an individual contribution grade (80%). The individual contribution will be assessed from three sources:<ol><li>Instructor interactions with the teams throughout the semester including work session attendance,</li><li>Written evaluations after each milestone by all team members of the contributions of each team member (including self-evaluations), and</li><li>Delineation within the written reports of an individual’s contributions.</li></ol>",
+          "links": [
+            { "title": "Project Assignment 1 (PDF)", "url": "#" },
+            { "title": "Project Assignment 2 (PDF)", "url": "#" },
+            { "title": "Project Assignment 3 (PDF)", "url": "#" },
+            { "title": "Project Assignment 4 (PDF)", "url": "#" },
+            { "title": "Project Design Assignment (PDF)", "url": "#" }
+          ]
+        },
+        {
+          "title": "Study Materials",
+          "description": "The following study materials were distributed in class:",
+          "links": [
+            { "title": "Lift and Drag Primer (PDF)", "url": "#" },
+            { "title": "Thin Airfoil Theory Summary (To accompany Homework 4) (PDF)", "url": "#" },
+            { "title": "Wind Tunnel Wall (To accompany Project Assignment 1) (PDF)", "url": "#" },
+            { "title": "Lift Generation and Streamline Curvature (PDF)", "url": "#" },
+            { "title": "Cylinder Drag with Roughness (To accompany Project Assignment 3) (PDF)", "url": "#" },
+            { "title": "CFD Notes (To accompany Project Assignment 4) (PDF)", "url": "#" },
+            { "title": "Conceptual Description of Wave Drag (PDF)", "url": "#" },
+            { "title": "CD NACA (PDF)", "url": "#" }
+          ]
+        },
+        {
+          "title": "Related Resources",
+          "usefulLinks": [
+            { "title": "Online Conversion", "url": "#" },
+            { "title": "Standard Atmospheric Computations", "url": "#" },
+            { "title": "XFOIL: Subsonic Airfoil Development System", "url": "#" },
+            { "title": "Fluid Mechanics Movies", "url": "#" }
+          ],
+          "projectLinks": [
+            { "title": "The Wing is the Thing", "url": "#" },
+            { "title": "Aircraft Design Information Sources: Advanced Design / Unusual Concepts", "url": "#" },
+            { "title": "Tailless Aircraft", "url": "#" },
+            { "title": "AVL", "url": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Multiphysics Modeling with LBM",
+      "instructor": "Dr. R. Verma",
+      "semester": "Spring 2026",
+      "description": "Covers immersed boundary and lattice Boltzmann methods for simulating complex fluid-structure interactions in biological and mechanical systems.",
+      "buttonText": "Join Interest List",
+      "link": "completecourse.html",
+      "modules": [
+        {
+          "title": "Syllabus",
+          "description": "Course structure, objectives, pedagogy and grading strategy.",
+          "courseMeetingTimes": {
+            "lectures": "3 sessions / week, 2 hours / session",
+            "labs": "1 session / week, 2 hours / session"
+          },
+          "learningObjectives": [
+            "Formulate and apply appropriate aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations;",
+            "Assess the applicability of aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations and estimate the errors resulting from their application;",
+            "Perform a computational and experimental aerodynamic analysis and design together with members of a team."
+          ],
+          "commentOnModels": "An aerodynamic model is simply a method to estimate the aerodynamic performance...",
+          "skills": [
+            "Quantitative or Analytical Skills",
+            "Qualitative or Conceptual Skills",
+            "Integrative Skills"
+          ],
+          "weightage": [
+            { "activity": "Homework", "percentage": "20%" },
+            { "activity": "Exams (The Written and Oral Part of each Exam are 15% each)", "percentage": "60%" },
+            { "activity": "Project (Assignments are 10% Total and the Design Report is 10%)", "percentage": "20%" }
+          ],
+          "grading": [
+            { "grade": "A", "marks": "90-100" },
+            { "grade": "B", "marks": "80-90" },
+            { "grade": "C", "marks": "70-80" },
+            { "grade": "D", "marks": "60-70" },
+            { "grade": "F", "marks": "0-60" }
+          ]
+        },
+        {
+          "title": "Calendar",
+          "calendar": [
+            { "week": "1", "topics": ["Integral Equations, Lift and Drag"], "keyDates": ["Project assignment 1 out"] },
+            { "week": "2", "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations", "Wright Brothers Wind Tunnel Tests", "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"], "keyDates": ["Homework 1 due"] },
+            { "week": "3", "topics": ["2-D Potential Flow"], "keyDates": ["Homework 2 due", "Project assignment 1 due"] },
+            { "week": "4", "topics": ["2-D Panel Methods"], "keyDates": ["Homework 3 due", "Project assignment 2 out"] },
+            { "week": "5", "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"], "keyDates": ["Homework 4 due", "Project assignment 2 due"] },
+            { "week": "6", "topics": ["Lifting Line and High Aspect Ratio Wings"], "keyDates": ["Homework 5 due", "Project assignment 3 out"] },
+            { "week": "7", "topics": ["Compressibility and Quasi 1D Flow"], "keyDates": ["Take-home written exam 1 out"] }
+          ]
+        },
+        {
+          "title": "Readings",
+          "description": "List of core and recommended textbooks for the course.",
+          "books": {
+            "recommended": {
+              "text": "The following book is recommended for purchase:",
+              "items": [
+                "Anderson, John D. *Fundamentals of Aerodynamics.* 3rd ed. New York, NY: McGraw-Hill, 2001. ISBN: 007237350.",
+                "If you have the Second Edition, it will be acceptable though you will be missing some of the reading material."
+              ]
+            },
+            "alsoUsed": {
+              "text": "The following books will also be used in the course:",
+              "items": [
+                "Kuethe, Arnold, and Chuen-Yen Chow. *Foundation of Aerodynamics.* 5th ed. New York, NY: John Wiley and Sons, 1997. ISBN: 0471129194.",
+                "Bertin, John J. *Aerodynamics for Engineers.* 4th ed. Upper Saddle River, NJ: Prentice Hall, 2001. ISBN: 0130646334.",
+                "Moran, Jack. *An Introduction to Theoretical and Computational Aerodynamics.* 1st ed. New York, NY: John Wiley and Sons, 2003. ISBN: 0486428796."
+              ]
+            },
+            "additional": {
+              "text": "Another useful book for its discussion of aircraft performance and dynamics would be:",
+              "items": [
+                "Anderson, John D. *Introduction to Flight.* 5th ed. New York, NY: McGraw-Hill, 2004. ISBN: 0072990716."
+              ]
+            }
+          }
+        },
+        {
+          "title": "Lecture Notes",
+          "description": "Downloadable lecture note PDFs for each class session.",
+          "lectures": [
+            { "title": "Lecture 1 - Sensitivity Analysis", "link": "#" },
+            { "title": "Lecture 2 - Kinematics of a Fluid Element", "link": "#" },
+            { "title": "Lecture 3 - Stress-Strain Relationship for a Newtonian Fluid", "link": "#" },
+            { "title": "Lecture 4 - Coordination Transformations for Strain and Stress Rates", "link": "#" },
+            { "title": "Lecture 5 - Compressible and Incompressible Fluid Element Motion Chart", "link": "#" },
+            { "title": "Lecture 6 - Compressible Viscous Equations", "link": "#" },
+            { "title": "Lecture 7 - Compressible Equations", "link": "#" },
+            { "title": "Lecture 8 - Equations of Aircraft Motion", "link": "#" },
+            { "title": "Lecture 9 - Brequet Range Equation", "link": "#" },
+            { "title": "Lecture 10 - Aerodynamic Center", "link": "#" },
+            { "title": "Lecture 11 - Notes on CQ 1", "link": "#" },
+            { "title": "Lecture 12 - Quick Visit to Bernoulli Land", "link": "#" },
+            { "title": "Lecture 13 - Kutta Condition", "link": "#" },
+            { "title": "Lecture 14 - Kutta Condition Solution", "link": "#" }
+          ]
+        },
+        {
+          "title": "Assignments",
+          "description": "All assignments below are due in the week in which they are listed.",
+          "assignments": [
+            {
+              "week": 1,
+              "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations"],
+              "links": [{ "title": "Homework 1", "url": "#" }]
+            },
+            {
+              "week": 2,
+              "topics": [
+                "Wright Brothers Wind Tunnel Tests",
+                "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"
+              ]
+            },
+            {
+              "week": 3,
+              "topics": ["2-D Potential Flow"],
+              "links": [{ "title": "Homework 2", "url": "#" }]
+            },
+            {
+              "week": 4,
+              "topics": ["2-D Panel Methods"],
+              "links": [{ "title": "Homework 3", "url": "#" }]
+            },
+            {
+              "week": 5,
+              "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"],
+              "links": [{ "title": "Homework 4", "url": "#" }]
+            },
+            {
+              "week": 6,
+              "topics": ["Lifting Line and High Aspect Ratio Wings"],
+              "links": [{ "title": "Homework 5", "url": "#" }]
+            },
+            {
+              "week": 9,
+              "topics": ["Navier-Stokes Equations"],
+              "links": [{ "title": "Homework 6", "url": "#" }]
+            },
+            {
+              "week": 10,
+              "topics": ["Boundary Layers: Laminar"],
+              "links": [
+                { "title": "Homework 7", "url": "#" },
+                { "title": "2004 Homework 7", "url": "#" },
+                { "title": "2004 Homework 7 Solutions", "url": "#" }
+              ]
+            },
+            {
+              "week": 11,
+              "topics": ["Boundary Layers: Laminar (cont.) and Separation"],
+              "links": [{ "title": "Homework 8", "url": "#" }]
+            }
+          ]
+        },
+        {
+          "title": "Exams",
+          "description": "The exams will have a take-home written portion and an oral portion. Students will have a few days to complete the written exam (see the calendar section for the specific sessions, the take-home exams will be distributed and due). The written exams will then be followed by an oral exam. The oral exams will be largely, though not exclusively, based on the questions from the written exam. The oral exam will be 30 minutes in length, conducted by Prof. Darmofal. The written exam questions will be similar to homework questions focusing mainly on quantitative and integrative abilities. The oral exams will focus on conceptual understanding.",
+          "links": [
+            { "title": "Take-home Exam 1 (PDF)", "url": "#" },
+            { "title": "Take-home Exam 2 (PDF)", "url": "#" },
+            { "title": "Take-home Exam 1 Study Questions (Answers are in the Yellow Boxes) (PDF)", "url": "#" }
+          ]
+        },
+        {
+          "title": "Projects",
+          "description": "Students will participate in an integrative team project developed with The Boeing Company concerning the aerodynamic analysis and design of a Blended-Wing Body (BWB) aircraft. During the first two months of the semester, students will complete assignments to learn the basic skills necessary to analyze the BWB aircraft. In the final month of the semester, teams of approximately three students will complete a redesign of the BWB. These teams will be responsible for completing the design project and documenting their results in a design report.<br><br>During the first two months of the semester, the staff will guide the students through the completion of the assignments. These assignments will be completed in pairs that the students can select, however, the pairs must be different for each of the assignments. Then, in the final month, the Labs will be dedicated to the teams working on the design project with staff in attendance to provide guidance. The students will be assigned to the design teams by the staff. Attendance will be taken for all lab sessions. The total individual student grade on the design project will be based on a team project grade (20%) and an individual contribution grade (80%). The individual contribution will be assessed from three sources:<ol><li>Instructor interactions with the teams throughout the semester including work session attendance,</li><li>Written evaluations after each milestone by all team members of the contributions of each team member (including self-evaluations), and</li><li>Delineation within the written reports of an individual’s contributions.</li></ol>",
+          "links": [
+            { "title": "Project Assignment 1 (PDF)", "url": "#" },
+            { "title": "Project Assignment 2 (PDF)", "url": "#" },
+            { "title": "Project Assignment 3 (PDF)", "url": "#" },
+            { "title": "Project Assignment 4 (PDF)", "url": "#" },
+            { "title": "Project Design Assignment (PDF)", "url": "#" }
+          ]
+        },
+        {
+          "title": "Study Materials",
+          "description": "The following study materials were distributed in class:",
+          "links": [
+            { "title": "Lift and Drag Primer (PDF)", "url": "#" },
+            { "title": "Thin Airfoil Theory Summary (To accompany Homework 4) (PDF)", "url": "#" },
+            { "title": "Wind Tunnel Wall (To accompany Project Assignment 1) (PDF)", "url": "#" },
+            { "title": "Lift Generation and Streamline Curvature (PDF)", "url": "#" },
+            { "title": "Cylinder Drag with Roughness (To accompany Project Assignment 3) (PDF)", "url": "#" },
+            { "title": "CFD Notes (To accompany Project Assignment 4) (PDF)", "url": "#" },
+            { "title": "Conceptual Description of Wave Drag (PDF)", "url": "#" },
+            { "title": "CD NACA (PDF)", "url": "#" }
+          ]
+        },
+        {
+          "title": "Related Resources",
+          "usefulLinks": [
+            { "title": "Online Conversion", "url": "#" },
+            { "title": "Standard Atmospheric Computations", "url": "#" },
+            { "title": "XFOIL: Subsonic Airfoil Development System", "url": "#" },
+            { "title": "Fluid Mechanics Movies", "url": "#" }
+          ],
+          "projectLinks": [
+            { "title": "The Wing is the Thing", "url": "#" },
+            { "title": "Aircraft Design Information Sources: Advanced Design / Unusual Concepts", "url": "#" },
+            { "title": "Tailless Aircraft", "url": "#" },
+            { "title": "AVL", "url": "#" }
+          ]
+        }]
+    },
+    {
+      "id": "3",
+      "title": "Machine Learning for Simulation",
+      "instructor": "Dr. P. Mehra",
+      "semester": "Spring 2026",
+      "description": "Learn how neural networks and surrogate models are applied to reduce computational cost in high-fidelity simulation tasks.",
+      "buttonText": "Apply Now",
+      "link": "completecourse.html"
+    }
+  ]
+}
