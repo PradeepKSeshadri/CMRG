@@ -46,6 +46,16 @@ publications reference page - https://chandanbose.com/journals.html
 
 research reference page - resume shared in linked in
 
-	https://github.com/PradeepKSeshadri/CMRG
+	Official github repo - https://github.com/PradeepKSeshadri/CMRG
 	
-	https://github.com/barbagroup/AeroPython/tree/master
+	Courses Notes - https://github.com/barbagroup/AeroPython/tree/master
+	
+	Official website link - https://pradeepkseshadri.github.io/CMRG/
+	
+NEW REQUIREMENT:
+
+1. IIT LOGO
+2. GALLERY
+3. COURSES
+4. CODE
+5. ONGOING
