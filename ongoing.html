@@ -264,6 +264,16 @@
       }
     }
 
+    .project-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #2a68d4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .project-link:hover { text-decoration: underline; }
+
     @media (max-width: 468px) {
       .research-card {
         padding: 1.5rem 1rem;
@@ -437,6 +447,7 @@
         <h4>Current Projects</h4>
         <ul class="projects-list"></ul>
       </div>
+      <a class="project-link" href="#" target="_blank" rel="noopener noreferrer" style="display:none;">Visit Project Website ↗</a>
     </div>
 
     <!-- Right Content -->
@@ -563,6 +574,12 @@
           li.textContent = i;
           impact.appendChild(li);
         });
+
+        const linkEl = clone.querySelector(".project-link");
+        if (item.link) {
+          linkEl.href = item.link;
+          linkEl.style.display = "inline-block";
+        }
 
         container.appendChild(clone);
       });

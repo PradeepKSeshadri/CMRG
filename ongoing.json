@@ -39,6 +39,29 @@
         "Bridging experiments and simulations for validation"
       ],
       "image": "images/Research_Image_Hydrocode.jpg"
+    },
+    {
+      "title": "PyAMorph: Implicit Geometry Modeling & Morphometric Analysis",
+      "subtitle": "Massively Parallel SDF Framework on Adaptive Meshes — INCAM 2026",
+      "icon": "🔷",
+      "overview": "Signed Distance Functions (SDFs), Constructive Solid Geometry (CSG), and AMReX Adaptive Mesh Refinement for high-fidelity microstructure characterisation.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Implicit geometry modeling via SDFs and CSG operations",
+        "Chan-Vese segmentation for image-to-SDF conversion",
+        "TPMS metamaterial generation: Gyroid, Schwarz P/D, Neovius, BCC/FCC lattices",
+        "Automated morphometry for SDFs"
+      ],
+      "tools": ["AMReX", "Image-based geometry workflows"],
+      "impact": [
+        "Enables simulation-ready microstructure geometry for solid propellant and metamaterial studies",
+        "Unified API composing images, STL meshes, and analytic shapes in a single CSG environment",
+        "Automated statistical morphometry over particle ensembles",
+        "Scalable to large HPC systems via AMReX domain decomposition without memory bottlenecks"
+      ],
+      "image": "images/PyAMorph image.png",
+      "imgtitle": "3D porous microstructure reconstructed via Chan-Vese segmentation on an AMReX MultiFab grid",
+      "link": "https://pyamorph.vercel.app/"
     }
   ],
 

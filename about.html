@@ -209,6 +209,45 @@
         }
       }
       /* journey ends  */
+      /* interns start */
+      .intern-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+      }
+      .intern-card {
+        background: var(--text-light);
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        padding: 28px 22px;
+        width: 100%;
+        max-width: 240px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .intern-card:hover {
+        transform: translateY(-5px);
+      }
+      .intern-card h3 {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin: 0 0 8px;
+      }
+      .intern-meta {
+        font-size: 13px;
+        color: #475569;
+        margin: 4px 0;
+        line-height: 1.5;
+      }
+      @media (max-width: 768px) {
+        .intern-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      /* interns end */
     </style>
     <link
       rel="stylesheet"
@@ -323,6 +362,15 @@
       <div class="team-grid" id="collaborator-grid"></div>
     </section>
     <!-- Complete collab ends  -->
+    <!-- Complete interns starts  -->
+    <section class="team-section">
+      <h2 class="section-title">Our Interns</h2>
+      <p class="section-subtitle">
+        Students contributing to our research through internships.
+      </p>
+      <div class="intern-grid" id="intern-grid"></div>
+    </section>
+    <!-- Complete interns ends  -->
     <!-- Complete journey starts  -->
     <section class="journey-section">
       <h2 class="section-title">Our Journey</h2>
@@ -485,6 +533,31 @@
       document.addEventListener("DOMContentLoaded", loadAbout);
     </script>
     <!-- loading About ends  -->
+    <!-- loading interns starts  -->
+    <script>
+      async function loadInterns() {
+        try {
+          const res = await fetch("interns.json");
+          const interns = await res.json();
+          const grid = document.getElementById("intern-grid");
+          interns.forEach((intern) => {
+            const card = document.createElement("div");
+            card.className = "intern-card";
+            card.innerHTML = `
+              <h3>${intern.name}</h3>
+              <p class="intern-meta"><i class="fas fa-university"></i> ${intern.institution}</p>
+              <p class="intern-meta"><i class="fas fa-laptop-code"></i> ${intern.department}</p>
+              <p class="intern-meta"><i class="fas fa-graduation-cap"></i> B.Tech (${intern.graduation})</p>
+            `;
+            grid.appendChild(card);
+          });
+        } catch (err) {
+          console.error("Error loading interns data:", err);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", loadInterns);
+    </script>
+    <!-- loading interns ends  -->
     <!-- loading footer starts  -->
     <script>
       async function loadFooter() {
