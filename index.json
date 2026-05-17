@@ -6,20 +6,25 @@
     "buttonLink": "about.html",
     "updates": [
       {
-        "title": "Positions Available!",
-        "text": "We are seeking passionate researchers to join our team to solve critical problems in multiphysics and computation.",
-        "image": "images/Blog1.png"
+        "title": "Lumina Presented at HEMCE 2026!",
+        "text": "Our team successfully delivered a talk and presented our paper on 'Lumina: An AI-Augmented Multiscale Material Informatics Framework' at the HEMCE conference, showcasing offline AI data querying and HPC-ready material models for extreme engineering regimes.",
+        "image": "images/HEMCE_2026_Talk.JPG"
       },
       {
-        "title": "DRDO SHRISTI 2022",
-        "text": "Our team delivered a keynote at the DRDO SHRISTI conference organized by the Defence Research and Development.",
-        "image": "images/Blog2.png"
+       "title": "CoMPhys at INCAM 2026!",
+       "text": "The CoMPhys Research Group is headed to 7th Indian Conference on Applied Mechanics (INCAM 2026)! We will be presenting three exciting papers on adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and spatiotemporal stress prediction using ConvLSTM models. Catch up with us there to discuss collaboration!",
+       "image": "images/INCAM_2026.jpg"
       },
       {
-        "title": "CoMPhys - PMC Sign MOU",
-        "text": "CoMPhys Research Group signed an MOU with PMC to promote academic and research collaboration.",
-        "image": "images/Pub_Journal_1_IJMF_2024.jpg"
-      }
+       "title": "CFD Symposium 2026 at IIT Madras!",
+       "text": "As proud organizers of the Aeronautical Society of India's Annual CFD Symposium, we invite you to submit your abstracts. Showcase your breakthrough computational fluid dynamics research before the May 31st deadline! Submit here: https://www.cfdaesi.com/cfd-symposium-2026",
+       "image": "images/AeSI_CFD_2026.png"
+      },
+      {
+      "title": "Hosting ICNMMF-6 at IIT Madras!",
+      "text": "We are excited to co-organize the 6th International Conference on Numerical Methods in Multiphase Flows (ICNMMF-6), taking place January 18-20, 2027, at IIT Madras. Join global experts in Chennai to discuss advanced multi-phase modeling. Details: https://ge.iitm.ac.in/icnmmf-6",
+      "image": "images/ICNMMF6_IITM.png"
+      }      
     ]
   },
   "whyChoose": {

@@ -13,7 +13,7 @@
         "Density-based all-speed solver framework ",
         "Hybrid Sharp–Diffuse Interface methods integrated with AMR"
       ],
-      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX"],
+      "tools": ["AMReX", "Alamo", "CTP Solver"],
       "impact": [
         "Exascale-ready implementations for large HPC centers",
         "Unified solver frameworks that span Mach regimes and multiphase problems",
@@ -22,17 +22,17 @@
       "image": "images/Research_Image_HPC.jpg"
     },
     {
-      "title": "In-House Multi-Material Eulerian Hydrocode",
+      "title": "In-House Computational Thermophysics Solver Development",
       "subtitle": "High-Strain-Rate Physics and Shock Physics Dynamics",
       "icon": "🌊",
-      "overview": "Scalable multi-material Eulerian hydrocode for shock propagation, impact and fragmentation problems. Designed to resolve sharp features while remaining robust in mixed-material zones using the hybrid interface approach.",
+      "overview": "Scalable Computational Thermophysics Solver for shock propagation, impact and fragmentation problems. Designed to resolve sharp features while remaining robust in mixed-material zones using the hybrid interface approach.",
       "publicationCount": 0,
       "currentProjects": [
         "Modeling shock initiation in energetic materials",
         "Impact response of layered protective structures",
         "High-order methods and AMR for shock-focused multiphysics"
       ],
-      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX"],
+      "tools": ["AMReX", "Alamo", "CTP Solver"],
       "impact": [
         "Accurate prediction of shock–material interactions",
         "Improved designs for protective systems and planetary entry models",
@@ -41,8 +41,8 @@
       "image": "images/Research_Image_Hydrocode.jpg"
     },
     {
-      "title": "PyAMorph: Implicit Geometry Modeling & Morphometric Analysis",
-      "subtitle": "Massively Parallel SDF Framework on Adaptive Meshes — INCAM 2026",
+      "title": "PyAMorph: Tool for Implicit Geometry Modeling & Morphometric Analysis",
+      "subtitle": "Massively Parallel SDF Framework on Adaptive Meshes",
       "icon": "🔷",
       "overview": "Signed Distance Functions (SDFs), Constructive Solid Geometry (CSG), and AMReX Adaptive Mesh Refinement for high-fidelity microstructure characterisation.",
       "publicationCount": 0,
@@ -62,7 +62,29 @@
       "image": "images/PyAMorph image.png",
       "imgtitle": "3D porous microstructure reconstructed via Chan-Vese segmentation on an AMReX MultiFab grid",
       "link": "https://pyamorph.vercel.app/"
-    }
+    },
+    {
+      "title": "Lumina: An AI-Augmented Multiscale Material Informatics Framework",
+      "subtitle": "Activate-on-Demand Material Data for Extreme Aero-Chemo-Thermo-Mechanical Regimes",
+      "icon": "🔥",
+      "overview": "A modular Python-based informatics framework that centralizes fragmented multiscale material data—from atomistic simulation datasets to macro-scale experimental records—within a unified repository utilizing a hierarchical XML schema and a conversational AI assistant.",
+      "publicationCount": 1,
+      "currentProjects": [
+         "Hierarchical XML-based schema and runtime material parsing architecture",
+         "Three-layer data state management (Original, Override, and Active views) for sandbox experimentation",
+        "Digitization of Shock Hugoniot databases (e.g., LANL reports) and multi-scale physics integration (Mie-Grüneisen and JWL Equations of State)",
+        "Conversational AI assistant utilizing locally deployed LLMs for natural language data querying"
+      ],
+      "tools": ["Python", "PyQt6", "PostgreSQL", "Matplotlib", "Ollama", "Llama 2", "cpp-material-engine"],
+      "impact": [
+        "Bridges the gap between granular atomistic data and continuum-scale hydrodynamic solvers through a traceable three-level parametric chain",
+        "Empowers formulators and simulation engineers with automated constitutive model validation and visualization (DoE stabilization)",
+        "Provides a stateless, header-only C++ execution backend suitable for highly concurrent HPC and parallel engineering environments",
+        "Enables completely offline, domain-expert-free database querying via automated natural-language-to-SQL conversions"
+      ],
+      "image": "images/Lumina workflow.png",
+      "imgtitle": "Material Data Processing and AI-Based Natural Language Query Workflow with three-layer state mapping"
+     }
   ],
 
   "Energetic Materials & Reactive Systems": [
@@ -77,7 +99,7 @@
         "Reactive burn models coupled to hydrocodes",
         "Multiscale Framework: DFT → MD → continuum"
       ],
-      "tools": ["LAMMPS", "DFT Codes", "Kinetic Monte Carlo", "Alamo", "AMReX", "SCIMITAR3DeX"],
+      "tools": ["LAMMPS", "DFT Codes", "Kinetic Monte Carlo", "Alamo", "AMReX", "CTP Solver"],
       "impact": [
         "Mechanistic insight into initiation and sensitivity",
         "Improved constitutive/reaction models for engineering simulations",
@@ -99,7 +121,7 @@
         "Topology and microstructure optimization for energy absorption",
         "Coupling experiments and simulations for validation"
       ],
-      "tools": ["Alamo", "AMReX", "SCIMITAR3DeX"],
+      "tools": ["Alamo", "AMReX", "CTP Solver"],
       "impact": [
         "Guides design of lighter, more effective protective systems",
         "Translates microstructural design rules to engineering-scale performance",
@@ -121,7 +143,7 @@
         "Microfluidic device modelling with interface-resolving methods",
         "Transport and mixing of particulates/cells in complex geometries"
       ],
-      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX", "Image-based geometry workflows"],
+      "tools": ["AMReX", "Alamo", "CTP Solver", "Image-based geometry workflows"],
       "impact": [
         "Supports translational bioengineering and device design",
         "Bridges physiological measurements and predictive modelling"
@@ -142,7 +164,7 @@
         "Aerothermochemical coupling in boundary layers at high enthalpy",
         "Multiscale methods for gas-surface interaction kinetics"
       ],
-      "tools": ["Alamo", "AMReX", "SCIMITAR3DeX", "WarpX"],
+      "tools": ["Alamo", "AMReX", "PuMA", "WarpX", "OpenFOAM", "PATO"],
       "impact": [
         "Improves predictive models for thermal protection systems",
         "Informs material selection and design for extreme environments",

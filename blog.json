@@ -62,8 +62,36 @@
     }],
     "announcements":[
     {
+        "date": "Mar 12, 2026",
+        "message": "Invited Talk on 'Towards Predictive Modeling and Controlled Energy Release in Energetic Materials' at Tezpur University, Assam"
+    },
+    {
+        "date": "Feb 23, 2026",
+        "message": "Invited Talk on 'AMReX and Embedded Boundary Methods' at Centre for Development of Advanced Computing (C-DAC), Pune"
+    },
+    {
+        "date": "Feb 16, 2026",
+        "message": "Invited Talk on 'Stop Throwing the Rocket Away: A Guide to not being a Single-Use Engineer' at SRM Institute of Science & Technologies"
+    },
+    {
+        "date": "Feb 5, 2026",
+        "message": "Invited Talk on 'Multiscale Modeling of Shock Initiation in Energetic Materials' at Indian Institute of Space Science and Technology, Thiruvananthapuram"
+    },
+    {
+        "date": "Jan 8, 2026",
+        "message": "Invited Talk on 'Towards the materials by design frameworks for architected energetic materials' at HEMRL, DRDO"
+    },
+    {
+        "date": "Dec 16, 2025",
+        "message": "Invited Talk on 'FEM for Composite Materials: State of the art in Multi-scale Image Based Simulations' at IIT Madras"
+    },
+    {
+        "date": "Dec 2, 2025",
+        "message": "Invited Talk on 'Immersed Boundary Approach to Moving Body Problems: Methods, Implementation and Applications' at Shri Mata Vaishno Devi University, Jammu"
+    },
+    {
         "date": "Sept 12, 2025",
-        "message": "Invited Talk at Bharath University"
+        "message": "Invited Talk on 'Towards Smarter Energetic Materials : A Computational Journey Into Controlled Energy Release' at Bharath University, Chennai"
     }
     ],
     "recent-highlights": {
@@ -71,31 +99,31 @@
     "recent-section-subtitle":"Featured publications representing our latest research breakthroughs",
     "cards":[
     {
-      "recent-badge": "Journal",
-      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
-      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
+      "recent-badge": "Journal 2025",
+      "recent-title": "High-fidelity simulations of shock initiation of an energetic crystal–binder system due to flyer impact.",
+      "recent-authors": "Roy, S., Seshadri, P. K., Okafor, C., Johnson, B. P., & Udaykumar, H. S.",
+      "recent-journal": "Shock Waves",
+      "recent-description": "Mesoscale simulations of energy localization at hotspots provide closure models for multiscale frameworks of shock-to-detonation transition (SDT). Validation of such mesoscale calculations is challenging as direct comparison with experiments is constrained both by limitations of data acquisition in the experiments (e.g., of temperature fields) and modeling over-simplifications in the simulations. To address the latter problem and bring modeling closer to experiments, we advance a high-fidelity mesoscale computational framework for interface-resolved reactive calculations of shock initiation in plastic-bonded explosives (PBXs).",
+      "recent-citations": "0 citations",
+      "recent-link": "https://link.springer.com/article/10.1007/s00193-025-01260-2"
+    },  
+    {
+      "recent-badge": "Pre-Print 2025",
+      "recent-title": "Latent Representation Learning of Multi-scale Thermophysics: Application to Dynamics in Shocked Porous Energetic Material",
+      "recent-authors": "Azarfar, S., Choi, J. B., Nguyen, P. C. H., Nguyen, Y. T., Seshadri, P. K., Udaykumar, H.S., and Baek, S.",
       "recent-journal": "International Journal of Multiphase Flow",
       "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
-      "recent-citations": "4 citations",
-      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
+      "recent-citations": "2 citations",
+      "recent-link":"https://arxiv.org/abs/2506.12996"
     },
     {
-      "recent-badge": "Journal",
-      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
-      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
-      "recent-journal": "International Journal of Multiphase Flow",
-      "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
-      "recent-citations": "4 citations",
-      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
-    },
-    {
-      "recent-badge": "Journal",
-      "recent-title": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
-      "recent-authors": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
-      "recent-journal": "International Journal of Multiphase Flow",
-      "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
-      "recent-citations": "4 citations",
-      "recent-link":"https://www.sciencedirect.com/science/article/pii/S030193222400154X?via%3Dihub"
+      "recent-badge": "ICML Conference 2024",
+      "recent-title": "PARCv2: Physics-aware recurrent convolutional neural networks for spatiotemporal dynamics modeling.",
+      "recent-authors": "Nguyen, P. C. H., Cheng, X., Azarfar, S., Seshadri, P. K., Nguyen, Y. T., Kim, M., Choi, S., Udaykumar, H.S., and Baek, S.",
+      "recent-journal": "ICML Conference 2024",
+      "recent-description": "we investigate an inductive bias approach that is versatile and generalizable to model generic nonlinear field evolution problems. Our study focuses on the recent physics-aware recurrent convolutions (PARC), which incorporates a differentiator-integrator architecture that inductively models the spatiotemporal dynamics of generic physical systems. We extend the capabilities of PARC to simulate unsteady, transient, and advection-dominant systems. The extended model, referred to as PARCv2, is equipped with differential operators to model advection-reaction-diffusion equations, as well as a hybrid integral solver for stable, long-time predictions.",
+      "recent-citations": "22 citations",
+      "recent-link":"https://arxiv.org/abs/2402.12503"
     }
   ]}
 }
