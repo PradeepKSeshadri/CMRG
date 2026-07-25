@@ -6,6 +6,23 @@
   "publications": [
     {
       "card": {
+        "thumbnail": "images/Pub_Okafor_ShockWaves_2026.jpg",
+        "card-heading": "High-order Eulerian sharp interface numerical techniques for micro- to macro-scale simulation of shocked energetic materials",
+        "author-name": "Okafor, C., Seshadri, P. K., Roy, S., & Udaykumar, H. S.",
+        "year": "2026",
+        "citation": "1 citations",
+        "tags": ["High-order Accuracy", "Sharp Interface", "Eulerian Framework", "Shock-to-Detonation", "Energetic Materials"],
+        "category": "Journal",
+        "publication-title": "Shock Waves",
+        "description": "A high-order Eulerian sharp-interface framework for simulating compressible flow in heterogeneous energetic materials from the grain (micro) scale up to the macro scale. The method is built to handle the fast transients and severe interfacial deformations that arise as a shock wave traverses a multi-phase, multi-material energetic mixture — including the transition from shock to detonation — enabling accurate, interface-resolved simulation of shocked energetic materials.",
+        "doi": "",
+        "view-link": "#",
+        "pdf-link": "#",
+        "needs_review": true
+      }
+    },
+    {
+      "card": {
         "thumbnail": "images/Pub_Shock_Waves_2026.jpg",
         "card-heading": "High-fidelity simulations of shock initiation of an energetic crystal–binder system due to flyer impact.",
         "author-name": "Roy, S., Seshadri, P. K., Okafor, C., Johnson, B. P., & Udaykumar, H. S.",
