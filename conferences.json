@@ -1,0 +1,158 @@
+{
+  "ribbon": {
+    "title": "Conferences & Talks",
+    "description": "Conference papers and invited/contributed talks presented by the group."
+  },
+  "items": [
+    {
+      "title": "Visco-elastic and Visco-plastic Strain-Rate Dependent Material Models for Bioinspired UHMWPE-Kevlar armour structures.",
+      "authors": "",
+      "venue": "APS Global Physics Summit 2026, 2026",
+      "year": "2026",
+      "citations": 0,
+      "kind": "talk",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "SCIMITAR3D-V2. 0: A versatile high-order accurate sharp-interface framework for compressible multi-material reactive simulations of heterogeneous energetic materials",
+      "authors": "",
+      "venue": "24th Biennial Conference of the APS Topical Group on Compression of …, 2025",
+      "year": "2025",
+      "citations": 0,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Direct numerical simulation of shock-to-detonation transition (SDT) in energetic materials using microstructure images",
+      "authors": "",
+      "venue": "24th Biennial Conference of the APS Topical Group on Compression of …, 2025",
+      "year": "2025",
+      "citations": 0,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "High-fidelity Numerical Simulations of High-speed Droplet Impact on Deformable Solids",
+      "authors": "",
+      "venue": "24th Biennial Conference of the APS Topical Group on Compression of …, 2025",
+      "year": "2025",
+      "citations": 0,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Physics-Aware Convolutional Neural Networks for Modelling Energetic Material in the Weak Shock Regime",
+      "authors": "",
+      "venue": "24th Biennial Conference of the APS Topical Group on Compression of …, 2025",
+      "year": "2025",
+      "citations": 0,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "PARCv2: Physics-aware recurrent convolutional neural networks for spatiotemporal dynamics modeling",
+      "authors": "",
+      "venue": "Proceedings of the 41st International Conference on Machine Learning, 37649 …, 2024",
+      "year": "2024",
+      "citations": 22,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "High-order methods for simulations of shocked reactive energetic materials at all scales",
+      "authors": "",
+      "venue": "APS March Meeting Abstracts 2024, A20. 010, 2024",
+      "year": "2024",
+      "citations": 3,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "High fidelity mesoscale simulations of shock initiation through flyer impact on HMX crystal-binder aggregates",
+      "authors": "",
+      "venue": "APS March Meeting Abstracts 2024, A20. 009, 2024",
+      "year": "2024",
+      "citations": 2,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Transfer-Learning for Rapid Predictions of CHNO Energetic Material Sensitivity",
+      "authors": "",
+      "venue": "APS March Meeting Abstracts 2024, A20. 006, 2024",
+      "year": "2024",
+      "citations": 0,
+      "kind": "talk",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Interface-resolved reactive simulations of initiation through flyer impact on HMX crystal–binder aggregates",
+      "authors": "",
+      "venue": "Bulletin of the American Physical Society 68, 2023",
+      "year": "2023",
+      "citations": 0,
+      "kind": "talk",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Modeling Multi-dimensional Shock-to-Detonation Transition of Pressed HMX Using a Meso-informed Ignition and Growth Model",
+      "authors": "",
+      "venue": "APS Shock Compression of Condensed Matter Meeting Abstracts, 1J. 004, 2022",
+      "year": "2022",
+      "citations": 0,
+      "kind": "talk",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Structure-property-performance linkages for heterogeneous energetic materials using deep-learning generated synthetic microstructures",
+      "authors": "",
+      "venue": "APS March Meeting Abstracts 2021, C23. 010, 2021",
+      "year": "2021",
+      "citations": 1,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Evaluation of the importance of void shapes in predictive meso-informed ignition and growth surrogate models for heterogeneous energetic materials",
+      "authors": "",
+      "venue": "APS March Meeting Abstracts 2021, C23. 011, 2021",
+      "year": "2021",
+      "citations": 0,
+      "kind": "talk",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Assessment of pressure reconstruction schemes in sharp interface immersed boundary method",
+      "authors": "",
+      "venue": "AIP Conference Proceedings 1978 (1), 030002, 2018",
+      "year": "2018",
+      "citations": 6,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
+      "title": "Determination of Flow Field Due to Clap and Fling Motion of a Rigid Flapping Wing Using LBM Simulation",
+      "authors": "",
+      "venue": "Proceedings of International Conference on Intelligent Unmanned Systems 9, 2013",
+      "year": "2013",
+      "citations": 0,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    }
+  ]
+}
