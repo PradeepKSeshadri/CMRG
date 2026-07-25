@@ -13,7 +13,7 @@
     "policy": "assets/as2050/AS2050_Course_Policy_2026.pdf",
     "plan": "assets/as2050/AS2050_Lecture_Plan_2026.pdf"
   },
-  "archiveLink": "completecourse.html",
+  "archiveLink": "completecourse.html?id=1",
   "assessmentLead": "Continuous by design — the term is graded through weekly tutorial quizzes, two quizzes, and a comprehensive end-semester exam.",
   "assessment": [
     { "c": "Continuous Assessment", "d": "Short quiz at every tutorial + assignments", "w": "20%" },
