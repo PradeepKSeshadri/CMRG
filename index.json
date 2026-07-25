@@ -1,84 +1,76 @@
 {
   "hero": {
-    "title": "Computational Multi-Physics Research Group <br> Indian Institute of Technology, Madras",
-    "description": "Bridging atoms to continuum, biology to ballistics — the CoMPhys Research Group at IIT Madras simulates every scale, every material, every interface, and every speed across defense, aerospace, energy, and bioinspired systems.",
-    "buttonText": "Explore Now",
-    "buttonLink": "about.html",
+    "title": "Computational Multiphysics Research Group",
+    "description": "Bridging atoms to continuum — we simulate every scale, material, and interface across defense, aerospace, energy, and bioinspired systems.",
+    "buttonText": "Explore Research",
+    "buttonLink": "ongoing.html",
     "updates": [
       {
+        "tag": "HEMCE 2026",
         "title": "Lumina Presented at HEMCE 2026!",
-        "text": "Our team successfully delivered a talk and presented our paper on 'Lumina: An AI-Augmented Multiscale Material Informatics Framework' at the HEMCE conference, showcasing offline AI data querying and HPC-ready material models for extreme engineering regimes.",
-        "image": "images/HEMCE_2026_Talk.JPG"
+        "text": "Our team delivered a talk on 'Lumina: An AI-Augmented Multiscale Material Informatics Framework', showcasing offline AI data querying and HPC-ready material models for extreme engineering regimes.",
+        "image": "images/HEMCE_2026_Talk.JPG",
+        "link": "blog.html"
       },
       {
+       "tag": "INCAM 2026",
        "title": "CoMPhys at INCAM 2026!",
-       "text": "The CoMPhys Research Group is headed to 7th Indian Conference on Applied Mechanics (INCAM 2026)! We will be presenting three exciting papers on adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and spatiotemporal stress prediction using ConvLSTM models. Catch up with us there to discuss collaboration!",
-       "image": "images/INCAM_2026.jpg"
+       "text": "Presenting three papers at the 7th Indian Conference on Applied Mechanics — adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and ConvLSTM stress prediction.",
+       "image": "images/INCAM_2026.jpg",
+       "link": "blog.html"
       },
       {
-       "title": "CFD Symposium 2026 at IIT Madras!",
-       "text": "As proud organizers of the Aeronautical Society of India's Annual CFD Symposium, we invite you to submit your abstracts. Showcase your breakthrough computational fluid dynamics research before the May 31st deadline! Submit here: https://www.cfdaesi.com/cfd-symposium-2026",
-       "image": "images/AeSI_CFD_2026.png"
+       "tag": "CFD Symposium",
+       "title": "Hosting the AeSI CFD Symposium 2026",
+       "text": "As organizers of the Aeronautical Society of India's Annual CFD Symposium at IIT Madras, we invite you to submit your abstracts before the deadline.",
+       "image": "images/AeSI_CFD_2026.png",
+       "link": "https://www.cfdaesi.com/cfd-symposium-2026"
       },
       {
-      "title": "Hosting ICNMMF-6 at IIT Madras!",
-      "text": "We are excited to co-organize the 6th International Conference on Numerical Methods in Multiphase Flows (ICNMMF-6), taking place January 18-20, 2027, at IIT Madras. Join global experts in Chennai to discuss advanced multi-phase modeling. Details: https://ge.iitm.ac.in/icnmmf-6",
-      "image": "images/ICNMMF6_IITM.png"
-      }      
+      "tag": "ICNMMF-6",
+      "title": "Co-organizing ICNMMF-6 at IIT Madras",
+      "text": "The 6th International Conference on Numerical Methods in Multiphase Flows — January 18-20, 2027, at IIT Madras. Join global experts in Chennai.",
+      "image": "images/ICNMMF6_IITM.png",
+      "link": "https://ge.iitm.ac.in/icnmmf-6"
+      }
     ]
   },
-  "whyChoose": {
-    "heading": "Why Choose Our Lab",
-    "description": "Tackle extreme physics with interdisciplinary tools, strong team culture, and rigorous training — from fundamentals to impact.",
-    "items":[
-        {
-        "icon": "🎖️",
-        "title": "Extreme Multiphysics",
-        "text": "All Scales and Speeds. Model complex flows and materials across scales — from nature to impact. (Respecting nature’s richness, capturing it through computation)"
-        },
-        {
-        "icon": "👥",
-        "title": "Interdisciplinary Science Meets Real-World Problems",
-        "text": "Start with real-world phenomena, model them, and drive practical innovation. (Observation leads to insight — insight leads to solutions)"
-        },
-        {
-        "icon": "💻",
-        "title": "Rigorous Training",
-        "text": "Strong Team Culture. Learn to collaborate, code professionally, and use cutting-edge computing tools. (We grow researchers ready for science, industry, and leadership)"
-        }
-     ]
-   },
   "research": {
     "heading": "Research Areas",
-    "description": "Our multidisciplinary approach spans various domains of computational physics and engineering.",
+    "description": "A multidisciplinary approach spanning computational physics and engineering — from nature's flyers to hypersonic reentry.",
     "items": [
       {
+        "iconKey": "flows",
         "icon": "🌊",
         "title": "Bioinspired Flows",
-        "text": "Modeling unsteady aerodynamics in nature’s flyers and biological systems."
+        "text": "Modeling unsteady aerodynamics in nature's flyers and biological systems."
       },
       {
+        "iconKey": "energetic",
         "icon": "🏗️",
         "title": "Energetic Material Dynamics",
         "text": "Simulating shock, reaction, and detonation in high-energy materials."
       },
       {
+        "iconKey": "hypersonic",
         "icon": "🔥",
         "title": "Hypersonic Reentry Physics",
         "text": "Capturing extreme aerothermal loads, ablation, and gas-surface interactions."
       },
       {
+        "iconKey": "strainrate",
         "icon": "⚡",
-        "title": "High Strain-Rate Material Response",
-        "text": "Understanding material deformation and failure under dynamic loading conditions."
+        "title": "High Strain-Rate Response",
+        "text": "Material deformation and failure under extreme dynamic loading."
       },
       {
-        "icon": "⚡",
+        "iconKey": "ai",
+        "icon": "🤖",
         "title": "AI-Driven Multi-Scale Modeling",
-        "text": "Accelerating simulations using machine learning across scales and physics domains."
+        "text": "Accelerating simulations with machine learning across scales and physics domains."
       }
     ],
-    "buttonText": "View All Research →",
+    "buttonText": "Ongoing & sponsored research",
     "buttonLink": "ongoing.html"
   },
   "join": {

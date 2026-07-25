@@ -13,895 +13,202 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMRG | Home</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="images/iit madras without bg.png"
-    />
+    <link rel="icon" type="image/png" href="images/brand/CMRG-Icon.png" />
     <!-- style sheet starts  -->
     <link rel="stylesheet" href="style.css" />
     <!-- style sheet ends  -->
     <style>
+      /* Brand font from the official kit */
+      @font-face {
+        font-family: "League Spartan";
+        src: url("images/brand/LeagueSpartan-Light.ttf") format("truetype");
+        font-weight: 300; font-style: normal; font-display: swap;
+      }
+
       :root {
         --primary: #012149;
-        --secondary: white;
-        --highlight: #facc15;
-        --text-dark: #111827;
-        --text-light: #f9fafb;
-      }
-      /* Complete Hero starts  */
-     
-      /* * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Segoe UI", sans-serif;
-      }
-      @media (max-width: 760px) {
-        header { height:72px; padding:10px 18px; }
-        header .brand, header .iit { height:44px; }
-        
-        nav.desktop-nav ul { gap:12px; }
-        nav.desktop-nav ul li a { font-size:0.95rem; padding:8px 6px; }
-      } */
-
-      /* Background logos that appear/disappear on either side of center text */
-      /* .hero {
-        position: relative;
-      } */
-
-      /* Make sure hero-content sits above the logos */
-      /* .hero-content {
-        z-index: 100;
-      } */
-
-      /* Background logo common rules */
-      /* .bg-logo {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 0;
-        pointer-events: none;         
-        z-index: 1;                   
-        width: clamp(220px, 28vw, 680px); 
-        max-height: 68vh;             
-        transition: opacity 0.6s ease;
-      } */
-
-      /* Left / Right placement and animation */
-      /* .bg-logo.left  { left: 6%;  animation: verticalSlideLeft 1s linear infinite; }
-      .bg-logo.right { right: 6%; animation: verticalSlideRight 1s linear infinite; animation-delay: 7s; } */
-
-      /* Keyframes for left logo (slide in from left, pulse, slide out) 
-      @keyframes verticalSlideLeft {
-        0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
-        10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
-        30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
-        60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
-        85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
-        100% { opacity: 0; transform: translateY(140%)  scale(.98); }
-      }
-      @keyframes verticalSlideRight {
-        10%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
-        35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-        65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-        90%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
-        100% { opacity: 0; transform: translate(18%, -50%)  scale(.96); }
-      }*/
-
-      /* Mirror movement for right logo */
-      /* @keyframes verticalSlideRight {
-        0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
-        10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
-        30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
-        60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
-        85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
-        100% { opacity: 0; transform: translateY(140%)  scale(.98); }
-      } */
-      /* @keyframes verticalSlideRight{
-        10%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
-        35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-        65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-        90%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
-        100% { opacity: 0; transform: translate(-18%, -50%) scale(.96); }
-      } */
-
-      /* Reduce intensity on small screens so logos don't dominate the view */
-      /* @media (max-width: 760px) {
-        .bg-logo { width: clamp(140px, 28vw, 340px); opacity: 0.12; }
-        .bg-logo.left { left: 4%; }
-        .bg-logo.right { right: 4%; }
+        --primary-2: #012a5e;
+        --gold: #facc15;
+        --ink: #0f1729;
+        --muted: #5a6b83;
+        --line: #e6ebf2;
+        --bg: #ffffff;
+        --bg-soft: #f6f8fb;
+        --maxw: 1180px;
       }
 
-      /* Accessibility: respect users who prefer reduced motion */
-      /*@media (prefers-reduced-motion: reduce) {
-        .bg-logo { animation: none !important; opacity: 0.3 !important; transform: translateY(-50%) scale(1) !important; }
-      } */
+      /* ---------- Header brand lockup (home) ---------- */
+      .logo.brand-lockup { align-items: center; gap: 14px; }
+      .logo-chip {
+        width: 46px; height: 46px; border-radius: 12px; background: #fff; flex: 0 0 auto;
+        display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.22);
+      }
+      .logo-chip img { width: 80%; height: 80%; object-fit: contain; }
+      .wordmark { display: flex; flex-direction: column; line-height: 1.2; max-width: 340px; }
+      .wordmark .w1 {
+        font-family: "League Spartan", "Segoe UI", sans-serif;
+        font-weight: 300; font-size: 1.16rem; color: var(--text-light); letter-spacing: .3px;
+      }
+      .wordmark .w2 { font-size: .66rem; letter-spacing: 1.5px; text-transform: uppercase; color: #9fb2cf; margin-top: 3px; }
+      .brand-divider { width: 1px; height: 40px; background: rgba(255,255,255,.16); flex: 0 0 auto; }
+      .iit-emblem { width: 46px; height: 46px; border-radius: 50%; flex: 0 0 auto; }
+      @media (max-width: 640px){
+        .wordmark .w2, .brand-divider, .iit-emblem { display: none; }
+        .wordmark { max-width: 190px; }
+        .wordmark .w1 { font-size: .95rem; }
+      }
 
+      /* ---------- Hero ---------- */
       .hero {
-        /* height: 90vh; */
-        background: linear-gradient(90deg, #011733, #012a5e, #0048a5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        padding: 10px;
-        position: relative;
-        /* border:2px solid red; */
-      }
-
-      .hero::before {
-        content: "";
-        background: url("images/IIT_Madras_Logo.svg.png") no-repeat center;
-        background-size: 500px;
-        opacity: 0.08;
-        position: absolute;
-        top: 28%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 800px;
-        height: 800px;
-        z-index: 0;
-      }
-      /* ensure content is centered and doesn't overflow on small screens */
-      .hero-content {
-        max-width: 1300px;
-        width: 100%;
-        padding: 0 20px;
-        text-align: center;
-        z-index: 2;
-        margin-top: -10px;
-        /* border:2px solid blue; */
-        margin: 150px auto 70px;
-      }
-      .hero-content h2 {
-        font-size: 2.8rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        line-height: 1.1;
+        position: relative; overflow: hidden;
+        background:
+          radial-gradient(1200px 600px at 78% -10%, rgba(0,72,165,.55), transparent 60%),
+          linear-gradient(160deg, #011229 0%, var(--primary) 42%, var(--primary-2) 100%);
         color: var(--text-light);
-        text-transform: none;
+        padding: clamp(80px, 14vh, 140px) 0 clamp(76px, 12vh, 130px);
+      }
+      .hero-watermark {
+        position: absolute; right: 2%; top: 50%; transform: translateY(-50%);
+        width: min(38vw, 440px); opacity: .10; pointer-events: none;
+      }
+      .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+      .hero .wrap { position: relative; z-index: 2; }
+      .hero-badge {
+        width: 76px; height: 76px; border-radius: 18px; background: #fff; display: grid; place-items: center;
+        box-shadow: 0 12px 34px rgba(0,0,0,.30); margin-bottom: 28px;
+      }
+      .hero-badge img { width: 80%; height: 80%; object-fit: contain; }
+      .eyebrow {
+        text-transform: uppercase; letter-spacing: 2.5px; font-size: .74rem; font-weight: 600;
+        color: var(--gold); margin: 0 0 20px;
+      }
+      .hero h1 {
+        font-family: "League Spartan", "Segoe UI", sans-serif;
+        margin: 0; font-weight: 300; letter-spacing: .2px;
+        font-size: clamp(2.2rem, 4.8vw, 3.7rem); line-height: 1.1; text-wrap: balance;
+        max-width: 17ch; color: var(--text-light);
+      }
+      .hero .lede {
+        margin: 24px 0 0; max-width: 60ch; color: #c4d1e6;
+        font-size: clamp(1.02rem, 1.4vw, 1.18rem); line-height: 1.7;
+      }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+      .btn2 {
+        display: inline-flex; align-items: center; gap: 9px;
+        padding: 13px 24px; border-radius: 8px; font-weight: 600; font-size: .98rem;
+        border: 1.5px solid transparent; transition: all .22s ease; text-decoration: none;
+      }
+      .btn-gold { background: var(--gold); color: var(--primary); border-color: var(--gold); }
+      .btn-gold:hover { background: transparent; color: var(--gold); }
+      .btn-ghost { color: #fff; border-color: rgba(255,255,255,.35); }
+      .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+      .btn2 svg { width: 17px; height: 17px; }
+
+      /* ---------- Section scaffolding ---------- */
+      .section { padding: clamp(60px, 8.5vw, 100px) 0; }
+      .section.soft { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .sec-head { max-width: 640px; }
+      .sec-head.center { margin: 0 auto; text-align: center; }
+      .sec-head h2 {
+        margin: 0; font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 700;
+        letter-spacing: -.4px; color: var(--ink); text-wrap: balance;
+      }
+      .sec-head p { margin: 14px 0 0; color: var(--muted); font-size: 1.05rem; line-height: 1.6; }
+      .sec-head .kicker {
+        display: inline-block; text-transform: uppercase; letter-spacing: 2px;
+        font-size: .72rem; font-weight: 700; color: var(--primary-2); margin: 0 0 12px;
+      }
+
+      /* ---------- Research grid ---------- */
+      .research-grid { margin-top: 50px; display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 900px){ .research-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px){ .research-grid { grid-template-columns: 1fr; } }
+      .rcard {
+        background: var(--bg); border: 1px solid var(--line); border-radius: 14px;
+        padding: 30px 26px; text-align: left;
+        transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      }
+      .rcard:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(1,33,73,.10); border-color: #cfd9e8; }
+      .rcard .ico {
+        width: 46px; height: 46px; border-radius: 11px; display: grid; place-items: center;
+        background: rgba(1,42,94,.06); color: var(--primary-2); margin-bottom: 18px;
+      }
+      .rcard .ico svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+      .rcard .ico .emoji { font-size: 24px; }
+      .rcard h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 600; letter-spacing: -.2px; color: var(--ink); }
+      .rcard p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
+      .rcard-cta {
+        display: flex; flex-direction: column; justify-content: center;
+        background: var(--bg-soft); border-style: dashed;
+      }
+      .rcard-cta h3 { margin-bottom: 6px; }
+      .textlink {
+        display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary-2);
+        border-bottom: 2px solid transparent; padding-bottom: 2px; text-decoration: none;
+        transition: border-color .2s, gap .2s; width: fit-content;
+      }
+      .textlink:hover { border-color: var(--gold); gap: 12px; }
+      .textlink svg { width: 16px; height: 16px; }
+
+      /* ---------- Latest News ---------- */
+      .news-grid { margin-top: 50px; display: grid; gap: 24px; grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 900px){ .news-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
+      .ncard {
+        background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+        display: flex; flex-direction: column; text-decoration: none;
+        transition: transform .22s ease, box-shadow .22s ease;
+      }
+      .ncard:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(1,33,73,.12); }
+      .ncard .thumb { aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-soft); display: block; }
+      .ncard .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .ncard .body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; text-align: left; }
+      .tag {
+        align-self: flex-start; font-size: .68rem; font-weight: 700; letter-spacing: 1.2px;
+        text-transform: uppercase; color: var(--primary-2); background: rgba(1,42,94,.07);
+        padding: 5px 10px; border-radius: 999px;
+      }
+      .ncard-title { font-size: 1.06rem; font-weight: 600; line-height: 1.35; letter-spacing: -.2px; color: var(--ink); }
+      .ncard-text {
+        color: var(--muted); font-size: .93rem; line-height: 1.55;
+        display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+      }
+      .center-link { margin-top: 42px; text-align: center; }
+      .center-link .textlink { margin: 0 auto; }
+
+      /* ---------- Join strip ---------- */
+      .join {
+        background:
+          radial-gradient(900px 420px at 85% 120%, rgba(250,204,21,.14), transparent 60%),
+          linear-gradient(120deg, var(--primary) 0%, var(--primary-2) 100%);
+        color: var(--text-light); text-align: center;
+      }
+      .join .wrap { padding-top: clamp(60px, 8.5vw, 92px); padding-bottom: clamp(60px, 8.5vw, 92px); }
+      .join h2 { margin: 0; font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 700; letter-spacing: -.4px; }
+      .join p { margin: 16px auto 0; max-width: 54ch; color: #c4d1e6; font-size: 1.08rem; line-height: 1.6; }
+      .join .cta-row { justify-content: center; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .rcard, .ncard, .btn2, .textlink { transition: none !important; }
       }
-
-      .hero-content p {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        margin-bottom: 30px;
-        color: var(--text-light);
-      }
-
-      .btn {
-        background-color: var(--highlight);
-        color: var(--primary);
-        border: 2px solid var(--highlight);
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        text-align: center;
-        max-width: 200px;
-        position: relative;
-        /* z-index: 9999; */
-        outline: none;
-        display: inline-block;
-        /* border:2px solid red; */
-      }
-
-      .btn:hover {
-        color: var(--highlight);
-        background-color: transparent;
-        border: 2px solid var(--highlight);
-        outline: none;
-      }
-
-      .box div {
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        background-color: transparent;
-        border: 3px solid rgba(197, 197, 197, 0.8);
-        transform: rotate(45deg);
-        /* border:20px solid red; */
-
-      }
-      .box div:nth-child(1) {
-        top: 25%;
-        left: 43%;
-        animation: animate 13s linear infinite;
-      }
-      .box div:nth-child(2) {
-        top: 70%;
-        left: 40%;
-        animation: animate 9s linear infinite;
-      }
-      .box div:nth-child(3) {
-        top: 17%;
-        left: 6%;
-        animation: animate 9s linear infinite;
-      }
-      .box div:nth-child(4) {
-        top: 35%;
-        left: 60%;
-        animation: animate 10s linear infinite;
-      }
-      .box div:nth-child(5) {
-        top: 67%;
-        left: 10%;
-        animation: animate 6s linear infinite;
-      }
-      .box div:nth-child(6) {
-        top: 75%;
-        left: 60%;
-        animation: animate 12s linear infinite;
-      }
-      .box div:nth-child(7) {
-        top: 80%;
-        left: 84%;
-        animation: animate 10s linear infinite;
-      }
-      .box div:nth-child(8) {
-        top: 32%;
-        left: 25%;
-        animation: animate 16s linear infinite;
-      }
-      .box div:nth-child(9) {
-        top: 90%;
-        left: 25%;
-        animation: animate 9s linear infinite;
-      }
-      .box div:nth-child(10) {
-        top: 20%;
-        left: 80%;
-        animation: animate 5s linear infinite;
-      }
-      @keyframes animate {
-        0% {
-          transform: scale(0) translateY(0) rotate(0);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1.3) translateY(-90px) rotate(360deg);
-          opacity: 1;
-        }
-      }
-
-      .scroll-down {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
-      }
-
-      .scroll-down span {
-        display: block;
-        width: 25px;
-        height: 25px;
-        border-bottom: 3px solid #ffffff;
-        border-right: 3px solid #fff;
-        transform: rotate(45deg);
-        margin: -7px;
-        animation: animate1 2s infinite;
-      }
-
-      @keyframes animate1 {
-        0% {
-          opacity: 1;
-          transform: rotate(45deg) translate(-20px, -20px);
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 1;
-          transform: rotate(45deg) translate(20px, 20px);
-        }
-      }
-
-      .nav-badge {
-      position: absolute;
-      top: 0px;
-      right: -18px;
-      width: 29px;
-      height: 15px;
-      background: red;
-      border-radius: 10%;
-      box-shadow: 0 0 0 rgba(255, 0, 0, 0.7);
-      animation: pulse 1.5s infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 10px;
-      /* font-family: "Dancing Script", cursive; */
-    }
-
-    /* Pulse animation */
-    @keyframes pulse {
-      0% {
-        transform: scale(0.9);
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 8px rgba(255, 0, 0, 0);
-      }
-      100% {
-        transform: scale(0.9);
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-      .nav-badge {
-      position: absolute;
-      top: 340px;
-      right: -18px;
-      left:98px;
-    }
-    }
-
-      /* .scroll-buttons {
-        position: absolute;
-        bottom: 30px; 
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 20px;
-        z-index: 3;
-      }
-
-     .scroll-btn {
-       background: rgba(255, 255, 255, 0.12);
-       color: white;
-       border: 1px solid rgba(255,255,255,0.25);
-       padding: 10px 18px;
-       border-radius: 25px;
-       text-decoration: none;
-       font-size: 0.95rem;
-       font-weight: 500;
-       transition: all 0.3s ease;
-       backdrop-filter: blur(4px);
-     }
-
-     .scroll-btn:hover {
-       background: rgba(255, 255, 255, 0.28);
-       color: var(--highlight);
-       border-color: var(--highlight);
-    }
-
-     html { scroll-behavior: smooth; } */
-
-     /* Hero Infinite Moving Cards starts */
-      .carousal {
-        color: white;
-        text-align: center;
-        padding: 40px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        margin-bottom: 70px;
-        z-index: 0;
-      }
-
-      .carousal::-webkit-scrollbar{
-        display: none;
-      }
-
-      .carousal h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 40px;
-        color: #facc15;
-      }
-
-      .group{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        animation: spin 15s infinite linear;
-      }
-
-      .group[aria-hidden="true"] {
-        position: absolute;
-        left: 100%;
-        display: flex;
-        gap: 30px;
-        align-items: center;
-      }
-
-      @keyframes spin {
-        from{
-          translate: 0;
-        }
-        to{
-          translate:-100%;
-        }
-      }
-
-      .group-card {
-        background-color: #0a1f3b7f;
-        border-radius: 15px;
-        width: 320px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        flex: 0 0 320px;
-      }
-
-      .group-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      }
-
-      .group-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .group-card .group-content {
-        padding: 20px;
-      }
-
-      .group-card h3 {
-        color: #facc15;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-      }
-
-      .group-card p {
-        font-size: 0.95rem;
-        color: #e5e7eb;
-        line-height: 1.5;
-      }
-
-      /* Hero Infinite Moving Cards ends */
-
-      /* Complete Hero ends  */
-      /* Complete why starts  */
-      .why-choose-section {
-        text-align: center;
-        padding: 60px 20px;
-        margin-top: 50px;
-      }
-
-      .why-choose-section h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        color: var(--text-dark);
-      }
-
-      .why-choose-section p {
-        font-size: 1rem;
-        max-width: 700px;
-        margin: 0 auto 40px;
-        color: #64748b;
-      }
-
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-      }
-
-      .card {
-        background-color: var(--secondary);
-        border-radius: 12px;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
-        padding: 30px 20px;
-        width: 280px;
-        text-align: center;
-        border-radius: 5px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .card:hover {
-        transform: scale(1.05);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
-      }
-
-      .icon {
-        font-size: 40px;
-        background-color: #1f3b8f;
-        color: var(--text-light);
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        border-radius: 50%;
-        margin: 0 auto 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .card h3 {
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        color: #333;
-      }
-
-      .card p {
-        color: #555;
-        font-size: 0.95rem;
-      }
-      @media (max-width: 600px) {
-        .why-choose-section {
-          margin-top: 30px;
-        }
-        .card {
-          width: 90%;
-        }
-        .hero-content h2 {
-          font-size: 1.8rem;
-        }
-        .hero-content p {
-          font-size: 1rem;
-        }
-      }
-      /* Complete why ends  */
-      /* Complete research starts  */
-      .research-section {
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      .research-section-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .research-section h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      .research-section p {
-        color: #64748b;
-        margin-bottom: 40px;
-        max-width: 700px;
-        margin-inline: auto;
-        font-size: 1rem;
-      }
-
-      .research-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        margin-bottom: 40px;
-      }
-
-      .research-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 4px 12px;
-        padding: 30px 20px;
-        width: 260px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .research-card:hover {
-        transform: scale(1.05);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
-      }
-
-      .icon {
-        font-size: 40px;
-        margin-bottom: 15px;
-      }
-
-      .research-card h3 {
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-      }
-
-      .research-card p {
-        font-size: 0.95rem;
-        color: #64748b;
-      }
-
-      .btn-view {
-        display: inline-block;
-        background: var(--primary);
-        color: var(--text-light);
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background 0.3s ease;
-        border: 2px solid var(--primary);
-      }
-
-      .btn-view:hover {
-        background: white;
-        border: 2px solid var(--primary);
-        color: var(--primary);
-      }
-
-      @media (max-width: 768px) {
-        .research-card {
-          width: 100%;
-          max-width: 400px;
-        }
-      }
-      /* Complete research ends  */
-      /* Complete join our community starts*/
-      .join-section {
-        background-color: var(--primary);
-        color: white;
-        text-align: center;
-        padding: 60px 20px;
-        position: relative;
-        overflow: hidden;  
-        box-shadow: 0px 2px 200px rgb(0, 20, 62)
-      }
-
-      .join-section .box div {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-        border: 3px solid rgba(255, 255, 255, 0.5); /* lighter border for contrast */
-        transform: rotate(45deg);
-        animation: animate 12s linear infinite;
-      }
-
-      .join-section .box div:nth-child(1) { top: 20%; left: 30%; animation-duration: 10s; }
-      .join-section .box div:nth-child(2) { top: 70%; left: 50%; animation-duration: 12s; }
-      .join-section .box div:nth-child(3) { top: 40%; left: 80%; animation-duration: 9s; }
-      .join-section .box div:nth-child(4) { top: 60%; left: 10%; animation-duration: 11s; }
-      .join-section .box div:nth-child(5) { top: 10%; left: 60%; animation-duration: 14s; }
-
-      .join-section-container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .join-section h2 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-      }
-
-      .join-section p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 30px;
-      }
-      /* Complete join our community ends*/
-      header{
-        z-index: 999;
-      }
-      /* Hero Infinite Moving Cards starts */
-      .carousal {
-        color: white;
-        text-align: center;
-        padding: 40px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        margin: 40px auto;
-        max-width: 100%;
-        /* border:2px solid blue; */
-        box-sizing: border-box;
-      }
-
-      .carousal::-webkit-scrollbar{
-        display: none;
-      }
-
-      .carousal h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 40px;
-        color: #facc15;
-      }
-
-      .group{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        padding-right: 0;
-        animation: spin 15s infinite linear;
-      }
-
-      .group[aria-hidden="true"] {
-        position: absolute;
-        left: 90%;
-        display: flex;
-        gap: 30px;
-        align-items: center;
-      }
-
-      @keyframes spin {
-        from{
-          translate: 0;
-        }
-        to{
-          translate:-100%;
-        }
-      }
-
-      .group-card {
-        background-color: #0a1f3b7f;
-        border-radius: 15px;
-        width: 300px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        flex: 0 0 auto;
-
-      }
-
-      .group-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      }
-
-      .group-card img {
-        width: 100%;
-        height: 200px;
-        /* height: 180px; */
-        object-fit: cover;
-        display: block;
-      }
-
-      .group-card .group-content {
-        padding: 30px;
-      }
-
-      .group-card h3 {
-        color: #facc15;
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-      }
-
-      .group-card p {
-        font-size: 0.9rem;
-        color: #e5e7eb;
-        line-height: 1.5;
-      }
-
-      @keyframes spin {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
-            
-      @media (max-width: 1200px) {
-        .hero-content {
-              /* border:2px solid red; */
-              padding: 100px 0px 50px;
-              width: 80%;
-              text-align: center;
-              margin: 0px auto;
-            }
-        .carousal {
-          padding: 20px 10px;
-          height: auto;
-          overflow: hidden;
-          width:60%;
-        }
-
-        .group {
-          animation: spinMobile 18s linear infinite;
-          gap: 15px;
-          padding-right:0px;
-          align-items: center;
-        }
-        .group[aria-hidden="true"] {
-              position: absolute;
-              left: 140%;
-              display: flex;
-              align-items: center;
-            }
-
-        @keyframes spinMobile {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-100%);
-          }
-        }
-
-        .group-card {
-          width: 190px;
-          border-radius: 10px;
-          /* margin-bottom: 20px; */
-        }
-
-        .group-card img {
-          height: 120px;
-        }
-
-        .group-card .group-content {
-          padding: 10px;
-        }
-
-        .group-card h3 {
-          font-size: 1rem;
-        }
-
-        .group-card p {
-          font-size: 0.8rem;
-        }
-      }
-
-      @media (max-width: 500px) {
-        .hero-content {
-              /* border:2px solid red; */
-              padding: 100px 0px 50px;
-              width: 50%;
-              text-align: center;
-              margin: 0px auto;
-            }
-            .carousal {
-          padding: 20px 10px;
-          height: auto;
-          overflow: hidden;
-          width:50%;
-        }
-        .group[aria-hidden="true"] {
-              position: absolute;
-              left: 160%;
-              display: flex;
-              align-items: center;
-            }
-          }
-      /* Hero Infinite Moving Cards ends */
     </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- aos  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- aos  -->
-
   </head>
   <body>
-    <!-- aos  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-- aos  -->
     <!--Complete Header Starts-->
     <header>
-      <div class="logo"
-     data-aos-anchor-placement="top-center"
-     >
-        <img
-          src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group"
-          class="brand"
-        />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
+      <div class="logo brand-lockup">
+        <span class="logo-chip"><img src="images/brand/CMRG-Icon.png" alt="CMRG symbol" /></span>
+        <span class="wordmark">
+          <span class="w1">Computational Multiphysics Research Group</span>
+          <span class="w2">Indian Institute of Technology Madras</span>
+        </span>
+        <span class="brand-divider"></span>
+        <img class="iit-emblem" src="images/IIT_Madras_Logo.svg.png" alt="IIT Madras" />
       </div>
-      <nav class="desktop-nav"
-     
-     >
+      <nav class="desktop-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="blog.html">News</a></li>
@@ -962,92 +269,65 @@
       </ul>
     </nav>
     <!-- Complete Header Ends  -->
-    <!-- Complete hero starts  -->
+
+    <!-- Hero -->
     <section class="hero">
-  <!-- Decorative background logos (appear/disappear left & right) -->
-  <!-- <img src="images/CMRG Logo White.png" alt="" class="bg-logo left" aria-hidden="true" />
-  <img src="images/IIT MADRAS.png" alt="" class="bg-logo right" aria-hidden="true" /> -->
-<div>
-      <div class="hero-content">
-        <h2></h2>
-        <p></p>
-        <div class="hero-button">
-          <a href="" class="btn"></a>
+      <img class="hero-watermark" src="images/brand/CMRG-Icon-White.png" alt="" aria-hidden="true" />
+      <div class="wrap">
+        <div class="hero-badge"><img src="images/brand/CMRG-Icon.png" alt="CMRG symbol" /></div>
+        <p class="eyebrow">Indian Institute of Technology Madras</p>
+        <h1></h1>
+        <p class="lede"></p>
+        <div class="cta-row">
+          <a class="btn2 btn-gold" href="#">
+            <span class="label"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn2 btn-ghost" href="openings.html">Join the Group</a>
         </div>
       </div>
-      <div class="box" aria-hidden="true">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <section class="carousal" id="updates">
-          <div class="group"></div>
-          <div class="group" aria-hidden="true"></div>
-      </section> 
-      <div class="scroll-down">
-        <span></span>
-        <span></span>
-      </div>
-      </div>
-      <!-- New scroll buttons -->
-      <!-- <div class="scroll-buttons" aria-hidden="true">
-      <a href="#why-choose-section" class="scroll-btn">Why Choose Our Lab</a>
-      <a href="#research-section" class="scroll-btn">Research Areas</a>
-      </div> -->
     </section>
-    <!-- Complete hero ends  -->
-    <!-- Complete why choose starts -->
-    <section class="why-choose-section" id="why-choose-section" >
-      <div class="why-choose-section-container">
-        <h2></h2>
-        <p></p>
-        <div class="cards"></div>
-      </div>
-    </section>
-    <!-- Complete why choose ends -->
-    <!-- Complete research starts  -->
-    <section class="research-section" id="research-section">
-      <div class="research-section-container">
-        <h2></h2>
-        <p></p>
+
+    <!-- Research Areas -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head center research-head">
+          <span class="kicker">What we work on</span>
+          <h2></h2>
+          <p></p>
+        </div>
         <div class="research-grid"></div>
-        <a href="" class="btn-view"></a>
       </div>
     </section>
-    <!-- Complete research ends  -->
-    <!-- Complete join section starts  -->
-    <section class="join-section">
-    <div class="join-section-container">
-      <h2></h2>
-      <p></p>
-      <div class="buttons">
-        <a href="" class="btn"></a>
+
+    <!-- Latest News -->
+    <section class="section soft">
+      <div class="wrap">
+        <div class="sec-head center">
+          <span class="kicker">From the group</span>
+          <h2>Latest News</h2>
+          <p>Talks, papers, and the conferences we're organizing.</p>
+        </div>
+        <div class="news-grid"></div>
+        <div class="center-link">
+          <a class="textlink" href="blog.html">View all news
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Floating animated boxes -->
-    <div class="box">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </section>
+    <!-- Join strip -->
+    <section class="join">
+      <div class="wrap">
+        <h2></h2>
+        <p></p>
+        <div class="cta-row">
+          <a class="btn2 btn-gold" href="#"><span class="label"></span></a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Complete join section ends  -->
     <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
@@ -1080,7 +360,8 @@
       <div class="footer-bottom"></div>
     </footer>
     <!-- Complete footer ends  -->
-    <!-- loading header starts  -->
+
+    <!-- loading header scripts  -->
     <script>
       function toggleSidebar() {
         const sidebar = document.getElementById("sidebar");
@@ -1091,9 +372,23 @@
         parentLi.classList.toggle("open");
       }
     </script>
-    <!-- loading header ends  -->
-    <!-- loading index data starts  -->
+
+    <!-- loading index data  -->
     <script>
+      const RESEARCH_ICONS = {
+        flows:      '<svg viewBox="0 0 24 24"><path d="M2 8c2.5-3 5.5-3 8 0s5.5 3 8 0M2 14c2.5-3 5.5-3 8 0s5.5 3 8 0M2 20c2.5-3 5.5-3 8 0s5.5 3 8 0" stroke-linecap="round"/></svg>',
+        energetic:  '<svg viewBox="0 0 24 24"><path d="M12 2l2.4 5.6L20 8l-4 4 1.2 6L12 15l-5.2 3L8 12 4 8l5.6-.4L12 2z" stroke-linejoin="round"/></svg>',
+        hypersonic: '<svg viewBox="0 0 24 24"><path d="M12 3c3 3 4 6 2 9 3-1 4-4 4-4 1 4-1 9-6 9s-8-4-6-9c0 0 1 2 3 3-2-4 0-6 3-8z" stroke-linejoin="round"/></svg>',
+        strainrate: '<svg viewBox="0 0 24 24"><path d="M11 3L4 13h6l-1 8 8-11h-6l1-7z" stroke-linejoin="round"/></svg>',
+        ai:         '<svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v2M14 3v2M10 19v2M14 19v2M3 10h2M3 14h2M19 10h2M19 14h2" stroke-linecap="round"/></svg>'
+      };
+      const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, c =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      }
+
       async function loadIndexData() {
         try {
           const res = await fetch("index.json");
@@ -1101,106 +396,69 @@
 
           // HERO
           const hero = data.hero;
-          document.querySelector(
-            ".hero-content h2"
-          ).innerHTML = `"${hero.title}"`;
-          document.querySelector(".hero-content p").textContent =
-            hero.description;
-          const heroBtn = document.querySelector(".hero-button a");
-          heroBtn.textContent = hero.buttonText;
+          document.querySelector(".hero h1").textContent = hero.title;
+          document.querySelector(".hero .lede").textContent = hero.description;
+          const heroBtn = document.querySelector(".hero .btn-gold");
+          heroBtn.querySelector(".label").textContent = hero.buttonText;
           heroBtn.href = hero.buttonLink;
 
-          document.querySelector('.scroll-down').addEventListener('click', () => {
-  window.scrollTo({
-    top: window.innerHeight,
-    behavior: 'smooth'
-  });
-});
-
-//  HERO SECTION INFINITE MOVING CARDS
-const updates = hero.updates;
-
-if (updates && updates.length > 0) {
-  const updatesGrid = document.querySelector(".group");
-  const hiddenGroup = document.querySelector(".carousal .group[aria-hidden]");
-
-  updates.forEach(update => {
-    const card = document.createElement("div");
-    card.classList.add("group-card");
-    card.innerHTML = `
-      <img src="${update.image}" alt="${update.title}">
-      <div class="group-content">
-        <h3>${update.title}</h3>
-        <p>${update.text}</p>
-      </div>
-    `;
-    updatesGrid.appendChild(card);
-  });
-
-  // ✅ Clone the visible group into the hidden one for infinite loop
-  hiddenGroup.innerHTML = updatesGrid.innerHTML;
-}
-
-          // WHY CHOOSE
-          const whychoose = data.whyChoose;
-          document.querySelector(
-            ".why-choose-section-container h2"
-          ).textContent = whychoose.heading;
-          document.querySelector(
-            ".why-choose-section-container p"
-          ).textContent = whychoose.description;
-          const whyChooseContainer = document.querySelector(".cards");
-          whyChooseContainer.innerHTML = "";
-          whychoose.items.forEach((item) => {
-            const card = document.createElement("div");
-            card.classList.add("card");
-            card.innerHTML = `
-          <div class="icon">${item.icon}</div>
-          <h3>${item.title}</h3>
-          <p>${item.text}</p>
-        `;
-            whyChooseContainer.appendChild(card);
+          // LATEST NEWS (first three updates)
+          const newsGrid = document.querySelector(".news-grid");
+          newsGrid.innerHTML = "";
+          (hero.updates || []).slice(0, 3).forEach((u) => {
+            const a = document.createElement("a");
+            a.className = "ncard";
+            a.href = u.link || "blog.html";
+            if (/^https?:/i.test(a.href)) { a.target = "_blank"; a.rel = "noopener"; }
+            a.innerHTML = `
+              <span class="thumb"><img src="${esc(u.image)}" alt="${esc(u.title)}" loading="lazy"></span>
+              <span class="body">
+                ${u.tag ? `<span class="tag">${esc(u.tag)}</span>` : ""}
+                <span class="ncard-title">${esc(u.title)}</span>
+                <span class="ncard-text">${esc(u.text)}</span>
+              </span>`;
+            newsGrid.appendChild(a);
           });
 
           // RESEARCH
           const research = data.research;
-          document.querySelector(".research-section h2").textContent =
-            research.heading;
-          document.querySelector(".research-section p").textContent =
-            research.description;
-          const researchGrid = document.querySelector(".research-grid");
-          researchGrid.innerHTML = "";
+          document.querySelector(".research-head h2").textContent = research.heading;
+          document.querySelector(".research-head p").textContent = research.description;
+          const rgrid = document.querySelector(".research-grid");
+          rgrid.innerHTML = "";
           research.items.forEach((item) => {
-            const card = document.createElement("div");
-            card.classList.add("research-card");
+            const card = document.createElement("article");
+            card.className = "rcard";
+            const icon = RESEARCH_ICONS[item.iconKey] || `<span class="emoji">${esc(item.icon)}</span>`;
             card.innerHTML = `
-          <div class="icon">${item.icon}</div>
-          <h3>${item.title}</h3>
-          <p>${item.text}</p>
-        `;
-            researchGrid.appendChild(card);
+              <div class="ico">${icon}</div>
+              <h3>${esc(item.title)}</h3>
+              <p>${esc(item.text)}</p>`;
+            rgrid.appendChild(card);
           });
-          const researchBtn = document.querySelector(".btn-view");
-          researchBtn.textContent = research.buttonText;
-          researchBtn.href = research.buttonLink;
+          // trailing "explore all" tile
+          const cta = document.createElement("article");
+          cta.className = "rcard rcard-cta";
+          cta.innerHTML = `
+            <h3>Explore all projects</h3>
+            <a class="textlink" href="${esc(research.buttonLink)}">${esc(research.buttonText)} ${ARROW}</a>`;
+          rgrid.appendChild(cta);
 
-          // JOIN SECTION
+          // JOIN
           const join = data.join;
-          document.querySelector(".join-section h2").textContent = join.heading;
-          document.querySelector(".join-section p").textContent =
-            join.description;
-          const joinBtn = document.querySelector(".join-section .btn");
-          joinBtn.textContent = join.buttonText;
+          document.querySelector(".join h2").textContent = join.heading;
+          document.querySelector(".join p").textContent = join.description;
+          const joinBtn = document.querySelector(".join .btn-gold");
+          joinBtn.querySelector(".label").textContent = join.buttonText;
           joinBtn.href = join.buttonLink;
         } catch (error) {
           console.error("Error loading index data:", error);
         }
       }
-
       loadIndexData();
     </script>
-    <!-- loading index data ends  -->
-    <!-- loading footer starts  -->
+
+    <!-- loading footer  -->
     <script>
       async function loadFooter() {
         try {
@@ -1263,7 +521,7 @@ if (updates && updates.length > 0) {
           document.querySelector(".footer-bottom").textContent =
             footer["footer-note"];
         } catch (err) {
-          console.error("Error loading publications data:", err);
+          console.error("Error loading footer data:", err);
         }
       }
       loadFooter();
