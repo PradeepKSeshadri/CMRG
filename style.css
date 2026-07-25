@@ -57,6 +57,37 @@ header {
   width:70px;
   margin-left: 20px;
 }
+
+/* Brand font from the official kit */
+@font-face {
+  font-family: "League Spartan";
+  src: url("images/brand/LeagueSpartan-Light.ttf") format("truetype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+
+/* Uniform brand lockup (icon chip + live-text wordmark + IIT emblem) */
+.logo.brand-lockup { align-items: center; gap: 14px; }
+.logo-chip {
+  width: 46px; height: 46px; border-radius: 12px; background: #fff; flex: 0 0 auto;
+  display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.22);
+}
+.logo-chip img { width: 80%; height: 80%; object-fit: contain; }
+.wordmark { display: flex; flex-direction: column; line-height: 1.2; max-width: 340px; }
+.wordmark .w1 {
+  font-family: "League Spartan", "Segoe UI", sans-serif;
+  font-weight: 300; font-size: 1.16rem; color: var(--text-light); letter-spacing: .3px;
+}
+.wordmark .w2 {
+  font-size: .66rem; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #9fb2cf; margin-top: 3px;
+}
+.brand-divider { width: 1px; height: 40px; background: rgba(255,255,255,.16); flex: 0 0 auto; }
+.iit-emblem { width: 46px; height: 46px; border-radius: 50%; flex: 0 0 auto; }
+@media (max-width: 640px){
+  .wordmark .w2, .brand-divider, .iit-emblem { display: none; }
+  .wordmark { max-width: 190px; }
+  .wordmark .w1 { font-size: .95rem; }
+}
 nav.desktop-nav {
   display: flex;
 }
