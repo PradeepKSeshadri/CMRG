@@ -7,124 +7,54 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-VGCK9VFN9Y');
-    </script>        
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab Courses</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="images/iit madras without bg.png"
-    />
+    <title>Courses | CMRG</title>
+    <link rel="icon" type="image/png" href="images/brand/CMRG-Icon.png" />
+    <link rel="stylesheet" href="style.css" />
     <style>
-      body {
-        margin: 0;
-        background: #f5f7fa;
-        color: #333;
+      :root {
+        --primary-2: #012a5e; --gold: #facc15;
+        --ink: #0f1729; --muted: #5a6b83; --line: #e6ebf2;
+        --bg: #ffffff; --bg-soft: #f6f8fb; --cmaxw: 1120px;
       }
-      .main-container {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-      }
+      .courses-main { background: var(--bg); color: var(--ink); }
+      .cwrap { max-width: var(--cmaxw); margin: 0 auto; padding: 0 24px; }
+      .display { font-family: "League Spartan", "Segoe UI", sans-serif; font-weight: 300; }
 
-      @media (max-width: 900px) {
-        .main-container {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .courses-section {
-        margin-bottom: 3rem;
-      }
-
-      .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 1.2rem;
-        color: #002244;
-      }
+      .layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; padding: clamp(40px, 6vw, 68px) 0 72px; align-items: start; }
+      @media (max-width: 900px){ .layout { grid-template-columns: 1fr; gap: 28px; } }
+      .section-title { font-size: 1.4rem; font-weight: 700; letter-spacing: -.3px; color: var(--ink); margin: 0 0 20px; }
 
       .course-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        padding: 1.5rem;
-        margin-bottom: 1.0rem;
-        transition: transform 0.3s;
+        background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 28px 28px 24px;
+        margin-bottom: 20px; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
       }
+      .course-card:hover { transform: translateY(-4px); box-shadow: 0 16px 38px rgba(1,33,73,.10); border-color: #cfd9e8; }
+      .cc-code { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+        color: var(--primary-2); background: rgba(1,42,94,.07); padding: 5px 11px; border-radius: 999px; margin-bottom: 14px; }
+      .cc-title { font-size: 1.5rem; font-weight: 700; letter-spacing: -.3px; color: var(--ink); margin: 0 0 8px; }
+      .cc-meta { font-size: .9rem; color: var(--muted); margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+      .cc-meta b { color: var(--ink); font-weight: 600; }
+      .cc-desc { font-size: .98rem; line-height: 1.6; color: #38414f; margin: 0 0 22px; max-width: 66ch; }
+      .cc-btn {
+        display: inline-flex; align-items: center; gap: 9px; background: var(--gold); color: var(--primary);
+        border: 1.5px solid var(--gold); padding: 11px 20px; border-radius: 8px; font-weight: 600; font-size: .95rem;
+        text-decoration: none; transition: all .2s;
+      }
+      .cc-btn:hover { background: transparent; color: var(--primary-2); border-color: var(--primary-2); }
+      .cc-btn svg { width: 16px; height: 16px; }
 
-      .course-card:hover {
-        transform: translateY(-4px);
-      }
-
-      .course-title {
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-bottom: 0.4rem;
-        color: #002244;
-      }
-
-      .course-meta {
-        font-size: 0.9rem;
-        color: #555;
-        margin-bottom: 1rem;
-      }
-
-      .course-description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-      }
-
-      .apply-button {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background: #004c99;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: background 0.3s;
-      }
-
-      .apply-button:hover {
-        background: var(--primary);
-      }
-
-      .sidebar1 {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-        padding: 1.5rem;
-      }
-
-      .sidebar1 h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-        color: #002244;
-      }
-
-      .news-item {
-        margin-bottom: 1.2rem;
-        border-left: 3px solid #0066cc;
-        padding-left: 0.8rem;
-      }
-
-      .news-item p {
-        margin: 0;
-        font-size: 0.95rem;
-      }
+      .aside-card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px; padding: 24px 22px; }
+      .aside-card h3 { margin: 0 0 16px; font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+      .ann { border-left: 3px solid var(--gold); padding: 2px 0 2px 14px; margin-bottom: 16px; }
+      .ann:last-child { margin-bottom: 0; }
+      .ann .date { font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--primary-2); }
+      .ann p { margin: 4px 0 0; font-size: .92rem; line-height: 1.5; color: #38414f; }
+      .empty { color: var(--muted); font-size: .92rem; }
     </style>
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -133,13 +63,14 @@
   <body>
     <!--Complete Header Starts-->
     <header>
-      <div class="logo">
-        <img
-          src="images/CMRG Logo White.png"
-          alt="Computational Multiphysics Research Group"
-          class="brand"
-        />
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
+      <div class="logo brand-lockup">
+        <span class="logo-chip"><img src="images/brand/CMRG-Icon.png" alt="CMRG symbol" /></span>
+        <span class="wordmark">
+          <span class="w1">Computational Multiphysics Research Group</span>
+          <span class="w2">Indian Institute of Technology Madras</span>
+        </span>
+        <span class="brand-divider"></span>
+        <img class="iit-emblem" src="images/IIT_Madras_Logo.svg.png" alt="IIT Madras" />
       </div>
       <nav class="desktop-nav">
         <ul>
@@ -161,9 +92,8 @@
               <a href="books.html">Books</a>
             </div>
           </li>
-        <!-- <li><a href="courses.html" class="active">Courses</a></li> -->
-        <!-- <li><a href="code.html">Code</a></li> -->
-          <li><a href="openings.html">Positions</a><span class="nav-badge">NEW</span></li>
+          <li><a href="courses.html" class="active">Courses</a></li>
+          <li><a href="openings.html">Positions <span class="nav-badge">NEW</span></a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -177,7 +107,7 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="blog.html">News</a></li>
         <li><a href="about.html">People</a></li>
         <li class="dropdown">
@@ -195,35 +125,39 @@
             <li><a href="books.html">Books</a></li>
           </ul>
         </li>
-        <!-- <li><a href="courses.html" class="active">Courses</a></li> -->
-        <!-- <li><a href="code.html">Code</a></li> -->
+        <li><a href="courses.html" class="active">Courses</a></li>
         <li><a href="openings.html">Positions</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <!-- Complete Header Ends  -->
-    <!-- Complete ribbon starts  -->
+
+    <!-- ribbon -->
     <div class="ribbon">
       <div class="ribbon-content">
-        <h1 class="ribbon-title"></h1>
+        <h1 class="ribbon-title display"></h1>
         <p class="ribbon-desc"></p>
       </div>
     </div>
-    <!-- Complete ribbon ends  -->
-    <div class="main-container">
-      <section class="courses-section">
-        <h2 class="section-title">Current & Upcoming Courses</h2>
-        <div id="courses-container"></div>
-      </section>
-      <aside class="sidebar1">
-        <h3>Announcements</h3>
-        <div id="announcements-container"></div>
-      </aside>
-    </div>
+
+    <main class="courses-main">
+      <div class="cwrap">
+        <div class="layout">
+          <section>
+            <h2 class="section-title">Current &amp; Upcoming Courses</h2>
+            <div id="courses-container"></div>
+          </section>
+          <aside class="aside-card">
+            <h3>Announcements</h3>
+            <div id="announcements-container"></div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
     <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
-        <!-- Column 1: About -->
         <div class="footer-column about">
           <h3></h3>
           <p></p>
@@ -235,12 +169,10 @@
             <a href="#" target="_blank" title="ResearchGate" class="researchgate-link"><img src="images/rg logo.png" alt="ResearchGate" class="researchgate-icon" /></a>
           </div>
         </div>
-        <!-- Column 2: Links -->
         <div class="footer-column">
           <h4>Quick Links</h4>
           <ul></ul>
         </div>
-        <!-- Column 3: Contact -->
         <div class="footer-column">
           <h4>Contact</h4>
           <div style="display: flex; justify-content: center">
@@ -252,59 +184,54 @@
       <div class="footer-bottom"></div>
     </footer>
     <!-- Complete footer ends  -->
-    <!-- loading header starts  -->
+
+    <!-- header scripts -->
     <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
+      function toggleSidebar() { document.getElementById("sidebar").classList.toggle("show"); }
+      function toggleDropdown(element) { element.parentElement.classList.toggle("open"); }
     </script>
-    <!-- loading header ends  -->
-     <!-- loading courses starts  -->
-      <script>
-        fetch('courses.json')
-        .then(response => response.json())
+
+    <!-- courses loader -->
+    <script>
+      const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+      fetch("courses.json")
+        .then(r => r.json())
         .then(data => {
           document.querySelector(".ribbon-title").textContent = data.ribbontitle;
           document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
-          // Render Announcements
-          const announcementsContainer = document.getElementById('announcements-container');
-          data.announcements.forEach(item => {
-            const newsDiv = document.createElement('div');
-            newsDiv.className = 'news-item';
-            const para = document.createElement('p');
-            para.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
-            newsDiv.appendChild(para);
-            announcementsContainer.appendChild(newsDiv);
-          });
-          // Render Courses
-          const coursesContainer = document.getElementById('courses-container');
-          data.courses.forEach(course => {
-            const id = course.id;
-            const to = (course.link || 'completecourse.html') + `?id=${encodeURIComponent(id)}`;
-            const courseCard = document.createElement('div');
-            courseCard.className = 'course-card';
-            courseCard.innerHTML = `
-              <h3 class="course-title">${course.title}</h3>
-              <p class="course-meta">
-                Instructor: ${course.instructor} | Semester: ${course.semester}
-              </p>
-              <p class="course-description">${course.description}</p>
-              <a href="${to}" class="apply-button">${course.buttonText}</a>
-            `;
-            coursesContainer.appendChild(courseCard);
-          });
+
+          const ann = document.getElementById("announcements-container");
+          if (data.announcements && data.announcements.length) {
+            ann.innerHTML = data.announcements.map(a =>
+              `<div class="ann"><div class="date">${esc(a.date)}</div><p>${esc(a.message)}</p></div>`).join("");
+          } else {
+            ann.innerHTML = `<p class="empty">No announcements right now.</p>`;
+          }
+
+          const cont = document.getElementById("courses-container");
+          cont.innerHTML = (data.courses || []).map(course => {
+            const key = course.courseKey || "as2050";
+            const to = `singlecourses.html?course=${encodeURIComponent(key)}`;
+            const metaBits = [];
+            if (course.code) metaBits.push(`<span><b>${esc(course.code)}</b></span>`);
+            if (course.semester) metaBits.push(`<span>${esc(course.semester)}</span>`);
+            if (course.instructor) metaBits.push(`<span>Instructor: <b>${esc(course.instructor)}</b></span>`);
+            return `
+              <article class="course-card">
+                ${course.code ? `<span class="cc-code">${esc(course.code)}</span>` : ""}
+                <h3 class="cc-title">${esc(course.title)}</h3>
+                <div class="cc-meta">${metaBits.join("")}</div>
+                <p class="cc-desc">${esc(course.description)}</p>
+                <a class="cc-btn" href="${to}">${esc(course.buttonText || "View course")} ${ARROW}</a>
+              </article>`;
+          }).join("");
         })
-        .catch(error => {
-          console.error('Error loading data:', error);
-        });
-      </script>
-    <!-- loading courses ends  -->
-    <!-- loading footer starts  -->
+        .catch(err => console.error("Error loading courses:", err));
+    </script>
+
+    <!-- footer loader -->
     <script>
       async function loadFooter() {
         try {
@@ -312,8 +239,7 @@
           const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
-          document.querySelector(".about p").innerHTML =
-            footer.about.description;
+          document.querySelector(".about p").innerHTML = footer.about.description;
           const socialLinks = document.querySelectorAll(".social-icons a");
           socialLinks[0].href = footer.about.social.github;
           socialLinks[1].href = footer.about.social.mail;
@@ -328,42 +254,15 @@
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;
-          const contactInfo = document.querySelector(".contact-info");
-          contactInfo.innerHTML = `
-            <li>
-              <table>
-                <tr">
-                  <td><i class="fas fa-map-marker-alt"></i></td>
-                  <td style="padding-left: 10px;">${contact.address}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <table>
-                <tr>
-                  <td><i class="fas fa-phone-alt"></i></td>
-                  <td style="padding-left: 10px;">${contact.phone}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <table>
-                <tr>
-                  <td><i class="fas fa-envelope"></i></td>
-                  <td style="padding-left: 10px;">${contact.email}</td>
-                </tr>
-              </table>
-            </li>
-        `;
-          document.querySelector(".footer-bottom").textContent =
-            footer["footer-note"];
-        } catch (err) {
-          console.error("Error loading publications data:", err);
-        }
+          document.querySelector(".contact-info").innerHTML = `
+            <li><table><tr><td><i class="fas fa-map-marker-alt"></i></td><td style="padding-left:10px;">${contact.address}</td></tr></table></li>
+            <li><table><tr><td><i class="fa-solid fa-city"></i></td><td style="padding-left:10px;">${contact.address1}</td></tr></table></li>
+            <li><table><tr><td><i class="fas fa-phone-alt"></i></td><td style="padding-left:10px;">${contact.phone}</td></tr></table></li>
+            <li><table><tr><td><i class="fas fa-envelope"></i></td><td style="padding-left:10px;">${contact.email}</td></tr></table></li>`;
+          document.querySelector(".footer-bottom").textContent = footer["footer-note"];
+        } catch (err) { console.error("Error loading footer data:", err); }
       }
       loadFooter();
     </script>
-    <!-- loading footer ends  -->
   </body>
->>>>>>> 53595ede9761e367ed1b768c07e9537a0517dac3
 </html>

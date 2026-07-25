@@ -1,438 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGCK9VFN9Y"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-VGCK9VFN9Y');
-    </script>      
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course Detail</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AS2050* Aerodynamics | Courses</title>
+    <link rel="icon" type="image/png" href="images/brand/CMRG-Icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary-2: #012a5e; --gold: #facc15;
+        --ink: #0f1729; --muted: #5a6b83; --line: #e6ebf2;
+        --bg: #ffffff; --bg-soft: #f6f8fb; --cmaxw: 1080px;
+        --lec: #012a5e; --tut: #1e6e46; --quiz: #9b1e1e; --holi: #8a94a6;
+      }
+      .course { background: var(--bg); color: var(--ink); }
+      .course a { text-decoration: none; color: inherit; }
+      .cwrap { max-width: var(--cmaxw); margin: 0 auto; padding: 0 24px; }
+      .display { font-family: "League Spartan", "Segoe UI", sans-serif; font-weight: 300; }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f7fa;
-      min-height: 100vh;
-    }
+      /* hero */
+      .chero {
+        background:
+          radial-gradient(1000px 520px at 82% -20%, rgba(0,72,165,.5), transparent 60%),
+          linear-gradient(155deg, #011229 0%, var(--primary) 45%, var(--primary-2) 100%);
+        color: #fff; padding: clamp(46px, 7vw, 78px) 0 clamp(38px, 5.5vw, 60px);
+      }
+      .c-eyebrow { text-transform: uppercase; letter-spacing: 2.2px; font-size: .72rem; font-weight: 600; color: var(--gold); margin: 0 0 14px; }
+      .chero h1 { margin: 0; font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.08; letter-spacing: .2px; color: #fff; }
+      .chero .sub { margin: 16px 0 0; max-width: 62ch; color: #c4d1e6; font-size: 1.06rem; line-height: 1.65; }
+      .facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+      .fact { display: inline-flex; align-items: center; gap: 8px; font-size: .86rem; color: #dbe5f4;
+        background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); padding: 7px 13px; border-radius: 999px; }
+      .fact b { color: #fff; font-weight: 600; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .cbtn { display: inline-flex; align-items: center; gap: 9px; padding: 12px 20px; border-radius: 8px;
+        font-weight: 600; font-size: .95rem; border: 1.5px solid transparent; transition: all .2s; }
+      .cbtn svg { width: 16px; height: 16px; }
+      .cbtn-gold { background: var(--gold); color: var(--primary); border-color: var(--gold); }
+      .cbtn-gold:hover { background: transparent; color: var(--gold); }
+      .cbtn-ghost { color: #fff; border-color: rgba(255,255,255,.35); }
+      .cbtn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+      .startnote { margin-top: 22px; font-size: .9rem; color: #aebfd8; }
+      .startnote .dot { color: var(--gold); }
 
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
+      /* sections */
+      .csec { padding: clamp(42px, 5.5vw, 68px) 0; }
+      .csec.soft { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .csec .h2 { margin: 0 0 6px; font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -.3px; color: var(--ink); }
+      .csec .lead { margin: 0 0 28px; color: var(--muted); max-width: 70ch; }
 
-    .sidebar-toggle {
-      display: none;
-      background-color: #1e3a5f;
-      color: white;
-      padding: 12px;
-      text-align: center;
-      font-weight: bold;
-      cursor: pointer;
-    }
+      /* assessment */
+      .assess { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: start; }
+      @media (max-width: 760px){ .assess { grid-template-columns: 1fr; } }
+      .atable { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--bg); }
+      .arow { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 14px 18px; align-items: center; border-top: 1px solid var(--line); }
+      .arow:first-child { border-top: none; }
+      .arow .c { font-weight: 600; color: var(--ink); }
+      .arow .d { font-size: .84rem; color: var(--muted); margin-top: 2px; }
+      .arow .w { font-family: "League Spartan","Segoe UI",sans-serif; font-weight: 300; font-size: 1.35rem; color: var(--primary-2); font-variant-numeric: tabular-nums; }
+      .arow.total { background: var(--bg-soft); }
+      .arow.total .w { color: var(--ink); }
+      .rules { border: 1px dashed #cdd7e6; border-radius: 14px; padding: 20px 22px; background: var(--bg-soft); }
+      .rules h3 { margin: 0 0 12px; font-size: 1rem; color: var(--ink); }
+      .rules ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .92rem; display: grid; gap: 8px; }
+      .rules b { color: var(--ink); }
 
-    .sidebar {
-      width: 240px;
-      background-color: #1e3a5f;
-      color: white;
-      padding-top: 20px;
-      flex-shrink: 0;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .sidebar h2 {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    .module-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .module-list li {
-      padding: 12px 20px;
-      cursor: pointer;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .module-list li:hover,
-    .module-list li.active {
-      background-color: #27476e;
-    }
-
-    .content-area {
-      flex: 1;
-      padding: 30px;
-    }
-
-    .module-content {
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .lecture-list {
-      margin-top: 20px;
-      padding-left: 20px;
-    }
-
-    .lecture-list li {
-      margin-bottom: 10px;
-    }
-
-    .lecture-list a {
-      color: #1e3a5f;
-      text-decoration: none;
-    }
-
-    .lecture-list a:hover {
-      text-decoration: underline;
-    }
-
-    table.calendar-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
-
-    .calendar-table th,
-    .calendar-table td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: left;
-    }
-
-    .calendar-table th {
-      background-color: #1e3a5f;
-      color: white;
-    }
-
-    .calendar-table tr:nth-child(even) {
-      background-color: #f1f3f5;
-    }
-
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column;
+      /* timeline */
+      .win { margin-top: 34px; }
+      .win:first-child { margin-top: 0; }
+      .win-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 14px; padding-bottom: 12px; border-bottom: 2px solid var(--primary); margin-bottom: 4px; }
+      .win-head h3 { margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--primary); }
+      .win-head .until { font-size: .82rem; color: var(--muted); }
+      .band { display: flex; align-items: center; gap: 10px; margin: 18px 0 8px; }
+      .band .bcode { font-family: "League Spartan","Segoe UI",sans-serif; font-weight: 300; font-size: .95rem; color: #fff; background: var(--primary-2); border-radius: 6px; padding: 2px 9px; letter-spacing: .5px; }
+      .band .btheme { font-size: .84rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .6px; }
+      .srow { display: grid; grid-template-columns: 96px 46px 1fr; gap: 14px; align-items: start; padding: 11px 8px; border-bottom: 1px solid var(--line); }
+      .srow .date { font-size: .84rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; padding-top: 2px; }
+      .stag { font-size: .74rem; font-weight: 700; color: #fff; border-radius: 6px; padding: 3px 0; text-align: center; letter-spacing: .3px; }
+      .stag.lec { background: var(--lec); }
+      .stag.tut { background: var(--tut); }
+      .stag.quiz, .stag.end { background: var(--quiz); }
+      .stag.holi { background: transparent; color: var(--holi); border: 1px dashed #c4ccd9; font-weight: 600; }
+      .srow .topic { font-size: .95rem; color: var(--ink); }
+      .srow.milestone { background: #fbeaea55; }
+      .srow.milestone .topic { font-weight: 600; color: var(--quiz); }
+      .srow.holi .topic { color: var(--holi); font-style: italic; }
+      @media (max-width: 560px){
+        .srow { grid-template-columns: 74px 42px 1fr; gap: 10px; }
+        .srow .date { font-size: .78rem; }
       }
 
-      .sidebar-toggle {
-        display: block;
-      }
+      /* references */
+      .refs { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: r; }
+      .refs li { display: flex; gap: 12px; align-items: baseline; padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+      .refs li::before { counter-increment: r; content: counter(r); font-family: "League Spartan","Segoe UI",sans-serif; color: var(--primary-2); font-size: 1.1rem; }
+      .refs .primary { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
+      .refs .pill { margin-left: 8px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--primary); background: var(--gold); padding: 2px 8px; border-radius: 999px; }
 
-      .sidebar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        z-index: 1000;
-        transform: translateX(-100%);
-      }
-
-      .sidebar.visible {
-        transform: translateX(0);
-      }
-
-      .content-area {
-        padding: 20px 10px;
-      }
-    }
-    /* ---------- Syllabus Section Styling ---------- */
-.module-content section {
-  margin-bottom: 30px;
-}
-
-.module-content h1,
-.module-content h2,
-.module-content h3 {
-  color: #1e3a5f;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.module-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.module-content ul {
-  padding-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.module-content ul li {
-  list-style: disc;
-  margin-bottom: 8px;
-  color: #444;
-}
-
-.module-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-}
-
-.module-content th,
-.module-content td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  text-align: left;
-}
-
-.module-content th {
-  background-color: #1e3a5f;
-  color: white;
-}
-
-.module-content tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Responsive Table for Mobile */
-@media screen and (max-width: 600px) {
-  .module-content table,
-  .module-content thead,
-  .module-content tbody,
-  .module-content th,
-  .module-content td,
-  .module-content tr {
-    display: block;
-  }
-
-  .module-content thead tr {
-    display: none;
-  }
-
-  .module-content td {
-    padding-left: 50%;
-    position: relative;
-    text-align: left;
-  }
-
-  .module-content td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 12px;
-    font-weight: bold;
-    color: #1e3a5f;
-  }
-}
-
-  </style>
-</head>
-
-<body>
-  <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Select Module</div>
-  <div class="container">
-    <div class="sidebar" id="sidebar">
-      <h2>Modules</h2>
-      <ul class="module-list" id="moduleList"></ul>
-    </div>
-    <div class="content-area">
-      <div class="module-content">
-        <h2 id="moduleTitle">Select a Module</h2>
-        <p id="moduleDescription">Click on a module to view its lecture notes and content.</p>
-        <ul class="lecture-list" id="lectureList"></ul>
-        <div id="calendarSection"></div>
+      .archive-note { text-align: center; color: var(--muted); font-size: .86rem; padding: 26px 0 40px; }
+      .archive-note a { color: var(--primary-2); border-bottom: 1px solid var(--gold); }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Complete Header Starts-->
+    <header>
+      <div class="logo brand-lockup">
+        <span class="logo-chip"><img src="images/brand/CMRG-Icon.png" alt="CMRG symbol" /></span>
+        <span class="wordmark">
+          <span class="w1">Computational Multiphysics Research Group</span>
+          <span class="w2">Indian Institute of Technology Madras</span>
+        </span>
+        <span class="brand-divider"></span>
+        <img class="iit-emblem" src="images/IIT_Madras_Logo.svg.png" alt="IIT Madras" />
       </div>
-    </div>
-  </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="about.html">People</a></li>
+          <li class="dropdown">
+            <a>Research</a>
+            <div class="dropdown-content">
+              <a href="ongoing.html">Ongoing</a>
+              <a href="funded.html">Sponsored</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a>Publications</a>
+            <div class="dropdown-content">
+              <a href="journals.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
+              <a href="books.html">Books</a>
+            </div>
+          </li>
+          <li><a href="courses.html" class="active">Courses</a></li>
+          <li><a href="openings.html">Positions <span class="nav-badge">NEW</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">News</a></li>
+        <li><a href="about.html">People</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="ongoing.html">Ongoing</a></li>
+            <li><a href="funded.html">Sponsored</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+            <li><a href="books.html">Books</a></li>
+          </ul>
+        </li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="openings.html">Positions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Complete Header Ends  -->
 
-  <script>
-  const modulesData = {
-    "modules": [
-      {
-        "title": "Aerodynamics",
-        "description": "Explore fundamental concepts of aerodynamics including fluid motion, aircraft forces, and pressure fields.",
-        "lectures": [
-          { "name": "Sensitivity Analysis", "link": "#" },
-          { "name": "Kinematics of a Fluid Element", "link": "#" },
-          { "name": "Stress-Strain Relationship", "link": "#" },
-          { "name": "Equations of Aircraft Motion", "link": "#" }
-        ],
-        "calendar": [
-          { "week": "1", "topics": ["Integral Equations, Lift and Drag"], "keyDates": ["Project assignment 1 out"] },
-          { "week": "2", "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations", "Wright Brothers Wind Tunnel Tests", "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"], "keyDates": ["Homework 1 due"] },
-          { "week": "3", "topics": ["2-D Potential Flow"], "keyDates": ["Homework 2 due", "Project assignment 1 due"] },
-          { "week": "4", "topics": ["2-D Panel Methods"], "keyDates": ["Homework 3 due", "Project assignment 2 out"] },
-          { "week": "5", "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"], "keyDates": ["Homework 4 due", "Project assignment 2 due"] },
-          { "week": "6", "topics": ["Lifting Line and High Aspect Ratio Wings"], "keyDates": ["Homework 5 due", "Project assignment 3 out"] },
-          { "week": "7", "topics": ["Compressibility and Quasi 1D Flow"], "keyDates": ["Take-home written exam 1 out"] }
-        ]
-      },
-      {
-        "title": "Syllabus",
-        "description": "Course structure, objectives, pedagogy and grading strategy."
-      },
-      {
-        "title": "Thermodynamics",
-        "description": "Learn about energy conservation, heat transfer, and the laws of thermodynamics in engineering systems.",
-        "lectures": [
-          { "name": "First Law of Thermodynamics", "link": "#" },
-          { "name": "Entropy and Second Law", "link": "#" },
-          { "name": "Carnot Cycle", "link": "#" }
-        ]
-      },
-      {
-        "title": "Fluid Mechanics",
-        "description": "Understand the behavior of fluids in motion and at rest, and their application in engineering designs.",
-        "lectures": [
-          { "name": "Continuity Equation", "link": "#" },
-          { "name": "Bernoulli's Principle", "link": "#" },
-          { "name": "Navier-Stokes Equations", "link": "#" }
-        ]
-      }
-    ]
-  };
-
-  const moduleList = document.getElementById("moduleList");
-  const sidebar = document.getElementById("sidebar");
-
-  function toggleSidebar() {
-    sidebar.classList.toggle("visible");
-  }
-
-  function loadModule(index) {
-    const contentArea = document.querySelector(".content-area");
-    const module = modulesData.modules[index];
-
-    // If it's the "Syllabus" module
-    if (module.title === "Syllabus") {
-      contentArea.innerHTML = `
-        <div class="module-content">
-          <h1>Syllabus</h1>
-          <hr>
-          <section id="meeting-times"></section>
-          <section id="objectives"></section>
-          <section id="model-comment"></section>
-          <section id="skills"></section>
-          <section id="grades"></section>
+    <main class="course">
+      <!-- Hero -->
+      <section class="chero">
+        <div class="cwrap">
+          <p class="c-eyebrow" id="c-eyebrow"></p>
+          <h1 class="display" id="c-title"></h1>
+          <p class="sub" id="c-sub"></p>
+          <div class="facts" id="c-facts"></div>
+          <div class="cta-row" id="c-cta"></div>
+          <p class="startnote" id="c-startnote"></p>
         </div>
-      `;
-      loadSyllabus(); // load syllabus content after HTML inserted
-    } else {
-      contentArea.innerHTML = `
-        <div class="module-content">
-          <h2 id="moduleTitle">${module.title}</h2>
-          <p id="moduleDescription">${module.description}</p>
-          <ul class="lecture-list" id="lectureList"></ul>
-          <div id="calendarSection"></div>
+      </section>
+
+      <!-- Assessment -->
+      <section class="csec">
+        <div class="cwrap">
+          <h2 class="h2 display">Assessment</h2>
+          <p class="lead" id="c-assess-lead"></p>
+          <div class="assess">
+            <div class="atable" id="c-assess"></div>
+            <div class="rules">
+              <h3>How it works</h3>
+              <ul id="c-rules"></ul>
+            </div>
+          </div>
         </div>
-      `;
+      </section>
 
-      const lectureList = document.getElementById("lectureList");
-      const calendarSection = document.getElementById("calendarSection");
+      <!-- Timeline -->
+      <section class="csec soft">
+        <div class="cwrap">
+          <h2 class="h2 display">Lecture &amp; Tutorial Plan</h2>
+          <p class="lead">40 lectures (Mon / Tue / Fri) and 14 tutorials (Wed), across three teaching windows. Slides and notes will attach to each lecture as the term progresses.</p>
+          <div id="c-timeline"></div>
+        </div>
+      </section>
 
-      module.lectures?.forEach(lecture => {
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${lecture.link}" target="_blank">${lecture.name}</a>`;
-        lectureList.appendChild(li);
-      });
+      <!-- References -->
+      <section class="csec">
+        <div class="cwrap">
+          <h2 class="h2 display">Text References</h2>
+          <p class="lead">Primary text plus complementary references for deeper reading.</p>
+          <ul class="refs" id="c-refs"></ul>
+        </div>
+      </section>
 
-      if (module.calendar) {
-        const table = document.createElement("table");
-        table.className = "calendar-table";
-        table.innerHTML = `
-          <thead>
-            <tr><th>WEEK #</th><th>TOPICS</th><th>KEY DATES</th></tr>
-          </thead>
-          <tbody>
-            ${module.calendar.map(row => `
-              <tr>
-                <td>${row.week}</td>
-                <td>${row.topics.join('<br>')}</td>
-                <td>${row.keyDates.join('<br>')}</td>
-              </tr>
-            `).join('')}
-          </tbody>
-        `;
-        calendarSection.appendChild(table);
+      <div class="archive-note" id="c-archive"></div>
+    </main>
+
+    <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" title="Mail"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank" title="Linked in"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#" target="_blank" title="ResearchGate" class="researchgate-link"><img src="images/rg logo.png" alt="ResearchGate" class="researchgate-icon" /></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+
+    <!-- header scripts -->
+    <script>
+      function toggleSidebar() { document.getElementById("sidebar").classList.toggle("show"); }
+      function toggleDropdown(element) { element.parentElement.classList.toggle("open"); }
+    </script>
+
+    <!-- course loader -->
+    <script>
+      const DOC_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>';
+      function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+      async function loadCourse() {
+        const key = new URLSearchParams(location.search).get("course") || "as2050";
+        try {
+          const res = await fetch(key + ".json");
+          const d = await res.json();
+
+          document.title = `${d.code} ${d.title} | Courses`;
+
+          // HERO
+          document.getElementById("c-eyebrow").textContent = `${d.code} · ${d.dept}`;
+          document.getElementById("c-title").textContent = d.title;
+          document.getElementById("c-sub").textContent = d.subtitle;
+
+          const facts = [];
+          if (d.semester)   facts.push(`<span class="fact"><b>${esc(d.semester)}</b>${d.semesterNote ? " · " + esc(d.semesterNote) : ""}</span>`);
+          if (d.slot)       facts.push(`<span class="fact"><b>${esc(d.slot)}</b></span>`);
+          if (d.cadence)    facts.push(`<span class="fact"><b>${esc(d.cadence)}</b></span>`);
+          if (d.instructor) facts.push(`<span class="fact">Instructor: <b>${esc(d.instructor)}</b></span>`);
+          document.getElementById("c-facts").innerHTML = facts.join("");
+
+          const cta = [];
+          if (d.docs && d.docs.policy) cta.push(`<a class="cbtn cbtn-gold" href="${esc(d.docs.policy)}" target="_blank" rel="noopener">${DOC_ICON} Course Policy (PDF)</a>`);
+          if (d.docs && d.docs.plan)   cta.push(`<a class="cbtn cbtn-ghost" href="${esc(d.docs.plan)}" target="_blank" rel="noopener">${DOC_ICON} Lecture Plan (PDF)</a>`);
+          document.getElementById("c-cta").innerHTML = cta.join("");
+
+          document.getElementById("c-startnote").innerHTML = d.startNote ? `<span class="dot">●</span> ${esc(d.startNote)}` : "";
+
+          // ASSESSMENT
+          document.getElementById("c-assess-lead").textContent = d.assessmentLead || "";
+          document.getElementById("c-assess").innerHTML = (d.assessment || []).map(a => `
+            <div class="arow${a.total ? " total" : ""}">
+              <div><div class="c">${esc(a.c)}</div>${a.d ? `<div class="d">${esc(a.d)}</div>` : ""}</div>
+              <div class="w">${esc(a.w)}</div>
+            </div>`).join("");
+          document.getElementById("c-rules").innerHTML = (d.rules || []).map(r => `<li>${r}</li>`).join("");
+
+          // TIMELINE
+          const blocks = d.blocks || {};
+          const tl = document.getElementById("c-timeline");
+          (d.windows || []).forEach(win => {
+            const sec = document.createElement("div");
+            sec.className = "win";
+            sec.innerHTML = `<div class="win-head"><h3>${esc(win.title)}</h3><span class="until">${esc(win.until)}</span></div>`;
+            let lastBlock = null;
+            win.rows.forEach(([date, kind, tag, block, topic]) => {
+              if (block && block !== lastBlock) {
+                lastBlock = block;
+                const band = document.createElement("div");
+                band.className = "band";
+                band.innerHTML = `<span class="bcode">${esc(block)}</span><span class="btheme">${esc(blocks[block] || "")}</span>`;
+                sec.appendChild(band);
+              }
+              const milestone = (kind === "quiz" || kind === "end");
+              const row = document.createElement("div");
+              row.className = "srow " + kind + (milestone ? " milestone" : "");
+              row.innerHTML = `
+                <div class="date">${esc(date)}</div>
+                <div class="stag ${esc(kind)}">${esc(tag)}</div>
+                <div class="topic">${esc(topic)}</div>`;
+              sec.appendChild(row);
+            });
+            tl.appendChild(sec);
+          });
+
+          // REFERENCES
+          document.getElementById("c-refs").innerHTML = (d.references || []).map(r =>
+            `<li class="${r.primary ? "primary" : ""}">${r.text}${r.primary ? '<span class="pill">Primary</span>' : ""}</li>`).join("");
+
+          // ARCHIVE
+          if (d.archiveLink) {
+            document.getElementById("c-archive").innerHTML =
+              `Looking for the 2025 offering? The <a href="${esc(d.archiveLink)}">archived course page</a> remains available.`;
+          }
+        } catch (err) {
+          console.error("Error loading course data:", err);
+          document.getElementById("c-title").textContent = "Course details are being updated.";
+        }
       }
-    }
+      loadCourse();
+    </script>
 
-    // Highlight the selected module
-    document.querySelectorAll('.module-list li').forEach((el, i) => {
-      el.classList.toggle('active', i === index);
-    });
-
-    if (window.innerWidth <= 768) sidebar.classList.remove("visible");
-  }
-
-  // Load syllabus JSON
-  function loadSyllabus() {
-    fetch("coursesection.json")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("meeting-times").innerHTML = `
-          <h2>Course Meeting Times</h2>
-          <p><strong>Lectures:</strong> ${data.courseMeetingTimes.lectures}</p>
-          <p><strong>Labs:</strong> ${data.courseMeetingTimes.labs}</p>
-        `;
-        document.getElementById("objectives").innerHTML = `
-          <h2>Learning Objectives</h2>
-          <ul>${data.learningObjectives.map(obj => `<li>${obj}</li>`).join('')}</ul>
-        `;
-        document.getElementById("model-comment").innerHTML = `
-          <h2>Comment on Aerodynamic Models</h2>
-          <p>${data.commentOnModels}</p>
-        `;
-        document.getElementById("skills").innerHTML = `
-          <h2>General Pedagogy and Assessment Strategy</h2>
-          <ul>${data.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
-        `;
-        document.getElementById("grades").innerHTML = `
-          <h2>Grades and Weightage</h2>
-          <table>
-            <thead>
-              <tr><th>Activities</th><th>Percentages</th></tr>
-            </thead>
-            <tbody>
-              ${data.weightage.map(item => `<tr><td>${item.activity}</td><td>${item.percentage}</td></tr>`).join('')}
-            </tbody>
-          </table>
-          <h3>Grade Breakdown</h3>
-          <table>
-            <thead>
-              <tr><th>Grades</th><th>Marks</th></tr>
-            </thead>
-            <tbody>
-              ${data.grading.map(g => `<tr><td>${g.grade}</td><td>${g.marks}</td></tr>`).join('')}
-            </tbody>
-          </table>
-        `;
-      });
-  }
-
-  // Initialize module sidebar
-  modulesData.modules.forEach((module, index) => {
-    const li = document.createElement("li");
-    li.textContent = module.title;
-    li.addEventListener("click", () => loadModule(index));
-    moduleList.appendChild(li);
-  });
-
-  // Load first module by default
-  loadModule(0);
-</script>
-<!-- loading footer starts  -->
+    <!-- footer loader -->
     <script>
       async function loadFooter() {
         try {
@@ -440,12 +364,13 @@
           const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
-          document.querySelector(".about p").innerHTML =
-            footer.about.description;
+          document.querySelector(".about p").innerHTML = footer.about.description;
           const socialLinks = document.querySelectorAll(".social-icons a");
           socialLinks[0].href = footer.about.social.github;
           socialLinks[1].href = footer.about.social.mail;
           socialLinks[2].href = footer.about.social.linkedin;
+          socialLinks[3].href = footer.about.social.google_scholar;
+          socialLinks[4].href = footer.about.social.research_gate;
           const quickLinks = document.querySelector(".footer-column ul");
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
@@ -454,52 +379,15 @@
             quickLinks.appendChild(li);
           });
           const contact = footer.contact;
-          const contactInfo = document.querySelector(".contact-info");
-          contactInfo.innerHTML = `
-            <li>
-              <table>
-                <tr">
-                  <td><i class="fas fa-map-marker-alt"></i></td>
-                  <td style="padding-left: 10px;">${contact.address}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <table>
-                <tr">
-                  <td><i class="fa-solid fa-city"></i></td>
-                  <td style="padding-left: 10px;">${contact.address1}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-            <li>
-              <table>
-                <tr>
-                  <td><i class="fas fa-phone-alt"></i></td>
-                  <td style="padding-left: 10px;">${contact.phone}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <table>
-                <tr>
-                  <td><i class="fas fa-envelope"></i></td>
-                  <td style="padding-left: 10px;">${contact.email}</td>
-                </tr>
-              </table>
-            </li>
-        `;
-          document.querySelector(".footer-bottom").textContent =
-            footer["footer-note"];
-        } catch (err) {
-          console.error("Error loading publications data:", err);
-        }
+          document.querySelector(".contact-info").innerHTML = `
+            <li><table><tr><td><i class="fas fa-map-marker-alt"></i></td><td style="padding-left:10px;">${contact.address}</td></tr></table></li>
+            <li><table><tr><td><i class="fa-solid fa-city"></i></td><td style="padding-left:10px;">${contact.address1}</td></tr></table></li>
+            <li><table><tr><td><i class="fas fa-phone-alt"></i></td><td style="padding-left:10px;">${contact.phone}</td></tr></table></li>
+            <li><table><tr><td><i class="fas fa-envelope"></i></td><td style="padding-left:10px;">${contact.email}</td></tr></table></li>`;
+          document.querySelector(".footer-bottom").textContent = footer["footer-note"];
+        } catch (err) { console.error("Error loading footer data:", err); }
       }
       loadFooter();
     </script>
-    <!-- loading footer ends  -->
-
-</body>
-
+  </body>
 </html>

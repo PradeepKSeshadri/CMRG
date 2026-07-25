@@ -2,17 +2,19 @@
   "ribbontitle": "Courses",
   "ribbondesc": "Stay Updated Regarding Latest Coursework Related Details",
   "announcements": [
-    { "date": "July 28, 2025", "message": "AS2050* Aerodynamics Course for Second Year Aerospace Undergraduates begins." }
+    { "date": "July 27, 2026", "message": "AS2050* Aerodynamics for second-year Aerospace undergraduates begins." }
   ],
   "courses": [
     {
       "id": "1",
-      "title": "AS2050* Aerodynamics",
+      "code": "AS2050*",
+      "courseKey": "as2050",
+      "title": "Undergraduate Aerodynamics",
       "instructor": "Dr. Pradeep Kumar Seshadri",
-      "semester": "Jul - Nov 2025 Semester",
-      "description": "This is a core course offered to second year Aerospace undergraduates. Credits Involve 3 Lectures + 1 Tutorial per week.",
-      "buttonText": "See More",
-      "link": "completecourse.html",
+      "semester": "Jul–Nov 2026",
+      "description": "A core course for second-year Aerospace undergraduates — 3 lectures + 1 tutorial per week.",
+      "buttonText": "View course",
+      "link": "singlecourses.html",
       "modules": [
         {
           "title": "Syllabus",

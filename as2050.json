@@ -1,0 +1,132 @@
+{
+  "code": "AS2050*",
+  "title": "Undergraduate Aerodynamics",
+  "dept": "Aerospace Engineering · IIT Madras",
+  "subtitle": "Vortex-dominated flows and the physics of lift — from potential-flow foundations through thin-airfoil and lifting-line theory to the aerodynamics of the whole aircraft.",
+  "instructor": "Pradeep Kumar Seshadri",
+  "semester": "Jul–Nov 2026",
+  "semesterNote": "3rd semester",
+  "slot": "B Slot",
+  "cadence": "3 Lectures + 1 Tutorial / week",
+  "startNote": "Classes begin Monday, 27 July 2026. Lecture materials will be posted here through the term.",
+  "docs": {
+    "policy": "assets/as2050/AS2050_Course_Policy_2026.pdf",
+    "plan": "assets/as2050/AS2050_Lecture_Plan_2026.pdf"
+  },
+  "archiveLink": "completecourse.html",
+  "assessmentLead": "Continuous by design — the term is graded through weekly tutorial quizzes, two quizzes, and a comprehensive end-semester exam.",
+  "assessment": [
+    { "c": "Continuous Assessment", "d": "Short quiz at every tutorial + assignments", "w": "20%" },
+    { "c": "Software Exercise", "d": "Individual — aerodynamics software, results & interpretation", "w": "5%" },
+    { "c": "Group Presentation", "d": "15 min on a real-world aerodynamics topic", "w": "5%" },
+    { "c": "Quiz 1", "d": "Tue 1 Sep 2026 · covers L1–L15", "w": "15%" },
+    { "c": "Quiz 2", "d": "Tue 6 Oct 2026 · covers L17–L27", "w": "15%" },
+    { "c": "End-Semester Exam", "d": "Fri 13 Nov 2026 · comprehensive", "w": "40%" },
+    { "c": "Total", "d": "", "w": "100%", "total": true }
+  ],
+  "rules": [
+    "A short, closed-book quiz at <b>each tutorial</b> — lectures, an assigned reading, or both.",
+    "The <b>first tutorial quiz is ungraded</b> — a no-stakes run to learn the format.",
+    "Your <b>lowest three graded quizzes are dropped</b> — also your absence allowance (miss up to three tutorials, no make-up).",
+    "Assignments carry a <b>10% penalty per late day</b>, up to 3 days.",
+    "<b>One make-up exam</b> only, after the end-sem, for any one missed quiz/exam.",
+    "No separate professionalism grade this semester."
+  ],
+  "blocks": {
+    "B0": "Foundations & review",
+    "B1": "Potential-flow toolkit",
+    "B2": "Vorticity & circulation",
+    "B3": "Two-dimensional airfoils",
+    "B4": "Thin-airfoil theory & panels",
+    "B5": "Propellers",
+    "B6": "Finite wings",
+    "B7": "Whole aircraft & synthesis"
+  },
+  "windows": [
+    {
+      "title": "Window 1",
+      "until": "Up to Quiz-I · Tue 1 Sep 2026",
+      "rows": [
+        ["Mon 27 Jul", "lec", "L1", "B0", "Introduction to aerodynamics; lift/drag/moment; applications & history; course & tutorial policies"],
+        ["Tue 28 Jul", "lec", "L2", "B0", "Review — vector calculus: grad/div/curl; divergence & Stokes' theorems"],
+        ["Wed 29 Jul", "tut", "T1", null, "Tutorial: vector-calculus problems"],
+        ["Fri 31 Jul", "lec", "L3", "B0", "Review — fluid kinematics: continuum, material derivative, Eulerian/Lagrangian, streamlines"],
+        ["Mon 03 Aug", "lec", "L4", "B1", "Conservation laws (continuity, momentum); incompressibility; irrotationality; velocity potential"],
+        ["Tue 04 Aug", "lec", "L5", "B1", "Stream function; Laplace equation; boundary conditions; superposition"],
+        ["Wed 05 Aug", "tut", "T2", null, "Tutorial: governing-equations problems"],
+        ["Fri 07 Aug", "lec", "L6", "B1", "Elementary flows I — uniform flow, source/sink, doublet"],
+        ["Mon 10 Aug", "lec", "L7", "B1", "Elementary flows II — Rankine half-body; non-lifting flow over a cylinder"],
+        ["Tue 11 Aug", "lec", "L8", "B1", "Complex potential & conformal mapping"],
+        ["Wed 12 Aug", "tut", "T3", null, "Tutorial: elementary flows & superposition"],
+        ["Fri 14 Aug", "lec", "L9", "B2", "Vorticity & circulation; the point vortex"],
+        ["Mon 17 Aug", "lec", "L10", "B2", "Lifting flow over a cylinder; Kutta–Joukowski theorem  L = ρV∞Γ"],
+        ["Tue 18 Aug", "lec", "L11", "B2", "Vortex dynamics — Helmholtz's theorems; Kelvin's circulation theorem"],
+        ["Wed 19 Aug", "tut", "T4", null, "Tutorial: vorticity, circulation, Kutta–Joukowski"],
+        ["Fri 21 Aug", "lec", "L12", "B2", "Biot–Savart law; vortex filament; vortex sheet"],
+        ["Mon 24 Aug", "lec", "L13", "B3", "Airfoil nomenclature & characteristics; cₗ, c_d, c_m; pressure distribution; aerodynamic centre"],
+        ["Tue 25 Aug", "lec", "L14", "B3", "Kutta condition; starting vortex; generation of circulation on an airfoil"],
+        ["Wed 26 Aug", "holi", "—", null, "Holiday — Milad (no tutorial)"],
+        ["Fri 28 Aug", "lec", "L15", "B3", "Joukowski transformation → airfoil lift; synthesis"],
+        ["Mon 31 Aug", "lec", "L16", "B3", "Quiz-I buffer — review & worked problems"],
+        ["Tue 01 Sep", "quiz", "Quiz", "", "QUIZ-I — covers L1–L15"]
+      ]
+    },
+    {
+      "title": "Window 2",
+      "until": "Quiz-I to Quiz-II · Tue 6 Oct 2026",
+      "rows": [
+        ["Wed 02 Sep", "tut", "T5", null, "Tutorial: Quiz-I solutions + airfoil problems"],
+        ["Fri 04 Sep", "lec", "L17", "B4", "Thin-airfoil theory I — vortex sheet on the camber line; fundamental equation"],
+        ["Mon 07 Sep", "lec", "L18", "B4", "Thin-airfoil theory II — symmetric airfoil: cₗ = 2πα; a.c. at c/4"],
+        ["Tue 08 Sep", "lec", "L19", "B4", "Thin-airfoil theory III — cambered airfoil: Fourier-series solution; cₗ, c_m"],
+        ["Wed 09 Sep", "tut", "T6", null, "Tutorial: thin-airfoil problems I"],
+        ["Fri 11 Sep", "lec", "L20", "B4", "Thin-airfoil theory IV — moments; centre of pressure vs. aerodynamic centre"],
+        ["Mon 14 Sep", "holi", "—", null, "Holiday — Ganesh Chaturthi"],
+        ["Tue 15 Sep", "lec", "L21", "B4", "Method of singularities; source/vortex panel methods — concept & discretisation"],
+        ["Wed 16 Sep", "tut", "T7", null, "Tutorial: thin-airfoil problems II"],
+        ["Fri 18 Sep", "lec", "L22", "B4", "Vortex panel method — implementation; intro to computational aerodynamics"],
+        ["Mon 21 Sep", "lec", "L23", "B4", "Experimental airfoil characteristics — Reynolds effects, stall, drag polar"],
+        ["Tue 22 Sep", "lec", "L24", "B5", "Propellers I — momentum (actuator-disc) theory; thrust; ideal efficiency"],
+        ["Wed 23 Sep", "tut", "T8", null, "Tutorial: panel-method / airfoil-data problems"],
+        ["Fri 25 Sep", "lec", "L25", "B5", "Propellers II — blade-element theory (uses 2D airfoil data)"],
+        ["Mon 28 Sep", "lec", "L26", "B5", "Propellers III — combined blade-element–momentum (BEM); performance charts"],
+        ["Tue 29 Sep", "lec", "L27", "B5", "Consolidation — thin-airfoil + propeller worked problems"],
+        ["Wed 30 Sep", "tut", "T9", null, "Tutorial: propeller (BEM) problems"],
+        ["Fri 02 Oct", "holi", "—", null, "Holiday — Gandhi Jayanti"],
+        ["Mon 05 Oct", "lec", "L28", "B5", "Quiz-II buffer — review"],
+        ["Tue 06 Oct", "quiz", "Quiz", "", "QUIZ-II — covers L17–L27"]
+      ]
+    },
+    {
+      "title": "Window 3",
+      "until": "Quiz-II to End-Semester · Fri 13 Nov 2026",
+      "rows": [
+        ["Wed 07 Oct", "tut", "T10", null, "Tutorial: Quiz-II solutions + finite-wing introduction"],
+        ["Fri 09 Oct", "lec", "L29", "B6", "Finite wings — downwash; induced angle of attack; induced drag; wingtip vortices"],
+        ["Mon 12 Oct", "lec", "L30", "B6", "Prandtl's lifting-line theory I — the fundamental equation"],
+        ["Tue 13 Oct", "lec", "L31", "B6", "Lifting-line theory II — elliptical lift distribution; minimum induced drag; span efficiency"],
+        ["Wed 14 Oct", "tut", "T11", null, "Tutorial: lifting-line problems I"],
+        ["Fri 16 Oct", "lec", "L32", "B6", "Lifting-line theory III — general distribution (Fourier); aspect-ratio effects"],
+        ["Mon 19 Oct", "lec", "L33", "B6", "Effect of geometry — aspect ratio, taper, twist on lift & induced drag"],
+        ["Tue 20 Oct", "holi", "—", null, "Holiday — Dussehra"],
+        ["Wed 21 Oct", "tut", "T12", null, "Tutorial: lifting-line / aspect-ratio problems II"],
+        ["Fri 23 Oct", "lec", "L34", "B6", "Elements of lifting-surface theory; vortex-lattice concept"],
+        ["Mon 26 Oct", "lec", "L35", "B6", "Swept & delta wings — sweep effects; leading-edge vortices"],
+        ["Tue 27 Oct", "lec", "L36", "B7", "Flow past bodies in incompressible flow; drag breakdown (pressure vs. friction)"],
+        ["Wed 28 Oct", "tut", "T13", null, "Tutorial: swept/delta + whole-aircraft problems"],
+        ["Fri 30 Oct", "lec", "L37", "B7", "Lift, drag & moment of the whole airplane; aircraft drag polar; L/D"],
+        ["Mon 02 Nov", "lec", "L38", "B7", "Putting it together: airfoil → wing → aircraft; applications"],
+        ["Tue 03 Nov", "lec", "L39", "B7", "Course synthesis & outlook (compressibility preview); End-sem review I"],
+        ["Wed 04 Nov", "tut", "T14", null, "Tutorial: comprehensive end-semester problem set"],
+        ["Fri 06 Nov", "lec", "L40", "B7", "End-sem review II — worked problems & Q&A (Last Instructional Day)"],
+        ["Fri 13 Nov", "end", "Exam", "", "END-SEMESTER EXAM — covers the entire course"]
+      ]
+    }
+  ],
+  "references": [
+    { "text": "Anderson, J. D. — <i>Fundamentals of Aerodynamics</i>, 7th ed.", "primary": true },
+    { "text": "Kuethe, A. M. &amp; Chow, C.-Y. — <i>Foundations of Aerodynamics</i>, 5th ed." },
+    { "text": "Kundu, Cohen, Dowling &amp; Capecelatro — <i>Fluid Mechanics</i>, 6th ed." },
+    { "text": "Acheson, D. J. — <i>Elementary Fluid Dynamics</i>." }
+  ]
+}
