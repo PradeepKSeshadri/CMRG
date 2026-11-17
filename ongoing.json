@@ -160,31 +160,6 @@
    "imgtitle": "Bullet-on-armour geometry built with PyAMorph (top) and a hypervelocity debris impact on a bumper shield simulated in-house (bottom)"
   }
  ],
- "Biophysical & Biomedical Flow Modeling": [
-  {
-   "title": "Biophysical & Biomedical Flow Modeling",
-   "subtitle": "Cardiovascular, Microfluidic, and Cellular-Scale Flows",
-   "icon": "🫀",
-   "overview": "Applying our all-speed solver technology and multiscale coupling to biofluids: cardiovascular flows, microfluidics, and transport in porous biological media. Emphasis on physiological fidelity and clinically relevant predictions.",
-   "publicationCount": 0,
-   "currentProjects": [
-    "Patient-specific cardiovascular flow simulations",
-    "Microfluidic device modelling with interface-resolving methods",
-    "Transport and mixing of particulates/cells in complex geometries"
-   ],
-   "tools": [
-    "AMReX",
-    "Alamo",
-    "CTP Solver",
-    "Image-based geometry workflows"
-   ],
-   "impact": [
-    "Supports translational bioengineering and device design",
-    "Bridges physiological measurements and predictive modelling"
-   ],
-   "image": "images/Research_Image_Cardiovascular.jpg"
-  }
- ],
  "Hypersonic & Reentry Physics": [
   {
    "title": "Hypersonic & Reentry Physics",
