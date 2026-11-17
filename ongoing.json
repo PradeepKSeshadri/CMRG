@@ -127,8 +127,8 @@
     "Provides a stateless, header-only C++ execution backend suitable for highly concurrent HPC and parallel engineering environments",
     "Enables completely offline, domain-expert-free database querying via automated natural-language-to-SQL conversions"
    ],
-   "image": "images/Lumina workflow.png",
-   "imgtitle": "Material Data Processing and AI-Based Natural Language Query Workflow with three-layer state mapping"
+   "image": "images/research/lumina.jpg",
+   "imgtitle": "Lumina materials engine: a JWL equation-of-state curve (top) and a shock Hugoniot fitted against experimental data (bottom)"
   }
  ],
  "Energetic Materials & Reactive Systems": [
