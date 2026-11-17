@@ -58,90 +58,100 @@
         .wordmark .w1 { font-size: .95rem; }
       }
 
-      /* ---------- Hero ---------- */
-      .hero {
-        position: relative; overflow: hidden;
-        background:
-          radial-gradient(1200px 600px at 78% -10%, rgba(0,72,165,.55), transparent 60%),
-          linear-gradient(160deg, #011229 0%, var(--primary) 42%, var(--primary-2) 100%);
-        color: var(--text-light);
-        padding: clamp(80px, 14vh, 140px) 0 clamp(76px, 12vh, 130px);
-      }
-      .hero-watermark {
-        position: absolute; right: 2%; top: 50%; transform: translateY(-50%);
-        width: min(38vw, 440px); opacity: .10; pointer-events: none;
-      }
+      /* ---------- Shared ---------- */
+      body { cursor: auto; }
       .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-      .hero .wrap { position: relative; z-index: 2; }
-      .hero-badge {
-        width: 76px; height: 76px; border-radius: 18px; background: #fff; display: grid; place-items: center;
-        box-shadow: 0 12px 34px rgba(0,0,0,.30); margin-bottom: 28px;
-      }
-      .hero-badge img { width: 80%; height: 80%; object-fit: contain; }
-      .eyebrow {
-        text-transform: uppercase; letter-spacing: 2.5px; font-size: .74rem; font-weight: 600;
-        color: var(--gold); margin: 0 0 20px;
-      }
-      .hero h1 {
-        font-family: "League Spartan", "Segoe UI", sans-serif;
-        margin: 0; font-weight: 300; letter-spacing: .2px;
-        font-size: clamp(2.2rem, 4.8vw, 3.7rem); line-height: 1.1; text-wrap: balance;
-        max-width: 17ch; color: var(--text-light);
-      }
-      .hero .lede {
-        margin: 24px 0 0; max-width: 60ch; color: #c4d1e6;
-        font-size: clamp(1.02rem, 1.4vw, 1.18rem); line-height: 1.7;
-      }
-      .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
       .btn2 {
         display: inline-flex; align-items: center; gap: 9px;
         padding: 13px 24px; border-radius: 8px; font-weight: 600; font-size: .98rem;
-        border: 1.5px solid transparent; transition: all .22s ease; text-decoration: none;
+        border: 1.5px solid transparent; transition: all .22s ease; text-decoration: none; cursor: pointer;
       }
       .btn-gold { background: var(--gold); color: var(--primary); border-color: var(--gold); }
       .btn-gold:hover { background: transparent; color: var(--gold); }
       .btn-ghost { color: #fff; border-color: rgba(255,255,255,.35); }
       .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
       .btn2 svg { width: 17px; height: 17px; }
+      .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+      .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative; overflow: hidden; color: var(--text-light);
+        background:
+          radial-gradient(1100px 620px at 82% -12%, rgba(0,82,185,.55), transparent 62%),
+          radial-gradient(700px 420px at -8% 110%, rgba(250,204,21,.10), transparent 60%),
+          linear-gradient(160deg, #010d20 0%, var(--primary) 46%, var(--primary-2) 100%);
+        padding: clamp(48px, 8vh, 88px) 0 0;
+      }
+      .hero::before {
+        content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+        background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+        background-size: 44px 44px;
+        -webkit-mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 70%);
+                mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 70%);
+      }
+      .hero .wrap { position: relative; z-index: 2; }
+      .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: clamp(28px, 4.5vw, 60px); align-items: center; }
+      @media (max-width: 980px){ .hero-grid { grid-template-columns: 1fr; } }
+      .eyebrow {
+        display: inline-flex; align-items: center; gap: 10px;
+        text-transform: uppercase; letter-spacing: 2.2px; font-size: .72rem; font-weight: 600;
+        color: var(--gold); margin: 0 0 22px;
+      }
+      .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--gold); }
+      .hero h1 {
+        font-family: "League Spartan", "Segoe UI", sans-serif;
+        margin: 0; font-weight: 300; letter-spacing: .2px;
+        font-size: clamp(2.2rem, 4.3vw, 3.5rem); line-height: 1.08; text-wrap: balance; color: #fff;
+      }
+      .hero .lede { margin: 22px 0 0; max-width: 52ch; color: #c4d1e6; font-size: clamp(1.02rem, 1.3vw, 1.14rem); line-height: 1.7; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+      /* showcase player */
+      .showcase { min-width: 0; }
+      .stage {
+        position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000;
+        box-shadow: 0 30px 70px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.10);
+      }
+      .stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; opacity: 0; transition: opacity .5s ease; }
+      .stage video.on { opacity: 1; }
+      .stage .bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--gold); z-index: 3; }
+      .cap { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-top: 16px; min-height: 66px; }
+      .cap .t { min-width: 0; }
+      .cap .tg { font-size: .66rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); }
+      .cap .ti { font-size: 1.04rem; font-weight: 600; color: #fff; margin-top: 4px; }
+      .cap .tx { font-size: .88rem; color: #a9bbd6; margin-top: 3px; line-height: 1.45; }
+      .dots { display: flex; gap: 2px; flex: 0 0 auto; padding-top: 2px; }
+      .dots button { width: 22px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+      .dots button::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.28); transition: all .2s; }
+      .dots button.on::before { background: var(--gold); width: 20px; border-radius: 6px; }
+      .dots button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
+
+      /* stats strip */
+      .stats-strip {
+        margin-top: clamp(44px, 7vh, 72px); border-top: 1px solid rgba(255,255,255,.12);
+        display: grid; grid-template-columns: repeat(4, 1fr);
+      }
+      .sstat { padding: 26px 20px 30px; border-left: 1px solid rgba(255,255,255,.10); }
+      .sstat:first-child { border-left: 0; padding-left: 0; }
+      .sstat .n { font-family: "League Spartan", "Segoe UI", sans-serif; font-weight: 300; font-size: clamp(2rem, 3.4vw, 2.7rem); line-height: 1; color: #fff; font-variant-numeric: tabular-nums; }
+      .sstat .l { margin-top: 8px; font-size: .74rem; letter-spacing: 1.5px; text-transform: uppercase; color: #9fb2cf; font-weight: 600; }
+      .sstat .s { margin-top: 4px; font-size: .78rem; color: #7f93b4; }
+      .sstat .s a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+      @media (max-width: 700px){
+        .stats-strip { grid-template-columns: repeat(2, 1fr); }
+        .sstat { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.08); }
+        .sstat:nth-child(-n+2) { border-top: 0; }
+      }
 
       /* ---------- Section scaffolding ---------- */
       .section { padding: clamp(60px, 8.5vw, 100px) 0; }
       .section.soft { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
       .sec-head { max-width: 640px; }
       .sec-head.center { margin: 0 auto; text-align: center; }
-      .sec-head h2 {
-        margin: 0; font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 700;
-        letter-spacing: -.4px; color: var(--ink); text-wrap: balance;
-      }
+      .sec-head h2 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 700; letter-spacing: -.4px; color: var(--ink); text-wrap: balance; }
       .sec-head p { margin: 14px 0 0; color: var(--muted); font-size: 1.05rem; line-height: 1.6; }
-      .sec-head .kicker {
-        display: inline-block; text-transform: uppercase; letter-spacing: 2px;
-        font-size: .72rem; font-weight: 700; color: var(--primary-2); margin: 0 0 12px;
-      }
-
-      /* ---------- Research grid ---------- */
-      .research-grid { margin-top: 50px; display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
-      @media (max-width: 900px){ .research-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 600px){ .research-grid { grid-template-columns: 1fr; } }
-      .rcard {
-        background: var(--bg); border: 1px solid var(--line); border-radius: 14px;
-        padding: 30px 26px; text-align: left;
-        transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-      }
-      .rcard:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(1,33,73,.10); border-color: #cfd9e8; }
-      .rcard .ico {
-        width: 46px; height: 46px; border-radius: 11px; display: grid; place-items: center;
-        background: rgba(1,42,94,.06); color: var(--primary-2); margin-bottom: 18px;
-      }
-      .rcard .ico svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.7; }
-      .rcard .ico .emoji { font-size: 24px; }
-      .rcard h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 600; letter-spacing: -.2px; color: var(--ink); }
-      .rcard p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
-      .rcard-cta {
-        display: flex; flex-direction: column; justify-content: center;
-        background: var(--bg-soft); border-style: dashed;
-      }
-      .rcard-cta h3 { margin-bottom: 6px; }
+      .kicker { display: inline-block; text-transform: uppercase; letter-spacing: 2px; font-size: .72rem; font-weight: 700; color: var(--primary-2); margin: 0 0 12px; }
       .textlink {
         display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary-2);
         border-bottom: 2px solid transparent; padding-bottom: 2px; text-decoration: none;
@@ -149,37 +159,104 @@
       }
       .textlink:hover { border-color: var(--gold); gap: 12px; }
       .textlink svg { width: 16px; height: 16px; }
+      .center-link { margin-top: 42px; text-align: center; }
+      .center-link .textlink { margin: 0 auto; }
+
+      /* ---------- Research grid ---------- */
+      .research-grid { margin-top: 50px; display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 900px){ .research-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px){ .research-grid { grid-template-columns: 1fr; } }
+      .rcard {
+        position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: 14px;
+        padding: 30px 26px; text-align: left; overflow: hidden;
+        transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      }
+      .rcard::after { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+      .rcard:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(1,33,73,.10); border-color: #cfd9e8; }
+      .rcard:hover::after { transform: scaleX(1); }
+      .rcard .ico { width: 46px; height: 46px; border-radius: 11px; display: grid; place-items: center; background: rgba(1,42,94,.06); color: var(--primary-2); margin-bottom: 18px; }
+      .rcard .ico svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+      .rcard .ico .emoji { font-size: 24px; }
+      .rcard h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 600; letter-spacing: -.2px; color: var(--ink); }
+      .rcard p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
+      .rcard-cta { display: flex; flex-direction: column; justify-content: center; background: var(--primary); border-color: var(--primary); }
+      .rcard-cta h3 { color: #fff; margin-bottom: 10px; }
+      .rcard-cta .textlink { color: var(--gold); }
+
+      /* ---------- Showreel ---------- */
+      .reel { background: linear-gradient(170deg, #010d20, var(--primary) 70%); color: #fff; }
+      .reel-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+      @media (max-width: 900px){ .reel-grid { grid-template-columns: 1fr; } }
+      .reel .kicker { color: var(--gold); }
+      .reel h2 { margin: 0; font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 700; letter-spacing: -.4px; color: #fff; text-wrap: balance; }
+      .reel p.d { margin: 16px 0 0; color: #c4d1e6; font-size: 1.04rem; line-height: 1.65; }
+      .reel ul { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 12px; }
+      .reel li { display: flex; gap: 12px; color: #dbe5f4; font-size: .96rem; line-height: 1.5; }
+      .reel li::before { content: ""; flex: 0 0 auto; width: 7px; height: 7px; margin-top: .5em; border-radius: 50%; background: var(--gold); }
+      .player { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000; box-shadow: 0 30px 70px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.10); }
+      .player video { width: 100%; height: 100%; display: block; background: #000; }
+      .player .play {
+        position: absolute; inset: 0; border: 0; padding: 0; cursor: pointer; color: #fff; font: inherit;
+        background-size: cover; background-position: center; display: grid; place-items: center;
+      }
+      .player .play::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(1,13,32,.15), rgba(1,13,32,.6)); transition: background .25s; }
+      .player .play:hover::before { background: linear-gradient(180deg, rgba(1,13,32,.05), rgba(1,13,32,.45)); }
+      .player .knob { position: relative; width: 84px; height: 84px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; box-shadow: 0 0 0 12px rgba(250,204,21,.22); transition: transform .2s; }
+      .player .play:hover .knob { transform: scale(1.07); }
+      .player .knob svg { width: 30px; height: 30px; fill: var(--primary); margin-left: 5px; }
+      .player .len { position: absolute; left: 18px; bottom: 16px; font-size: .82rem; font-weight: 600; letter-spacing: .4px; }
+
+      /* ---------- Lab mosaic ---------- */
+      .lab-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+      .mosaic { margin-top: 40px; display: grid; gap: 14px; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(130px, 17vw, 215px); }
+      .mosaic figure { margin: 0; position: relative; overflow: hidden; border-radius: 14px; background: var(--bg-soft); cursor: zoom-in; }
+      .mosaic figure:first-child { grid-column: span 2; grid-row: span 2; }
+      .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+      .mosaic figure:hover img { transform: scale(1.05); }
+      .mosaic figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 16px 13px; color: #fff; font-size: .88rem; font-weight: 600; background: linear-gradient(transparent, rgba(1,13,32,.82)); }
+      @media (max-width: 760px){
+        .mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+        .mosaic figure:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+        .mosaic figure:first-child { grid-column: span 2; grid-row: span 1; }
+        .mosaic { grid-auto-rows: 42vw; }
+      }
+      .lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(1,9,22,.93); display: none; place-items: center; padding: 24px; cursor: zoom-out; }
+      .lightbox.show { display: grid; }
+      .lightbox img { max-width: 100%; max-height: 84vh; border-radius: 10px; }
+      .lightbox p { color: #dbe5f4; text-align: center; margin-top: 14px; font-size: .95rem; }
+
+      /* ---------- Publications ---------- */
+      .pub-list { margin-top: 44px; display: grid; gap: 16px; }
+      .pub {
+        display: grid; grid-template-columns: 74px minmax(0, 1fr) auto; gap: 22px; align-items: center;
+        background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; text-decoration: none;
+        transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      }
+      .pub:hover { transform: translateX(4px); box-shadow: 0 12px 30px rgba(1,33,73,.10); border-color: #cfd9e8; }
+      .pub .yr { font-family: "League Spartan", "Segoe UI", sans-serif; font-weight: 300; font-size: 1.9rem; color: var(--primary-2); font-variant-numeric: tabular-nums; }
+      .pub .pt { font-size: 1.04rem; font-weight: 600; line-height: 1.38; color: var(--ink); }
+      .pub .pa { margin-top: 6px; font-size: .88rem; color: var(--muted); line-height: 1.45; }
+      .pub .pv { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .86rem; color: var(--primary-2); font-weight: 600; }
+      .pub .arrow { color: var(--primary-2); width: 22px; height: 22px; }
+      .tag { align-self: flex-start; font-size: .68rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--primary-2); background: rgba(1,42,94,.07); padding: 5px 10px; border-radius: 999px; }
+      .tag.pre { color: #7a5b00; background: rgba(250,204,21,.22); }
+      @media (max-width: 640px){ .pub { grid-template-columns: 1fr; gap: 8px; padding: 20px; } .pub .arrow { display: none; } .pub .yr { font-size: 1.3rem; } }
 
       /* ---------- Latest News ---------- */
       .news-grid { margin-top: 50px; display: grid; gap: 24px; grid-template-columns: repeat(3, 1fr); }
       @media (max-width: 900px){ .news-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
-      .ncard {
-        background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
-        display: flex; flex-direction: column; text-decoration: none;
-        transition: transform .22s ease, box-shadow .22s ease;
-      }
+      .ncard { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: transform .22s ease, box-shadow .22s ease; }
       .ncard:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(1,33,73,.12); }
       .ncard .thumb { aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-soft); display: block; }
-      .ncard .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .ncard .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+      .ncard:hover .thumb img { transform: scale(1.05); }
       .ncard .body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; text-align: left; }
-      .tag {
-        align-self: flex-start; font-size: .68rem; font-weight: 700; letter-spacing: 1.2px;
-        text-transform: uppercase; color: var(--primary-2); background: rgba(1,42,94,.07);
-        padding: 5px 10px; border-radius: 999px;
-      }
       .ncard-title { font-size: 1.06rem; font-weight: 600; line-height: 1.35; letter-spacing: -.2px; color: var(--ink); }
-      .ncard-text {
-        color: var(--muted); font-size: .93rem; line-height: 1.55;
-        display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
-      }
-      .center-link { margin-top: 42px; text-align: center; }
-      .center-link .textlink { margin: 0 auto; }
+      .ncard-text { color: var(--muted); font-size: .93rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 
       /* ---------- Join strip ---------- */
       .join {
-        background:
-          radial-gradient(900px 420px at 85% 120%, rgba(250,204,21,.14), transparent 60%),
-          linear-gradient(120deg, var(--primary) 0%, var(--primary-2) 100%);
+        background: radial-gradient(900px 420px at 85% 120%, rgba(250,204,21,.14), transparent 60%), linear-gradient(120deg, var(--primary) 0%, var(--primary-2) 100%);
         color: var(--text-light); text-align: center;
       }
       .join .wrap { padding-top: clamp(60px, 8.5vw, 92px); padding-bottom: clamp(60px, 8.5vw, 92px); }
@@ -188,7 +265,8 @@
       .join .cta-row { justify-content: center; }
 
       @media (prefers-reduced-motion: reduce) {
-        .rcard, .ncard, .btn2, .textlink { transition: none !important; }
+        .rcard, .ncard, .pub, .btn2, .textlink, .mosaic img, .ncard .thumb img, .stage video { transition: none !important; }
+        .reveal { opacity: 1; transform: none; transition: none; }
       }
     </style>
     <link
@@ -272,26 +350,35 @@
 
     <!-- Hero -->
     <section class="hero">
-      <img class="hero-watermark" src="images/brand/CMRG-Icon-White.png" alt="" aria-hidden="true" />
       <div class="wrap">
-        <div class="hero-badge"><img src="images/brand/CMRG-Icon.png" alt="CMRG symbol" /></div>
-        <p class="eyebrow">Indian Institute of Technology Madras</p>
-        <h1></h1>
-        <p class="lede"></p>
-        <div class="cta-row">
-          <a class="btn2 btn-gold" href="#">
-            <span class="label"></span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn2 btn-ghost" href="openings.html">Join the Group</a>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow"></p>
+            <h1></h1>
+            <p class="lede"></p>
+            <div class="cta-row">
+              <a class="btn2 btn-gold" href="#"><span class="label"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn2 btn-ghost hero-second" href="#showreel">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="label"></span>
+              </a>
+            </div>
+          </div>
+          <div class="showcase" aria-label="Simulations from the group">
+            <div class="stage"><video muted playsinline preload="metadata"></video><video muted playsinline preload="none"></video><div class="bar"></div></div>
+            <div class="cap">
+              <div class="t"><div class="tg"></div><div class="ti"></div><div class="tx"></div></div>
+              <div class="dots"></div>
+            </div>
+          </div>
         </div>
+        <div class="stats-strip"></div>
       </div>
     </section>
 
     <!-- Research Areas -->
     <section class="section">
       <div class="wrap">
-        <div class="sec-head center research-head">
+        <div class="sec-head center research-head reveal">
           <span class="kicker">What we work on</span>
           <h2></h2>
           <p></p>
@@ -300,19 +387,66 @@
       </div>
     </section>
 
-    <!-- Latest News -->
+    <!-- Showreel -->
+    <section class="section reel" id="showreel">
+      <div class="wrap">
+        <div class="reel-grid">
+          <div class="reveal">
+            <span class="kicker reel-kicker"></span>
+            <h2></h2>
+            <p class="d"></p>
+            <ul></ul>
+          </div>
+          <div class="player reveal">
+            <video controls playsinline preload="none"></video>
+            <button class="play" type="button" aria-label="Play the CMRG showreel">
+              <span class="knob"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="len">CMRG showreel · 4:48</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lab -->
+    <section class="section">
+      <div class="wrap">
+        <div class="lab-head reveal">
+          <div class="sec-head lab-sec">
+            <span class="kicker"></span>
+            <h2></h2>
+            <p></p>
+          </div>
+          <a class="textlink lab-link" href="gallery.html"><span class="label"></span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="mosaic"></div>
+      </div>
+    </section>
+
+    <!-- Publications -->
     <section class="section soft">
       <div class="wrap">
-        <div class="sec-head center">
+        <div class="sec-head center pub-head reveal">
+          <span class="kicker"></span>
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="pub-list"></div>
+        <div class="center-link"><a class="textlink pub-link" href="journals.html"><span class="label"></span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head center reveal">
           <span class="kicker">From the group</span>
           <h2>Latest News</h2>
           <p>Talks, papers, and the conferences we're organizing.</p>
         </div>
         <div class="news-grid"></div>
         <div class="center-link">
-          <a class="textlink" href="blog.html">View all news
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <a class="textlink" href="blog.html">View all news <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </section>
@@ -327,6 +461,8 @@
         </div>
       </div>
     </section>
+
+    <div class="lightbox" id="lightbox"><div><img alt="" /><p></p></div></div>
 
     <!-- Complete footer starts  -->
     <footer class="footer">
@@ -383,33 +519,156 @@
         ai:         '<svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v2M14 3v2M10 19v2M14 19v2M3 10h2M3 14h2M19 10h2M19 14h2" stroke-linecap="round"/></svg>'
       };
       const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      const $ = (s, r) => (r || document).querySelector(s);
+      const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       function esc(s) {
         return String(s == null ? "" : s).replace(/[&<>"']/g, c =>
           ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
       }
+      const ok = (u) => u && u !== "#";
+
+      /* ---- hero showcase: muted clips that advance on their own ---- */
+      function initShowcase(items) {
+        const box = $(".showcase");
+        if (!items || !items.length) { box.style.display = "none"; return; }
+        const vids = box.querySelectorAll("video"), bar = $(".stage .bar"), dots = $(".dots");
+        let cur = -1, front = 0;
+        dots.innerHTML = items.map((it, i) => `<button type="button" aria-label="Show: ${esc(it.title)}"></button>`).join("");
+        const btns = dots.querySelectorAll("button");
+        function show(i) {
+          cur = (i + items.length) % items.length;
+          const it = items[cur], v = vids[front ^= 1], old = vids[front ^ 1];
+          v.poster = it.poster || ""; v.src = it.video; v.loop = REDUCED;
+          v.onended = () => show(cur + 1);
+          v.ontimeupdate = () => { if (v.duration) bar.style.width = (100 * v.currentTime / v.duration) + "%"; };
+          old.onended = old.ontimeupdate = null;
+          v.classList.add("on"); old.classList.remove("on"); old.pause();
+          if (!REDUCED) { const p = v.play(); if (p) p.catch(() => {}); }
+          $(".cap .tg").textContent = it.tag || "";
+          $(".cap .ti").textContent = it.title || "";
+          $(".cap .tx").textContent = it.text || "";
+          btns.forEach((b, k) => b.classList.toggle("on", k === cur));
+        }
+        btns.forEach((b, k) => b.onclick = () => show(k));
+        show(0);
+      }
+
+      /* ---- stats strip (numbers come from scholar.json) ---- */
+      function initStats(cfg, sc) {
+        const strip = $(".stats-strip");
+        if (!cfg || !cfg.items) { strip.style.display = "none"; return; }
+        strip.innerHTML = cfg.items.map((it) => {
+          const val = it.key ? sc[it.key] : it.value;
+          const note = it.note ? esc(it.note)
+            : (it.key && cfg.sourceLink ? `<a href="${esc(cfg.sourceLink)}" target="_blank" rel="noopener">${esc(cfg.sourceText || "source")}</a>` : "");
+          return `<div class="sstat"><div class="n" data-n="${esc(val)}">${val != null ? esc(val) : "—"}</div>
+                  <div class="l">${esc(it.label)}</div>${note ? `<div class="s">${note}</div>` : ""}</div>`;
+        }).join("");
+        if (REDUCED) return;
+        strip.querySelectorAll(".n").forEach((el) => {
+          const end = parseInt(el.dataset.n, 10);
+          if (!(end > 0)) return;
+          const t0 = performance.now(), dur = 1100;
+          (function tick(t) {
+            const k = Math.min(1, (t - t0) / dur);
+            el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+            if (k < 1) requestAnimationFrame(tick);
+          })(t0);
+        });
+      }
+
+      function initReel(r) {
+        const sec = $("#showreel");
+        if (!r || !r.video) { sec.style.display = "none"; $(".hero-second").style.display = "none"; return; }
+        $(".reel-kicker").textContent = r.kicker || "";
+        $(".reel h2").textContent = r.heading || "";
+        $(".reel p.d").textContent = r.description || "";
+        $(".reel ul").innerHTML = (r.points || []).map((p) => `<li>${esc(p)}</li>`).join("");
+        const v = $(".player video"), btn = $(".player .play");
+        v.poster = r.poster || "";
+        btn.style.backgroundImage = r.poster ? `url("${r.poster}")` : "none";
+        btn.onclick = () => { v.src = r.video; btn.remove(); v.play(); };
+      }
+
+      function initLab(lab) {
+        if (!lab || !(lab.photos || []).length) { $(".mosaic").closest("section").style.display = "none"; return; }
+        $(".lab-sec .kicker").textContent = lab.kicker || "";
+        $(".lab-sec h2").textContent = lab.heading || "";
+        $(".lab-sec p").textContent = lab.description || "";
+        $(".lab-link .label").textContent = lab.buttonText || "Gallery";
+        $(".lab-link").href = lab.buttonLink || "gallery.html";
+        const lb = $("#lightbox");
+        $(".mosaic").innerHTML = lab.photos.slice(0, 5).map((p) =>
+          `<figure class="reveal" tabindex="0"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("");
+        document.querySelectorAll(".mosaic figure").forEach((f, i) => {
+          const open = () => { $("img", lb).src = lab.photos[i].src; $("p", lb).textContent = lab.photos[i].caption; lb.classList.add("show"); };
+          f.onclick = open; f.onkeydown = (e) => { if (e.key === "Enter") open(); };
+        });
+        lb.onclick = () => lb.classList.remove("show");
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("show"); });
+      }
+
+      function initPubs(cfg, jr) {
+        const list = $(".pub-list");
+        const pubs = ((jr && jr.publications) || []).map((p) => p.card)
+          .sort((a, b) => String(b.year).localeCompare(String(a.year))).slice(0, (cfg && cfg.count) || 3);
+        if (!cfg || !pubs.length) { list.closest("section").style.display = "none"; return; }
+        $(".pub-head .kicker").textContent = cfg.kicker || "";
+        $(".pub-head h2").textContent = cfg.heading || "";
+        $(".pub-head p").textContent = cfg.description || "";
+        $(".pub-link .label").textContent = cfg.buttonText || "All publications";
+        $(".pub-link").href = cfg.buttonLink || "journals.html";
+        list.innerHTML = pubs.map((c) => {
+          const pre = (c.category || "").toLowerCase() === "preprint";
+          const href = ok(c["view-link"]) ? c["view-link"] : (ok(c.doi) ? c.doi : "journals.html");
+          return `<a class="pub reveal" href="${esc(href)}" ${/^https?:/.test(href) ? 'target="_blank" rel="noopener"' : ""}>
+            <div class="yr">${esc(c.year)}</div>
+            <div>
+              <div class="pt">${esc(c["card-heading"])}</div>
+              <div class="pa">${esc(c["author-name"])}</div>
+              <div class="pv"><span class="tag ${pre ? "pre" : ""}">${pre ? "Preprint" : "Journal"}</span>${esc(c["publication-title"])}</div>
+            </div>
+            <span class="arrow">${ARROW}</span></a>`;
+        }).join("");
+      }
+
+      function watchReveals() {
+        const els = document.querySelectorAll(".reveal");
+        if (REDUCED || !("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("in")); return; }
+        const io = new IntersectionObserver((ents) => ents.forEach((en) => {
+          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+        }), { threshold: 0.12 });
+        els.forEach((e) => io.observe(e));
+      }
 
       async function loadIndexData() {
         try {
-          const res = await fetch("index.json");
-          const data = await res.json();
+          const get = (f) => fetch(f).then((r) => r.json()).catch(() => ({}));
+          const [data, sc, jr] = await Promise.all([fetch("index.json").then((r) => r.json()), get("scholar.json"), get("journals.json")]);
 
           // HERO
           const hero = data.hero;
-          document.querySelector(".hero h1").textContent = hero.title;
-          document.querySelector(".hero .lede").textContent = hero.description;
-          const heroBtn = document.querySelector(".hero .btn-gold");
-          heroBtn.querySelector(".label").textContent = hero.buttonText;
+          $(".hero .eyebrow").textContent = hero.eyebrow || "Indian Institute of Technology Madras";
+          $(".hero h1").textContent = hero.title;
+          $(".hero .lede").textContent = hero.description;
+          const heroBtn = $(".hero .btn-gold");
+          $(".label", heroBtn).textContent = hero.buttonText;
           heroBtn.href = hero.buttonLink;
+          const second = $(".hero-second");
+          $(".label", second).textContent = hero.secondaryText || "Watch the showreel";
+          second.href = hero.secondaryLink || "#showreel";
+          initShowcase(hero.showcase);
+          initStats(data.stats, sc);
 
           // LATEST NEWS (first three updates)
-          const newsGrid = document.querySelector(".news-grid");
+          const newsGrid = $(".news-grid");
           newsGrid.innerHTML = "";
           (hero.updates || []).slice(0, 3).forEach((u) => {
             const a = document.createElement("a");
-            a.className = "ncard";
+            a.className = "ncard reveal";
             a.href = u.link || "blog.html";
-            if (/^https?:/i.test(a.href)) { a.target = "_blank"; a.rel = "noopener"; }
+            if (/^https?:/i.test(u.link || "")) { a.target = "_blank"; a.rel = "noopener"; }
             a.innerHTML = `
               <span class="thumb"><img src="${esc(u.image)}" alt="${esc(u.title)}" loading="lazy"></span>
               <span class="body">
@@ -422,13 +681,13 @@
 
           // RESEARCH
           const research = data.research;
-          document.querySelector(".research-head h2").textContent = research.heading;
-          document.querySelector(".research-head p").textContent = research.description;
-          const rgrid = document.querySelector(".research-grid");
+          $(".research-head h2").textContent = research.heading;
+          $(".research-head p").textContent = research.description;
+          const rgrid = $(".research-grid");
           rgrid.innerHTML = "";
           research.items.forEach((item) => {
             const card = document.createElement("article");
-            card.className = "rcard";
+            card.className = "rcard reveal";
             const icon = RESEARCH_ICONS[item.iconKey] || `<span class="emoji">${esc(item.icon)}</span>`;
             card.innerHTML = `
               <div class="ico">${icon}</div>
@@ -436,24 +695,28 @@
               <p>${esc(item.text)}</p>`;
             rgrid.appendChild(card);
           });
-          // trailing "explore all" tile
           const cta = document.createElement("article");
-          cta.className = "rcard rcard-cta";
+          cta.className = "rcard rcard-cta reveal";
           cta.innerHTML = `
             <h3>Explore all projects</h3>
             <a class="textlink" href="${esc(research.buttonLink)}">${esc(research.buttonText)} ${ARROW}</a>`;
           rgrid.appendChild(cta);
 
+          initReel(data.showreel);
+          initLab(data.lab);
+          initPubs(data.publications, jr);
+
           // JOIN
           const join = data.join;
-          document.querySelector(".join h2").textContent = join.heading;
-          document.querySelector(".join p").textContent = join.description;
-          const joinBtn = document.querySelector(".join .btn-gold");
-          joinBtn.querySelector(".label").textContent = join.buttonText;
+          $(".join h2").textContent = join.heading;
+          $(".join p").textContent = join.description;
+          const joinBtn = $(".join .btn-gold");
+          $(".label", joinBtn).textContent = join.buttonText;
           joinBtn.href = join.buttonLink;
         } catch (error) {
           console.error("Error loading index data:", error);
         }
+        watchReveals();
       }
       loadIndexData();
     </script>

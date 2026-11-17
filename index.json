@@ -6,6 +6,13 @@
     "buttonLink": "ongoing.html",
     "updates": [
       {
+        "tag": "IOH 2027",
+        "title": "Visit us at the Institute Open House 2027",
+        "text": "Meet the group at IIT Madras Institute Open House, 2–4 January 2027, Department of Aerospace Engineering. Watch our simulations, see the posters, and ask our students anything.",
+        "image": "images/lab/lab-01.jpg",
+        "link": "gallery.html"
+      },
+      {
         "tag": "HEMCE 2026",
         "title": "Lumina Presented at HEMCE 2026!",
         "text": "Our team delivered a talk on 'Lumina: An AI-Augmented Multiscale Material Informatics Framework', showcasing offline AI data querying and HPC-ready material models for extreme engineering regimes.",
@@ -13,25 +20,72 @@
         "link": "blog.html"
       },
       {
-       "tag": "INCAM 2026",
-       "title": "CoMPhys at INCAM 2026!",
-       "text": "Presenting three papers at the 7th Indian Conference on Applied Mechanics — adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and ConvLSTM stress prediction.",
-       "image": "images/INCAM_2026.jpg",
-       "link": "blog.html"
+        "tag": "INCAM 2026",
+        "title": "CoMPhys at INCAM 2026!",
+        "text": "Presenting three papers at the 7th Indian Conference on Applied Mechanics — adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and ConvLSTM stress prediction.",
+        "image": "images/INCAM_2026.jpg",
+        "link": "blog.html"
       },
       {
-       "tag": "CFD Symposium",
-       "title": "Hosting the AeSI CFD Symposium 2026",
-       "text": "As organizers of the Aeronautical Society of India's Annual CFD Symposium at IIT Madras, we invite you to submit your abstracts before the deadline.",
-       "image": "images/AeSI_CFD_2026.png",
-       "link": "https://www.cfdaesi.com/cfd-symposium-2026"
+        "tag": "CFD Symposium",
+        "title": "Hosting the AeSI CFD Symposium 2026",
+        "text": "As organizers of the Aeronautical Society of India's Annual CFD Symposium at IIT Madras, we invite you to submit your abstracts before the deadline.",
+        "image": "images/AeSI_CFD_2026.png",
+        "link": "https://www.cfdaesi.com/cfd-symposium-2026"
       },
       {
-      "tag": "ICNMMF-6",
-      "title": "Co-organizing ICNMMF-6 at IIT Madras",
-      "text": "The 6th International Conference on Numerical Methods in Multiphase Flows — January 18-20, 2027, at IIT Madras. Join global experts in Chennai.",
-      "image": "images/ICNMMF6_IITM.png",
-      "link": "https://ge.iitm.ac.in/icnmmf-6"
+        "tag": "ICNMMF-6",
+        "title": "Co-organizing ICNMMF-6 at IIT Madras",
+        "text": "The 6th International Conference on Numerical Methods in Multiphase Flows — January 18-20, 2027, at IIT Madras. Join global experts in Chennai.",
+        "image": "images/ICNMMF6_IITM.png",
+        "link": "https://ge.iitm.ac.in/icnmmf-6"
+      }
+    ],
+    "eyebrow": "Department of Aerospace Engineering · IIT Madras",
+    "secondaryText": "Watch the showreel",
+    "secondaryLink": "#showreel",
+    "showcase": [
+      {
+        "video": "media/jet-engine.mp4",
+        "poster": "media/jet-engine.jpg",
+        "tag": "Aircraft engines",
+        "title": "A complete micro-turbojet, spinning up",
+        "text": "KJ-66 engine with rotating compressor and turbine — 55 million cells."
+      },
+      {
+        "video": "media/origami-wing.mp4",
+        "poster": "media/origami-wing.jpg",
+        "tag": "Bioinspired flight",
+        "title": "An origami wing that snaps in the wind",
+        "text": "Two-way coupled flow and structure for a bistable folding wing."
+      },
+      {
+        "video": "media/debris-shield.mp4",
+        "poster": "media/debris-shield.jpg",
+        "tag": "Spacecraft protection",
+        "title": "Space debris meets a bumper shield",
+        "text": "A hypervelocity pellet shatters into a harmless spray."
+      },
+      {
+        "video": "media/scramjet.mp4",
+        "poster": "media/scramjet.jpg",
+        "tag": "Hypersonic flight",
+        "title": "Shock train inside a scramjet",
+        "text": "Shock waves bouncing through an isolator at supersonic speed."
+      },
+      {
+        "video": "media/rde.mp4",
+        "poster": "media/rde.jpg",
+        "tag": "New rocket engines",
+        "title": "A rotating detonation engine",
+        "text": "A supersonic combustion wave racing around an annulus."
+      },
+      {
+        "video": "media/origami-blast.mp4",
+        "poster": "media/origami-blast.jpg",
+        "tag": "Blast mitigation",
+        "title": "An origami cell under blast",
+        "text": "A folded-paper Kresling cell loaded by a blast wave."
       }
     ]
   },
@@ -78,5 +132,77 @@
     "description": "We welcome curious minds eager to learn, code, model, and make a difference in science, engineering, and real-world applications.",
     "buttonText": "View Openings",
     "buttonLink": "openings.html"
+  },
+  "stats": {
+    "items": [
+      {
+        "key": "num_pubs",
+        "label": "Publications"
+      },
+      {
+        "key": "total_citations",
+        "label": "Citations"
+      },
+      {
+        "key": "h_index",
+        "label": "h-index"
+      },
+      {
+        "value": "3",
+        "label": "In-house codes",
+        "note": "YALI · PyAMorph · Lumina"
+      }
+    ],
+    "sourceText": "Google Scholar",
+    "sourceLink": "https://scholar.google.com/citations?user=KQNT0mwAAAAJ&hl=en"
+  },
+  "showreel": {
+    "kicker": "Five-minute tour",
+    "heading": "See what we simulate",
+    "description": "Jet engines, space-debris shields, folding wings, scramjets and detonation engines — every simulation in this film runs on software written by our team at IIT Madras, on India's national supercomputers.",
+    "video": "media/cmrg-showreel.mp4",
+    "poster": "media/cmrg-showreel-poster.jpg",
+    "points": [
+      "Our own solver for air, liquids, metals and fuels — and the boundaries where they meet",
+      "Geometry built by PyAMorph straight from drawings",
+      "Runs on GPUs and National Supercomputing Mission machines"
+    ]
+  },
+  "lab": {
+    "kicker": "Life in the lab",
+    "heading": "Where the code gets written",
+    "description": "Students writing, testing and debugging solvers side by side in the Department of Aerospace Engineering.",
+    "photos": [
+      {
+        "src": "images/lab/lab-01.jpg",
+        "caption": "Writing and testing our own solver"
+      },
+      {
+        "src": "images/lab/lab-05.jpg",
+        "caption": "Problem-solving, one step at a time"
+      },
+      {
+        "src": "images/lab/lab-02.jpg",
+        "caption": "Shock–particle simulations on screen"
+      },
+      {
+        "src": "images/lab/lab-06.jpg",
+        "caption": "Checking results against theory"
+      },
+      {
+        "src": "images/lab/lab-04.jpg",
+        "caption": "Everyday work at the lab"
+      }
+    ],
+    "buttonText": "Open the gallery",
+    "buttonLink": "gallery.html"
+  },
+  "publications": {
+    "kicker": "Recent work",
+    "heading": "Latest Publications",
+    "description": "New journal articles and preprints from the group.",
+    "count": 3,
+    "buttonText": "All publications",
+    "buttonLink": "journals.html"
   }
 }

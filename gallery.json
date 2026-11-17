@@ -1,43 +1,42 @@
 {
   "ribbontitle": "Gallery",
-  "ribbondesc": "Dive into our gallery to relive the highlights of our research story.",
+  "ribbondesc": "Life in the lab, and the posters we take to open houses and conferences.",
   "images": [
     {
-      "src": "images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg",
-      "caption": "Hands-on Session with Students"
+      "src": "images/lab/lab-01.jpg",
+      "caption": "Writing and testing our own solver"
     },
     {
-      "src": "images/Pub_Journal_7_JPP_2022.jpg",
-      "caption": "Hands-on Session with Students"
+      "src": "images/lab/lab-02.jpg",
+      "caption": "Shock–particle simulations on screen"
     },
     {
-      "src": "images/Blog2.png",
-      "caption": "Team Collaboration at the Workshop"
+      "src": "images/lab/lab-03.jpg",
+      "caption": "Working through a simulation together"
     },
     {
-      "src": "images/Pub_Journal_10_JAP_2022.jpg",
-      "caption": "Team Collaboration at the Workshop"
+      "src": "images/lab/lab-04.jpg",
+      "caption": "Everyday work at the lab"
     },
     {
-      "src": "images/Ashoke.jpg",
-      "caption": "Hands-on Session with Students"
+      "src": "images/lab/lab-05.jpg",
+      "caption": "Problem-solving, one step at a time"
     },
     {
-      "src": "images/Blog2.png",
-      "caption": "Team Collaboration at the Workshop Team Collaboration at the Workshop Team Collaboration at the Workshop Team Collaboration at the Workshop Team Collaboration at the Workshop Team Collaboration at the Workshop Team Collaboration at the Workshop Team Collaboration at the Workshop"
+      "src": "images/lab/lab-06.jpg",
+      "caption": "Checking results against theory"
     },
     {
-      "src": "images/Pub_Journal_7_JPP_2022.jpg",
-      "caption": "Hands-on Session with Students"
+      "src": "images/lab/poster-overview.jpg",
+      "caption": "IOH 2027 poster — group overview"
     },
     {
-      "src": "images/Pradeep.jpg",
-      "caption": "Team Collaboration at the Workshop"
+      "src": "images/lab/poster-pyamorph.jpg",
+      "caption": "IOH 2027 poster — PyAMorph"
     },
     {
-      "src": "images/Pub_Journal_7_JPP_2022.jpg",
-      "caption": "Hands-on Session with Students"
+      "src": "images/lab/poster-solver.jpg",
+      "caption": "IOH 2027 poster — the solver"
     }
-
   ]
 }

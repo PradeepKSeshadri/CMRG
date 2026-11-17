@@ -5,6 +5,16 @@
   },
   "items": [
     {
+      "title": "Predicting Ballistic Limit and Specific Energy Absorption of Bioinspired UHMWPE-Kevlar Armour Structure using Surrogate Modelling",
+      "authors": "",
+      "venue": "Venue to be confirmed",
+      "year": "2026",
+      "citations": 0,
+      "kind": "paper",
+      "link": "",
+      "needs_review": true
+    },
+    {
       "title": "Visco-elastic and Visco-plastic Strain-Rate Dependent Material Models for Bioinspired UHMWPE-Kevlar armour structures.",
       "authors": "",
       "venue": "APS Global Physics Summit 2026, 2026",
@@ -59,7 +69,7 @@
       "authors": "",
       "venue": "Proceedings of the 41st International Conference on Machine Learning, 37649 …, 2024",
       "year": "2024",
-      "citations": 22,
+      "citations": 25,
       "kind": "paper",
       "link": "",
       "needs_review": true
@@ -153,6 +163,15 @@
       "kind": "paper",
       "link": "",
       "needs_review": true
+    },
+    {
+      "title": "Analysis of unsteady aerodynamics on dragonfly using computational fluid dynamics and the effect of flapping trajectories on it",
+      "authors": "",
+      "venue": "Proc. 11th Asian International Conference on Fluid Machinery, 2011",
+      "year": "2011",
+      "citations": 0,
+      "kind": "paper",
+      "link": ""
     }
   ]
 }
