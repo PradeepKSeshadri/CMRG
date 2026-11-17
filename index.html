@@ -127,21 +127,28 @@
       .dots button.on::before { background: var(--gold); width: 20px; border-radius: 6px; }
       .dots button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
 
-      /* stats strip */
-      .stats-strip {
+      /* news ticker (items come from hero.updates in index.json) */
+      .news-ticker {
         margin-top: clamp(44px, 7vh, 72px); border-top: 1px solid rgba(255,255,255,.12);
-        display: grid; grid-template-columns: repeat(4, 1fr);
+        display: flex; align-items: center; gap: 20px; padding: 18px 0 22px;
       }
-      .sstat { padding: 26px 20px 30px; border-left: 1px solid rgba(255,255,255,.10); }
-      .sstat:first-child { border-left: 0; padding-left: 0; }
-      .sstat .n { font-family: "League Spartan", "Segoe UI", sans-serif; font-weight: 300; font-size: clamp(2rem, 3.4vw, 2.7rem); line-height: 1; color: #fff; font-variant-numeric: tabular-nums; }
-      .sstat .l { margin-top: 8px; font-size: .74rem; letter-spacing: 1.5px; text-transform: uppercase; color: #9fb2cf; font-weight: 600; }
-      .sstat .s { margin-top: 4px; font-size: .78rem; color: #7f93b4; }
-      .sstat .s a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+      .news-ticker .lbl { flex: none; font-size: .72rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); padding-right: 20px; border-right: 1px solid rgba(255,255,255,.14); }
+      .news-ticker .vp { flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 32px, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(90deg, transparent, #000 32px, #000 calc(100% - 32px), transparent); }
+      .news-ticker .track { display: flex; width: max-content; animation: ticker var(--dur, 40s) linear infinite; }
+      .news-ticker:hover .track, .news-ticker:focus-within .track { animation-play-state: paused; }
+      .news-ticker .grp { display: flex; flex: none; }
+      .news-ticker a { flex: none; white-space: nowrap; margin-right: 56px; color: #dbe5f5; text-decoration: none; font-size: .95rem; }
+      .news-ticker a:hover, .news-ticker a:focus-visible { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+      .news-ticker a b { margin-right: 10px; font-size: .7rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold); }
+      @keyframes ticker { to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) {
+        .news-ticker .vp { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+        .news-ticker .track { animation: none; }
+        .news-ticker .grp[aria-hidden] { display: none; }
+      }
       @media (max-width: 700px){
-        .stats-strip { grid-template-columns: repeat(2, 1fr); }
-        .sstat { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.08); }
-        .sstat:nth-child(-n+2) { border-top: 0; }
+        .news-ticker { gap: 14px; }
+        .news-ticker .lbl { padding-right: 14px; }
       }
 
       /* ---------- Section scaffolding ---------- */
@@ -371,7 +378,7 @@
             </div>
           </div>
         </div>
-        <div class="stats-strip"></div>
+        <div class="news-ticker" aria-label="Group news"><span class="lbl">News</span><div class="vp"><div class="track"></div></div></div>
       </div>
     </section>
 
@@ -554,28 +561,20 @@
         show(0);
       }
 
-      /* ---- stats strip (numbers come from scholar.json) ---- */
-      function initStats(cfg, sc) {
-        const strip = $(".stats-strip");
-        if (!cfg || !cfg.items) { strip.style.display = "none"; return; }
-        strip.innerHTML = cfg.items.map((it) => {
-          const val = it.key ? sc[it.key] : it.value;
-          const note = it.note ? esc(it.note)
-            : (it.key && cfg.sourceLink ? `<a href="${esc(cfg.sourceLink)}" target="_blank" rel="noopener">${esc(cfg.sourceText || "source")}</a>` : "");
-          return `<div class="sstat"><div class="n" data-n="${esc(val)}">${val != null ? esc(val) : "—"}</div>
-                  <div class="l">${esc(it.label)}</div>${note ? `<div class="s">${note}</div>` : ""}</div>`;
+      /* ---- news ticker (every entry of hero.updates, newest first) ---- */
+      function initTicker(items) {
+        const bar = $(".news-ticker");
+        if (!items || !items.length) { bar.style.display = "none"; return; }
+        const links = (hidden) => items.map((u) => {
+          const ext = /^https?:/i.test(u.link || "");
+          return `<a href="${esc(u.link || "blog.html")}"${ext ? ' target="_blank" rel="noopener"' : ""}${hidden ? ' tabindex="-1"' : ""}>${u.tag ? `<b>${esc(u.tag)}</b>` : ""}${esc(u.title)}</a>`;
         }).join("");
-        if (REDUCED) return;
-        strip.querySelectorAll(".n").forEach((el) => {
-          const end = parseInt(el.dataset.n, 10);
-          if (!(end > 0)) return;
-          const t0 = performance.now(), dur = 1100;
-          (function tick(t) {
-            const k = Math.min(1, (t - t0) / dur);
-            el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
-            if (k < 1) requestAnimationFrame(tick);
-          })(t0);
-        });
+        const track = bar.querySelector(".track");
+        // two identical groups: the track slides by exactly one group, so the loop is seamless
+        track.innerHTML = `<div class="grp">${links(false)}</div><div class="grp" aria-hidden="true">${links(true)}</div>`;
+        const setDur = () => track.style.setProperty("--dur", Math.max(20, track.firstElementChild.offsetWidth / 55) + "s");
+        setDur();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(setDur);
       }
 
       function initReel(r) {
@@ -645,7 +644,7 @@
       async function loadIndexData() {
         try {
           const get = (f) => fetch(f).then((r) => r.json()).catch(() => ({}));
-          const [data, sc, jr] = await Promise.all([fetch("index.json").then((r) => r.json()), get("scholar.json"), get("journals.json")]);
+          const [data, jr] = await Promise.all([fetch("index.json").then((r) => r.json()), get("journals.json")]);
 
           // HERO
           const hero = data.hero;
@@ -659,7 +658,7 @@
           $(".label", second).textContent = hero.secondaryText || "Watch the showreel";
           second.href = hero.secondaryLink || "#showreel";
           initShowcase(hero.showcase);
-          initStats(data.stats, sc);
+          initTicker(hero.updates);
 
           // LATEST NEWS (first three updates)
           const newsGrid = $(".news-grid");

@@ -13,27 +13,6 @@
         "link": "gallery.html"
       },
       {
-        "tag": "HEMCE 2026",
-        "title": "Lumina Presented at HEMCE 2026!",
-        "text": "Our team delivered a talk on 'Lumina: An AI-Augmented Multiscale Material Informatics Framework', showcasing offline AI data querying and HPC-ready material models for extreme engineering regimes.",
-        "image": "images/HEMCE_2026_Talk.JPG",
-        "link": "blog.html"
-      },
-      {
-        "tag": "INCAM 2026",
-        "title": "CoMPhys at INCAM 2026!",
-        "text": "Presenting three papers at the 7th Indian Conference on Applied Mechanics — adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and ConvLSTM stress prediction.",
-        "image": "images/INCAM_2026.jpg",
-        "link": "blog.html"
-      },
-      {
-        "tag": "CFD Symposium",
-        "title": "Hosting the AeSI CFD Symposium 2026",
-        "text": "As organizers of the Aeronautical Society of India's Annual CFD Symposium at IIT Madras, we invite you to submit your abstracts before the deadline.",
-        "image": "images/AeSI_CFD_2026.png",
-        "link": "https://www.cfdaesi.com/cfd-symposium-2026"
-      },
-      {
         "tag": "ICNMMF-6",
         "title": "Co-organizing ICNMMF-6 at IIT Madras",
         "text": "The 6th International Conference on Numerical Methods in Multiphase Flows — January 18-20, 2027, at IIT Madras. Join global experts in Chennai.",
@@ -132,29 +111,6 @@
     "description": "We welcome curious minds eager to learn, code, model, and make a difference in science, engineering, and real-world applications.",
     "buttonText": "View Openings",
     "buttonLink": "openings.html"
-  },
-  "stats": {
-    "items": [
-      {
-        "key": "num_pubs",
-        "label": "Publications"
-      },
-      {
-        "key": "total_citations",
-        "label": "Citations"
-      },
-      {
-        "key": "h_index",
-        "label": "h-index"
-      },
-      {
-        "value": "5",
-        "label": "In-house codes",
-        "note": "YALI · PyAMorph · Lumina · Weaver · MFEM shell solver"
-      }
-    ],
-    "sourceText": "Google Scholar",
-    "sourceLink": "https://scholar.google.com/citations?user=KQNT0mwAAAAJ&hl=en"
   },
   "showreel": {
     "kicker": "Five-minute tour",

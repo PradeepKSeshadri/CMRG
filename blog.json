@@ -62,6 +62,18 @@
     }],
     "announcements":[
     {
+        "date": "Aug 11–12, 2026",
+        "message": "Hosted the 27th Annual CFD Symposium of the Aeronautical Society of India at IIT Madras (<a href=\"https://www.cfdaesi.com/cfd-symposium-2026\" target=\"_blank\" rel=\"noopener\">symposium page</a>)"
+    },
+    {
+        "date": "Jul 9–11, 2026",
+        "message": "Three papers presented at the 7th Indian Conference on Applied Mechanics (INCAM 2026), IIT Kanpur: adaptive implicit modeling (PyAMorph), stochastic microstructure transport (PuMA), and ConvLSTM stress prediction"
+    },
+    {
+        "date": "Apr 29 – May 1, 2026",
+        "message": "Talk on 'Lumina: An AI-Augmented Multiscale Material Informatics Framework' at the 15th International High Energy Materials Conference & Exhibits (HEMCE 2026), Hyderabad"
+    },
+    {
         "date": "Mar 12, 2026",
         "message": "Invited Talk on 'Towards Predictive Modeling and Controlled Energy Release in Energetic Materials' at Tezpur University, Assam"
     },
