@@ -368,11 +368,8 @@
     <!-- Complete stats ends  -->
      <!-- ==================== CONFERENCE BUTTON SECTION ==================== -->
 <div class="button-group">
-  <button class="active" onclick="loadConferences('Conference Talks', this)">
-    Conference Talks
-  </button>
-  <button onclick="loadConferences('Conference Proceedings', this)">
-    Conference Proceedings
+  <button class="active" onclick="loadConferences('Book Chapters', this)">
+    Book Chapters
   </button>
 </div>
 
@@ -382,7 +379,7 @@
         <input
           type="text"
           id="searchInput"
-          placeholder="Type here to Search Conference..."
+          placeholder="Type here to search books..."
           oninput="filterConferences()"
         />
       </div>
@@ -395,12 +392,12 @@
 <script>
   let conferenceData;
 
-  fetch("conference.json")
+  fetch("books.json")
     .then((res) => res.json())
     .then((json) => {
       conferenceData = json;
       // Default load
-      loadConferences("Conference Talks", document.querySelector(".button-group button"));
+      loadConferences("Book Chapters", document.querySelector(".button-group button"));
     });
 
   function loadConferences(type, btn) {
@@ -518,7 +515,12 @@
           document.getElementById("total-journals").textContent =
             totalJournals + "+";
           //Stats calculation ends
-          console.log(allPublications);
+          // Profile-wide numbers come from Google Scholar (scholar.json), as on the Publications page
+          fetch("scholar.json").then((r) => r.json()).then((sc) => {
+            if (sc.num_pubs != null) document.getElementById("total-publications").textContent = sc.num_pubs;
+            if (sc.total_citations != null) document.getElementById("total-citations").textContent = sc.total_citations;
+            if (sc.h_index != null) document.getElementById("h-index").textContent = sc.h_index;
+          }).catch(() => {});
       })
 
       fetch("books.json")
@@ -550,7 +552,7 @@
     <!-- <script>
       let allConferences = [];
       // Load the data
-      fetch("conference.json")
+      fetch("books.json")
         .then((response) => response.json())
         .then((data) => {
           allConferences = data.conferences;
@@ -657,6 +659,7 @@
         <div class="pub-authors">${authorsFinal}</div>
         ${pub.journal || pub.details ? `<div class="pub-journal">${journalHTML}</div>` : ""}
         ${pub.year ? `<div class="pub-meta"><strong>Year:</strong> ${escapeHtml(pub.year)}</div>` : ""}
+        ${pub.link ? `<div class="pub-meta"><a href="${pub.link}" target="_blank" rel="noopener">View chapter</a></div>` : ""}
       `;
       container.appendChild(card);
     });
@@ -692,12 +695,12 @@
   }
 
   // ---------- Fetch JSON ----------
-  fetch("conference.json")
+  fetch("books.json")
     .then((res) => res.json())
     .then((json) => {
       conferenceData = json;
-      const defaultType = Object.keys(conferenceData).includes("Conference Talks")
-        ? "Conference Talks"
+      const defaultType = Object.keys(conferenceData).includes("Book Chapters")
+        ? "Book Chapters"
         : Object.keys(conferenceData)[0];
       const defaultBtn = document.querySelector(".button-group button");
       loadConferences(defaultType, defaultBtn);

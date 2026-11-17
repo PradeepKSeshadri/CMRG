@@ -1,37 +1,15 @@
-{"ribbon":{
-  "title":"Books",
-  "description":"Explore our distinguished conference contributions that highlight pioneering research, collaborative innovation, and the global impact of our work in computational multiphysics and interdisciplinary scientific advancements."
-},
-  "Conference Talks": [
+{
+  "ribbon": {
+    "title": "Books",
+    "description": "Book chapters contributed by the group."
+  },
+  "Book Chapters": [
     {
-      "title": "Physics-aware Recurrent Convolutional Neural Networks for Spatiotemporal Dynamics Modeling.",
-      "authors": "Nguyen, P.C., Cheng, X., Arfaza, S., Seshadri, P. K., Nguyen, Y.T., Kim, M., Choi, S., Udaykumar, H.S. and Baek, S.",
-      "journal": "ICML Conference, 2024",
-      "citescore": "34",
-      "ranking": ""
-    },
-    {
-      "title": "High-order methods for simulations of shocked reactive energetic materials at all scales.",
-      "authors": "Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
-      "journal": "2.Bulletin of the American Physical Society, 2024.",
-      "citescore": "",
-      "ranking": ""
-    }
-  ],
-  "Conference Proceedings": [
-    {
-      "title": "Analysis of Unsteady Aerodynamics on Dragonfly Using Computational Fluid Dynamics and the Effect of Flapping Trajectories on it.",
-      "authors": "Arun Ramanathan.S, Prabhu.S, Seshadri, P. K., Tamizhvendhan.B, Asad Ahmed",
-      "journal": "13.Proceedings of 11th Asian International Conference on Fluid Machinery, IIT Madras, Chennai, Nov 2011.",
-      "citescore": "",
-      "ranking": ""
-    },
-    {
-      "title": " Analysis of Unsteady Aerodynamics on Dragonfly Using CFD.",
-      "authors": "Arun Ramanathan.S, Prabhu.S, Seshadri, P. K., Tamizhvendhan.B, Asad Ahmed.",
-      "journal": "14.the 11th Asian Symposium on Visualization, JUN 2011.",
-      "citescore": "",
-      "ranking": ""
+      "title": "Handling Slender/Thin Geometries with Sharp Edges in Sharp Interface Immersed Boundary Approach",
+      "authors": "Seshadri, P. K. and De, A.",
+      "journal": "In: Immersed Boundary Method: Development and Applications, Computational Methods in Engineering & the Sciences, Springer Singapore, pp. 139–165.",
+      "year": "2020",
+      "link": "https://doi.org/10.1007/978-981-15-3940-4_5"
     }
   ]
 }
