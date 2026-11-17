@@ -5,10 +5,10 @@
   "subtitle": "Vortex-dominated flows and the physics of lift — from potential-flow foundations through thin-airfoil and lifting-line theory to the aerodynamics of the whole aircraft.",
   "instructor": "Pradeep Kumar Seshadri",
   "semester": "Jul–Nov 2026",
-  "semesterNote": "3rd semester",
+  "semesterNote": "3rd semester · second offering",
   "slot": "B Slot",
   "cadence": "3 Lectures + 1 Tutorial / week",
-  "startNote": "Classes begin Monday, 27 July 2026. Lecture materials will be posted here through the term.",
+  "startNote": "The Jul–Nov 2026 term is complete. Lecture slides are linked from the plan below and listed together under Lecture Slides.",
   "docs": {
     "policy": "assets/as2050/AS2050_Course_Policy_2026.pdf",
     "plan": "assets/as2050/AS2050_Lecture_Plan_2026.pdf"
@@ -16,22 +16,44 @@
   "archiveLink": "completecourse.html?id=1",
   "assessmentLead": "Continuous by design — the term is graded through weekly tutorial quizzes, two quizzes, and a comprehensive end-semester exam.",
   "assessment": [
-    { "c": "Continuous Assessment", "d": "Short quiz at every tutorial + assignments", "w": "20%" },
-    { "c": "Software Exercise", "d": "Individual — aerodynamics software, results & interpretation", "w": "5%" },
-    { "c": "Group Presentation", "d": "15 min on a real-world aerodynamics topic", "w": "5%" },
-    { "c": "Quiz 1", "d": "Tue 1 Sep 2026 · covers L1–L15", "w": "15%" },
-    { "c": "Quiz 2", "d": "Tue 6 Oct 2026 · covers L17–L27", "w": "15%" },
-    { "c": "End-Semester Exam", "d": "Fri 13 Nov 2026 · comprehensive", "w": "40%" },
-    { "c": "Total", "d": "", "w": "100%", "total": true }
+    {
+      "c": "Continuous Assessment",
+      "d": "Short quiz at every tutorial + assignments",
+      "w": "20%"
+    },
+    {
+      "c": "Software Exercise",
+      "d": "Individual — aerodynamics software, results & interpretation",
+      "w": "5%"
+    },
+    {
+      "c": "Group Presentation",
+      "d": "15 min on a real-world aerodynamics topic",
+      "w": "5%"
+    },
+    {
+      "c": "Quiz 1",
+      "d": "Tue 1 Sep 2026 · covers L1–L15",
+      "w": "15%"
+    },
+    {
+      "c": "Quiz 2",
+      "d": "Tue 6 Oct 2026 · covers L17–L27",
+      "w": "15%"
+    },
+    {
+      "c": "End-Semester Exam",
+      "d": "Fri 13 Nov 2026 · comprehensive",
+      "w": "40%"
+    },
+    {
+      "c": "Total",
+      "d": "",
+      "w": "100%",
+      "total": true
+    }
   ],
-  "rules": [
-    "A short, closed-book quiz at <b>each tutorial</b> — lectures, an assigned reading, or both.",
-    "The <b>first tutorial quiz is ungraded</b> — a no-stakes run to learn the format.",
-    "Your <b>lowest three graded quizzes are dropped</b> — also your absence allowance (miss up to three tutorials, no make-up).",
-    "Assignments carry a <b>10% penalty per late day</b>, up to 3 days.",
-    "<b>One make-up exam</b> only, after the end-sem, for any one missed quiz/exam.",
-    "No separate professionalism grade this semester."
-  ],
+  "rules": ["A short, closed-book quiz at <b>each tutorial</b> — lectures, an assigned reading, or both.", "The <b>first tutorial quiz is ungraded</b> — a no-stakes run to learn the format.", "Your <b>lowest three graded quizzes are dropped</b> — also your absence allowance (miss up to three tutorials, no make-up).", "Assignments carry a <b>10% penalty per late day</b>, up to 3 days.", "<b>One make-up exam</b> only, after the end-sem, for any one missed quiz/exam.", "No separate professionalism grade this semester."],
   "blocks": {
     "B0": "Foundations & review",
     "B1": "Potential-flow toolkit",
@@ -124,9 +146,161 @@
     }
   ],
   "references": [
-    { "text": "Anderson, J. D. — <i>Fundamentals of Aerodynamics</i>, 7th ed.", "primary": true },
-    { "text": "Kuethe, A. M. &amp; Chow, C.-Y. — <i>Foundations of Aerodynamics</i>, 5th ed." },
-    { "text": "Kundu, Cohen, Dowling &amp; Capecelatro — <i>Fluid Mechanics</i>, 6th ed." },
-    { "text": "Acheson, D. J. — <i>Elementary Fluid Dynamics</i>." }
+    {
+      "text": "Anderson, J. D. — <i>Fundamentals of Aerodynamics</i>, 7th ed.",
+      "primary": true
+    },
+    {
+      "text": "Kuethe, A. M. &amp; Chow, C.-Y. — <i>Foundations of Aerodynamics</i>, 5th ed."
+    },
+    {
+      "text": "Kundu, Cohen, Dowling &amp; Capecelatro — <i>Fluid Mechanics</i>, 6th ed."
+    },
+    {
+      "text": "Acheson, D. J. — <i>Elementary Fluid Dynamics</i>."
+    }
+  ],
+  "scheduleTitle": "Lecture & Tutorial Plan",
+  "scheduleLead": "40 lectures (Mon / Tue / Fri) and 14 tutorials (Wed), across three teaching windows, as planned at the start of term. Slides are attached to the lecture whose topic they cover.",
+  "slidesTitle": "Lecture Slides",
+  "slidesLead": "Post-class slide decks from the Jul–Nov 2026 offering, with every derivation complete.",
+  "slidesNote": "Decks for the remaining lectures will be added as they are cleared for posting.",
+  "archiveText": "This course was first offered in Jul–Nov 2025.",
+  "slideDecks": [
+    {
+      "tag": "L2",
+      "title": "Vector Calculus",
+      "file": "assets/as2050/AS2050_L02_VectorCalculus.pdf",
+      "pages": 66,
+      "size": "0.4 MB",
+      "rows": ["L2"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L3",
+      "title": "Fluid Kinematics",
+      "file": "assets/as2050/AS2050_L03_FluidKinematics.pdf",
+      "pages": 47,
+      "size": "1.1 MB",
+      "rows": ["L3"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L4",
+      "title": "Conservation Laws",
+      "file": "assets/as2050/AS2050_L04_ConservationLaws.pdf",
+      "pages": 34,
+      "size": "0.4 MB",
+      "rows": ["L4"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L5",
+      "title": "Stream Function & Laplace",
+      "file": "assets/as2050/AS2050_L05_StreamFunction.pdf",
+      "pages": 25,
+      "size": "0.5 MB",
+      "rows": ["L5"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L6",
+      "title": "Elementary Flows I — uniform flow, source & sink, doublet",
+      "file": "assets/as2050/AS2050_L06_ElementaryFlowsI.pdf",
+      "pages": 25,
+      "size": "0.4 MB",
+      "rows": ["L6"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L7",
+      "title": "Elementary Flows II — Rankine half-body and oval, non-lifting cylinder",
+      "file": "assets/as2050/AS2050_L07_ElementaryFlowsII.pdf",
+      "pages": 25,
+      "size": "0.4 MB",
+      "rows": ["L7"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L8",
+      "title": "Complex Potential & Conformal Mapping",
+      "file": "assets/as2050/AS2050_L08_ComplexPotential.pdf",
+      "pages": 25,
+      "size": "0.5 MB",
+      "rows": ["L8"],
+      "group": "Foundations & potential flow"
+    },
+    {
+      "tag": "L9",
+      "title": "Circulation, Vortices and Lift",
+      "file": "assets/as2050/AS2050_L09_CirculationLift.pdf",
+      "pages": 16,
+      "size": "1.1 MB",
+      "rows": ["L9", "L10"],
+      "group": "Vorticity, circulation & airfoils"
+    },
+    {
+      "tag": "L11",
+      "title": "Kelvin and Helmholtz — why circulation lasts",
+      "file": "assets/as2050/AS2050_L11_KelvinHelmholtz.pdf",
+      "pages": 10,
+      "size": "0.8 MB",
+      "rows": ["L11"],
+      "group": "Vorticity, circulation & airfoils"
+    },
+    {
+      "tag": "L13",
+      "title": "Airfoils — names, shapes, and where they came from",
+      "file": "assets/as2050/AS2050_L13_Airfoils.pdf",
+      "pages": 26,
+      "size": "3.3 MB",
+      "rows": ["L13"],
+      "group": "Vorticity, circulation & airfoils"
+    },
+    {
+      "tag": "L14",
+      "title": "Plane Ideal Flow and Conformal Mapping",
+      "file": "assets/as2050/AS2050_L14_ConformalMapping.pdf",
+      "pages": 44,
+      "size": "0.8 MB",
+      "rows": ["L15"],
+      "group": "Vorticity, circulation & airfoils"
+    },
+    {
+      "tag": "TAT",
+      "title": "Thin-Aerofoil Theory — from the camber line to the vortex sheet and its general solution",
+      "file": "assets/as2050/AS2050_ThinAerofoilTheory.pdf",
+      "pages": 21,
+      "size": "0.3 MB",
+      "rows": ["L17"],
+      "group": "Thin-aerofoil theory, propellers & wings"
+    },
+    {
+      "tag": "BET",
+      "title": "Blade-Element Theory of the Propeller",
+      "file": "assets/as2050/AS2050_BladeElementTheory.pdf",
+      "pages": 25,
+      "size": "0.4 MB",
+      "rows": ["L25"],
+      "group": "Thin-aerofoil theory, propellers & wings"
+    },
+    {
+      "tag": "LLT",
+      "title": "Finite Wings — downwash, vortex filaments and Prandtl's lifting-line theory",
+      "file": "assets/as2050/AS2050_FiniteWings_LiftingLine.pdf",
+      "pages": 25,
+      "size": "0.3 MB",
+      "rows": ["L29", "L30"],
+      "group": "Thin-aerofoil theory, propellers & wings"
+    },
+    {
+      "tag": "VLM",
+      "title": "Wings in Practice — general loading, induced-drag design, theory against experiment, and the vortex lattice method",
+      "file": "assets/as2050/AS2050_WingsInPractice_VLM.pdf",
+      "pages": 30,
+      "size": "0.8 MB",
+      "rows": ["L32", "L34"],
+      "group": "Thin-aerofoil theory, propellers & wings"
+    }
   ]
 }

@@ -105,6 +105,36 @@
       .refs .primary { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
       .refs .pill { margin-left: 8px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--primary); background: var(--gold); padding: 2px 8px; border-radius: 999px; }
 
+      /* slides attached to schedule rows */
+      .srow .topic .slink { display: inline-flex; align-items: center; gap: 5px; margin-left: 10px; padding: 2px 9px;
+        font-size: .74rem; font-weight: 700; letter-spacing: .3px; color: var(--primary-2); background: rgba(250,204,21,.22);
+        border: 1px solid var(--gold); border-radius: 999px; white-space: nowrap; vertical-align: 1px; transition: all .2s; }
+      .srow .topic .slink:hover { background: var(--gold); color: var(--primary); }
+      .srow .topic .slink svg { width: 11px; height: 11px; }
+      .win.nodate .srow { grid-template-columns: 52px 1fr; }
+      .win.nodate .srow .date { display: none; }
+
+      /* slide deck index */
+      .decks { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+      .deck { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px;
+        background: var(--bg); transition: transform .2s, box-shadow .2s, border-color .2s; }
+      .deck:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(1,33,73,.10); border-color: var(--gold); }
+      .deck .dtag { flex: none; min-width: 46px; text-align: center; font-size: .74rem; font-weight: 700; color: #fff;
+        background: var(--primary-2); border-radius: 6px; padding: 4px 6px; letter-spacing: .3px; }
+      .deck .dtitle { font-weight: 600; color: var(--ink); font-size: .96rem; line-height: 1.35; }
+      .deck .dmeta { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+      .deck-group { margin: 26px 0 12px; font-size: .84rem; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
+      .deck-group:first-child { margin-top: 0; }
+      .deck-note { margin-top: 20px; font-size: .86rem; color: var(--muted); }
+
+      /* syllabus modules */
+      .mods { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+      .mod { border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; background: var(--bg); }
+      .mod .mnum { font-family: "League Spartan","Segoe UI",sans-serif; font-weight: 300; font-size: .95rem; color: #fff;
+        background: var(--primary-2); border-radius: 6px; padding: 2px 9px; letter-spacing: .5px; display: inline-block; }
+      .mod h3 { margin: 12px 0 10px; font-size: 1.02rem; color: var(--ink); }
+      .mod ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .9rem; display: grid; gap: 6px; }
+
       .archive-note { text-align: center; color: var(--muted); font-size: .86rem; padding: 26px 0 40px; }
       .archive-note a { color: var(--primary-2); border-bottom: 1px solid var(--gold); }
     </style>
@@ -198,8 +228,17 @@
         </div>
       </section>
 
+      <!-- Syllabus modules (optional) -->
+      <section class="csec" id="sec-modules" hidden>
+        <div class="cwrap">
+          <h2 class="h2 display" id="c-modules-title">Syllabus</h2>
+          <p class="lead" id="c-modules-lead"></p>
+          <div class="mods" id="c-modules"></div>
+        </div>
+      </section>
+
       <!-- Assessment -->
-      <section class="csec">
+      <section class="csec" id="sec-assess" hidden>
         <div class="cwrap">
           <h2 class="h2 display">Assessment</h2>
           <p class="lead" id="c-assess-lead"></p>
@@ -214,16 +253,26 @@
       </section>
 
       <!-- Timeline -->
-      <section class="csec soft">
+      <section class="csec soft" id="sec-timeline" hidden>
         <div class="cwrap">
-          <h2 class="h2 display">Lecture &amp; Tutorial Plan</h2>
-          <p class="lead">40 lectures (Mon / Tue / Fri) and 14 tutorials (Wed), across three teaching windows. Slides and notes will attach to each lecture as the term progresses.</p>
+          <h2 class="h2 display" id="c-timeline-title">Lecture Plan</h2>
+          <p class="lead" id="c-timeline-lead"></p>
           <div id="c-timeline"></div>
         </div>
       </section>
 
+      <!-- Slide decks (optional) -->
+      <section class="csec" id="sec-decks" hidden>
+        <div class="cwrap">
+          <h2 class="h2 display" id="c-decks-title">Lecture Slides</h2>
+          <p class="lead" id="c-decks-lead"></p>
+          <div id="c-decks"></div>
+          <p class="deck-note" id="c-decks-note"></p>
+        </div>
+      </section>
+
       <!-- References -->
-      <section class="csec">
+      <section class="csec" id="sec-refs" hidden>
         <div class="cwrap">
           <h2 class="h2 display">Text References</h2>
           <p class="lead">Primary text plus complementary references for deeper reading.</p>
@@ -281,10 +330,12 @@
           const res = await fetch(key + ".json");
           const d = await res.json();
 
-          document.title = `${d.code} ${d.title} | Courses`;
+          document.title = `${d.code ? d.code + " " : ""}${d.title} | Courses`;
+          const show = (id, on) => { document.getElementById(id).hidden = !on; };
+          const SLIDE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>';
 
           // HERO
-          document.getElementById("c-eyebrow").textContent = `${d.code} · ${d.dept}`;
+          document.getElementById("c-eyebrow").textContent = [d.code, d.dept].filter(Boolean).join(" · ");
           document.getElementById("c-title").textContent = d.title;
           document.getElementById("c-sub").textContent = d.subtitle;
 
@@ -293,16 +344,31 @@
           if (d.slot)       facts.push(`<span class="fact"><b>${esc(d.slot)}</b></span>`);
           if (d.cadence)    facts.push(`<span class="fact"><b>${esc(d.cadence)}</b></span>`);
           if (d.instructor) facts.push(`<span class="fact">Instructor: <b>${esc(d.instructor)}</b></span>`);
+          (d.facts || []).forEach(f => facts.push(`<span class="fact">${esc(f)}</span>`));
           document.getElementById("c-facts").innerHTML = facts.join("");
 
           const cta = [];
+          const decks0 = d.slideDecks || [];
           if (d.docs && d.docs.policy) cta.push(`<a class="cbtn cbtn-gold" href="${esc(d.docs.policy)}" target="_blank" rel="noopener">${DOC_ICON} Course Policy (PDF)</a>`);
           if (d.docs && d.docs.plan)   cta.push(`<a class="cbtn cbtn-ghost" href="${esc(d.docs.plan)}" target="_blank" rel="noopener">${DOC_ICON} Lecture Plan (PDF)</a>`);
+          if (decks0.length)           cta.push(`<a class="cbtn ${cta.length ? "cbtn-ghost" : "cbtn-gold"}" href="#sec-decks">${DOC_ICON} ${esc(d.slidesTitle || "Lecture Slides")}</a>`);
           document.getElementById("c-cta").innerHTML = cta.join("");
 
           document.getElementById("c-startnote").innerHTML = d.startNote ? `<span class="dot">●</span> ${esc(d.startNote)}` : "";
 
+          // SYLLABUS MODULES
+          const mods = d.modules || [];
+          show("sec-modules", mods.length > 0);
+          if (d.modulesTitle) document.getElementById("c-modules-title").textContent = d.modulesTitle;
+          document.getElementById("c-modules-lead").textContent = d.modulesLead || "";
+          document.getElementById("c-modules").innerHTML = mods.map((m, i) => `
+            <div class="mod"><span class="mnum">${esc(m.tag || "M" + (i + 1))}</span>
+              <h3>${esc(m.title)}</h3>
+              <ul>${(m.items || []).map(it => `<li>${esc(it)}</li>`).join("")}</ul>
+            </div>`).join("");
+
           // ASSESSMENT
+          show("sec-assess", (d.assessment || []).length > 0);
           document.getElementById("c-assess-lead").textContent = d.assessmentLead || "";
           document.getElementById("c-assess").innerHTML = (d.assessment || []).map(a => `
             <div class="arow${a.total ? " total" : ""}">
@@ -314,9 +380,16 @@
           // TIMELINE
           const blocks = d.blocks || {};
           const tl = document.getElementById("c-timeline");
+          show("sec-timeline", (d.windows || []).length > 0);
+          if (d.scheduleTitle) document.getElementById("c-timeline-title").textContent = d.scheduleTitle;
+          document.getElementById("c-timeline-lead").textContent = d.scheduleLead || "";
+          // decks attach to schedule rows through their "rows" tags
+          const decks = d.slideDecks || [];
+          const byRow = {};
+          decks.forEach(dk => (dk.rows || []).forEach(t => (byRow[t] = byRow[t] || []).push(dk)));
           (d.windows || []).forEach(win => {
             const sec = document.createElement("div");
-            sec.className = "win";
+            sec.className = "win" + (win.rows.every(r => !r[0]) ? " nodate" : "");
             sec.innerHTML = `<div class="win-head"><h3>${esc(win.title)}</h3><span class="until">${esc(win.until)}</span></div>`;
             let lastBlock = null;
             win.rows.forEach(([date, kind, tag, block, topic]) => {
@@ -333,20 +406,43 @@
               row.innerHTML = `
                 <div class="date">${esc(date)}</div>
                 <div class="stag ${esc(kind)}">${esc(tag)}</div>
-                <div class="topic">${esc(topic)}</div>`;
+                <div class="topic">${esc(topic)}${(byRow[tag] || []).map(dk =>
+                  `<a class="slink" href="${esc(dk.file)}" target="_blank" rel="noopener" title="${esc(dk.title)}${dk.pages ? " · " + dk.pages + " slides" : ""}">Slides ${SLIDE_ICON}</a>`).join("")}</div>`;
               sec.appendChild(row);
             });
             tl.appendChild(sec);
           });
 
+          // SLIDE DECK INDEX
+          show("sec-decks", decks.length > 0);
+          if (d.slidesTitle) document.getElementById("c-decks-title").textContent = d.slidesTitle;
+          document.getElementById("c-decks-lead").textContent = d.slidesLead || "";
+          document.getElementById("c-decks-note").textContent = d.slidesNote || "";
+          const groups = [];
+          decks.forEach(dk => {
+            const g = dk.group || "";
+            if (!groups.length || groups[groups.length - 1].name !== g) groups.push({ name: g, items: [] });
+            groups[groups.length - 1].items.push(dk);
+          });
+          document.getElementById("c-decks").innerHTML = groups.map(g => `
+            ${g.name ? `<div class="deck-group">${esc(g.name)}</div>` : ""}
+            <div class="decks">${g.items.map(dk => `
+              <a class="deck" href="${esc(dk.file)}" target="_blank" rel="noopener">
+                <span class="dtag">${esc(dk.tag || "PDF")}</span>
+                <span><div class="dtitle">${esc(dk.title)}</div>
+                <div class="dmeta">${[dk.pages ? dk.pages + " slides" : "", dk.size || "", "PDF"].filter(Boolean).join(" · ")}</div></span>
+              </a>`).join("")}</div>`).join("");
+
           // REFERENCES
+          show("sec-refs", (d.references || []).length > 0);
+          if (d.referencesLead) document.querySelector("#sec-refs .lead").textContent = d.referencesLead;
           document.getElementById("c-refs").innerHTML = (d.references || []).map(r =>
             `<li class="${r.primary ? "primary" : ""}">${r.text}${r.primary ? '<span class="pill">Primary</span>' : ""}</li>`).join("");
 
           // ARCHIVE
           if (d.archiveLink) {
             document.getElementById("c-archive").innerHTML =
-              `Looking for the 2025 offering? The <a href="${esc(d.archiveLink)}">archived course page</a> remains available.`;
+              `${esc(d.archiveText || "Looking for the 2025 offering?")} The <a href="${esc(d.archiveLink)}">archived course page</a> remains available.`;
           }
         } catch (err) {
           console.error("Error loading course data:", err);

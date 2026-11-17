@@ -1,0 +1,78 @@
+{
+  "code": "AS5420",
+  "title": "Introduction to Computational Fluid Dynamics",
+  "dept": "Aerospace Engineering · IIT Madras",
+  "subtitle": "A rigorous introduction to the fundamentals of CFD, from basic numerical discretisation to the solution of the full Navier–Stokes equations, with equal weight on the theory (stability, consistency, convergence) and on writing the schemes yourself.",
+  "instructor": "Pradeep Kumar Seshadri",
+  "semester": "Jan–May 2027",
+  "semesterNote": "elective",
+  "facts": ["Previously offered: Jan–May 2026"],
+  "startNote": "Next offered as an elective in Jan–May 2027. The syllabus and assessment shown here are those of the Jan–May 2026 offering; details for 2027 will be posted at the start of term.",
+  "modulesTitle": "Syllabus",
+  "modulesLead": "Five modules, moving from the building blocks of numerical methods to grids and applications.",
+  "modules": [
+    {
+      "title": "Fundamentals of numerical methods",
+      "items": ["Digital computing: machine epsilon, round-off errors", "Numerical differentiation (finite differences) and integration", "Classification of PDEs: elliptic, parabolic, hyperbolic", "Physical behaviour: advection and diffusion equations"]
+    },
+    {
+      "title": "Hyperbolic equations — the wave equation",
+      "items": ["Discretisation schemes for the 1D first-order wave equation", "Von Neumann stability analysis", "Numerical dissipation and dispersion", "Systems of equations: quasi-1D Euler and full Euler equations", "Shock-capturing basics"]
+    },
+    {
+      "title": "Parabolic equations — the heat equation",
+      "items": ["Explicit and implicit time-marching schemes", "Crank–Nicolson method", "Multi-dimensional problems: alternating direction implicit (ADI) method", "LU approximate-factorisation schemes"]
+    },
+    {
+      "title": "Elliptic equations — Laplace & Poisson",
+      "items": ["Solution properties and boundary conditions", "Point iterative techniques: Jacobi, Gauss–Seidel, SOR", "Introduction to multigrid"]
+    },
+    {
+      "title": "Grid generation & applications",
+      "items": ["Structured grid generation", "Algebraic and elliptic grid generation", "Transformation of equations to curvilinear coordinates", "Applications to complex flow problems"]
+    }
+  ],
+  "assessmentLead": "Continuous assessment, as run in Jan–May 2026. Coding is a mandatory component.",
+  "assessment": [
+    {
+      "c": "Assignments",
+      "d": "Four assignments, 10% each — derivations and basic coding (e.g. 1D solvers)",
+      "w": "40%"
+    },
+    {
+      "c": "Quizzes",
+      "d": "Four 15-minute quizzes, 5% each, based on case studies shared with the class",
+      "w": "20%"
+    },
+    {
+      "c": "Capstone Project",
+      "d": "Term project on a chosen track (beginner / intermediate / advanced) + written exam based on the project",
+      "w": "40%"
+    },
+    {
+      "c": "Total",
+      "d": "",
+      "w": "100%",
+      "total": true
+    }
+  ],
+  "rules": ["<b>Coding is mandatory</b> — every scheme studied is also implemented.", "The capstone uses a <b>tiered project system</b>: choose a beginner, intermediate or advanced track.", "Projects <b>reproduce specific historical results</b> (e.g. Chorin 1967, Sod 1978).", "Code copied from elsewhere, or AI-generated without understanding, <b>fails the project component</b>."],
+  "references": [
+    {
+      "text": "Anderson, J. D. — <i>Computational Fluid Dynamics: The Basics with Applications</i>, McGraw-Hill.",
+      "primary": true
+    },
+    {
+      "text": "Tannehill, J. C., Anderson, D. A. &amp; Pletcher, R. H. — <i>Computational Fluid Mechanics and Heat Transfer</i>, Taylor &amp; Francis."
+    },
+    {
+      "text": "Ramakrishna, M. — <i>Elements of Computational Fluid Dynamics</i>."
+    },
+    {
+      "text": "Ferziger, J. H. &amp; Perić, M. — <i>Computational Methods for Fluid Dynamics</i>, Springer."
+    },
+    {
+      "text": "Toro, E. F. — <i>Riemann Solvers and Numerical Methods for Fluid Dynamics</i>, Springer, 2009."
+    }
+  ]
+}

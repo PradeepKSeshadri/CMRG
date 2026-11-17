@@ -1,0 +1,217 @@
+{
+  "code": "AS2510",
+  "title": "Low Speed Lab",
+  "dept": "Aerospace Engineering · IIT Madras",
+  "subtitle": "Wind-tunnel and bench experiments in low-speed aerodynamics, with a lecture series on how wind tunnels work and how pressure, force and flow are measured in them.",
+  "instructor": "Pradeep Kumar Seshadri",
+  "semester": "Jul–Nov 2026",
+  "semesterNote": "3rd semester",
+  "cadence": "1 Lecture + 1 Laboratory session / week",
+  "startNote": "The Jul–Nov 2026 term is complete. Lecture slides and experiment briefings are linked below.",
+  "assessmentLead": "Graded mainly on the laboratory work itself: individual reports on each experiment, conduct in the laboratory, a viva voce on your own data, and a short end-semester exam.",
+  "assessment": [
+    {
+      "c": "Lab Reports",
+      "d": "One individual report per experiment; best nine of ten count",
+      "w": "50%"
+    },
+    {
+      "c": "Preparedness and Conduct",
+      "d": "Assessed in the laboratory, each session",
+      "w": "10%"
+    },
+    {
+      "c": "Viva Voce",
+      "d": "Individual, on the experiments you performed and the data you recorded",
+      "w": "20%"
+    },
+    {
+      "c": "End-Semester Exam",
+      "d": "Theory lectures and experiments",
+      "w": "20%"
+    },
+    {
+      "c": "Total",
+      "d": "",
+      "w": "100%",
+      "total": true
+    }
+  ],
+  "rules": ["<b>Ten experiments</b>, one per laboratory session: six in the wind tunnel, four on the bench.", "Each session opens with a <b>briefing</b> on that day's experiment: the theory, the rig, the procedure and what the report must contain.", "Reports are written <b>individually</b> and are due at <b>5:00 pm on the Sunday</b> following the session.", "Late reports lose <b>10% per day</b>, up to 3 days.", "Your <b>best nine reports</b> count."],
+  "scheduleTitle": "Lectures & Experiment Briefings",
+  "scheduleLead": "Two tracks run side by side: a Monday lecture series on wind-tunnel theory and measurement, and a briefing at the start of each Tuesday laboratory session.",
+  "blocks": {
+    "WT": "Wind tunnels",
+    "PM": "Pressure measurement",
+    "FM": "Forces & flow visualisation",
+    "WE": "Wind-tunnel experiments",
+    "BE": "Boundary-layer, pipe-flow & bench experiments"
+  },
+  "windows": [
+    {
+      "title": "Lecture series",
+      "until": "Mondays · wind-tunnel theory and measurement",
+      "rows": [
+        ["", "lec", "L1", "WT", "Governing equations, scaling and similarity"],
+        ["", "lec", "L2", "WT", "Basics of wind tunnels"],
+        ["", "lec", "L3", "WT", "Performance parameters, power and losses"],
+        ["", "lec", "L4", "WT", "Component losses in a wind tunnel"],
+        ["", "lec", "L5", "PM", "Pressure and its measurement"],
+        ["", "lec", "L6", "PM", "Equipment for pressure measurement"],
+        ["", "lec", "L7", "FM", "Lift, drag and force measurement"],
+        ["", "lec", "L8", "FM", "Flow visualisation and particle image velocimetry"]
+      ]
+    },
+    {
+      "title": "Experiment briefings",
+      "until": "Tuesdays · at the start of the laboratory session",
+      "rows": [
+        ["", "tut", "E1", "WE", "Flow past a circular cylinder — surface pressure and pressure drag"],
+        ["", "tut", "E2", "WE", "Wake survey of a circular cylinder — total drag"],
+        ["", "tut", "E3", "WE", "NACA 0015 surface pressure — lift and pressure drag"],
+        ["", "tut", "E4", "WE", "Wake survey of the NACA 0015"],
+        ["", "tut", "E5–6", "BE", "Boundary layers on a flat plate; friction losses in a pipe"],
+        ["", "tut", "E7–8", "BE", "Flow at a sudden enlargement; lift and drag from the force balance"],
+        ["", "tut", "E9–10", "BE", "Flow through a pipe bend; force due to the impact of a jet"]
+      ]
+    }
+  ],
+  "slidesTitle": "Slides",
+  "slidesLead": "Slide decks from the Jul–Nov 2026 offering: seven lectures and the briefings for all ten experiments.",
+  "slidesNote": "The Lecture 8 deck (flow visualisation) will be added once it is cleared for posting.",
+  "slideDecks": [
+    {
+      "tag": "L1",
+      "title": "Governing Equations, Scaling and Similarity",
+      "file": "assets/as2510/AS2510_L01_GoverningEquations_Similarity.pdf",
+      "pages": 41,
+      "size": "0.3 MB",
+      "rows": ["L1"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "L2",
+      "title": "Basics of Wind Tunnels",
+      "file": "assets/as2510/AS2510_L02_WindTunnelBasics.pdf",
+      "pages": 31,
+      "size": "0.8 MB",
+      "rows": ["L2"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "L3",
+      "title": "Performance Parameters, Power and Losses",
+      "file": "assets/as2510/AS2510_L03_TunnelPerformance.pdf",
+      "pages": 16,
+      "size": "0.3 MB",
+      "rows": ["L3"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "L4",
+      "title": "Component Losses in a Wind Tunnel",
+      "file": "assets/as2510/AS2510_L04_ComponentLosses.pdf",
+      "pages": 17,
+      "size": "0.3 MB",
+      "rows": ["L4"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "L5",
+      "title": "Pressure and its Measurement",
+      "file": "assets/as2510/AS2510_L05_PressureMeasurement.pdf",
+      "pages": 20,
+      "size": "0.3 MB",
+      "rows": ["L5"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "L6",
+      "title": "Equipment for Pressure Measurement",
+      "file": "assets/as2510/AS2510_L06_PressureEquipment.pdf",
+      "pages": 29,
+      "size": "0.7 MB",
+      "rows": ["L6"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "L7",
+      "title": "Lift, Drag and Force Measurement",
+      "file": "assets/as2510/AS2510_L07_LiftDragForceMeasurement.pdf",
+      "pages": 17,
+      "size": "0.2 MB",
+      "rows": ["L7"],
+      "group": "Lecture series"
+    },
+    {
+      "tag": "E1",
+      "title": "Flow past a Circular Cylinder",
+      "file": "assets/as2510/AS2510_E01_CylinderPressure_Briefing.pdf",
+      "pages": 49,
+      "size": "0.8 MB",
+      "rows": ["E1"],
+      "group": "Experiment briefings"
+    },
+    {
+      "tag": "E2",
+      "title": "Wake Survey of a Circular Cylinder",
+      "file": "assets/as2510/AS2510_E02_CylinderWake_Briefing.pdf",
+      "pages": 27,
+      "size": "0.3 MB",
+      "rows": ["E2"],
+      "group": "Experiment briefings"
+    },
+    {
+      "tag": "E3",
+      "title": "NACA 0015 Surface Pressure",
+      "file": "assets/as2510/AS2510_E03_AirfoilPressure_Briefing.pdf",
+      "pages": 20,
+      "size": "0.2 MB",
+      "rows": ["E3"],
+      "group": "Experiment briefings"
+    },
+    {
+      "tag": "E4",
+      "title": "Wake Survey of the NACA 0015",
+      "file": "assets/as2510/AS2510_E04_AirfoilWake_Briefing.pdf",
+      "pages": 12,
+      "size": "0.2 MB",
+      "rows": ["E4"],
+      "group": "Experiment briefings"
+    },
+    {
+      "tag": "E5–6",
+      "title": "Boundary Layers and Pipe Friction",
+      "file": "assets/as2510/AS2510_E05-E06_BoundaryLayer_PipeFriction_Briefing.pdf",
+      "pages": 23,
+      "size": "0.2 MB",
+      "rows": ["E5–6"],
+      "group": "Experiment briefings"
+    },
+    {
+      "tag": "E7–8",
+      "title": "Sudden Enlargement and Force Balance",
+      "file": "assets/as2510/AS2510_E07-E08_SuddenEnlargement_ForceBalance_Briefing.pdf",
+      "pages": 18,
+      "size": "0.2 MB",
+      "rows": ["E7–8"],
+      "group": "Experiment briefings"
+    },
+    {
+      "tag": "E9–10",
+      "title": "Pipe Bend and Jet Impact",
+      "file": "assets/as2510/AS2510_E09-E10_PipeBend_JetImpact_Briefing.pdf",
+      "pages": 16,
+      "size": "0.2 MB",
+      "rows": ["E9–10"],
+      "group": "Experiment briefings"
+    }
+  ],
+  "referencesLead": "The course text.",
+  "references": [
+    {
+      "text": "Barlow, J. B., Rae, W. H. &amp; Pope, A. — <i>Low-Speed Wind Tunnel Testing</i>, 3rd ed.",
+      "primary": true
+    }
+  ]
+}

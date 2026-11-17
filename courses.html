@@ -38,6 +38,9 @@
       .cc-title { font-size: 1.5rem; font-weight: 700; letter-spacing: -.3px; color: var(--ink); margin: 0 0 8px; }
       .cc-meta { font-size: .9rem; color: var(--muted); margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 6px 16px; }
       .cc-meta b { color: var(--ink); font-weight: 600; }
+      .cc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+      .cc-tag { font-size: .76rem; font-weight: 600; color: var(--primary-2); background: rgba(250,204,21,.22);
+        border: 1px solid var(--gold); padding: 3px 10px; border-radius: 999px; }
       .cc-desc { font-size: .98rem; line-height: 1.6; color: #38414f; margin: 0 0 22px; max-width: 66ch; }
       .cc-btn {
         display: inline-flex; align-items: center; gap: 9px; background: var(--gold); color: var(--primary);
@@ -144,7 +147,7 @@
       <div class="cwrap">
         <div class="layout">
           <section>
-            <h2 class="section-title">Current &amp; Upcoming Courses</h2>
+            <h2 class="section-title" id="courses-title">Courses</h2>
             <div id="courses-container"></div>
           </section>
           <aside class="aside-card">
@@ -202,6 +205,8 @@
           document.querySelector(".ribbon-title").textContent = data.ribbontitle;
           document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
 
+          if (data.sectionTitle) document.getElementById("courses-title").textContent = data.sectionTitle;
+
           const ann = document.getElementById("announcements-container");
           if (data.announcements && data.announcements.length) {
             ann.innerHTML = data.announcements.map(a =>
@@ -215,7 +220,6 @@
             const key = course.courseKey || "as2050";
             const to = `singlecourses.html?course=${encodeURIComponent(key)}`;
             const metaBits = [];
-            if (course.code) metaBits.push(`<span><b>${esc(course.code)}</b></span>`);
             if (course.semester) metaBits.push(`<span>${esc(course.semester)}</span>`);
             if (course.instructor) metaBits.push(`<span>Instructor: <b>${esc(course.instructor)}</b></span>`);
             return `
@@ -223,6 +227,7 @@
                 ${course.code ? `<span class="cc-code">${esc(course.code)}</span>` : ""}
                 <h3 class="cc-title">${esc(course.title)}</h3>
                 <div class="cc-meta">${metaBits.join("")}</div>
+                ${(course.tags || []).length ? `<div class="cc-tags">${course.tags.map(t => `<span class="cc-tag">${esc(t)}</span>`).join("")}</div>` : ""}
                 <p class="cc-desc">${esc(course.description)}</p>
                 <a class="cc-btn" href="${to}">${esc(course.buttonText || "View course")} ${ARROW}</a>
               </article>`;

@@ -1,8 +1,15 @@
 {
   "ribbontitle": "Courses",
-  "ribbondesc": "Stay Updated Regarding Latest Coursework Related Details",
+  "ribbondesc": "Courses taught by Dr. Pradeep Kumar Seshadri at IIT Madras, with lecture slides",
   "announcements": [
-    { "date": "July 27, 2026", "message": "AS2050* Aerodynamics for second-year Aerospace undergraduates begins." }
+    {
+      "date": "November 2026",
+      "message": "Lecture slides for AS2050* Aerodynamics and AS2510 Low Speed Lab (Jul–Nov 2026) are now posted on the course pages."
+    },
+    {
+      "date": "Jan–May 2027",
+      "message": "AS5420 Introduction to Computational Fluid Dynamics will be offered as an elective."
+    }
   ],
   "courses": [
     {
@@ -12,7 +19,7 @@
       "title": "Undergraduate Aerodynamics",
       "instructor": "Dr. Pradeep Kumar Seshadri",
       "semester": "Jul–Nov 2026",
-      "description": "A core course for second-year Aerospace undergraduates — 3 lectures + 1 tutorial per week.",
+      "description": "A core course for second-year Aerospace undergraduates: potential flow, vorticity and circulation, thin-aerofoil and lifting-line theory, propellers and the whole aircraft. 3 lectures + 1 tutorial per week.",
       "buttonText": "View course",
       "link": "singlecourses.html",
       "modules": [
@@ -24,12 +31,12 @@
             "tutorial": "Slot 'D' / 1 session / week,  50 mins / session"
           },
           "learningObjectives": [
-             "Apply Helmholtz’s laws, Kelvin’s circulation theorem, and Biot–Savart law to analyze vortex-dominated flows and predict lift generation in airfoils;",
-             "Construct thin airfoil and lifting-line models to estimate aerodynamic characteristics such as lift, drag, and moment for two-dimensional and finite wings;",
-             "Evaluate the aerodynamic performance of airfoils, wings, and propellers using theoretical models and interpret experimental data in relation to design parameters;",
-             "Analyze the effect of wing geometry (aspect ratio, sweep, delta planform) and flow conditions on induced drag and flow behavior using classical inviscid theories;",
-             "Communicate the fundamental principles of lift generation and aircraft flight in simple, scientifically accurate language to non-specialist audiences;",
-             "Reflect on the role of an engineer by learning how to abstract real-world situations, formulate models and hypotheses, and appreciate the values of professionalism, responsibility, and meaningful problem-solving."
+            "Apply Helmholtz’s laws, Kelvin’s circulation theorem, and Biot–Savart law to analyze vortex-dominated flows and predict lift generation in airfoils;",
+            "Construct thin airfoil and lifting-line models to estimate aerodynamic characteristics such as lift, drag, and moment for two-dimensional and finite wings;",
+            "Evaluate the aerodynamic performance of airfoils, wings, and propellers using theoretical models and interpret experimental data in relation to design parameters;",
+            "Analyze the effect of wing geometry (aspect ratio, sweep, delta planform) and flow conditions on induced drag and flow behavior using classical inviscid theories;",
+            "Communicate the fundamental principles of lift generation and aircraft flight in simple, scientifically accurate language to non-specialist audiences;",
+            "Reflect on the role of an engineer by learning how to abstract real-world situations, formulate models and hypotheses, and appreciate the values of professionalism, responsibility, and meaningful problem-solving."
           ],
           "skills": [
             "Quantitative or Analytical Skills",
@@ -37,44 +44,196 @@
             "Integrative Skills"
           ],
           "weightage": [
-            { "activity": "Homework & Tutorials (Weekly)", "percentage": "20%" },
-            { "activity": "Quiz 1 (August Last Week - Covers materials taught up to the point)", "percentage": "15%" },
-            { "activity": "Quiz 2 (October First Week - Covers materials taught between Quiz 1 and Quiz 2)", "percentage": "15%" },
-            { "activity": "End Semester Exam (Compulsory, covers entire course)", "percentage": "40%" },
-            { "activity": "Professionalism & Participation (Starts at full marks; deductions apply)", "percentage": "10%" }
+            {
+              "activity": "Homework & Tutorials (Weekly)",
+              "percentage": "20%"
+            },
+            {
+              "activity": "Quiz 1 (August Last Week - Covers materials taught up to the point)",
+              "percentage": "15%"
+            },
+            {
+              "activity": "Quiz 2 (October First Week - Covers materials taught between Quiz 1 and Quiz 2)",
+              "percentage": "15%"
+            },
+            {
+              "activity": "End Semester Exam (Compulsory, covers entire course)",
+              "percentage": "40%"
+            },
+            {
+              "activity": "Professionalism & Participation (Starts at full marks; deductions apply)",
+              "percentage": "10%"
+            }
           ],
           "grading": [
-            { "grade": "S", "points": "10"},
-            { "grade": "A", "points": "9" },
-            { "grade": "B", "points": "8" },
-            { "grade": "C", "points": "7" },
-            { "grade": "D", "points": "6" },
-            { "grade": "E", "points": "5" },
-            { "grade": "F", "points": "0" }
+            {
+              "grade": "S",
+              "points": "10"
+            },
+            {
+              "grade": "A",
+              "points": "9"
+            },
+            {
+              "grade": "B",
+              "points": "8"
+            },
+            {
+              "grade": "C",
+              "points": "7"
+            },
+            {
+              "grade": "D",
+              "points": "6"
+            },
+            {
+              "grade": "E",
+              "points": "5"
+            },
+            {
+              "grade": "F",
+              "points": "0"
+            }
           ]
         },
         {
           "title": "Calendar",
           "calendar": [
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 1", "topic": ["Introduction to Aerodynamics, Motivation, Course Info"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 3", "topic": ["Vector Differential Calculus, In-class Problems"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 4", "topic": ["Vector Integral Calculus, In-class Problems"] },
-            { "weekDate": "Aug 4  – Aug 8", "type": "Lecture 5", "topic": ["Continuum Hypothesis, Transport Properties", "Eulerian and Lagrangian Descriptions", "Control Volume and Material Derivatives"] },
-            { "weekDate": "Aug 4  – Aug 8", "type": "Lecture 6", "topic": ["Flow Visualization, Equations of Motion, Conservation Laws, Conditions and Consequences of Incompressibility"] },
-            { "weekDate": "Aug 4  – Aug 8", "type": "Lecture 7", "topic": ["Irrotational Incompressible Flow about 2D Bodies"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
-            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] }
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 1",
+              "topic": [
+                "Introduction to Aerodynamics, Motivation, Course Info"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 3",
+              "topic": [
+                "Vector Differential Calculus, In-class Problems"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 4",
+              "topic": [
+                "Vector Integral Calculus, In-class Problems"
+              ]
+            },
+            {
+              "weekDate": "Aug 4  – Aug 8",
+              "type": "Lecture 5",
+              "topic": [
+                "Continuum Hypothesis, Transport Properties",
+                "Eulerian and Lagrangian Descriptions",
+                "Control Volume and Material Derivatives"
+              ]
+            },
+            {
+              "weekDate": "Aug 4  – Aug 8",
+              "type": "Lecture 6",
+              "topic": [
+                "Flow Visualization, Equations of Motion, Conservation Laws, Conditions and Consequences of Incompressibility"
+              ]
+            },
+            {
+              "weekDate": "Aug 4  – Aug 8",
+              "type": "Lecture 7",
+              "topic": [
+                "Irrotational Incompressible Flow about 2D Bodies"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            },
+            {
+              "weekDate": "Jul 28 – Aug 1",
+              "type": "Lecture 2",
+              "topic": [
+                "Historical Perspective, Course Schedule, Vector Algebra"
+              ]
+            }
           ]
         },
         {
@@ -108,20 +267,62 @@
           "title": "Lecture Notes",
           "description": "Downloadable lecture note PDFs for each class session.",
           "lectures": [
-            { "title": "Lecture 1 - Sensitivity Analysis", "link": "#" },
-            { "title": "Lecture 2 - Kinematics of a Fluid Element", "link": "#" },
-            { "title": "Lecture 3 - Stress-Strain Relationship for a Newtonian Fluid", "link": "#" },
-            { "title": "Lecture 4 - Coordination Transformations for Strain and Stress Rates", "link": "#" },
-            { "title": "Lecture 5 - Compressible and Incompressible Fluid Element Motion Chart", "link": "#" },
-            { "title": "Lecture 6 - Compressible Viscous Equations", "link": "#" },
-            { "title": "Lecture 7 - Compressible Equations", "link": "#" },
-            { "title": "Lecture 8 - Equations of Aircraft Motion", "link": "#" },
-            { "title": "Lecture 9 - Brequet Range Equation", "link": "#" },
-            { "title": "Lecture 10 - Aerodynamic Center", "link": "#" },
-            { "title": "Lecture 11 - Notes on CQ 1", "link": "#" },
-            { "title": "Lecture 12 - Quick Visit to Bernoulli Land", "link": "#" },
-            { "title": "Lecture 13 - Kutta Condition", "link": "#" },
-            { "title": "Lecture 14 - Kutta Condition Solution", "link": "#" }
+            {
+              "title": "Lecture 1 - Sensitivity Analysis",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 2 - Kinematics of a Fluid Element",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 3 - Stress-Strain Relationship for a Newtonian Fluid",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 4 - Coordination Transformations for Strain and Stress Rates",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 5 - Compressible and Incompressible Fluid Element Motion Chart",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 6 - Compressible Viscous Equations",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 7 - Compressible Equations",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 8 - Equations of Aircraft Motion",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 9 - Brequet Range Equation",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 10 - Aerodynamic Center",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 11 - Notes on CQ 1",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 12 - Quick Visit to Bernoulli Land",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 13 - Kutta Condition",
+              "link": "#"
+            },
+            {
+              "title": "Lecture 14 - Kutta Condition Solution",
+              "link": "#"
+            }
           ]
         },
         {
@@ -130,8 +331,15 @@
           "assignments": [
             {
               "week": 1,
-              "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations"],
-              "links": [{ "title": "Homework 1", "url": "#" }]
+              "topics": [
+                "Kinematics, Stress-strain, and Navier-Stokes Equations"
+              ],
+              "links": [
+                {
+                  "title": "Homework 1",
+                  "url": "#"
+                }
+              ]
             },
             {
               "week": 2,
@@ -142,42 +350,95 @@
             },
             {
               "week": 3,
-              "topics": ["2-D Potential Flow"],
-              "links": [{ "title": "Homework 2", "url": "#" }]
+              "topics": [
+                "2-D Potential Flow"
+              ],
+              "links": [
+                {
+                  "title": "Homework 2",
+                  "url": "#"
+                }
+              ]
             },
             {
               "week": 4,
-              "topics": ["2-D Panel Methods"],
-              "links": [{ "title": "Homework 3", "url": "#" }]
+              "topics": [
+                "2-D Panel Methods"
+              ],
+              "links": [
+                {
+                  "title": "Homework 3",
+                  "url": "#"
+                }
+              ]
             },
             {
               "week": 5,
-              "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"],
-              "links": [{ "title": "Homework 4", "url": "#" }]
+              "topics": [
+                "Thin Airfoil Theory and Vortex Lattice Methods"
+              ],
+              "links": [
+                {
+                  "title": "Homework 4",
+                  "url": "#"
+                }
+              ]
             },
             {
               "week": 6,
-              "topics": ["Lifting Line and High Aspect Ratio Wings"],
-              "links": [{ "title": "Homework 5", "url": "#" }]
+              "topics": [
+                "Lifting Line and High Aspect Ratio Wings"
+              ],
+              "links": [
+                {
+                  "title": "Homework 5",
+                  "url": "#"
+                }
+              ]
             },
             {
               "week": 9,
-              "topics": ["Navier-Stokes Equations"],
-              "links": [{ "title": "Homework 6", "url": "#" }]
+              "topics": [
+                "Navier-Stokes Equations"
+              ],
+              "links": [
+                {
+                  "title": "Homework 6",
+                  "url": "#"
+                }
+              ]
             },
             {
               "week": 10,
-              "topics": ["Boundary Layers: Laminar"],
+              "topics": [
+                "Boundary Layers: Laminar"
+              ],
               "links": [
-                { "title": "Homework 7", "url": "#" },
-                { "title": "2004 Homework 7", "url": "#" },
-                { "title": "2004 Homework 7 Solutions", "url": "#" }
+                {
+                  "title": "Homework 7",
+                  "url": "#"
+                },
+                {
+                  "title": "2004 Homework 7",
+                  "url": "#"
+                },
+                {
+                  "title": "2004 Homework 7 Solutions",
+                  "url": "#"
+                }
               ]
             },
             {
               "week": 11,
-              "topics": ["Boundary Layers: Laminar (cont.) and Separation"],
-              "links": [{ "title": "Homework 8", "url": "#" }]
+              "topics": [
+                "Boundary Layers: Laminar (cont.) and Separation"
+              ],
+              "links": [
+                {
+                  "title": "Homework 8",
+                  "url": "#"
+                }
+              ]
             }
           ]
         },
@@ -185,52 +446,159 @@
           "title": "Exams",
           "description": "The exams will have a take-home written portion and an oral portion. Students will have a few days to complete the written exam (see the calendar section for the specific sessions, the take-home exams will be distributed and due). The written exams will then be followed by an oral exam. The oral exams will be largely, though not exclusively, based on the questions from the written exam. The oral exam will be 30 minutes in length, conducted by Prof. Darmofal. The written exam questions will be similar to homework questions focusing mainly on quantitative and integrative abilities. The oral exams will focus on conceptual understanding.",
           "links": [
-            { "title": "Take-home Exam 1 (PDF)", "url": "#" },
-            { "title": "Take-home Exam 2 (PDF)", "url": "#" },
-            { "title": "Take-home Exam 1 Study Questions (Answers are in the Yellow Boxes) (PDF)", "url": "#" }
+            {
+              "title": "Take-home Exam 1 (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Take-home Exam 2 (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Take-home Exam 1 Study Questions (Answers are in the Yellow Boxes) (PDF)",
+              "url": "#"
+            }
           ]
         },
         {
           "title": "Projects",
           "description": "Students will participate in an integrative team project developed with The Boeing Company concerning the aerodynamic analysis and design of a Blended-Wing Body (BWB) aircraft. During the first two months of the semester, students will complete assignments to learn the basic skills necessary to analyze the BWB aircraft. In the final month of the semester, teams of approximately three students will complete a redesign of the BWB. These teams will be responsible for completing the design project and documenting their results in a design report.<br><br>During the first two months of the semester, the staff will guide the students through the completion of the assignments. These assignments will be completed in pairs that the students can select, however, the pairs must be different for each of the assignments. Then, in the final month, the Labs will be dedicated to the teams working on the design project with staff in attendance to provide guidance. The students will be assigned to the design teams by the staff. Attendance will be taken for all lab sessions. The total individual student grade on the design project will be based on a team project grade (20%) and an individual contribution grade (80%). The individual contribution will be assessed from three sources:<ol><li>Instructor interactions with the teams throughout the semester including work session attendance,</li><li>Written evaluations after each milestone by all team members of the contributions of each team member (including self-evaluations), and</li><li>Delineation within the written reports of an individual’s contributions.</li></ol>",
           "links": [
-            { "title": "Project Assignment 1 (PDF)", "url": "#" },
-            { "title": "Project Assignment 2 (PDF)", "url": "#" },
-            { "title": "Project Assignment 3 (PDF)", "url": "#" },
-            { "title": "Project Assignment 4 (PDF)", "url": "#" },
-            { "title": "Project Design Assignment (PDF)", "url": "#" }
+            {
+              "title": "Project Assignment 1 (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Project Assignment 2 (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Project Assignment 3 (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Project Assignment 4 (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Project Design Assignment (PDF)",
+              "url": "#"
+            }
           ]
         },
         {
           "title": "Study Materials",
           "description": "The following study materials were distributed in class:",
           "links": [
-            { "title": "Lift and Drag Primer (PDF)", "url": "#" },
-            { "title": "Thin Airfoil Theory Summary (To accompany Homework 4) (PDF)", "url": "#" },
-            { "title": "Wind Tunnel Wall (To accompany Project Assignment 1) (PDF)", "url": "#" },
-            { "title": "Lift Generation and Streamline Curvature (PDF)", "url": "#" },
-            { "title": "Cylinder Drag with Roughness (To accompany Project Assignment 3) (PDF)", "url": "#" },
-            { "title": "CFD Notes (To accompany Project Assignment 4) (PDF)", "url": "#" },
-            { "title": "Conceptual Description of Wave Drag (PDF)", "url": "#" },
-            { "title": "CD NACA (PDF)", "url": "#" }
+            {
+              "title": "Lift and Drag Primer (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Thin Airfoil Theory Summary (To accompany Homework 4) (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Wind Tunnel Wall (To accompany Project Assignment 1) (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Lift Generation and Streamline Curvature (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Cylinder Drag with Roughness (To accompany Project Assignment 3) (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "CFD Notes (To accompany Project Assignment 4) (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "Conceptual Description of Wave Drag (PDF)",
+              "url": "#"
+            },
+            {
+              "title": "CD NACA (PDF)",
+              "url": "#"
+            }
           ]
         },
         {
           "title": "Related Resources",
           "usefulLinks": [
-            { "title": "Online Conversion", "url": "#" },
-            { "title": "Standard Atmospheric Computations", "url": "#" },
-            { "title": "XFOIL: Subsonic Airfoil Development System", "url": "#" },
-            { "title": "Fluid Mechanics Movies", "url": "#" }
+            {
+              "title": "Online Conversion",
+              "url": "#"
+            },
+            {
+              "title": "Standard Atmospheric Computations",
+              "url": "#"
+            },
+            {
+              "title": "XFOIL: Subsonic Airfoil Development System",
+              "url": "#"
+            },
+            {
+              "title": "Fluid Mechanics Movies",
+              "url": "#"
+            }
           ],
           "projectLinks": [
-            { "title": "The Wing is the Thing", "url": "#" },
-            { "title": "Aircraft Design Information Sources: Advanced Design / Unusual Concepts", "url": "#" },
-            { "title": "Tailless Aircraft", "url": "#" },
-            { "title": "AVL", "url": "#" }
+            {
+              "title": "The Wing is the Thing",
+              "url": "#"
+            },
+            {
+              "title": "Aircraft Design Information Sources: Advanced Design / Unusual Concepts",
+              "url": "#"
+            },
+            {
+              "title": "Tailless Aircraft",
+              "url": "#"
+            },
+            {
+              "title": "AVL",
+              "url": "#"
+            }
           ]
         }
+      ],
+      "tags": [
+        "Second offering (first: Jul–Nov 2025)",
+        "15 slide decks"
       ]
+    },
+    {
+      "id": "2",
+      "code": "AS2510",
+      "courseKey": "as2510",
+      "title": "Low Speed Lab",
+      "instructor": "Dr. Pradeep Kumar Seshadri",
+      "semester": "Jul–Nov 2026",
+      "description": "A laboratory course for second-year Aerospace undergraduates: ten wind-tunnel and bench experiments, with a lecture series on wind tunnels and on the measurement of pressure, force and flow.",
+      "tags": [
+        "7 lecture decks",
+        "7 experiment briefings"
+      ],
+      "buttonText": "View course",
+      "link": "singlecourses.html"
+    },
+    {
+      "id": "3",
+      "code": "AS5420",
+      "courseKey": "as5420",
+      "title": "Introduction to Computational Fluid Dynamics",
+      "instructor": "Dr. Pradeep Kumar Seshadri",
+      "semester": "Jan–May 2027",
+      "description": "An elective that goes from numerical discretisation to the Euler and Navier–Stokes equations: finite differences, stability analysis, hyperbolic, parabolic and elliptic solvers, and grid generation. Coding is part of every module.",
+      "tags": [
+        "Upcoming elective",
+        "Previously offered: Jan–May 2026"
+      ],
+      "buttonText": "View course",
+      "link": "singlecourses.html"
     }
-  ]
+  ],
+  "sectionTitle": "Courses"
 }
