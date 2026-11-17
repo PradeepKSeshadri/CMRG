@@ -43,7 +43,9 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
   position: sticky;
   top: 0;
-  z-index: 1;
+  /* above any page content that sets its own z-index (the home hero uses 2-3),
+     below the mobile sidebar (999) and the lightboxes */
+  z-index: 40;
 }
 
 .logo {

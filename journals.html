@@ -42,7 +42,7 @@
       .tab.active{background:var(--primary);color:#fff;border-color:var(--primary);}
       .spacer{flex:1;}
       .search{position:relative;}
-      .search input{border:1px solid var(--line);border-radius:999px;padding:10px 16px 10px 38px;font-size:.92rem;width:230px;max-width:52vw;outline:none;background:#fff;font-family:inherit;}
+      .search input{border:1px solid var(--line);border-radius:999px;padding:10px 16px 10px 38px;font-size:.92rem;width:290px;max-width:60vw;outline:none;background:#fff;font-family:inherit;}
       .search input:focus{border-color:var(--primary-2);}
       .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2;}
       .sort{border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:.9rem;color:var(--ink);background:#fff;font-family:inherit;}
@@ -79,6 +79,7 @@
       .crow .yr{font-family:"League Spartan","Segoe UI",sans-serif;font-weight:300;font-size:1.3rem;color:var(--primary-2);}
       .crow .ctitle{font-size:.98rem;font-weight:600;line-height:1.35;color:var(--ink);}
       .crow .cvenue{font-size:.85rem;color:var(--muted);margin-top:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+      .crow .cauth{font-size:.88rem;color:var(--ink);opacity:.8;margin-top:3px;}
       .crow.talk{border-left:3px solid var(--conf);}
       .clink{color:var(--primary-2);font-weight:600;display:inline-flex;align-items:center;gap:4px;}
       .clink svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;}
@@ -119,7 +120,7 @@
             <div class="dropdown-content">
               <a href="journals.html">Journals &amp; Preprints</a>
               <a href="journals.html?tab=conf">Conferences &amp; Talks</a>
-              <a href="books.html">Books</a>
+              <a href="journals.html?tab=books">Books</a>
             </div>
           </li>
           <li><a href="courses.html">Courses</a></li>
@@ -148,7 +149,7 @@
           <ul class="submenu">
             <li><a href="journals.html">Journals &amp; Preprints</a></li>
             <li><a href="journals.html?tab=conf">Conferences &amp; Talks</a></li>
-            <li><a href="books.html">Books</a></li>
+            <li><a href="journals.html?tab=books">Books</a></li>
           </ul>
         </li>
         <li><a href="courses.html">Courses</a></li>
@@ -170,11 +171,12 @@
         <div class="tabs" id="tabs">
           <button class="tab active" data-tab="journal">Journal Articles &amp; Preprints <span class="cnt" id="cnt-j"></span></button>
           <button class="tab" data-tab="conf">Conferences &amp; Talks <span class="cnt" id="cnt-c"></span></button>
+          <button class="tab" data-tab="books">Books <span class="cnt" id="cnt-b"></span></button>
         </div>
         <div class="spacer"></div>
         <label class="search">
           <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>
-          <input id="q" type="search" placeholder="Search title, author, venue…" />
+          <input id="q" type="search" placeholder="Search by title, author or journal" />
         </label>
         <select class="sort" id="sort">
           <option value="year">Newest first</option>
@@ -186,6 +188,7 @@
         <p class="count-note" id="count-note"></p>
         <div class="jgrid" id="jgrid"></div>
         <div class="clist hidden" id="clist"></div>
+        <div class="clist hidden" id="blist"></div>
       </div>
     </main>
 
@@ -224,10 +227,11 @@
                pdf:'<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>',
                link:'<svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>'};
 
-      let DATA={journals:[],conf:[]}, tab="journal", q="", sort="year";
+      let DATA={journals:[],conf:[],books:[]}, tab="journal", q="", sort="year";
 
       function j_search(c){return [c["card-heading"],c["author-name"],c["publication-title"]].concat(c.tags||[]).join(" ").toLowerCase();}
       function c_search(i){return [i.title,i.authors,i.venue].join(" ").toLowerCase();}
+      function b_search(i){return [i.title,i.authors,i.journal].join(" ").toLowerCase();}
       const match=s=>!q||s.includes(q.toLowerCase());
       function sortJ(a,b){return sort==="cites"?(num(b.citation)-num(a.citation)):(String(b.year).localeCompare(String(a.year))||num(b.citation)-num(a.citation));}
       function sortC(a,b){return sort==="cites"?((b.citations||0)-(a.citations||0)):(String(b.year).localeCompare(String(a.year))||(b.citations||0)-(a.citations||0));}
@@ -274,13 +278,32 @@
           </div>`;
         }).join("");
       }
+      /* books and book chapters: same row format as conferences (books.json) */
+      function renderBooks(){
+        const items=DATA.books.filter(i=>match(b_search(i))).sort((a,b)=>String(b.year).localeCompare(String(a.year)));
+        $("#blist").innerHTML=items.map(i=>{
+          const link=ok(i.link)?`<a class="clink" href="${esc(i.link)}" target="_blank" rel="noopener">${IC.link} link</a>`:"";
+          return `<div class="crow">
+            <div class="yr">${esc(i.year)}</div>
+            <div>
+              <div class="ctitle">${esc(i.title)}</div>
+              ${i.authors?`<div class="cauth">${esc(i.authors)}</div>`:""}
+              <div class="cvenue">${esc(i.journal)} ${link}</div>
+            </div>
+          </div>`;
+        }).join("");
+      }
+      const TABS={
+        journal:{el:"#jgrid",draw:renderJournals,n:()=>DATA.journals.map(p=>p.card).filter(c=>match(j_search(c))).length,label:"journal articles & preprints"},
+        conf:{el:"#clist",draw:renderConf,n:()=>DATA.conf.filter(i=>match(c_search(i))).length,label:"conference papers & talks"},
+        books:{el:"#blist",draw:renderBooks,n:()=>DATA.books.filter(i=>match(b_search(i))).length,label:"book chapters"}
+      };
       function render(){
-        const isJ=tab==="journal";
-        $("#jgrid").classList.toggle("hidden",!isJ);
-        $("#clist").classList.toggle("hidden",isJ);
-        if(isJ)renderJournals();else renderConf();
-        const n=(isJ?DATA.journals.map(p=>p.card).filter(c=>match(j_search(c))):DATA.conf.filter(i=>match(c_search(i)))).length;
-        $("#count-note").textContent=`${n} ${isJ?'journal articles & preprints':'conference papers & talks'}${q?` matching “${q}”`:''}`;
+        Object.keys(TABS).forEach(k=>$(TABS[k].el).classList.toggle("hidden",k!==tab));
+        const T=TABS[tab]; T.draw();
+        const n=T.n();
+        $("#count-note").textContent=`${n} ${n===1?T.label.replace(/s( &|$)/g,"$1"):T.label}${q?` matching “${q}”`:''}`;
+        $("#sort").style.visibility=tab==="books"?"hidden":"";
       }
       function setTab(t){tab=t;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===t));render();}
       document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
@@ -290,8 +313,11 @@
       Promise.all([
         fetch("journals.json").then(r=>r.json()),
         fetch("conferences.json").then(r=>r.json()).catch(()=>({items:[]})),
-        fetch("scholar.json").then(r=>r.json()).catch(()=>({}))
-      ]).then(([jr,cf,sc])=>{
+        fetch("scholar.json").then(r=>r.json()).catch(()=>({})),
+        fetch("books.json").then(r=>r.json()).catch(()=>({}))
+      ]).then(([jr,cf,sc,bk])=>{
+        DATA.books=bk["Book Chapters"]||[];
+        $("#cnt-b").textContent="("+DATA.books.length+")";
         DATA.journals=jr.publications||[];
         DATA.conf=cf.items||[];
         if(jr.ribbon){$("#p-title").textContent=jr.ribbon.title||"Publications";$("#p-desc").textContent=jr.ribbon.description||"";}
@@ -301,7 +327,7 @@
         $("#cnt-j").textContent="("+DATA.journals.length+")";
         $("#cnt-c").textContent="("+DATA.conf.length+")";
         const t=new URLSearchParams(location.search).get("tab");
-        setTab(t==="conf"?"conf":"journal");
+        setTab(TABS[t]?t:"journal");
       }).catch(err=>{console.error("Error loading publications:",err);$("#count-note").textContent="Publications are being updated.";});
     </script>
 
