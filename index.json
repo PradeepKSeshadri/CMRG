@@ -148,9 +148,9 @@
         "label": "h-index"
       },
       {
-        "value": "3",
+        "value": "4",
         "label": "In-house codes",
-        "note": "YALI · PyAMorph · Lumina"
+        "note": "YALI · PyAMorph · Lumina · Weaver"
       }
     ],
     "sourceText": "Google Scholar",

@@ -1,26 +1,211 @@
-[
-  {
-    "name": "Harshdip Saha",
-    "institution": "Netaji Subhas University of Technology (NSUT)",
-    "department": "Computer Science and Engineering (CSE)",
-    "graduation": "2027"
-  },
-  {
-    "name": "Anshika Singh",
-    "institution": "Netaji Subhas University of Technology (NSUT)",
-    "department": "Computer Science and Engineering (CSE)",
-    "graduation": "2027"
-  },
-  {
-    "name": "Zeeshan Ahmad",
-    "institution": "Netaji Subhas University of Technology (NSUT)",
-    "department": "Electronics and Communication Engineering (ECE)",
-    "graduation": "2028"
-  },
-  {
-    "name": "Ark Malhotra",
-    "institution": "Netaji Subhas University of Technology (NSUT)",
-    "department": "Computer Science and Engineering (CSE)",
-    "graduation": "2028"
-  }
-]
+{
+  "sessions": [
+    {
+      "title": "Summer 2026",
+      "period": "April – September 2026",
+      "interns": [
+        {
+          "name": "Aashif Rehan R",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Potential-flow theory with AeroPython"
+        },
+        {
+          "name": "Adisaran M",
+          "institution": "Amrita Vishwa Vidyapeetham, Coimbatore",
+          "topic": "CFD and unsteady aerodynamics"
+        },
+        {
+          "name": "Adithyan J",
+          "institution": "Amrita Vishwa Vidyapeetham, Coimbatore",
+          "topic": "CFD and unsteady aerodynamics"
+        },
+        {
+          "name": "Anand Vij",
+          "institution": "Manipal Institute of Technology",
+          "topic": "Chemical-equilibrium solver for the Lumina materials engine"
+        },
+        {
+          "name": "Anees Khan A",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Potential-flow theory with AeroPython"
+        },
+        {
+          "name": "B. Surya",
+          "institution": "IIITDM Kurnool",
+          "topic": "Parametric generation of bio-inspired cuttlebone lattices"
+        },
+        {
+          "name": "Baddela Thej Roy",
+          "institution": "Amrita Vishwa Vidyapeetham, Coimbatore",
+          "topic": "CFD and unsteady aerodynamics"
+        },
+        {
+          "name": "Biswarga Bidit Tamuli",
+          "institution": "Tezpur University",
+          "topic": "Propeller modelling and adjoint shape optimisation"
+        },
+        {
+          "name": "Dhakshitha S",
+          "institution": "Amrita Vishwa Vidyapeetham, Coimbatore",
+          "topic": "Aircraft design automation and optimisation"
+        },
+        {
+          "name": "Elango Sathish",
+          "institution": "IISER Mohali",
+          "topic": "Agentic AI for automating CFD workflows"
+        },
+        {
+          "name": "Gowri Remjith",
+          "institution": "SRM Institute of Science and Technology",
+          "topic": "Airfoil shape optimisation with SU2 adjoint solvers"
+        },
+        {
+          "name": "Harsh Saxena",
+          "institution": "Central University of Jammu",
+          "topic": "Domain-specific language model for materials research"
+        },
+        {
+          "name": "Kanishka Sodhi",
+          "institution": "Indian Institute of Space Science and Technology",
+          "topic": "Moving-body simulation of a Mars rotorcraft"
+        },
+        {
+          "name": "Lingesh B P",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Compressible flow, shock physics and a polymer equation-of-state database"
+        },
+        {
+          "name": "M Tanveer Ahammad",
+          "institution": "Amrita Vishwa Vidyapeetham, Coimbatore",
+          "topic": "Aircraft design automation and optimisation"
+        },
+        {
+          "name": "Naresh Lamba",
+          "institution": "Central University of Jammu",
+          "topic": "Domain-specific language model for materials research"
+        },
+        {
+          "name": "Naveen R",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Compressible flow, shock physics and a polymer equation-of-state database"
+        },
+        {
+          "name": "Prajan Kumar J",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Potential-flow theory with AeroPython"
+        },
+        {
+          "name": "Rohit Raj",
+          "institution": "Tezpur University",
+          "topic": "Flapping-wing CAD models and multibody kinematics"
+        },
+        {
+          "name": "Sacheth C Praveen",
+          "institution": "IIT Gandhinagar",
+          "topic": "Chemical-equilibrium solver for the Lumina materials engine"
+        },
+        {
+          "name": "Santhanapozhilan S",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Potential-flow theory with AeroPython"
+        },
+        {
+          "name": "Saranraj E",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Compressible flow, shock physics and a polymer equation-of-state database"
+        },
+        {
+          "name": "Setty Pelle Roshith Kumar",
+          "institution": "National Institute of Technology Karnataka, Surathkal",
+          "topic": "LLM-driven agent for OpenFOAM workflows"
+        },
+        {
+          "name": "Suvvari Gnana Aditya",
+          "institution": "National Institute of Technology Karnataka, Surathkal",
+          "topic": "AI assistant for OpenFOAM–PATO and a neural-operator airfoil surrogate"
+        },
+        {
+          "name": "Vishal V",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Compressible flow, shock physics and a polymer equation-of-state database"
+        },
+        {
+          "name": "Wampamba Muzafaru",
+          "institution": "Madras Institute of Technology, Anna University",
+          "topic": "Compressible flow, shock physics and a polymer equation-of-state database"
+        }
+      ]
+    },
+    {
+      "title": "Winter 2025–26",
+      "period": "November 2025 – June 2026",
+      "interns": [
+        {
+          "name": "A Abdul Azeez",
+          "institution": "B.S. Abdur Rahman Crescent Institute of Science & Technology",
+          "topic": "Lumina materials database and equation-of-state visualisation"
+        },
+        {
+          "name": "Anshika Singh",
+          "institution": "Netaji Subhas University of Technology, Delhi",
+          "topic": "PyAMorph: implicit geometry modelling and morphometric analysis"
+        },
+        {
+          "name": "Ark Malhotra",
+          "institution": "Netaji Subhas University of Technology, Delhi",
+          "topic": "PyAMorph: implicit geometry modelling and morphometric analysis"
+        },
+        {
+          "name": "Hari Sree Charan H",
+          "institution": "B.S. Abdur Rahman Crescent Institute of Science & Technology",
+          "topic": "Lumina materials database and equation-of-state visualisation"
+        },
+        {
+          "name": "Harsha C",
+          "institution": "T John Institute of Technology, Bangalore",
+          "topic": "C++ material-database library for Lumina"
+        },
+        {
+          "name": "Harshdip Saha",
+          "institution": "Netaji Subhas University of Technology, Delhi",
+          "topic": "PyAMorph: implicit geometry modelling and morphometric analysis"
+        },
+        {
+          "name": "Jeswin Mickle",
+          "institution": "T John Institute of Technology, Bangalore",
+          "topic": "C++ material-database library for Lumina"
+        },
+        {
+          "name": "Mohanraj N",
+          "institution": "Kumaraguru College of Technology",
+          "topic": "Effective thermal properties of porous fibrous materials"
+        },
+        {
+          "name": "Mukeshwaran K",
+          "institution": "B.S. Abdur Rahman Crescent Institute of Science & Technology",
+          "topic": "Effective thermal properties of porous fibrous materials"
+        },
+        {
+          "name": "Navbila K",
+          "institution": "Kongu Engineering College",
+          "topic": "Lumina materials database and equation-of-state visualisation"
+        },
+        {
+          "name": "Sridhar S",
+          "institution": "Kongu Engineering College",
+          "topic": "Lumina materials database and equation-of-state visualisation"
+        },
+        {
+          "name": "Subhadevi K",
+          "institution": "Kongu Engineering College",
+          "topic": "Lumina materials database and equation-of-state visualisation"
+        },
+        {
+          "name": "Zeeshan Ahmad",
+          "institution": "Netaji Subhas University of Technology, Delhi",
+          "topic": "PyAMorph: implicit geometry modelling and morphometric analysis"
+        }
+      ]
+    }
+  ]
+}

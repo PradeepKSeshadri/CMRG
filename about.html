@@ -209,45 +209,44 @@
         }
       }
       /* journey ends  */
-      /* interns start */
-      .intern-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        justify-content: center;
+      /* people tabs + members + interns */
+      body { cursor: auto; }
+      .ptabs-wrap { background: var(--text-light); padding: 34px 20px 0; }
+      .ptabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+      .ptab {
+        border: 1px solid #d5dce8; background: #fff; color: #475569; padding: 11px 22px; border-radius: 999px;
+        font: inherit; font-weight: 600; font-size: 15px; cursor: pointer; transition: all .18s;
       }
-      .intern-card {
-        background: var(--text-light);
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        padding: 28px 22px;
-        width: 100%;
-        max-width: 240px;
-        text-align: center;
-        transition: transform 0.3s ease;
+      .ptab .cnt { opacity: .65; font-weight: 500; margin-left: 4px; }
+      .ptab:hover { border-color: var(--primary); color: var(--primary); }
+      .ptab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+      .ptab:focus-visible { outline: 2px solid var(--highlight); outline-offset: 2px; }
+      .ppanel[hidden] { display: none; }
+      .sub-title { font-size: 22px; font-weight: 700; color: var(--primary); margin: 56px 0 6px; }
+      .sub-note { color: #64748b; font-size: 15px; margin-bottom: 28px; }
+      .member-grid, .intern-grid {
+        display: grid; gap: 20px; max-width: 1180px; margin: 0 auto; text-align: left;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
-      .intern-card:hover {
-        transform: translateY(-5px);
+      .member-card, .intern-card {
+        background: #fff; border: 1px solid #e6ebf2; border-radius: 12px; padding: 20px;
+        transition: transform .2s ease, box-shadow .2s ease;
       }
-      .intern-card h3 {
-        font-size: 17px;
-        font-weight: 600;
-        color: var(--text-dark);
-        margin: 0 0 8px;
+      .member-card:hover, .intern-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(1,33,73,.10); }
+      .member-card { display: flex; gap: 16px; align-items: flex-start; }
+      .avatar {
+        flex: 0 0 auto; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center;
+        background: var(--primary); color: var(--highlight); font-weight: 700; font-size: 18px; letter-spacing: .5px;
+        object-fit: cover;
       }
-      .intern-meta {
-        font-size: 13px;
-        color: #475569;
-        margin: 4px 0;
-        line-height: 1.5;
-      }
-      @media (max-width: 768px) {
-        .intern-grid {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-      /* interns end */
+      .member-card h3, .intern-card h3 { font-size: 16.5px; font-weight: 600; color: var(--text-dark); margin: 0 0 4px; }
+      .member-role { font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #1e40af; }
+      .member-topic, .intern-meta { font-size: 13.5px; color: #475569; margin-top: 8px; line-height: 1.5; }
+      .intern-card { border-left: 3px solid var(--highlight); }
+      .intern-meta i { width: 18px; color: #94a3b8; }
+      .session-head { display: flex; align-items: baseline; justify-content: center; gap: 12px; flex-wrap: wrap; }
+      .session-head .pill { font-size: 13px; font-weight: 600; color: #1e40af; background: #e8eefc; padding: 3px 12px; border-radius: 999px; }
+      /* people tabs end */
     </style>
     <link
       rel="stylesheet"
@@ -346,42 +345,47 @@
         </p>
     </div>
     <!-- Complete description ends  -->
-     <!-- Complete team starts  -->
-    <section class="team-section">
+    <div class="ptabs-wrap">
+      <div class="ptabs" role="tablist">
+        <button class="ptab active" role="tab" data-tab="team">Our Team <span class="cnt" id="cnt-team"></span></button>
+        <button class="ptab" role="tab" data-tab="interns">Interns <span class="cnt" id="cnt-interns"></span></button>
+        <button class="ptab" role="tab" data-tab="collaborators">Collaborators <span class="cnt" id="cnt-collab"></span></button>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <section class="team-section ppanel" id="panel-team">
       <h2 class="section-title">Our Team</h2>
       <p class="section-subtitle">
-        A group of researchers and students advancing multiscale, multiphysics modeling at IIT Madras. 
+        The people working in the lab at IIT Madras on multiscale, multiphysics modeling.
       </p>
       <div class="team-grid" id="team-grid"></div>
+      <h3 class="sub-title">Researchers &amp; Students</h3>
+      <p class="sub-note">Postdoctoral researchers and students currently in the group.</p>
+      <div class="member-grid" id="member-grid"></div>
+      <h3 class="sub-title">Our Journey</h3>
+      <p class="sub-note">Key milestones in our lab's growth and achievements</p>
+      <div class="timeline" id="timeline-container"></div>
     </section>
-    <!-- Complete team ends  -->
-    <!-- Complete collab starts  -->
-    <section class="team-section">
+
+    <!-- Interns -->
+    <section class="team-section ppanel" id="panel-interns" hidden>
+      <h2 class="section-title">Summer &amp; Winter Interns</h2>
+      <p class="section-subtitle">
+        Students from across India and abroad who have worked with the group through research internships.
+      </p>
+      <div id="intern-sessions"></div>
+    </section>
+
+    <!-- Collaborators -->
+    <section class="team-section ppanel" id="panel-collaborators" hidden>
       <h2 class="section-title">Our Collaborators</h2>
       <p class="section-subtitle">
         Working with global partners to drive interdisciplinary breakthroughs in physics-based simulations.
       </p>
       <div class="team-grid" id="collaborator-grid"></div>
     </section>
-    <!-- Complete collab ends  -->
-    <!-- Complete interns starts  -->
-    <section class="team-section">
-      <h2 class="section-title">Our Interns</h2>
-      <p class="section-subtitle">
-        Students contributing to our research through internships.
-      </p>
-      <div class="intern-grid" id="intern-grid"></div>
-    </section>
-    <!-- Complete interns ends  -->
-    <!-- Complete journey starts  -->
-    <section class="journey-section">
-      <h2 class="section-title">Our Journey</h2>
-      <p class="section-subtitle">
-        Key milestones in our lab's growth and achievements
-      </p>
-      <div class="timeline" id="timeline-container"></div>
-    </section>
-    <!-- Complete journey ends  -->
+
     <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
@@ -513,6 +517,20 @@
             // teamcard.appendChild(teamicondiv);
             collaboratorgrid.appendChild(teamcard);
         })
+          // members
+          const esc = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+          const initials = (n) => n.replace(/[^A-Za-z ]/g, "").split(" ").filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+          document.getElementById("member-grid").innerHTML = (data.members || []).map((m) => `
+            <div class="member-card">
+              ${m.src ? `<img class="avatar" src="${esc(m.src)}" alt="${esc(m.name)}">` : `<div class="avatar">${esc(initials(m.name))}</div>`}
+              <div>
+                <h3>${esc(m.name)}</h3>
+                <div class="member-role">${esc(m.role)}</div>
+                <div class="member-topic">${esc(m.subject)}</div>
+              </div>
+            </div>`).join("");
+          document.getElementById("cnt-team").textContent = "(" + (data.teams.length + (data.members || []).length) + ")";
+          document.getElementById("cnt-collab").textContent = "(" + data.collaborators.length + ")";
           //journey
             const container = document.getElementById("timeline-container");
             data.journey.forEach((item) => {
@@ -540,24 +558,42 @@
       async function loadInterns() {
         try {
           const res = await fetch("interns.json");
-          const interns = await res.json();
-          const grid = document.getElementById("intern-grid");
-          interns.forEach((intern) => {
-            const card = document.createElement("div");
-            card.className = "intern-card";
-            card.innerHTML = `
-              <h3>${intern.name}</h3>
-              <p class="intern-meta"><i class="fas fa-university"></i> ${intern.institution}</p>
-              <p class="intern-meta"><i class="fas fa-laptop-code"></i> ${intern.department}</p>
-              <p class="intern-meta"><i class="fas fa-graduation-cap"></i> B.Tech (${intern.graduation})</p>
-            `;
-            grid.appendChild(card);
-          });
+          const data = await res.json();
+          const esc = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+          let total = 0;
+          document.getElementById("intern-sessions").innerHTML = (data.sessions || []).map((s) => {
+            total += s.interns.length;
+            return `
+              <div class="session-head">
+                <h3 class="sub-title">${esc(s.title)}</h3>
+                <span class="pill">${s.interns.length} interns</span>
+              </div>
+              <p class="sub-note">${esc(s.period || "")}</p>
+              <div class="intern-grid">${s.interns.map((i) => `
+                <div class="intern-card">
+                  <h3>${esc(i.name)}</h3>
+                  <p class="intern-meta"><i class="fas fa-university"></i>${esc(i.institution)}</p>
+                  ${i.topic ? `<p class="intern-meta"><i class="fas fa-flask"></i>${esc(i.topic)}</p>` : ""}
+                </div>`).join("")}
+              </div>`;
+          }).join("");
+          document.getElementById("cnt-interns").textContent = "(" + total + ")";
         } catch (err) {
           console.error("Error loading interns data:", err);
         }
       }
       document.addEventListener("DOMContentLoaded", loadInterns);
+
+      // tabs (deep link: about.html?tab=interns)
+      function setPeopleTab(t, push) {
+        const tabs = document.querySelectorAll(".ptab");
+        if (![...tabs].some((b) => b.dataset.tab === t)) t = "team";
+        tabs.forEach((b) => { b.classList.toggle("active", b.dataset.tab === t); b.setAttribute("aria-selected", b.dataset.tab === t); });
+        document.querySelectorAll(".ppanel").forEach((p) => { p.hidden = p.id !== "panel-" + t; });
+        if (push) history.replaceState(null, "", t === "team" ? "about.html" : "about.html?tab=" + t);
+      }
+      document.querySelectorAll(".ptab").forEach((b) => b.addEventListener("click", () => setPeopleTab(b.dataset.tab, true)));
+      setPeopleTab(new URLSearchParams(location.search).get("tab") || "team", false);
     </script>
     <!-- loading interns ends  -->
     <!-- loading footer starts  -->
