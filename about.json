@@ -72,39 +72,71 @@
       "description": "Computational Multiphysics Research Lab established"
     }
   ],
-  "members": [
+  "groups": [
     {
-      "name": "Ali",
-      "role": "Postdoctoral Researcher",
-      "subject": "Shock–droplet interaction and reactive multiphase flows"
+      "title": "Postdoctoral Researcher",
+      "people": [
+        {
+          "name": "Ali",
+          "role": "Postdoctoral Researcher",
+          "src": "images/team/ali.jpg",
+          "subject": "Shock–droplet interaction and reactive multiphase flows."
+        }
+      ]
     },
     {
-      "name": "A. Abdul Azeez",
-      "role": "Researcher",
-      "subject": "Equation-of-state data and the Lumina materials engine",
-      "needs_review": true
+      "title": "Project Staff",
+      "people": [
+        {
+          "name": "Boaz Prem Raj",
+          "role": "Project Associate",
+          "src": "images/team/prem.jpg",
+          "subject": "Solver builds, scaling studies and high-performance computing.",
+          "email": "boazpremraj96@gmail.com"
+        },
+        {
+          "name": "A. Abdul Azeez",
+          "role": "Project Trainee",
+          "src": "images/team/abdul.jpg",
+          "subject": "Simulating shock-tube blast-wave propagation and structural overpressure interactions on foams and rigid targets.",
+          "email": "azeezabu187@gmail.com"
+        },
+        {
+          "name": "Mohanraj N",
+          "role": "Project Trainee",
+          "src": "images/team/mohanraj.jpg",
+          "subject": "3D microstructural characterisation, signed-distance-field geometry modelling of re-entry capsules and heterogeneous microstructures, and multiscale simulation of porous thermal protection systems and energetic materials using PyAMorph and NASA's PuMA.",
+          "email": "nmohanraj43@gmail.com"
+        }
+      ]
     },
     {
-      "name": "Mohanraj N",
-      "role": "Researcher",
-      "subject": "Microstructure-resolved modelling of porous thermal protection materials",
-      "needs_review": true
+      "title": "M.Tech. Students",
+      "people": [
+        {
+          "name": "Aadarsh",
+          "role": "M.Tech. Student",
+          "src": "images/team/aadarsh.jpg",
+          "subject": "Shock–particle interaction and turbulence."
+        },
+        {
+          "name": "Puneet",
+          "role": "M.Tech. Student",
+          "subject": "Architected energetic materials and shock-to-detonation transition."
+        }
+      ]
     },
     {
-      "name": "Adarsh",
-      "role": "Researcher",
-      "subject": "Shock–particle interaction and turbulence",
-      "needs_review": true
-    },
-    {
-      "name": "Puneet",
-      "role": "M.Tech. Student",
-      "subject": "Architected energetic materials and shock-to-detonation transition"
-    },
-    {
-      "name": "Janardhan",
-      "role": "B.Tech. Student",
-      "subject": "Bioinspired shielding against orbital-debris impact"
+      "title": "B.Tech. Students",
+      "people": [
+        {
+          "name": "Naveneeth Janardhan Suraj",
+          "role": "B.Tech. Student, 3rd Year",
+          "badge": "Young Research Fellowship Awardee",
+          "src": "images/team/janardhan.jpg",
+          "subject": "Modelling space-debris impact, Whipple shield design and ballistic-limit-equation prediction."
+        }
+      ]
     }
   ]
 }

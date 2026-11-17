@@ -233,12 +233,17 @@
         transition: transform .2s ease, box-shadow .2s ease;
       }
       .member-card:hover, .intern-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(1,33,73,.10); }
-      .member-card { display: flex; gap: 16px; align-items: flex-start; }
+      #member-groups .member-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 290px)); justify-content: center; }
+      .member-card { text-align: center; padding: 26px 22px 22px; display: flex; flex-direction: column; align-items: center; }
       .avatar {
-        flex: 0 0 auto; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center;
-        background: var(--primary); color: var(--highlight); font-weight: 700; font-size: 18px; letter-spacing: .5px;
-        object-fit: cover;
+        flex: 0 0 auto; width: 118px; height: 118px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 14px;
+        background: var(--primary); color: var(--highlight); font-weight: 700; font-size: 34px; letter-spacing: .5px;
+        object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 0 2px #e6ebf2;
       }
+      .member-badge { margin-top: 10px; font-size: 12px; font-weight: 700; color: #7a5b00; background: rgba(250,204,21,.25); border: 1px solid var(--highlight); padding: 4px 11px; border-radius: 999px; }
+      .member-mail { margin-top: auto; padding-top: 14px; color: var(--primary); font-size: 1.1rem; }
+      .member-mail:hover { color: #b98900; }
+      .member-card .member-topic { text-align: center; }
       .member-card h3, .intern-card h3 { font-size: 16.5px; font-weight: 600; color: var(--text-dark); margin: 0 0 4px; }
       .member-role { font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #1e40af; }
       .member-topic, .intern-meta { font-size: 13.5px; color: #475569; margin-top: 8px; line-height: 1.5; }
@@ -360,9 +365,7 @@
         The people working in the lab at IIT Madras on multiscale, multiphysics modeling.
       </p>
       <div class="team-grid" id="team-grid"></div>
-      <h3 class="sub-title">Researchers &amp; Students</h3>
-      <p class="sub-note">Postdoctoral researchers and students currently in the group.</p>
-      <div class="member-grid" id="member-grid"></div>
+      <div id="member-groups"></div>
       <h3 class="sub-title">Our Journey</h3>
       <p class="sub-note">Key milestones in our lab's growth and achievements</p>
       <div class="timeline" id="timeline-container"></div>
@@ -520,16 +523,21 @@
           // members
           const esc = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
           const initials = (n) => n.replace(/[^A-Za-z ]/g, "").split(" ").filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
-          document.getElementById("member-grid").innerHTML = (data.members || []).map((m) => `
-            <div class="member-card">
-              ${m.src ? `<img class="avatar" src="${esc(m.src)}" alt="${esc(m.name)}">` : `<div class="avatar">${esc(initials(m.name))}</div>`}
-              <div>
+          const groups = data.groups || [];
+          document.getElementById("member-groups").innerHTML = groups.map((g) => `
+            <h3 class="sub-title">${esc(g.title)}</h3>
+            <div class="member-grid">${g.people.map((m) => `
+              <div class="member-card">
+                ${m.src ? `<img class="avatar" src="${esc(m.src)}" alt="${esc(m.name)}" loading="lazy">` : `<div class="avatar">${esc(initials(m.name))}</div>`}
                 <h3>${esc(m.name)}</h3>
                 <div class="member-role">${esc(m.role)}</div>
+                ${m.badge ? `<div class="member-badge"><i class="fas fa-award"></i> ${esc(m.badge)}</div>` : ""}
                 <div class="member-topic">${esc(m.subject)}</div>
-              </div>
+                ${m.email ? `<a class="member-mail" href="mailto:${esc(m.email)}" title="Email ${esc(m.name)}"><i class="fas fa-envelope"></i></a>` : ""}
+              </div>`).join("")}
             </div>`).join("");
-          document.getElementById("cnt-team").textContent = "(" + (data.teams.length + (data.members || []).length) + ")";
+          const nMembers = groups.reduce((n, g) => n + g.people.length, 0);
+          document.getElementById("cnt-team").textContent = "(" + (data.teams.length + nMembers) + ")";
           document.getElementById("cnt-collab").textContent = "(" + data.collaborators.length + ")";
           //journey
             const container = document.getElementById("timeline-container");
