@@ -13,6 +13,21 @@
   ],
   "courses": [
     {
+      "id": "3",
+      "code": "AS5420",
+      "courseKey": "as5420",
+      "title": "Introduction to Computational Fluid Dynamics",
+      "instructor": "Dr. Pradeep Kumar Seshadri",
+      "semester": "Jan–May 2027",
+      "description": "An elective that goes from numerical discretisation to the Euler and Navier–Stokes equations: finite differences, stability analysis, hyperbolic, parabolic and elliptic solvers, and grid generation. Coding is part of every module.",
+      "tags": [
+        "Upcoming elective",
+        "Previously offered: Jan–May 2026"
+      ],
+      "buttonText": "View course",
+      "link": "singlecourses.html"
+    },
+    {
       "id": "1",
       "code": "AS2050*",
       "courseKey": "as2050",
@@ -595,21 +610,6 @@
       "tags": [
         "Six sessions",
         "Discussion-based"
-      ],
-      "buttonText": "View course",
-      "link": "singlecourses.html"
-    },
-    {
-      "id": "3",
-      "code": "AS5420",
-      "courseKey": "as5420",
-      "title": "Introduction to Computational Fluid Dynamics",
-      "instructor": "Dr. Pradeep Kumar Seshadri",
-      "semester": "Jan–May 2027",
-      "description": "An elective that goes from numerical discretisation to the Euler and Navier–Stokes equations: finite differences, stability analysis, hyperbolic, parabolic and elliptic solvers, and grid generation. Coding is part of every module.",
-      "tags": [
-        "Upcoming elective",
-        "Previously offered: Jan–May 2026"
       ],
       "buttonText": "View course",
       "link": "singlecourses.html"
