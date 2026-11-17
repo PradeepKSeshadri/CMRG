@@ -263,7 +263,40 @@
     "A common base for every application area of the group"
    ],
    "image": "images/Research_Image_Hydrocode.jpg",
-   "imgtitle": "Shock interaction simulated with the in-house solver"
+   "imgtitle": "Shock interaction simulated with the in-house solver",
+   "performance": {
+    "title": "Measured performance",
+    "stats": [
+     {
+      "n": "95%",
+      "l": "weak-scaling efficiency on 6,144 CPU cores",
+      "s": "2.1 billion cells, hybrid MPI + OpenMP"
+     },
+     {
+      "n": "97%",
+      "l": "strong-scaling efficiency, 32 to 128 nodes",
+      "s": "fixed grid of 1.07 billion cells"
+     },
+     {
+      "n": "16.9 M",
+      "l": "cell-updates per second on one A100 GPU",
+      "s": "double precision"
+     },
+     {
+      "n": "90%",
+      "l": "strong-scaling efficiency from 2 to 8 A100 GPUs",
+      "s": "fixed grid of 134 million cells"
+     },
+     {
+      "n": "9×",
+      "l": "fewer cells with adaptive refinement",
+      "s": "at the resolution of a uniform 1024³ grid"
+     }
+    ],
+    "figure": "images/research/cpu_scaling.png",
+    "figcaption": "Parallel efficiency on CPU nodes: weak scaling at 256³ cells per node and strong scaling of fixed 512³ and 1024³ grids.",
+    "note": "Measured on PARAM Shakti in October 2026 for a three-dimensional Richtmyer–Meshkov mixing layer on a uniform grid; each point is the mean of two runs. CPU nodes have 48 cores; GPU nodes carry two NVIDIA A100 cards."
+   }
   },
   {
    "title": "Thin-Shell Structural Solver on MFEM",

@@ -129,6 +129,20 @@
   gap: 2rem;
 }
 
+
+.perf { flex: 1 1 100%; border-top: 1px solid #e6ebf2; padding-top: 1.6rem; }
+.perf h4 { margin: 0 0 1rem; font-size: 1.05rem; color: #012149; }
+.perf-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
+.perf-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.perf-stat { background: #012149; color: #fff; border-radius: 12px; padding: 16px 16px 14px; }
+.perf-stat .n { font-size: 1.7rem; font-weight: 300; line-height: 1; color: #facc15; font-variant-numeric: tabular-nums; }
+.perf-stat .l { margin-top: 8px; font-size: .86rem; line-height: 1.35; font-weight: 600; }
+.perf-stat .s { margin-top: 4px; font-size: .76rem; color: #a9bbd6; line-height: 1.35; }
+.perf figure { margin: 0; }
+.perf figure img { width: 100%; border: 1px solid #e6ebf2; border-radius: 12px; background: #fff; }
+.perf figcaption, .perf-note { font-size: .8rem; color: #5a6b83; line-height: 1.5; margin-top: 8px; }
+@media (max-width: 900px) { .perf-grid { grid-template-columns: 1fr; } }
+
 /* Responsive */
 @media (max-width: 768px) {
   .research-card {
@@ -578,6 +592,20 @@
           linkEl.style.display = "inline-block";
         }
 
+        if (item.performance) {
+          const p = item.performance, e = t => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+          const div = document.createElement("div");
+          div.className = "perf";
+          div.innerHTML = `<h4>${e(p.title || "Performance")}</h4>
+            <div class="perf-grid">
+              <div>
+                <div class="perf-stats">${(p.stats || []).map(x => `<div class="perf-stat"><div class="n">${e(x.n)}</div><div class="l">${e(x.l)}</div><div class="s">${e(x.s)}</div></div>`).join("")}</div>
+                ${p.note ? `<p class="perf-note">${e(p.note)}</p>` : ""}
+              </div>
+              ${p.figure ? `<figure><img src="${e(p.figure)}" alt="${e(p.figcaption)}" loading="lazy"><figcaption>${e(p.figcaption)}</figcaption></figure>` : ""}
+            </div>`;
+          clone.querySelector(".research-card").appendChild(div);
+        }
         container.appendChild(clone);
       });
     }
