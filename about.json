@@ -114,10 +114,11 @@
       "title": "M.Tech. Students",
       "people": [
         {
-          "name": "Aadarsh",
+          "name": "Adarsh Kumar Sah",
           "role": "M.Tech. Student",
           "src": "images/team/aadarsh.jpg",
-          "subject": "Shock–particle interaction and turbulence."
+          "subject": "Shock–particle interactions, turbulence physics, and computational aerodynamics.",
+          "email": "ae25m803@smail.iitm.ac.in"
         },
         {
           "name": "Puneet",
