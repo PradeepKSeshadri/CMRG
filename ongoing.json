@@ -1,57 +1,273 @@
 {
  "ribbontitle": "Research",
  "ribbondesc": "Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
- "High-Performance Computing & Solver Development": [
+ "Energetic Materials & Propulsion": [
   {
-   "title": "High-Performance Computing & Solver Development",
-   "subtitle": "Adaptive, Scalable, and Multiphysics-Ready",
-   "icon": "⚡",
-   "overview": "Core lab effort: developing exascale-ready solvers built on Adaptive Mesh Refinement (AMR) and a Hybrid Sharp–Diffuse Interface Framework. These solver technologies underpin our shock hydrocodes, all-speed CFD, and multiscale frameworks.",
+   "title": "Shock Initiation & Detonation of Energetic Materials",
+   "subtitle": "Initiation, Hot-Spot Physics, and Microstructure-aware burn models",
+   "icon": "🔥",
+   "overview": "Multiscale, multiphysics study of energetic materials from atomistic chemistry to continuum-scale initiation and run-to-detonation behavior. We combine DFT, MD, KMC and continuum reactive flow models for predictive capabilities.",
    "publicationCount": 0,
    "currentProjects": [
-    "AMR-enabled hydrocodes",
-    "Density-based all-speed solver framework ",
-    "Hybrid Sharp–Diffuse Interface methods integrated with AMR"
+    "Hot-spot formation and growth in heterogeneous energetic materials",
+    "Reactive burn models coupled to hydrocodes",
+    "Multiscale Framework: DFT → MD → continuum"
    ],
    "tools": [
-    "AMReX",
+    "LAMMPS",
+    "DFT Codes",
+    "Kinetic Monte Carlo",
     "Alamo",
+    "AMReX",
     "CTP Solver"
    ],
    "impact": [
-    "Exascale-ready implementations for large HPC centers",
-    "Unified solver frameworks that span Mach regimes and multiphase problems",
-    "Reusable libraries and software components for group projects"
+    "Mechanistic insight into initiation and sensitivity",
+    "Improved constitutive/reaction models for engineering simulations",
+    "Data-driven parameter calibration linking experiments and simulation"
    ],
-   "image": "images/research/solver.jpg",
-   "imgtitle": "Micro-turbojet with rotating compressor and turbine (top) and a rotating detonation engine (bottom), both from the group's in-house solver"
+   "image": "images/Research_Image_Energetic_Materials.jpg"
   },
   {
-   "title": "In-House Computational Thermophysics Solver Development",
-   "subtitle": "High-Strain-Rate Physics and Shock Physics Dynamics",
-   "icon": "🌊",
-   "overview": "Scalable Computational Thermophysics Solver for shock propagation, impact and fragmentation problems. Designed to resolve sharp features while remaining robust in mixed-material zones using the hybrid interface approach.",
+   "title": "Solid Propellant Modelling",
+   "subtitle": "From Packed Microstructure to Burn Rate and Grain Integrity",
+   "icon": "🚀",
+   "overview": "Predictive modelling of composite solid propellants starting from the microstructure: we pack realistic oxidiser particles, resolve the burning surface and the flame above it, and follow heat and stress into the solid to study burn rate, cracks and debonding.",
    "publicationCount": 0,
    "currentProjects": [
-    "Modeling shock initiation in energetic materials",
-    "Impact response of layered protective structures",
-    "High-order methods and AMR for shock-focused multiphysics"
+    "Packing of spherical and faceted crystals to measured loadings",
+    "Interface-resolved burning of ammonium perchlorate propellants and burn-rate prediction",
+    "Coupled thermal and mechanical response of the burning solid",
+    "Grain geometry, burn-back and the effect of cracks and debonds"
+   ],
+   "tools": [
+    "YALI solver",
+    "PyAMorph",
+    "Lumina"
+   ],
+   "impact": [
+    "Burn-rate trends predicted from measured material constants",
+    "Microstructures built to a recipe and validated against published packs",
+    "A route from CT images of real propellant to simulation"
+   ],
+   "image": "images/research/propellant.jpg",
+   "imgtitle": "Packed propellant microstructures with faceted and spherical particles built with PyAMorph (top), and temperature and stress on a burning surface (bottom)"
+  },
+  {
+   "title": "Propulsion Flows",
+   "subtitle": "Jet Engines, Scramjets and Detonation Engines",
+   "icon": "🔥",
+   "overview": "Whole-device simulations of air-breathing and detonation-based engines with the in-house solver: rotating machinery inside a real engine geometry, shock trains in supersonic inlets, and detonation waves that travel around an annular chamber.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Complete micro-turbojet with rotating compressor and turbine",
+    "Shock trains in scramjet isolators and strut combustors",
+    "Rotating detonation engines"
+   ],
+   "tools": [
+    "YALI solver",
+    "PyAMorph",
+    "AMReX"
+   ],
+   "impact": [
+    "Engine geometry taken from drawings to a running simulation without body-fitted meshing",
+    "Moving parts and reacting flow handled in one framework",
+    "Simulations at tens of millions of cells on GPUs"
+   ],
+   "image": "images/research/propulsion.jpg",
+   "imgtitle": "A micro-turbojet with rotating compressor and turbine (top) and a rotating detonation engine (bottom), simulated with the in-house solver"
+  }
+ ],
+ "Protective Materials & Structures": [
+  {
+   "title": "Impact, Blast & Debris Protection",
+   "subtitle": "Multiscale Mechanics and Materials Design for Protection",
+   "icon": "🛡️",
+   "overview": "Design and simulation of materials and structures optimized for impact resistance — from microstructural tailoring to structural-scale response — using coupled multiscale mechanics and dynamic testing calibration.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Hypervelocity debris impact on spacecraft bumper shields",
+    "Ballistic response of layered and fibre-composite armour",
+    "Blast loading of protective structures",
+    "Coupling experiments and simulations for validation"
+   ],
+   "tools": [
+    "Alamo",
+    "AMReX",
+    "CTP Solver"
+   ],
+   "impact": [
+    "Guides design of lighter, more effective protective systems",
+    "Translates microstructural design rules to engineering-scale performance",
+    "Supports defense and aerospace material qualification"
+   ],
+   "image": "images/research/protection.jpg",
+   "imgtitle": "Bullet-on-armour geometry built with PyAMorph (top) and a hypervelocity debris impact on a bumper shield simulated in-house (bottom)"
+  },
+  {
+   "title": "Bioinspired & Architected Protective Materials",
+   "subtitle": "Origami, Architected Lattices and Nature's Armour",
+   "icon": "🦋",
+   "overview": "Nature folds, layers and grades its structures to absorb energy. We design and simulate protective materials that borrow these ideas — origami cells that fold under load, spinodoid and cuttlebone-like lattices, nacre-like layups and bioinspired fibre armour — under impact and blast.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Origami (Kresling) cells as foldable, energy-absorbing structures under blast",
+    "Spinodoid and graded porous architectures as shields against orbital-debris impact",
+    "Bioinspired UHMWPE–Kevlar armour",
+    "Cuttlebone-like and nacre-like lattices and layups"
+   ],
+   "tools": [
+    "YALI solver",
+    "PyAMorph",
+    "MFEM",
+    "Weaver"
+   ],
+   "impact": [
+    "Lightweight structures that fold and absorb energy by design",
+    "Geometry generators for origami and architected materials that feed directly into simulation",
+    "Design rules for protective structures in aerospace and defence"
+   ],
+   "image": "images/research/bioinspired.jpg",
+   "imgtitle": "An origami cell under a blast wave (top) and a spinodoid architecture built with PyAMorph (bottom)"
+  }
+ ],
+ "Hypersonics & Thermal Protection": [
+  {
+   "title": "Hypersonic & Reentry Aerothermodynamics",
+   "subtitle": "Ablation, Aerothermochemistry, and Plasma–Material Interaction",
+   "icon": "🚀",
+   "overview": "Coupled study of high-enthalpy aerothermodynamics, surface ablation and chemistry, and plasma–material interactions encountered during hypersonic flight and planetary reentry.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Ablation and surface chemistry modelling for TPS materials",
+    "Aerothermochemical coupling in boundary layers at high enthalpy",
+    "Multiscale methods for gas-surface interaction kinetics"
+   ],
+   "tools": [
+    "Alamo",
+    "AMReX",
+    "PuMA",
+    "WarpX",
+    "OpenFOAM",
+    "PATO"
+   ],
+   "impact": [
+    "Improves predictive models for thermal protection systems",
+    "Informs material selection and design for extreme environments",
+    "Enables joint experiments and simulation campaigns with hypersonics groups"
+   ],
+   "image": "images/research/hypersonic.jpg",
+   "imgtitle": "A crew-module and a scramjet-vehicle geometry built with PyAMorph"
+  },
+  {
+   "title": "Thermal Protection System Simulations",
+   "subtitle": "Microstructure-Resolved Response of Porous Heat-Shield Materials",
+   "icon": "🛡️",
+   "overview": "Heat shields are porous, fibrous materials whose behaviour is set at the scale of individual fibres. We build fibre-felt microstructures, compute their effective thermal and transport properties, and simulate heat conduction, flow through the pores and material response directly on the resolved geometry.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Effective thermal properties of porous fibrous materials from meso-scale simulations",
+    "Synthetic and CT-derived fibre-felt microstructures",
+    "Coupled conduction and pore-scale flow in resolved microstructures",
+    "Material-response models for ablative heat shields"
+   ],
+   "tools": [
+    "YALI solver",
+    "PyAMorph",
+    "PuMA",
+    "PATO"
+   ],
+   "impact": [
+    "Material properties computed from the microstructure rather than fitted",
+    "A link between micro-CT data and vehicle-scale heat-shield models",
+    "Support for reentry and hypersonic vehicle design"
+   ],
+   "image": "images/research/tps.jpg",
+   "imgtitle": "Fibre-felt microstructures for thermal protection materials built with PyAMorph"
+  },
+  {
+   "title": "Inflatable Decelerators & Parachutes",
+   "subtitle": "Flexible Structures that Slow a Vehicle Down",
+   "icon": "🪂",
+   "overview": "Ballutes, tension cones and parachutes are thin fabric structures that deform strongly in the flow they are meant to slow. We simulate them with a thin-shell structural solver coupled two-way to the flow solver.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Tension-cone ballutes in supersonic flow",
+    "Inflatable aerodynamic decelerators",
+    "Parachute canopies"
+   ],
+   "tools": [
+    "YALI solver",
+    "MFEM",
+    "PyAMorph"
+   ],
+   "impact": [
+    "Fabric structures simulated at their true thickness",
+    "Coupled prediction of shape, drag and loads",
+    "Support for entry, descent and recovery system design"
+   ],
+   "image": "images/research/decelerators.jpg",
+   "imgtitle": "Inflatable decelerator shapes and a crew module under parachutes, built with PyAMorph"
+  }
+ ],
+ "Bioinspired Flight & Fluid–Structure Interaction": [
+  {
+   "title": "Bioinspired Flight & Moving Bodies",
+   "subtitle": "Flapping, Folding and Rotating Wings in Two-Way Coupled Flow",
+   "icon": "🌀",
+   "overview": "Insects and birds fly with wings that flap, twist and fold, and the flow and the structure shape each other. We simulate this two-way coupling for bioinspired and engineered flyers, from a folding origami wing to flapping insects and rotors.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Origami wing in a turning stream: tip vortex, wake and snap-through",
+    "Flapping-wing and insect flight",
+    "Rotors and rotary-wing micro air vehicles",
+    "Wing response to gusts"
+   ],
+   "tools": [
+    "YALI solver",
+    "MFEM",
+    "PyAMorph"
+   ],
+   "impact": [
+    "Rigid, articulated and flexible bodies in one framework",
+    "Thin wings resolved without body-fitted remeshing",
+    "Design ideas for small, agile flying vehicles"
+   ],
+   "image": "images/research/fsi.jpg",
+   "imgtitle": "Two-way coupled simulation of a bistable origami wing with its tip vortex (top) and an insect geometry built with PyAMorph (bottom)"
+  }
+ ],
+ "Solvers & High-Performance Computing": [
+  {
+   "title": "YALI: In-House Multiphysics Solver",
+   "subtitle": "Adaptive, GPU-Ready and Built for Shocks, Interfaces and Moving Bodies",
+   "icon": "⚡",
+   "overview": "The group's core solver, written in-house on adaptive mesh refinement. One code handles gases, liquids, elastoplastic solids and reacting materials, coupled across sharp, moving interfaces, from low-speed flow to shocks and detonation.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "High-order shock capturing with sharp material interfaces",
+    "Adaptive mesh refinement on CPUs and GPUs",
+    "Elastoplastic solids, impact and fragmentation",
+    "Reacting flow and detonation",
+    "Moving and deforming immersed bodies"
    ],
    "tools": [
     "AMReX",
     "Alamo",
-    "CTP Solver"
+    "GPU (CUDA)",
+    "MPI"
    ],
    "impact": [
-    "Accurate prediction of shock–material interactions",
-    "Improved designs for protective systems and planetary entry models",
-    "Bridging experiments and simulations for validation"
+    "One framework spanning Mach regimes, materials and phases",
+    "Runs on national supercomputers and on GPUs",
+    "A common base for every application area of the group"
    ],
-   "image": "images/Research_Image_Hydrocode.jpg"
+   "image": "images/Research_Image_Hydrocode.jpg",
+   "imgtitle": "Shock interaction simulated with the in-house solver"
   },
   {
    "title": "Thin-Shell Structural Solver on MFEM",
-   "subtitle": "Membranes, Shells and Creased Sheets for Fluid–Structure Interaction",
+   "subtitle": "Membranes, Shells and Creased Sheets",
    "icon": "🪂",
    "overview": "A finite-element structural solver built on the MFEM library for thin, flexible structures. It uses nonlinear membrane and thin-shell formulations for large deformations, with crease hinges for folded sheets, and couples two-way to our flow solver so that the fabric, canopy or folded panel moves with the flow around it.",
    "publicationCount": 0,
@@ -73,7 +289,9 @@
    ],
    "image": "images/research/shell.jpg",
    "imgtitle": "A tension-cone ballute and a parachute geometry built with PyAMorph (top), and the shell mesh of a Kresling origami cell with its mountain, valley and ring creases (bottom)"
-  },
+  }
+ ],
+ "Software & AI Tools": [
   {
    "title": "PyAMorph: Tool for Implicit Geometry Modeling & Morphometric Analysis",
    "subtitle": "Massively Parallel SDF Framework on Adaptive Meshes",
@@ -129,197 +347,52 @@
    ],
    "image": "images/research/lumina.jpg",
    "imgtitle": "Lumina materials engine: a JWL equation-of-state curve (top) and a shock Hugoniot fitted against experimental data (bottom)"
-  }
- ],
- "Energetic Materials & Reactive Systems": [
-  {
-   "title": "Energetic Materials & Reactive Systems",
-   "subtitle": "Initiation, Hot-Spot Physics, and Microstructure-aware burn models",
-   "icon": "🔥",
-   "overview": "Multiscale, multiphysics study of energetic materials from atomistic chemistry to continuum-scale initiation and run-to-detonation behavior. We combine DFT, MD, KMC and continuum reactive flow models for predictive capabilities.",
-   "publicationCount": 0,
-   "currentProjects": [
-    "Hot-spot formation and growth in heterogeneous energetic materials",
-    "Reactive burn models coupled to hydrocodes",
-    "Multiscale Framework: DFT → MD → continuum"
-   ],
-   "tools": [
-    "LAMMPS",
-    "DFT Codes",
-    "Kinetic Monte Carlo",
-    "Alamo",
-    "AMReX",
-    "CTP Solver"
-   ],
-   "impact": [
-    "Mechanistic insight into initiation and sensitivity",
-    "Improved constitutive/reaction models for engineering simulations",
-    "Data-driven parameter calibration linking experiments and simulation"
-   ],
-   "image": "images/Research_Image_Energetic_Materials.jpg"
   },
   {
-   "title": "Solid Propellant Modelling",
-   "subtitle": "From Packed Microstructure to Burn Rate and Grain Integrity",
-   "icon": "🚀",
-   "overview": "Predictive modelling of composite solid propellants starting from the microstructure: we pack realistic oxidiser particles, resolve the burning surface and the flame above it, and follow heat and stress into the solid to study burn rate, cracks and debonding.",
+   "title": "Weaver: Design Automation & Optimisation",
+   "subtitle": "Surrogate-Based Optimisation for Aerospace Design",
+   "icon": "🧵",
+   "overview": "A toolkit that automates the loop from a parametric design to its analysis and optimisation, using surrogate models to keep the number of expensive simulations small.",
    "publicationCount": 0,
    "currentProjects": [
-    "Packing of spherical and faceted crystals to measured loadings",
-    "Interface-resolved burning of ammonium perchlorate propellants and burn-rate prediction",
-    "Coupled thermal and mechanical response of the burning solid",
-    "Grain geometry, burn-back and the effect of cracks and debonds"
+    "Aircraft and wing–propeller design automation",
+    "Surrogate-based optimisation with constraint handling",
+    "Optimisation of architected protective materials"
    ],
    "tools": [
-    "YALI solver",
-    "PyAMorph",
-    "Lumina"
+    "Python",
+    "OpenVSP"
    ],
    "impact": [
-    "Burn-rate trends predicted from measured material constants",
-    "Microstructures built to a recipe and validated against published packs",
-    "A route from CT images of real propellant to simulation"
+    "Design studies that would otherwise need thousands of simulations",
+    "A common optimisation layer for the group's solvers and geometry tools"
    ],
-   "image": "images/research/propellant.jpg",
-   "imgtitle": "Packed propellant microstructures with faceted and spherical particles built with PyAMorph (top), and temperature and stress on a burning surface (bottom)"
-  }
- ],
- "Impact-Resistant & Protective Materials": [
-  {
-   "title": "Impact-Resistant & Protective Materials",
-   "subtitle": "Multiscale Mechanics and Materials Design for Protection",
-   "icon": "🛡️",
-   "overview": "Design and simulation of materials and structures optimized for impact resistance — from microstructural tailoring to structural-scale response — using coupled multiscale mechanics and dynamic testing calibration.",
-   "publicationCount": 0,
-   "currentProjects": [
-    "Multiscale models for fiber-matrix composites under impact",
-    "Topology and microstructure optimization for energy absorption",
-    "Coupling experiments and simulations for validation"
-   ],
-   "tools": [
-    "Alamo",
-    "AMReX",
-    "CTP Solver"
-   ],
-   "impact": [
-    "Guides design of lighter, more effective protective systems",
-    "Translates microstructural design rules to engineering-scale performance",
-    "Supports defense and aerospace material qualification"
-   ],
-   "image": "images/research/protection.jpg",
-   "imgtitle": "Bullet-on-armour geometry built with PyAMorph (top) and a hypervelocity debris impact on a bumper shield simulated in-house (bottom)"
-  }
- ],
- "Bioinspired Materials & Structures": [
-  {
-   "title": "Bioinspired Materials & Structures",
-   "subtitle": "Origami, Architected Lattices and Nature's Armour",
-   "icon": "🦋",
-   "overview": "Nature folds, layers and grades its structures to absorb energy and change shape. We model origami-based structures and architected materials inspired by biology — Kresling cells, spinodoid and cuttlebone-like lattices, nacre-like layups and fibre armour — under impact, blast and aerodynamic loading.",
-   "publicationCount": 0,
-   "currentProjects": [
-    "Origami (Kresling) cells as foldable, energy-absorbing structures under blast",
-    "Bistable origami wings that change shape in a gust",
-    "Spinodoid and graded porous architectures as shields against orbital-debris impact",
-    "Bioinspired UHMWPE–Kevlar armour and cuttlebone-like lattices"
-   ],
-   "tools": [
-    "YALI solver",
-    "PyAMorph",
-    "MFEM",
-    "Weaver"
-   ],
-   "impact": [
-    "Lightweight structures that fold, snap and absorb energy by design",
-    "Geometry generators for origami and architected materials that feed directly into simulation",
-    "Design rules for protective structures in aerospace and defence"
-   ],
-   "image": "images/research/bioinspired.jpg",
-   "imgtitle": "A folding Kresling origami cell (top) and a spinodoid architecture built with PyAMorph (bottom)"
-  }
- ],
- "Fluid–Structure Interaction": [
-  {
-   "title": "Fluid–Structure Interaction & Moving Bodies",
-   "subtitle": "Two-Way Coupled Flow and Deforming Structures",
-   "icon": "🌀",
-   "overview": "Many of our problems have a structure that moves or deforms because of the flow, and a flow that changes because of it. Our in-house flow solver is coupled two-way to an MFEM-based thin-shell and membrane solver and to rigid multibody motion, through sharp immersed interfaces on adaptive meshes.",
-   "publicationCount": 0,
-   "currentProjects": [
-    "Ballutes and inflatable decelerators in supersonic flow",
-    "Parachute canopies",
-    "Origami wing in a turning stream: tip vortex, wake and snap-through",
-    "Blast loading of a thin-walled origami cell",
-    "Flapping and rotating bodies: insect flight, rotors and turbomachinery"
-   ],
-   "tools": [
-    "YALI solver",
-    "MFEM",
-    "PyAMorph",
-    "AMReX"
-   ],
-   "impact": [
-    "One framework for rigid, articulated and flexible bodies in high- and low-speed flow",
-    "Thin structures resolved without body-fitted remeshing",
-    "Simulations that reach flight-relevant Reynolds and Mach numbers on GPUs"
-   ],
-   "image": "images/research/fsi.jpg",
-   "imgtitle": "Two-way coupled simulation of a bistable origami wing with its tip vortex (top) and an origami cell under a blast wave (bottom)"
-  }
- ],
- "Hypersonic & Reentry Physics": [
-  {
-   "title": "Hypersonic & Reentry Physics",
-   "subtitle": "Ablation, Aerothermochemistry, and Plasma–Material Interaction",
-   "icon": "🚀",
-   "overview": "Coupled study of high-enthalpy aerothermodynamics, surface ablation and chemistry, and plasma–material interactions encountered during hypersonic flight and planetary reentry.",
-   "publicationCount": 0,
-   "currentProjects": [
-    "Ablation and surface chemistry modelling for TPS materials",
-    "Aerothermochemical coupling in boundary layers at high enthalpy",
-    "Multiscale methods for gas-surface interaction kinetics"
-   ],
-   "tools": [
-    "Alamo",
-    "AMReX",
-    "PuMA",
-    "WarpX",
-    "OpenFOAM",
-    "PATO"
-   ],
-   "impact": [
-    "Improves predictive models for thermal protection systems",
-    "Informs material selection and design for extreme environments",
-    "Enables joint experiments and simulation campaigns with hypersonics groups"
-   ],
-   "image": "images/research/hypersonic.jpg",
-   "imgtitle": "Inflatable aerodynamic decelerators and a crew-module geometry built with PyAMorph"
+   "image": "",
+   "imgtitle": ""
   },
   {
-   "title": "Thermal Protection System Simulations",
-   "subtitle": "Microstructure-Resolved Response of Porous Heat-Shield Materials",
-   "icon": "🛡️",
-   "overview": "Heat shields are porous, fibrous materials whose behaviour is set at the scale of individual fibres. We build fibre-felt microstructures, compute their effective thermal and transport properties, and simulate heat conduction, flow through the pores and material response directly on the resolved geometry.",
+   "title": "AI & Surrogate Modelling",
+   "subtitle": "Physics-Aware Learning and AI Assistants for Simulation",
+   "icon": "🤖",
+   "overview": "Machine learning used alongside simulation: physics-aware neural networks that learn the dynamics of shocked materials and multiphase flows, fast surrogates for design, and language-model agents that set up and run simulation workflows.",
    "publicationCount": 0,
    "currentProjects": [
-    "Effective thermal properties of porous fibrous materials from meso-scale simulations",
-    "Synthetic and CT-derived fibre-felt microstructures",
-    "Coupled conduction and pore-scale flow in resolved microstructures",
-    "Material-response models for ablative heat shields"
+    "Physics-aware recurrent convolutional neural networks (PARC) for shocked energetic materials and multiphase flow",
+    "Neural-operator surrogates for aerodynamic prediction",
+    "AI agents that automate CFD case setup and post-processing",
+    "Language models and retrieval for materials data"
    ],
    "tools": [
-    "YALI solver",
-    "PyAMorph",
-    "PuMA",
-    "PATO"
+    "Python",
+    "PyTorch"
    ],
    "impact": [
-    "Material properties computed from the microstructure rather than fitted",
-    "A link between micro-CT data and vehicle-scale heat-shield models",
-    "Support for reentry and hypersonic vehicle design"
+    "Closure models learned from meso-scale simulations",
+    "Predictions in milliseconds where a simulation takes hours",
+    "Less manual effort in setting up and running simulations"
    ],
-   "image": "images/research/tps.jpg",
-   "imgtitle": "Fibre-felt microstructures for thermal protection materials built with PyAMorph"
+   "image": "images/Pub_Journal_4_SciAdv_2023.jpg",
+   "imgtitle": "Physics-aware recurrent convolutional neural network (PARC) prediction, from our Science Advances paper"
   }
  ]
 }

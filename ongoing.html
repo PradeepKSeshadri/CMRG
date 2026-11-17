@@ -410,15 +410,7 @@
       </div>
     </div>
 
-  <div class="button-group">
-    <button class="active" onclick="loadResearch('High-Performance Computing & Solver Development', this)">High-Performance Computing & Solver Development</button>
-    <button onclick="loadResearch('Energetic Materials & Reactive Systems', this)">Energetic Materials & Reactive Systems</button>
-    <button onclick="loadResearch('Impact-Resistant & Protective Materials', this)">Impact-Resistant & Protective Materials</button>
-    <button onclick="loadResearch('Bioinspired Materials & Structures', this)">Bioinspired Materials & Structures</button>
-    <button onclick="loadResearch('Fluid–Structure Interaction', this)">Fluid–Structure Interaction</button>
-    <button onclick="loadResearch('Hypersonic & Reentry Physics', this)">Hypersonic & Reentry Physics</button>
-
-    </div>
+  <div class="button-group"></div>
 
   <div id="projects-container"></div>
 <template id="research-card-template">
@@ -546,8 +538,13 @@
 
       list.forEach(item => {
         const clone = template.content.cloneNode(true);
-        clone.querySelector(".research-img").src = item.image;
-        clone.querySelector(".research-img").alt = item.imgtitle;
+        if (item.image) {
+          clone.querySelector(".research-img").src = item.image;
+          clone.querySelector(".research-img").alt = item.imgtitle || "";
+          clone.querySelector(".research-img").title = item.imgtitle || "";
+        } else {
+          clone.querySelector(".card-image").remove();
+        }
         clone.querySelector(".research-title").textContent = item.title;
         clone.querySelector(".subtitle").textContent = item.subtitle;
         clone.querySelector(".icon-square").textContent = item.icon;
@@ -591,7 +588,17 @@
         researchData = json;
         document.querySelector(".ribbon-title").textContent = json.ribbontitle;
         document.querySelector(".ribbon-desc").textContent = json.ribbondesc;
-        loadResearch("High-Performance Computing & Solver Development", document.querySelector(".button-group button"));
+        const group = document.querySelector(".button-group");
+        const tabs = Object.keys(json).filter(k => Array.isArray(json[k]));
+        tabs.forEach(name => {
+          const b = document.createElement("button");
+          b.textContent = name;
+          b.onclick = () => loadResearch(name, b);
+          group.appendChild(b);
+        });
+        const want = new URLSearchParams(location.search).get("tab");
+        const i = Math.max(0, tabs.findIndex(t => t === want));
+        loadResearch(tabs[i], group.children[i]);
       });
       function toggleMenu() {
         const menu = document.querySelector(".navListul");

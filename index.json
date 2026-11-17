@@ -91,37 +91,37 @@
   },
   "research": {
     "heading": "Research Areas",
-    "description": "A multidisciplinary approach spanning computational physics and engineering — from nature's flyers to hypersonic reentry.",
+    "description": "Four application areas, built on our own solvers and software.",
     "items": [
       {
-        "iconKey": "flows",
-        "icon": "🌊",
-        "title": "Bioinspired Flows",
-        "text": "Modeling unsteady aerodynamics in nature's flyers and biological systems."
+        "iconKey": "energetic",
+        "icon": "💥",
+        "title": "Energetic Materials & Propulsion",
+        "text": "Shock initiation and detonation, solid propellants, and jet, scramjet and detonation engines."
       },
       {
-        "iconKey": "energetic",
-        "icon": "🏗️",
-        "title": "Energetic Material Dynamics",
-        "text": "Simulating shock, reaction, and detonation in high-energy materials."
+        "iconKey": "strainrate",
+        "icon": "🛡️",
+        "title": "Protective Materials & Structures",
+        "text": "Impact, blast and debris shielding with bioinspired, architected and origami designs."
       },
       {
         "iconKey": "hypersonic",
         "icon": "🔥",
-        "title": "Hypersonic Reentry Physics",
-        "text": "Capturing extreme aerothermal loads, ablation, and gas-surface interactions."
+        "title": "Hypersonics & Thermal Protection",
+        "text": "Reentry aerothermodynamics, heat-shield materials, ballutes and parachutes."
       },
       {
-        "iconKey": "strainrate",
-        "icon": "⚡",
-        "title": "High Strain-Rate Response",
-        "text": "Material deformation and failure under extreme dynamic loading."
+        "iconKey": "flows",
+        "icon": "🌊",
+        "title": "Bioinspired Flight & Fluid–Structure Interaction",
+        "text": "Flapping, folding and rotating wings in two-way coupled flow."
       },
       {
         "iconKey": "ai",
         "icon": "🤖",
-        "title": "AI-Driven Multi-Scale Modeling",
-        "text": "Accelerating simulations with machine learning across scales and physics domains."
+        "title": "Solvers, Software & AI",
+        "text": "In-house solvers on GPUs and supercomputers, geometry and materials software, and physics-aware machine learning."
       }
     ],
     "buttonText": "Ongoing & sponsored research",
