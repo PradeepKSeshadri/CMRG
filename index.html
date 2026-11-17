@@ -250,8 +250,10 @@
       @media (max-width: 640px){ .pub { grid-template-columns: 1fr; gap: 8px; padding: 20px; } .pub .arrow { display: none; } .pub .yr { font-size: 1.3rem; } }
 
       /* ---------- Latest News ---------- */
-      .news-grid { margin-top: 50px; display: grid; gap: 24px; grid-template-columns: repeat(3, 1fr); }
-      @media (max-width: 900px){ .news-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
+      /* flex, not grid, so one or two cards sit centred instead of leaving empty columns */
+      .news-grid { margin-top: 50px; display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+      .news-grid > * { flex: 0 1 calc((100% - 48px) / 3); min-width: 0; }
+      @media (max-width: 900px){ .news-grid { max-width: 520px; margin-inline: auto; } .news-grid > * { flex-basis: 100%; } }
       .ncard { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: transform .22s ease, box-shadow .22s ease; }
       .ncard:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(1,33,73,.12); }
       .ncard .thumb { aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-soft); display: block; }
@@ -298,6 +300,7 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="blog.html">News</a></li>
           <li><a href="about.html">People</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li class="dropdown">
             <a>Research</a>
             <div class="dropdown-content">
@@ -332,6 +335,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="blog.html">News</a></li>
         <li><a href="about.html">People</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">

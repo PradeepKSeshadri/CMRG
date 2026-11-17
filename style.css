@@ -104,6 +104,11 @@ nav.desktop-nav li {
   position: relative;
 }
 
+/* nine top-level items: tighten spacing on narrower desktops so the bar still fits */
+@media (max-width: 1400px) {
+  nav.desktop-nav ul { gap: .35rem; }
+}
+
 nav.desktop-nav a {
   color: var(--text-light);
   text-decoration: none;
