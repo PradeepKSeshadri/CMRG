@@ -50,6 +50,31 @@
    "image": "images/Research_Image_Hydrocode.jpg"
   },
   {
+   "title": "Thin-Shell Structural Solver on MFEM",
+   "subtitle": "Membranes, Shells and Creased Sheets for Fluid–Structure Interaction",
+   "icon": "🪂",
+   "overview": "A finite-element structural solver built on the MFEM library for thin, flexible structures. It uses nonlinear membrane and thin-shell formulations for large deformations, with crease hinges for folded sheets, and couples two-way to our flow solver so that the fabric, canopy or folded panel moves with the flow around it.",
+   "publicationCount": 0,
+   "currentProjects": [
+    "Inflatable decelerators: tension-cone ballutes in supersonic flow",
+    "Parachute canopies and their inflation",
+    "Origami structures: Kresling cells and folding wings with mountain and valley creases",
+    "Two-way coupling of the shell solver with the in-house flow solver"
+   ],
+   "tools": [
+    "MFEM",
+    "YALI solver",
+    "PyAMorph"
+   ],
+   "impact": [
+    "Thin structures simulated at their true thickness, without thickening them to fit the flow grid",
+    "One structural solver for fabric decelerators, parachutes and origami",
+    "Geometry, creases and meshes generated directly from PyAMorph"
+   ],
+   "image": "images/research/shell.jpg",
+   "imgtitle": "A tension-cone ballute and a parachute geometry built with PyAMorph (top), and the shell mesh of a Kresling origami cell with its mountain, valley and ring creases (bottom)"
+  },
+  {
    "title": "PyAMorph: Tool for Implicit Geometry Modeling & Morphometric Analysis",
    "subtitle": "Massively Parallel SDF Framework on Adaptive Meshes",
    "icon": "🔷",
@@ -218,13 +243,14 @@
    "title": "Fluid–Structure Interaction & Moving Bodies",
    "subtitle": "Two-Way Coupled Flow and Deforming Structures",
    "icon": "🌀",
-   "overview": "Many of our problems have a structure that moves or deforms because of the flow, and a flow that changes because of it. Our in-house solver couples compressible and incompressible flow to thin shells, membranes and rigid multibody motion through sharp immersed interfaces on adaptive meshes.",
+   "overview": "Many of our problems have a structure that moves or deforms because of the flow, and a flow that changes because of it. Our in-house flow solver is coupled two-way to an MFEM-based thin-shell and membrane solver and to rigid multibody motion, through sharp immersed interfaces on adaptive meshes.",
    "publicationCount": 0,
    "currentProjects": [
+    "Ballutes and inflatable decelerators in supersonic flow",
+    "Parachute canopies",
     "Origami wing in a turning stream: tip vortex, wake and snap-through",
-    "Blast loading of a thin-walled origami cell with a shell finite-element model",
-    "Flapping and rotating bodies: insect flight, rotors and turbomachinery",
-    "Deployable and inflatable decelerators in supersonic flow"
+    "Blast loading of a thin-walled origami cell",
+    "Flapping and rotating bodies: insect flight, rotors and turbomachinery"
    ],
    "tools": [
     "YALI solver",
