@@ -288,6 +288,11 @@
       "s": "fixed grid of 134 million cells"
      },
      {
+      "n": "71%",
+      "l": "weak-scaling efficiency on 8 A100 GPUs",
+      "s": "four nodes, 256³ cells per GPU"
+     },
+     {
       "n": "9×",
       "l": "fewer cells with adaptive refinement",
       "s": "at the resolution of a uniform 1024³ grid"
