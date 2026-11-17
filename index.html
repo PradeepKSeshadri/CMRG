@@ -130,16 +130,16 @@
       /* news ticker (items come from hero.updates in index.json) */
       .news-ticker {
         margin-top: clamp(44px, 7vh, 72px); border-top: 1px solid rgba(255,255,255,.12);
-        display: flex; align-items: center; gap: 20px; padding: 18px 0 22px;
+        display: flex; align-items: center; gap: 22px; padding: 22px 0 26px;
       }
-      .news-ticker .lbl { flex: none; font-size: .72rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); padding-right: 20px; border-right: 1px solid rgba(255,255,255,.14); }
+      .news-ticker .lbl { flex: none; font-size: .9rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); padding-right: 20px; border-right: 1px solid rgba(255,255,255,.14); }
       .news-ticker .vp { flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 32px, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(90deg, transparent, #000 32px, #000 calc(100% - 32px), transparent); }
       .news-ticker .track { display: flex; width: max-content; animation: ticker var(--dur, 40s) linear infinite; }
       .news-ticker:hover .track, .news-ticker:focus-within .track { animation-play-state: paused; }
       .news-ticker .grp { display: flex; flex: none; }
-      .news-ticker a { flex: none; white-space: nowrap; margin-right: 56px; color: #dbe5f5; text-decoration: none; font-size: .95rem; }
+      .news-ticker a { flex: none; white-space: nowrap; margin-right: 64px; color: #e6edf9; text-decoration: none; font-size: 1.15rem; }
       .news-ticker a:hover, .news-ticker a:focus-visible { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-      .news-ticker a b { margin-right: 10px; font-size: .7rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold); }
+      .news-ticker a b { margin-right: 12px; font-size: .86rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold); }
       @keyframes ticker { to { transform: translateX(-50%); } }
       @media (prefers-reduced-motion: reduce) {
         .news-ticker .vp { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
@@ -569,16 +569,28 @@
       function initTicker(items) {
         const bar = $(".news-ticker");
         if (!items || !items.length) { bar.style.display = "none"; return; }
-        const links = (hidden) => items.map((u) => {
+        const link = (u, hidden) => {
           const ext = /^https?:/i.test(u.link || "");
-          return `<a href="${esc(u.link || "blog.html")}"${ext ? ' target="_blank" rel="noopener"' : ""}${hidden ? ' tabindex="-1"' : ""}>${u.tag ? `<b>${esc(u.tag)}</b>` : ""}${esc(u.title)}</a>`;
-        }).join("");
-        const track = bar.querySelector(".track");
-        // two identical groups: the track slides by exactly one group, so the loop is seamless
-        track.innerHTML = `<div class="grp">${links(false)}</div><div class="grp" aria-hidden="true">${links(true)}</div>`;
-        const setDur = () => track.style.setProperty("--dur", Math.max(20, track.firstElementChild.offsetWidth / 55) + "s");
-        setDur();
-        if (document.fonts && document.fonts.ready) document.fonts.ready.then(setDur);
+          return `<a href="${esc(u.link || "blog.html")}"${ext ? ' target="_blank" rel="noopener"' : ""}${hidden ? ' tabindex="-1" aria-hidden="true"' : ""}>${u.tag ? `<b>${esc(u.tag)}</b>` : ""}${esc(u.title)}</a>`;
+        };
+        const track = bar.querySelector(".track"), vp = bar.querySelector(".vp");
+        // Two identical groups; the track slides by exactly one group, so the loop is seamless.
+        // With few items a group is narrower than the bar, so repeat the list until it fills it.
+        const build = (reps) => {
+          let first = "", rest = "";
+          for (let r = 0; r < reps; r++) { first += items.map((u) => link(u, r > 0)).join(""); rest += items.map((u) => link(u, true)).join(""); }
+          track.innerHTML = `<div class="grp">${first}</div><div class="grp" aria-hidden="true">${rest}</div>`;
+        };
+        const fit = () => {
+          build(1);
+          if (REDUCED) return;
+          const w = track.firstElementChild.offsetWidth;
+          if (w > 0 && w < vp.offsetWidth) build(Math.ceil(vp.offsetWidth / w));
+          track.style.setProperty("--dur", Math.max(20, track.firstElementChild.offsetWidth / 55) + "s");
+        };
+        fit();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+        let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(fit, 200); });
       }
 
       function initReel(r) {
