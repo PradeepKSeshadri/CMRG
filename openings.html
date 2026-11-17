@@ -70,6 +70,11 @@
         margin-bottom: 8px;
       }
 
+      .status-banner { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; padding: 16px 22px;
+        background: rgba(250,204,21,.16); border: 1.5px solid var(--highlight); border-radius: 16px; font-weight: 600; color: var(--primary); }
+      .status-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; font-size: .74rem;
+        letter-spacing: 1.3px; text-transform: uppercase; padding: 5px 13px; border-radius: 999px; }
+      .status-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--highlight); }
       .info-block {
         margin-top: 10px;
         font-size: 0.95rem;
@@ -251,6 +256,15 @@
             data.ribbon.description;
 
           const container = document.getElementById("join-sections");
+
+          if (data.status) {
+            const st = document.createElement("div");
+            st.className = "status-banner";
+            st.innerHTML = `<span class="status-pill"></span><span class="status-text"></span>`;
+            st.querySelector(".status-pill").textContent = data.status.label;
+            st.querySelector(".status-text").textContent = data.status.text;
+            container.appendChild(st);
+          }
 
           data.sections.forEach((section) => {
             const sec = document.createElement("section");

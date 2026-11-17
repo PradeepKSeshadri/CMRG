@@ -4,24 +4,46 @@
     "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
   "sections": [
-   {
-  "title": "Applications Open: Research Programmes {Ph.D. / M.S. (by Research)} – Jan 2026 Intake @ IIT Madras",
-  "emoji": "🚀",
-  "description": "The Computational Multiphysics Research Group at IIT Madras is inviting motivated candidates to pursue cutting-edge research across the following thrust areas:",
-  "points": [
-    "🌿 Bioinspired Flows: Unravel unsteady aerodynamics in insect flight and bioinspired flapping wings.",
-    "💥 Energetic Material Dynamics: Simulate detonation physics, shock initiation, and reactive flow in energetic environments.",
-    "☄️ Hypersonic Reentry Physics: Investigate aerothermal loads, ablation, and gas–surface interactions during extreme reentry conditions.",
-    "🛠️ High Strain-Rate Material Response: Explore deformation, failure, and fracture under intense thermo-mechanical loading.",
-    "🤖 AI-Driven Multi-Scale Modeling*: Develop next-generation solvers by integrating machine learning with multiscale physics."
+    {
+      "title": "Ph.D. / M.S. (by Research) – January 2027 Intake @ IIT Madras",
+      "emoji": "🎓",
+      "description": "Applications for the January 2027 intake have closed and interviews are currently in progress. Shortlisted candidates are contacted by the Institute. Candidates who listed the group as a preference are welcome to write to us about research topics.",
+      "info": [
+        "📌 Status: Interviews in progress",
+        "🎓 Programme Start: January 2027",
+        "✉️ Contact: pkseshadri@iitm.ac.in"
+      ]
+    },
+    {
+      "title": "Next Round: July 2027 Intake",
+      "emoji": "🚀",
+      "description": "The group takes Ph.D. and M.S. (by Research) students through the IIT Madras research admissions held twice a year. Motivated candidates are invited to apply in the next round in the following thrust areas:",
+      "points": [
+        "🌿 Bioinspired Flight & Structures: unsteady aerodynamics of flapping and folding wings, origami structures and architected materials.",
+        "🌀 Fluid–Structure Interaction: two-way coupled simulation of flow with thin shells, membranes and moving bodies.",
+        "💥 Energetic Materials & Solid Propellants: shock initiation, detonation physics and microstructure-resolved burning.",
+        "☄️ Hypersonic Reentry & Thermal Protection: aerothermal loads, ablation and porous heat-shield materials.",
+        "🛠️ High Strain-Rate Material Response: deformation, failure and fracture under impact and blast.",
+        "🤖 AI-Driven Multi-Scale Modeling: machine learning combined with multiscale physics and in-house solver development."
+      ],
+      "info": [
+        "📅 Application dates: announced on the IIT Madras research admissions portal",
+        "✅ Eligibility: Strong academic background in Aerospace, Mechanical, Applied Physics, or allied fields. Admission through written test & interview. Syllabus: https://ae.iitm.ac.in/documents/Interview_Syllabus.pdf",
+        "🌐 Apply Online: https://research.iitm.ac.in/",
+        "✉️ Contact: Interested candidates may write directly to pkseshadri@iitm.ac.in"
+      ]
+    },
+    {
+      "title": "Research Internships",
+      "emoji": "🧑‍💻",
+      "description": "We host summer and winter research interns from institutes across India; 39 students have interned with the group since November 2025. To apply, write to pkseshadri@iitm.ac.in with your CV, the period you are available, and the area you would like to work in.",
+      "info": [
+        "👥 Past interns and their projects: see the Interns tab on the People page"
+      ]
+    }
   ],
-  "info": [
-    "📅 Application Deadline: 31st October 2025",
-    "🎓 Programme Start: January 2026",
-    "✅ Eligibility: Strong academic background in Aerospace, Mechanical, Applied Physics, or allied fields. Admission through written test & interview. Syllabus: https://ae.iitm.ac.in/documents/Interview_Syllabus.pdf",
-    "🌐 Apply Online: https://research.iitm.ac.in/",
-    "✉️ Contact: Interested candidates may write directly to pkseshadri@iitm.ac.in"
-  ]
-   }
-  ]
+  "status": {
+    "label": "Jan 2027 intake",
+    "text": "Interviews are in progress for the January 2027 intake. Applications for this round are closed."
+  }
 }

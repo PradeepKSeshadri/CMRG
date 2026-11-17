@@ -33,6 +33,10 @@
         margin-bottom: 20px; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
       }
       .course-card:hover { transform: translateY(-4px); box-shadow: 0 16px 38px rgba(1,33,73,.10); border-color: #cfd9e8; }
+      .course-card.upcoming { border: 1.5px solid var(--gold); background: linear-gradient(180deg, rgba(250,204,21,.09), var(--bg) 46%); position: relative; }
+      .cc-status { display: inline-flex; align-items: center; gap: 7px; font-size: .72rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+        color: var(--primary); background: var(--gold); padding: 5px 12px; border-radius: 999px; margin: 0 8px 14px 0; }
+      .cc-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--primary); }
       .cc-code { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
         color: var(--primary-2); background: rgba(1,42,94,.07); padding: 5px 11px; border-radius: 999px; margin-bottom: 14px; }
       .cc-title { font-size: 1.5rem; font-weight: 700; letter-spacing: -.3px; color: var(--ink); margin: 0 0 8px; }
@@ -223,7 +227,8 @@
             if (course.semester) metaBits.push(`<span>${esc(course.semester)}</span>`);
             if (course.instructor) metaBits.push(`<span>Instructor: <b>${esc(course.instructor)}</b></span>`);
             return `
-              <article class="course-card">
+              <article class="course-card${course.status === "upcoming" ? " upcoming" : ""}">
+                ${course.status === "upcoming" ? `<span class="cc-status">${esc(course.statusText || "Upcoming")}</span>` : ""}
                 ${course.code ? `<span class="cc-code">${esc(course.code)}</span>` : ""}
                 <h3 class="cc-title">${esc(course.title)}</h3>
                 <div class="cc-meta">${metaBits.join("")}</div>
