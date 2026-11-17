@@ -148,9 +148,9 @@
         "label": "h-index"
       },
       {
-        "value": "4",
+        "value": "5",
         "label": "In-house codes",
-        "note": "YALI · PyAMorph · Lumina · Weaver"
+        "note": "YALI · PyAMorph · Lumina · Weaver · MFEM shell solver"
       }
     ],
     "sourceText": "Google Scholar",
