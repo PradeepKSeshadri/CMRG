@@ -1,7 +1,7 @@
 {
   "ribbon": {
     "title": "SCIMITAReX3D",
-    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational tools to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational tools to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
   "tagline": "Exascale Hybrid Sharp/Diffuse Interface Solver for Multi-Material Dynamics",
   "buttons": [

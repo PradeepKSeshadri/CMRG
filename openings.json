@@ -1,7 +1,7 @@
 {
   "ribbon": {
     "title": "Positions",
-    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
   "sections": [
    {
@@ -9,7 +9,7 @@
   "emoji": "🚀",
   "description": "The Computational Multiphysics Research Group at IIT Madras is inviting motivated candidates to pursue cutting-edge research across the following thrust areas:",
   "points": [
-    "🌿 Bioinspired Flows: Unravel unsteady aerodynamics in insect flight and blood flow in cardiovascular systems.",
+    "🌿 Bioinspired Flows: Unravel unsteady aerodynamics in insect flight and bioinspired flapping wings.",
     "💥 Energetic Material Dynamics: Simulate detonation physics, shock initiation, and reactive flow in energetic environments.",
     "☄️ Hypersonic Reentry Physics: Investigate aerothermal loads, ablation, and gas–surface interactions during extreme reentry conditions.",
     "🛠️ High Strain-Rate Material Response: Explore deformation, failure, and fracture under intense thermo-mechanical loading.",
