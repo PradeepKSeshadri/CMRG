@@ -1,0 +1,96 @@
+{
+  "code": "",
+  "title": "Professional Ethics for Aerospace Engineers",
+  "dept": "Aerospace Engineering · IIT Madras",
+  "subtitle": "A discussion course for third-year B.Tech students on how engineering catastrophes are produced by ordinary people following ordinary incentives, and on keeping the path from evidence to decision open while it is still cheap to do so.",
+  "instructor": "Pradeep Kumar Seshadri",
+  "semester": "Jul–Nov 2026",
+  "semesterNote": "third-year B.Tech",
+  "facts": [
+    "Six two-hour sessions on Saturdays",
+    "Discussion-based, no examination"
+  ],
+  "startNote": "This course ran from 29 August to 31 October 2026. Sessions run on discussion, not lecture: each is built around a brief of a real situation that stops at the point where somebody had to decide.",
+  "modulesTitle": "Sessions",
+  "modulesLead": "Six sessions. Students read a brief and commit to a written position before each session; what actually happened is disclosed only after the room has argued it.",
+  "modules": [
+    {
+      "title": "I. “Safety is pure waste” — 29 Aug",
+      "items": [
+        "What happens when the institutions that check engineers are removed"
+      ]
+    },
+    {
+      "title": "II. Evidence and the path to decision — 5 Sep",
+      "items": [
+        "The evidence almost always exists beforehand; what fails is the path from it to the decision"
+      ]
+    },
+    {
+      "title": "III. Certification, delegated authority and many hands — 19 Sep",
+      "items": [
+        "Responsibility when no single person decided the thing that went wrong"
+      ]
+    },
+    {
+      "title": "IV. Speaking up — 10 Oct",
+      "items": [
+        "Raising a concern early, in writing, while it is cheap"
+      ]
+    },
+    {
+      "title": "V. Integrity in analysis and simulation — 24 Oct",
+      "items": [
+        "What gets left out of a report, and who signs it"
+      ]
+    },
+    {
+      "title": "VI. What a profession is — 31 Oct",
+      "items": [
+        "Codes read last, as an audit of the cases studied",
+        "Group project presentations"
+      ]
+    }
+  ],
+  "assessmentLead": "Sixty per cent of the marks are for spoken, group or presented work, and there is no examination.",
+  "assessment": [
+    {
+      "c": "Pre-session positions",
+      "d": "One handwritten paragraph before each session; marked on submission, not content",
+      "w": "12%"
+    },
+    {
+      "c": "Written assignments",
+      "d": "One after each session, 300 words; best five of six count",
+      "w": "23%"
+    },
+    {
+      "c": "Group opening",
+      "d": "Twelve minutes, once in the semester",
+      "w": "15%"
+    },
+    {
+      "c": "Contribution in the room",
+      "d": "Across all six sessions; written contributions count",
+      "w": "15%"
+    },
+    {
+      "c": "Project",
+      "d": "Framing memo (5%), group presentation (15%) and report (15%) on a case not taught in the course",
+      "w": "35%"
+    },
+    {
+      "c": "Total",
+      "d": "",
+      "w": "100%",
+      "total": true
+    }
+  ],
+  "rules": [
+    "Grades are <b>absolute</b>; passing requires 40% overall <b>and</b> attendance at four of the six sessions.",
+    "Pre-session positions are <b>handwritten in the room</b> and cannot be submitted late.",
+    "AI tools are permitted for assignments <b>as a supplement</b>, with the prompt and changes declared.",
+    "Groups are <b>assigned, not chosen</b>; two groups open every session."
+  ],
+  "references": []
+}
