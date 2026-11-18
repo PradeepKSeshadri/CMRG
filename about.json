@@ -121,9 +121,11 @@
           "email": "ae25m803@smail.iitm.ac.in"
         },
         {
-          "name": "Puneet",
+          "name": "Punit Kumar Maharshi S",
           "role": "M.Tech. Student",
-          "subject": "Architected energetic materials and shock-to-detonation transition."
+          "src": "images/team/punit.jpg",
+          "subject": "Architected energetic materials and shock-to-detonation transition.",
+          "email": "punit.kmaharshi@gmail.com"
         }
       ]
     },
