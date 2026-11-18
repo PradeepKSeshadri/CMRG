@@ -7,254 +7,72 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-VGCK9VFN9Y');
-    </script>    
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog & News</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="images/iit madras without bg.png"
-    />
-    <style>
-      body {
-        margin: 0;
-        background: #f5f7fa;
-        color: #333;
-      }
-      .main-container {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-      }
-
-      @media (max-width: 900px) {
-        .main-container {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .blog-section{
-        margin-bottom: 1rem;
-      }
-
-      .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #002244;
-      }
-
-      .blog-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        overflow: hidden;
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s;
-        padding: 10px;
-        border: 1px solid rgb(227, 227, 227);
-      }
-
-      .blog-card:hover {
-        transform: translateY(-4px);
-      }
-
-      .blog-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: 1px solid rgb(227, 227, 227);
-      }
-
-      .blog-content {
-        padding: 1.2rem;
-      }
-
-      .blog-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-      }
-
-      .blog-meta {
-        font-size: 0.85rem;
-        color: #666;
-        margin-bottom: 0.8rem;
-      }
-
-      .blog-description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .read-more {
-        margin-top: 1rem;
-        display: inline-block;
-        color: #0066cc;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .read-more:hover {
-        text-decoration: underline;
-      }
-
-      .sidebar1 {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-        padding: 1.5rem;
-      }
-
-      .sidebar1 h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-        color: #002244;
-      }
-
-      .news-item {
-        margin-bottom: 1.2rem;
-        border-left: 3px solid #0066cc;
-        padding-left: 0.8rem;
-      }
-
-      .news-item p {
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      .recent-highlights-section {
-        text-align: center;
-        padding: 60px 20px;
-        background-color: #f9fbfd;
-      }
-      .recent-section-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: #1e293b;
-      }
-      .recent-section-subtitle {
-        font-size: 1.1rem;
-        color: #555;
-        margin-bottom: 40px;
-      }
-      .recent-highlight-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-      }
-      .recent-highlight-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: #ffffff;
-        padding: 24px;
-        width: 320px;
-        border-radius: 12px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-        text-align: left;
-        transition: transform 0.3s ease;
-        max-height: 500px;
-      }
-      .recent-highlight-card:hover {
-        transform: translateY(-5px);
-      }
-      .recent-badge {
-        display: inline-block;
-        background-color: #1e293b;
-        color: white;
-        font-size: 0.75rem;
-        padding: 4px 10px;
-        border-radius: 999px;
-        font-weight: 600;
-        margin-bottom: 12px;
-      }
-      .recent-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin: 6px 0 8px;
-        color: #1e293b;
-        line-height: 1.4;
-      }
-      .recent-authors {
-        font-size: 0.95rem;
-        color: #4b5563;
-        margin-bottom: 4px;
-      }
-      .recent-journal {
-        font-size: 0.9rem;
-        color: #6b7280;
-        margin-bottom: 10px;
-      }
-      .recent-card-content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      .recent-description {
-        font-size: 0.9rem;
-        color: #374151;
-        line-height: 1.6;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        transition: all 0.3s ease;
-        margin-bottom: 20px;
-      }
-      .recent-description.expanded {
-        -webkit-line-clamp: unset;
-      }
-      .recent-card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .recent-citations {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: #1d4ed8;
-        text-decoration: none;
-      }
-      .recent-read-more {
-        background-color: #f1f5f9;
-        padding: 6px 12px;
-        font-size: 0.85rem;
-        border-radius: 6px;
-        text-decoration: none;
-        color: #1e293b;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-      }
-      .recent-read-more:hover {
-        background-color: #e2e8f0;
-      }
-      @media (max-width: 768px) {
-        .recent-highlight-card {
-          width: 100%;
-          max-width: 450px;
-        }
-      }
-    </style>
+    <title>News | CMRG</title>
+    <link rel="icon" type="image/png" href="images/brand/CMRG-Icon.png" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <style>
+      :root{
+        --primary-2:#012a5e; --gold:#facc15; --ink:#0f1729; --muted:#5a6b83;
+        --line:#e6ebf2; --bg:#fff; --bg-soft:#f6f8fb; --pmaxw:1140px;
+      }
+      .news{background:var(--bg); color:var(--ink);}
+      .news a{color:inherit; text-decoration:none;}
+      .pwrap{max-width:var(--pmaxw); margin:0 auto; padding:0 24px;}
+      .display{font-family:"League Spartan","Segoe UI",sans-serif; font-weight:300;}
+
+      .phero{background:radial-gradient(1000px 520px at 84% -30%,rgba(0,72,165,.5),transparent 60%),linear-gradient(155deg,#011229,var(--primary) 46%,var(--primary-2));color:#fff;padding:clamp(44px,7vw,72px) 0 clamp(36px,5vw,56px);}
+      .phero h1{margin:0;font-size:clamp(2rem,4.4vw,3rem);letter-spacing:.2px;color:#fff;}
+      .phero p{margin:14px 0 0;max-width:64ch;color:#c4d1e6;}
+
+      .block{padding:clamp(40px,6vw,64px) 0;}
+      .block.soft{background:var(--bg-soft);border-block:1px solid var(--line);}
+      .kicker{font-size:.72rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--primary-2);margin:0 0 8px;}
+      .block h2{margin:0 0 6px;font-size:clamp(1.5rem,2.6vw,1.9rem);letter-spacing:-.3px;color:var(--ink);}
+      .block .sub{margin:0 0 28px;color:var(--muted);}
+
+      /* current news cards (same items as the home page ticker: hero.updates in index.json) */
+      .ngrid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+      .ncard{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:42% 1fr;transition:transform .22s ease,box-shadow .22s ease;}
+      .ncard:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(1,33,73,.12);}
+      .ncard .thumb{background:var(--bg-soft);min-height:190px;}
+      .ncard .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+      .ncard .body{padding:22px;display:flex;flex-direction:column;gap:10px;}
+      .tag{align-self:flex-start;font-size:.66rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--primary-2);background:rgba(1,42,94,.07);padding:4px 10px;border-radius:999px;}
+      .ncard-title{font-size:1.08rem;font-weight:600;line-height:1.35;letter-spacing:-.2px;}
+      .ncard-text{color:var(--muted);font-size:.93rem;line-height:1.55;}
+      @media(max-width:560px){.ncard{grid-template-columns:1fr;}.ncard .thumb{aspect-ratio:16/9;min-height:0;}}
+
+      .cols{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,64px);align-items:start;}
+      @media(max-width:900px){.cols{grid-template-columns:1fr;}}
+
+      /* blog posts */
+      .posts{display:grid;gap:20px;}
+      .post{display:grid;grid-template-columns:168px 1fr;gap:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;transition:transform .2s,box-shadow .2s;}
+      .post:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(1,33,73,.10);}
+      .post img{width:168px;height:132px;border-radius:10px;object-fit:cover;background:var(--bg-soft);display:block;}
+      .post h3{margin:0 0 8px;font-size:1.06rem;line-height:1.35;letter-spacing:-.2px;}
+      .post p{margin:0 0 12px;color:#48525f;font-size:.92rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+      .more{font-size:.85rem;font-weight:600;color:var(--primary-2);display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid transparent;}
+      .post:hover .more{border-color:var(--gold);}
+      .more svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;}
+      @media(max-width:560px){.post{grid-template-columns:1fr;}.post img{width:100%;height:180px;}}
+
+      /* events and talks timeline (announcements in blog.json, newest first) */
+      .tl-year{font-family:"League Spartan","Segoe UI",sans-serif;font-weight:300;font-size:1.5rem;color:var(--primary-2);margin:26px 0 12px;}
+      .tl-year:first-child{margin-top:0;}
+      .tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line);display:grid;gap:18px;}
+      .tl li{position:relative;}
+      .tl li::before{content:"";position:absolute;left:-28px;top:.38em;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--gold);}
+      .tl .when{font-size:.74rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);}
+      .tl .what{margin-top:3px;font-size:.95rem;line-height:1.5;color:var(--ink);}
+      .tl .what a{color:var(--primary-2);font-weight:600;border-bottom:1px solid var(--gold);}
+      @media (prefers-reduced-motion: reduce){.ncard,.post{transition:none;}}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
   <body>
     <!--Complete Header Starts-->
@@ -331,42 +149,41 @@
       </ul>
     </nav>
     <!-- Complete Header Ends  -->
-    <!-- Complete ribbon starts  -->
-    <div class="ribbon">
-      <div class="ribbon-content">
-        <h1 class="ribbon-title"></h1>
-        <p class="ribbon-desc"></p>
-      </div>
-    </div>
-    <!-- Complete ribbon ends  -->
-    <div class="main-container">
-      <div>
-        <section class="blog-section">
-          <h2 class="section-title">Latest Blog Posts</h2>
-          <div id="blog-list">
-            <!-- Blog cards will be inserted here dynamically -->
-          </div>
-        </section>
-      </div>
-      <aside class="sidebar1" id="labNewsSection">
-        <h3>Lab News</h3>
-        <!-- News items will be appended here dynamically -->
-      </aside>
-    </div>
-    <!-- Complete Recent Highlights starts  -->
-    <section class="recent-highlights-section">
-      <h2 class="recent-section-title"></h2>
-      <p class="recent-section-subtitle"></p>
-      <div class="recent-highlight-cards"></div>
-    </section>
-    <!-- Complete Recent Highlights ends  -->
-    <!-- Complete footer starts  -->
+
+    <main class="news">
+      <section class="phero"><div class="pwrap">
+        <h1 class="display" id="n-title">News</h1>
+        <p id="n-desc"></p>
+      </div></section>
+
+      <section class="block" id="current"><div class="pwrap">
+        <p class="kicker">Right now</p>
+        <h2>Latest news</h2>
+        <p class="sub">What the group is preparing for and taking part in.</p>
+        <div class="ngrid" id="ngrid"></div>
+      </div></section>
+
+      <section class="block soft"><div class="pwrap cols">
+        <div>
+          <p class="kicker">From the group</p>
+          <h2>Blog</h2>
+          <p class="sub">Longer pieces on how the work is done and why.</p>
+          <div class="posts" id="posts"></div>
+        </div>
+        <div>
+          <p class="kicker">Record</p>
+          <h2>Events &amp; talks</h2>
+          <p class="sub">Conferences, symposia and invited talks, newest first.</p>
+          <div id="timeline"></div>
+        </div>
+      </div></section>
+    </main>
+
+    <!-- footer -->
     <footer class="footer">
       <div class="footer-container">
-        <!-- Column 1: About -->
         <div class="footer-column about">
-          <h3></h3>
-          <p></p>
+          <h3></h3><p></p>
           <div class="social-icons">
             <a href="#" target="_blank" title="Github"><i class="fab fa-github"></i></a>
             <a href="#" target="_blank" title="Mail"><i class="fas fa-envelope"></i></a>
@@ -375,181 +192,72 @@
             <a href="#" target="_blank" title="ResearchGate" class="researchgate-link"><img src="images/rg logo.png" alt="ResearchGate" class="researchgate-icon" /></a>
           </div>
         </div>
-        <!-- Column 2: Links -->
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul></ul>
-        </div>
-        <!-- Column 3: Contact -->
-        <div class="footer-column">
-          <h4>Contact</h4>
-          <div style="display: flex; justify-content: center">
-            <ul class="contact-info"></ul>
-          </div>
-        </div>
+        <div class="footer-column"><h4>Quick Links</h4><ul></ul></div>
+        <div class="footer-column"><h4>Contact</h4><div style="display:flex;justify-content:center"><ul class="contact-info"></ul></div></div>
       </div>
       <hr />
       <div class="footer-bottom"></div>
     </footer>
-    <!-- Complete footer ends  -->
-    <!-- loading header starts  -->
+
     <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
+      function toggleSidebar(){document.getElementById("sidebar").classList.toggle("show");}
+      function toggleDropdown(el){el.parentElement.classList.toggle("open");}
     </script>
-    <!-- loading header ends  -->
-    <!-- loading blog  -->
+
+
+    <!-- news loader -->
     <script>
-      // fetch("blog.json")
-      //   .then((res) => res.json())
-      //   .then((data) => {
-      //     document.querySelector(".ribbon-title").textContent = data.ribbontitle;
-      //     document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
-      //     const blogList = document.getElementById("blog-list");
-      //     data.blogs.forEach((blog) => {
-      //       const preview =
-      //         blog.sections[0].content.split(". ").slice(0, 2).join(". ") + ".";
-      //       const blogCard = `
-      //         <div class="blog-card">
-      //           <img src="${blog.image}" alt="Blog ${blog.id}" />
-      //           <div class="blog-content">
-      //             <h3 class="blog-title">${blog.title}</h3>
-      //             <p class="blog-meta">By Researcher | 2025</p>
-      //             <p class="blog-description">${preview}</p>
-      //             <a href="singleblog.html?id=${blog.id}" class="read-more">Read More →</a>
-      //           </div>
-      //         </div>
-      //       `;
-      //       blogList.innerHTML += blogCard;
-      //     });
-      //     const container = document.getElementById('labNewsSection');
-      //     data.announcements.forEach(item => {
-      //       const newsDiv = document.createElement('div');
-      //       newsDiv.className = 'news-item';
-      //       const newsPara = document.createElement('p');
-      //       newsPara.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
-      //       newsDiv.appendChild(newsPara);
-      //       container.appendChild(newsDiv);
-      //     });
+      const $=s=>document.querySelector(s);
+      function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+      const ARROW='<svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
-      //   const recentHighlightData = data["recent-highlights"];
-      //     // Set section title and subtitle
-      //     document.querySelector(".recent-section-title").textContent = recentHighlightData["recent-section-title"];
-      //     document.querySelector(".recent-section-subtitle").textContent = recentHighlightData["recent-section-subtitle"];
-      //     // Render recent highlight cards
-      //     const highlightCards = document.querySelector(".recent-highlight-cards");
-      //     highlightCards.innerHTML = "";
-      //     recentHighlightData.cards.forEach((highlight) => {
-      //       const div = document.createElement("div");
-      //       div.className = "recent-highlight-card";
-      //       const recentauthor = highlight["recent-authors"];
-      //       div.innerHTML = `
-      //           <div class="recent-card-content">
-      //             <span class="recent-badge">${highlight["recent-badge"]}</span>
-      //             <h3 class="recent-title">${highlight["recent-title"]}</h3>
-      //             <p class="recent-authors">${recentauthor.replace(
-      //             "Seshadri, P. K",
-      //             `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
-      //           )}</p>
-      //             <p class="recent-journal">${highlight["recent-journal"]}</p>
-      //             <p class="recent-description">${highlight["recent-description"]}</p>
-      //           </div>
-      //           <div class="recent-card-footer">
-      //             <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
-      //             <a href="${highlight["recent-link"]}" class="recent-read-more"">Read More</a>
-      //           </div>
-      //         `;
-      //       highlightCards.appendChild(div);
-      //     });
-          
-      //   });
-      fetch("blog.json")
-  .then((res) => res.json())
-  .then((data) => {
-    document.querySelector(".ribbon-title").textContent = data.ribbontitle;
-    document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
+      Promise.all([
+        fetch("blog.json").then(r=>r.json()),
+        fetch("index.json").then(r=>r.json()).catch(()=>({}))
+      ]).then(([data,home])=>{
+        $("#n-title").textContent=data.ribbontitle||"News";
+        $("#n-desc").textContent=data.ribbondesc||"";
 
-    const blogList = document.getElementById("blog-list");
+        // current news: the same list that drives the home page
+        const ups=(home.hero&&home.hero.updates)||[];
+        if(!ups.length)$("#current").style.display="none";
+        $("#ngrid").innerHTML=ups.map(u=>{
+          const ext=/^https?:/i.test(u.link||"");
+          const here=!u.link||/^blog\.html/.test(u.link);
+          const inner=`<span class="thumb"><img src="${esc(u.image)}" alt="" loading="lazy"></span>
+            <span class="body">${u.tag?`<span class="tag">${esc(u.tag)}</span>`:""}
+              <span class="ncard-title">${esc(u.title)}</span>
+              <span class="ncard-text">${esc(u.text)}</span></span>`;
+          return here?`<div class="ncard">${inner}</div>`
+            :`<a class="ncard" href="${esc(u.link)}"${ext?' target="_blank" rel="noopener"':""}>${inner}</a>`;
+        }).join("");
 
-    data.blogs.forEach((blog) => {
-      const preview =
-        blog.sections[0].content.split(". ").slice(0, 2).join(". ") + ".";
+        // blog posts
+        $("#posts").innerHTML=(data.blogs||[]).map(b=>{
+          const img=Array.isArray(b.image)?b.image[0]:b.image;
+          const first=(b.sections&&b.sections[0]&&b.sections[0].content)||"";
+          const preview=first.split(". ").slice(0,2).join(". ").replace(/\.?$/,".");
+          return `<a class="post" href="singleblog.html?id=${encodeURIComponent(b.id)}">
+            <img src="${esc(img)}" alt="" loading="lazy">
+            <div><h3>${esc(b.title)}</h3><p>${esc(preview)}</p><span class="more">Read the post ${ARROW}</span></div>
+          </a>`;
+        }).join("");
 
-      // Handle single vs multiple images
-      let imgSrc = "";
-      if (Array.isArray(blog.image)) {
-        imgSrc = blog.image.length > 0 ? blog.image[0] : "placeholder.jpg";
-      } else {
-        imgSrc = blog.image || "placeholder.jpg";
-      }
-
-      const blogCard = `
-        <div class="blog-card">
-          <img src="${imgSrc}" alt="Blog ${blog.id}" />
-          <div class="blog-content">
-            <h3 class="blog-title">${blog.title}</h3>
-            <p class="blog-meta">By Researcher | 2025</p>
-            <p class="blog-description">${preview}</p>
-            <a href="singleblog.html?id=${blog.id}" class="read-more">Read More →</a>
-          </div>
-        </div>
-      `;
-      blogList.innerHTML += blogCard;
-    });
-
-    // Announcements
-    const container = document.getElementById("labNewsSection");
-    data.announcements.forEach((item) => {
-      const newsDiv = document.createElement("div");
-      newsDiv.className = "news-item";
-      const newsPara = document.createElement("p");
-      newsPara.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
-      newsDiv.appendChild(newsPara);
-      container.appendChild(newsDiv);
-    });
-
-    // Recent highlights
-    const recentHighlightData = data["recent-highlights"];
-    document.querySelector(".recent-section-title").textContent =
-      recentHighlightData["recent-section-title"];
-    document.querySelector(".recent-section-subtitle").textContent =
-      recentHighlightData["recent-section-subtitle"];
-
-    const highlightCards = document.querySelector(".recent-highlight-cards");
-    highlightCards.innerHTML = "";
-    recentHighlightData.cards.forEach((highlight) => {
-      const div = document.createElement("div");
-      div.className = "recent-highlight-card";
-      const recentauthor = highlight["recent-authors"];
-      div.innerHTML = `
-        <div class="recent-card-content">
-          <span class="recent-badge">${highlight["recent-badge"]}</span>
-          <h3 class="recent-title">${highlight["recent-title"]}</h3>
-          <p class="recent-authors">${recentauthor.replace(
-            "Seshadri, P. K",
-            `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
-          )}</p>
-          <p class="recent-journal">${highlight["recent-journal"]}</p>
-          <p class="recent-description">${highlight["recent-description"]}</p>
-        </div>
-        <div class="recent-card-footer">
-          <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
-          <a href="${highlight["recent-link"]}" class="recent-read-more">Read More</a>
-        </div>
-      `;
-      highlightCards.appendChild(div);
-    });
-  });
-
+        // events and talks, grouped by year (order as written in blog.json: newest first)
+        const groups=[];
+        (data.announcements||[]).forEach(a=>{
+          const y=(String(a.date).match(/(\d{4})\s*$/)||[])[1]||"";
+          const when=String(a.date).replace(/,?\s*\d{4}\s*$/,"")||y;
+          if(!groups.length||groups[groups.length-1].y!==y)groups.push({y,items:[]});
+          groups[groups.length-1].items.push({when,msg:a.message});
+        });
+        // message is trusted site content and may carry a link, so it is inserted as HTML
+        $("#timeline").innerHTML=groups.map(g=>`<div class="tl-year">${esc(g.y)}</div><ul class="tl">${
+          g.items.map(i=>`<li><div class="when">${esc(i.when)}</div><div class="what">${i.msg}</div></li>`).join("")}</ul>`).join("");
+      }).catch(err=>{console.error("Error loading news:",err);});
     </script>
-    <!-- loading blog end  -->
-    <!-- loading footer starts  -->
+
+    <!-- footer loader -->
     <script>
       async function loadFooter() {
         try {
@@ -557,66 +265,23 @@
           const data = await res.json();
           const footer = data.footer;
           document.querySelector(".about h3").textContent = footer.about.title;
-          document.querySelector(".about p").innerHTML =
-            footer.about.description;
-          const socialLinks = document.querySelectorAll(".social-icons a");
-          socialLinks[0].href = footer.about.social.github;
-          socialLinks[1].href = footer.about.social.mail;
-          socialLinks[2].href = footer.about.social.linkedin;
-          socialLinks[3].href = footer.about.social.google_scholar;
-          socialLinks[4].href = footer.about.social.research_gate;
-          const quickLinks = document.querySelector(".footer-column ul");
-          quickLinks.innerHTML = "";
-          footer["quick-links"].forEach((link) => {
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
-            quickLinks.appendChild(li);
-          });
-          const contact = footer.contact;
-          const contactInfo = document.querySelector(".contact-info");
-          contactInfo.innerHTML = `
-            <li>
-              <table>
-                <tr">
-                  <td><i class="fas fa-map-marker-alt"></i></td>
-                  <td style="padding-left: 10px;">${contact.address}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <table>
-                <tr">
-                  <td><i class="fa-solid fa-city"></i></td>
-                  <td style="padding-left: 10px;">${contact.address1}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-            <li>
-              <table>
-                <tr>
-                  <td><i class="fas fa-phone-alt"></i></td>
-                  <td style="padding-left: 10px;">${contact.phone}</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <table>
-                <tr>
-                  <td><i class="fas fa-envelope"></i></td>
-                  <td style="padding-left: 10px;">${contact.email}</td>
-                </tr>
-              </table>
-            </li>
-        `;
-          document.querySelector(".footer-bottom").textContent =
-            footer["footer-note"];
-        } catch (err) {
-          console.error("Error loading publications data:", err);
-        }
+          document.querySelector(".about p").innerHTML = footer.about.description;
+          const s = document.querySelectorAll(".social-icons a");
+          s[0].href=footer.about.social.github; s[1].href=footer.about.social.mail;
+          s[2].href=footer.about.social.linkedin; s[3].href=footer.about.social.google_scholar;
+          s[4].href=footer.about.social.research_gate;
+          const ql=document.querySelector(".footer-column ul"); ql.innerHTML="";
+          footer["quick-links"].forEach(l=>{const li=document.createElement("li");li.innerHTML=`<a href="${l.link}">${l.name}</a>`;ql.appendChild(li);});
+          const contact=footer.contact;
+          document.querySelector(".contact-info").innerHTML=`
+            <li><table><tr><td><i class="fas fa-map-marker-alt"></i></td><td style="padding-left:10px;">${contact.address}</td></tr></table></li>
+            <li><table><tr><td><i class="fa-solid fa-city"></i></td><td style="padding-left:10px;">${contact.address1}</td></tr></table></li>
+            <li><table><tr><td><i class="fas fa-phone-alt"></i></td><td style="padding-left:10px;">${contact.phone}</td></tr></table></li>
+            <li><table><tr><td><i class="fas fa-envelope"></i></td><td style="padding-left:10px;">${contact.email}</td></tr></table></li>`;
+          document.querySelector(".footer-bottom").textContent = footer["footer-note"];
+        } catch (err) { console.error("Error loading footer data:", err); }
       }
       loadFooter();
     </script>
-    <!-- loading footer ends  -->
   </body>
 </html>
