@@ -605,13 +605,13 @@
       "id": "4",
       "code": "",
       "courseKey": "ethics",
-      "title": "Professional Ethics for Aerospace Engineers",
+      "title": "Professional Ethics in Aerospace Engineering",
       "instructor": "Dr. Pradeep Kumar Seshadri",
       "semester": "Jul–Nov 2026",
-      "description": "A discussion course for third-year B.Tech Aerospace students, built on real engineering cases: six Saturday sessions on evidence, certification, speaking up, integrity in analysis and what a profession is.",
+      "description": "A single session for third-year B.Tech Aerospace students, built on real engineering cases: Challenger, the Boeing 737 MAX and Chandrayaan, and what an engineer can do when the evidence and the decision part ways.",
       "tags": [
-        "Six sessions",
-        "Discussion-based"
+        "One session",
+        "Slides available"
       ],
       "buttonText": "View course",
       "link": "singlecourses.html"

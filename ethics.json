@@ -1,96 +1,94 @@
 {
   "code": "",
-  "title": "Professional Ethics for Aerospace Engineers",
+  "title": "Professional Ethics in Aerospace Engineering",
   "dept": "Aerospace Engineering · IIT Madras",
-  "subtitle": "A discussion course for third-year B.Tech students on how engineering catastrophes are produced by ordinary people following ordinary incentives, and on keeping the path from evidence to decision open while it is still cheap to do so.",
+  "subtitle": "A single session for third-year B.Tech students on how engineering catastrophes are produced by ordinary people following ordinary incentives, told through Challenger, the Boeing 737 MAX and Chandrayaan.",
   "instructor": "Pradeep Kumar Seshadri",
   "semester": "Jul–Nov 2026",
   "semesterNote": "third-year B.Tech",
   "facts": [
-    "Six two-hour sessions on Saturdays",
-    "Discussion-based, no examination"
+    "One session",
+    "Slides available"
   ],
-  "startNote": "This course ran from 29 August to 31 October 2026. Sessions run on discussion, not lecture: each is built around a brief of a real situation that stops at the point where somebody had to decide.",
-  "modulesTitle": "Sessions",
-  "modulesLead": "Six sessions. Students read a brief and commit to a written position before each session; what actually happened is disclosed only after the room has argued it.",
+  "startNote": "This was a single session, not a full course. The slides used in it are posted below.",
+  "modulesTitle": "Session outline",
+  "modulesLead": "Two decisions, and 353 people. The session opens by putting students in the room the night before a launch, then works through three cases and ends with what an engineer can actually do.",
   "modules": [
     {
-      "title": "I. “Safety is pure waste” — 29 Aug",
+      "tag": "0",
+      "title": "You are in the room — 27 January 1986, 8:45 pm",
       "items": [
-        "What happens when the institutions that check engineers are removed"
+        "The call, and the evidence you have",
+        "The same data, with nothing left out",
+        "So: what do you say?"
       ]
     },
     {
-      "title": "II. Evidence and the path to decision — 5 Sep",
+      "tag": "A",
+      "title": "Challenger — how a known problem becomes an accepted one",
       "items": [
-        "The evidence almost always exists beforehand; what fails is the path from it to the decision"
+        "What the O-ring had to do, and why the problem was not a surprise",
+        "The trap has a name: normalisation of deviance",
+        "The teleconference, and what happened to the man who objected"
       ]
     },
     {
-      "title": "III. Certification, delegated authority and many hands — 19 Sep",
+      "tag": "B",
+      "title": "The 737 MAX — how a decision gets made by nobody",
       "items": [
-        "Responsibility when no single person decided the thing that went wrong"
+        "It starts as a commercial problem, and becomes an engineering one",
+        "One sensor, and the months between the two crashes",
+        "Who was supposed to catch this? The problem of many hands"
       ]
     },
     {
-      "title": "IV. Speaking up — 10 Oct",
+      "tag": "C",
+      "title": "The other reflex — the same kind of evidence, a different answer",
       "items": [
-        "Raising a concern early, in writing, while it is cheap"
+        "Vikram, 6 September 2019",
+        "Success-based and failure-based design",
+        "23 August 2023"
       ]
     },
     {
-      "title": "V. Integrity in analysis and simulation — 24 Oct",
+      "tag": "D",
+      "title": "So what do you do?",
       "items": [
-        "What gets left out of a report, and who signs it"
-      ]
-    },
-    {
-      "title": "VI. What a profession is — 31 Oct",
-      "items": [
-        "Codes read last, as an audit of the cases studied",
-        "Group project presentations"
+        "Four ways of meeting a failure",
+        "Three questions worth asking out loud",
+        "What you can actually do at your level",
+        "What the profession offers you, and its limit"
       ]
     }
   ],
-  "assessmentLead": "Sixty per cent of the marks are for spoken, group or presented work, and there is no examination.",
-  "assessment": [
+  "slidesTitle": "Slides",
+  "slidesLead": "The deck prepared for the session.",
+  "slideDecks": [
     {
-      "c": "Pre-session positions",
-      "d": "One handwritten paragraph before each session; marked on submission, not content",
-      "w": "12%"
-    },
-    {
-      "c": "Written assignments",
-      "d": "One after each session, 300 words; best five of six count",
-      "w": "23%"
-    },
-    {
-      "c": "Group opening",
-      "d": "Twelve minutes, once in the semester",
-      "w": "15%"
-    },
-    {
-      "c": "Contribution in the room",
-      "d": "Across all six sessions; written contributions count",
-      "w": "15%"
-    },
-    {
-      "c": "Project",
-      "d": "Framing memo (5%), group presentation (15%) and report (15%) on a case not taught in the course",
-      "w": "35%"
-    },
-    {
-      "c": "Total",
-      "d": "",
-      "w": "100%",
-      "total": true
+      "tag": "PDF",
+      "title": "Professional Ethics in Aerospace Engineering: Two decisions, and 353 people",
+      "file": "assets/ethics/Professional_Ethics_Aerospace_Slides.pdf",
+      "pages": 47,
+      "size": "0.9 MB"
     }
   ],
-  "rules": [
-    "Grades are <b>absolute</b>; passing requires 40% overall <b>and</b> attendance at four of the six sessions.",
-    "Pre-session positions are <b>handwritten in the room</b> and cannot be submitted late.",
-    "AI tools are permitted for assignments <b>as a supplement</b>, with the prompt and changes declared.",
-    "Groups are <b>assigned, not chosen</b>; two groups open every session."
-  ],
-  "references": []
+  "referencesLead": "Where to read further, as listed at the end of the session.",
+  "references": [
+    {
+      "text": "Feynman, R. P. — Appendix F to the Rogers Commission Report, 1986. Six pages, free on the NASA history site.",
+      "primary": true
+    },
+    {
+      "text": "Vaughan, D. — <i>The Challenger Launch Decision</i>, 1996. The source of “normalisation of deviance”."
+    },
+    {
+      "text": "Sterman, J. &amp; Quinn, J. — <i>Boeing's 737 MAX 8 Disasters</i>, MIT Sloan, 2023. A free case study that takes the systems view."
+    },
+    {
+      "text": "Herkert, J., Borenstein, J. &amp; Miller, K. — “The Boeing 737 MAX: Lessons for Engineering Ethics”, <i>Science and Engineering Ethics</i>, 2020."
+    },
+    {
+      "text": "Tufte, E. — <i>Visual Explanations</i>, 1997, on the O-ring charts, read alongside the published criticism of his reading."
+    }
+  ]
 }
